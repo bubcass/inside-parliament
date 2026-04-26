@@ -21,8 +21,61 @@ export const theSeanadAtWork: Story = {
     {
       type: "text",
       paragraphs: [
-        "On Tuesday the Seanad Select Committee on EU Scrutiny and Transparency will hold a discussion with the Minister of State at the Department of the Taoiseach with responsibility for EU affairs as it continues the development of its 2026 work programme.",
-        "The work of this committee arises from a Cabinet decision from July 2022, after which the Minister of State, Deputy Byrne, said he looked forward to appearing before the new Seanad select committee to outline the principles of intended EU statutory instruments.",
+        "Unexpectedly, the first reference made by the Cathaoirleach of the Seanad, Senator Mark Daly, is to a newspaper that's been defunct for a century.",
+        "\"Everybody knows the story of the <em>Skibbereen Eagle</em> keeping its eye on the Russian Tsar in the late 19th century. It comes up quite a bit in Seanad debates as a sort of funny reference, a slant on David versus Goliath. But that doesn't mean the idea of scrutiny was wrong. Scrutiny, transparency, accoutability - they're all connected. And they're everybody's responsibility.\" ",
+        "Senator Daly is looking over a sheaf of documents as he says this, a brief he's been given by Departments in advance of the latest meeting of the <strong>Seanad Select Committee on EU Scrutiny and Transparency.</strong>",
+        "Tuesday's meeting is the next in the regularly scheduled series, when the Committee will hold a discussion with the Minister of State at the Department of the Taoiseach with responsibility for EU affairs, Deputy Thomas Byrne, as it continues its scrutiny work. The Minister of State is no stranger to the work being done by the Committee.",
+      ],
+    },
+    {
+      type: "video",
+      video: {
+        src: "/media/transparency_seanad.mp4",
+        poster: "/media/SSC-on-EU-Scrutiny.jpg",
+        caption:
+          "The committee meets in the Seanad chamber and is distinctive in being made up entirely of Senators.",
+      },
+    },
+    {
+      type: "text",
+      heading: "A new layer of oversight",
+      paragraphs: [
+        '"The Minister of State knows the Chamber well. He served for a few years here and he knows the really valuable repository of knowledge that we have in the Seanad", notes the Cathaoirleach. The work of this Committee arises from a Cabinet decision from July 2022, after which the Minister of State, Deputy Byrne, was one of the first to speak about the work of the Committee that would be formed, saying at the time he looked forward to appearing before the new Seanad select committee to outline the principles of intended EU statutory instruments. He\'s done so on several occasions.',
+        '"The Minister of State sees his input as a valuable part of the process. We are a scrutiny committee and we want to be really well-informed - that goes without saying", continues Senator Daly. "The Minister of State said at his first attendance before us that the process would add greater transparency to the transposition of EU secondary legislation, which has the power to benefit areas such as the environment, consumer rights and employee rights. He\'s absolutely right."',
+      ],
+    },
+    {
+      type: "text",
+      heading: "Important work, quietly done",
+      paragraphs: [
+        "The role of the committee is to specifically examine EU directives and consider proposals for statutory instruments that would give effect to the contents of these directives in Irish law, a process known as transposing the directive.",
+      ],
+    },
+    {
+      type: "media-text",
+      //heading: "Important work, quietly done",
+      paragraphs: [
+        "It begins the examination at an early stage, assessing the potential impact of directives on Ireland and tracking how EU directives and regulations progress from Brussels to implementation in national law.",
+        "It may also consider the potential effects and consequences of failing to transpose the functions, and refer any draft statutory instrument to a relevant joint committee for further consideration.",
+        '"But the really important thing to consider", notes Senator Daly, "is the advantage we have of having Senators with a wealth of knowledge and experience doing the scrutiny. We have barristers sitting alongside advocates and people with lived experience. It\'s a special mix."',
+      ],
+      mediaSide: "right",
+      media: {
+        type: "image",
+        asset: {
+          src: "/media/alice-mary.jpg",
+          poster: "/media/alice-mary.jpg",
+          caption:
+            "Senator Alice-Mary Higgins, a member of the Committee, speaks about the process allowing 'a space in which the relevant Oireachtas committees, with their expertise, can bring something in'",
+        },
+      },
+    },
+    {
+      type: "text",
+      heading: "The scale of the job",
+      paragraphs: [
+        "At the Committee's meeting with the Minister of State , Deputy Thomas Byrne ,on 17 February 2026, members heard how much the workload has expanded. The Minister of State indicated the number of statutory instruments made by Ministers each year under the European Communities Act 1972 has grown from around 20 in the 1970s to roughly 200 a year in recent times.",
+        "He also estimated that about 70 draft EU-related statutory instruments a year may come before the Committee, or approximately 10% of all statutory instruments made by Government annually. The Cathaoirleach notes the Committee's amended terms of reference, adopted in August 2025,  extend beyond draft statutory instruments to include infringement proceedings and external EU agreements. As he states, \"It's a growing body and it means the scrutiny is required now more than ever. And our Committee is well placed to do it\"",
       ],
     },
     {
@@ -37,56 +90,12 @@ export const theSeanadAtWork: Story = {
     },
     {
       type: "text",
-      heading: "A New Layer of Oversight",
+      heading: "A suitable forum",
       paragraphs: [
-        'Deputy Byrne said the process would add greater transparency to the transposition of EU secondary legislation, which has the power to benefit areas such as the environment, consumer rights and employee rights.',
-        "The role of the committee is to specifically examine EU directives and consider proposals for statutory instruments that would give effect to the contents of these directives in Irish law, a process known as transposing the directive.",
-      ],
-    },
-    {
-      type: "media-text",
-      eyebrow: "Inside the chamber",
-      heading: "Scrutiny is often quiet work",
-      paragraphs: [
-        "It begins the examination at an early stage, assessing the potential impact of directives on Ireland and tracking how EU directives and regulations progress from Brussels to implementation in national law.",
-        "It may also consider the potential effects and consequences of failing to transpose the functions, and refer any draft statutory instrument to a relevant joint committee for further consideration.",
-      ],
-      mediaSide: "right",
-      media: {
-        type: "image",
-        asset: {
-          src: "/media/alice-mary.jpg",
-          poster: "/media/alice-mary.jpg",
-          caption:
-            "Senator Alice-Mary Higgins is among the members who have contributed to debate on how the Seanad should scrutinise EU measures.",
-        },
-      },
-    },
-    {
-      type: "text",
-      heading: "The Scale of the Task",
-      paragraphs: [
-        "At the committee's meeting with Minister of State Thomas Byrne on 17 February 2026, members heard how much the workload has expanded. Byrne said the number of statutory instruments made by Ministers each year under the European Communities Act 1972 has grown from about 20 in the 1970s to roughly 200 a year in recent times.",
-        "He estimated that about 70 draft EU-related statutory instruments a year may come before this committee, amounting to about 10% of all statutory instruments made by Government annually. Byrne also said the committee's amended terms of reference, adopted in August 2025, now extend beyond draft statutory instruments to include infringement proceedings and external EU agreements.",
-      ],
-    },
-    {
-      type: "video",
-      video: {
-        src: "/media/transparency_seanad.mp4",
-        poster: "/media/full_chamber.jpg",
-        caption:
-          "The committee meets in the Seanad chamber and is distinctive in being made up entirely of Senators.",
-      },
-    },
-    {
-      type: "text",
-      heading: "Established in 2025",
-      paragraphs: [
-        "This Seanad select committee was established in December 2025 and, at its inaugural meeting, the Cathaoirleach, Senator Mark Daly, noted the importance of its role.",
+        "The Committee was established in December 2025 and at its inaugural meeting the Cathaoirleach emphasised the importance of work.",
         'He said: "The legislation we deal with in the Dáil and Seanad every year is a drop in the ocean compared with the legislation done by Departments without scrutiny. Our role is to highlight it and change that system, which has been in place for half a century."',
-        "Daly has also linked scrutiny directly to transparency and cost. In the committee's first meeting in December 2025 he argued that large volumes of EU-derived law can be finalised by Departments and signed by Ministers without elected members seeing the final text in advance, and pointed to a €1.54 million fine incurred over the late transposition of the work-life balance directive as an example of the price of delay.",
-        "By February 2026, the committee was pressing Departments to give it draft statutory instruments and information notes at least six months before transposition deadlines. Byrne said a new transparency initiative would also see up-to-date details of EU directives due for transposition, and infringement cases against Ireland, published online as Ireland prepares for its Presidency of the Council of the European Union beginning on 1 July 2026.",
+        'He emphasises again how the Seanad is well placed as a forum from which to select members for the committee. "The Upper House is markedly different from the Dáil in that partisanship is not a driving force. There are party rivalries I know but for the most part our Senators leave those behind. We consider matters dispassionately and with impartiality. This is vital if we are to do our scrutiny in the most effective and efficient way. Our work is unwavering and free of distraction or agendas."',
+        "The Committee will be keeping its eye on what comes from Europe.",
       ],
     },
     {
@@ -96,27 +105,26 @@ export const theSeanadAtWork: Story = {
         {
           label: "Committee page",
           href: "https://www.oireachtas.ie/en/committees/34/seanad-select-committee-on-eu-scrutiny-and-transparency/",
-          description: "Seanad Select Committee on EU Scrutiny and Transparency",
+          description:
+            "Seanad Select Committee on EU Scrutiny and Transparency",
         },
         {
           label: "Read the 17 February 2026 debate",
-          href: "https://data.oireachtas.ie/ie/oireachtas/debateRecord/seanad_select_committee_on_eu_scrutiny_and_transparency/2026-02-17/debate/mul%40/main.pdf",
-          description: "Official Report of the committee's engagement with Minister of State Thomas Byrne",
+          href: "https://www.oireachtas.ie/en/debates/debate/seanad_select_committee_on_eu_scrutiny_and_transparency/2026-02-17/",
+          description:
+            "Official Report of the Committee's engagement with the Minister of State, Deputy Thomas Byrne",
         },
         {
-          label: "Read the Minister's opening statement",
-          href: "https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/seanad_select_committee_on_eu_scrutiny_and_transparency/submissions/2026/2026-02-17_opening-statement-thomas-byrne-t-d-minister-of-state-for-european-affairs-department-of-the-taoiseach-department-of-foreign-affairs-and-trade_en.pdf",
-          description: "Opening statement by Thomas Byrne TD, 17 February 2026",
-        },
-        {
-          label: "Read the inaugural committee debate",
+          label: "Read this Committee's inaugural debate",
           href: "https://data.oireachtas.ie/ie/oireachtas/debateRecord/seanad_select_committee_on_eu_scrutiny_and_transparency/2025-12-17/debate/mul%40/main.pdf",
-          description: "Official Report of the committee's first meeting in December 2025",
+          description:
+            "Official Report of the Committee's meeting of December 2025",
         },
         {
-          label: "Background on the Seanad's EU scrutiny role",
+          label: "More on the Seanad's expanding ambitions",
           href: "https://www.oireachtas.ie/en/visit-and-learn/centenaries/seanad100/the-seanad-looking-forward/",
-          description: "Seanad100 page on reform and scrutiny of EU legislation",
+          description:
+            "In its second century, the Seanad looks to reform and expansion in its work",
         },
       ],
     },

@@ -161,6 +161,11 @@
     margin: 0 auto;
   }
 
+  .caption {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   span {
     color: var(--color-faint);
     display: block;

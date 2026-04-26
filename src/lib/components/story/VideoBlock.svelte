@@ -8,6 +8,10 @@
 <figure class="video-block">
   <video
     autoplay
+    controls
+    controlslist="nodownload noremoteplayback"
+    disablepictureinpicture
+    disableremoteplayback
     loop
     muted
     playsinline
@@ -48,7 +52,9 @@
     width: 100%;
   }
 
-  figcaption {
+  .caption {
+    margin-left: auto;
+    margin-right: auto;
     max-width: var(--measure);
   }
 
