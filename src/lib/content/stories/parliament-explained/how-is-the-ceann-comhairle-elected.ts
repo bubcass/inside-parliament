@@ -11,8 +11,8 @@ export const europeanMeasuresExplained: Story = {
   date: "April 14, 2026",
   readingTime: "5 min read",
   hero: {
-    src: "/media/ceann_comhairle_election.jpg",
-    alt: "The Ceann Comhairle, Deputy Verona Murphy, on being elected in 2024.",
+    src: "/media/dail_no_sit_2.jpg",
+    alt: "The bell in the Dáil Chamber",
   },
   blocks: [
     {
@@ -126,13 +126,13 @@ export const europeanMeasuresExplained: Story = {
           },
         },
         {
-          title: "The Chair takes the oath of office",
+          title: "The Ceann Comhairle takes the oath of office",
           body: "After the question is put the new Ceann Comhairle takes the oath of office and is robed. After taking his or her seat, the business of Dáil Éireann can continue with its new chairperson in place.",
           placeLabel: "Dáil Chamber",
-          overlayPosition: "right-center",
+          overlayPosition: "left-center",
           focus: { x: 46, y: 42, scale: 1.02 },
           image: {
-            src: "/media/ceann-comhairle-speaks-after-election.jpg",
+            src: "/media/ceann_comhairle_in_chair.jpg",
             alt: "The newly elected Ceann Comhairle addressing the Dáil from the Chair after the formal election.",
           },
         },
