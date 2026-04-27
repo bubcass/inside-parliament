@@ -17,19 +17,19 @@ export const europeanMeasuresExplained: Story = {
   blocks: [
     {
       type: "text",
-      heading: "From Paper to Question",
+      //heading: "Selecting the Ceann Comhairle",
       paragraphs: [
-        "The first version of a European measure may look remote from daily political life. Its language is procedural, its consequences indirect and its route through domestic institutions easy to miss.",
-        "The Seanad’s scrutiny role gives that process a public point of entry. Members can ask what a proposal changes, who it affects and whether the State’s response is clear enough before decisions harden.",
+        "The Ceann Comhairle is the chairperson of Dáil Éireann and presides impartially and with authority over the business and proceedings of the House.",
+        "When a new Dáil meets and after the roll of elected Members has been announced by the Clerk of the Dáil, the process to select the new Ceann Comhairle begins.",
       ],
     },
     {
       type: "chart",
       chart: "ceann-comhairle-waffle",
-      data: "/data/CCfinalCount.csv",
+      data: "/data/CCSelectionCompleteData.csv",
       title: "Election of the Ceann Comhairle",
-      caption:
-        "Standings after each count. Candidates must reach the quota to be elected.",
+      //caption:
+      //"Standings after each count. Candidates must reach the quota to be elected.",
     },
     {
       type: "media-text",

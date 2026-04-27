@@ -81,15 +81,16 @@
 <style>
   .story {
     overflow: clip;
+    --site-header-height: 3.25rem;
   }
 
   .story-hero.split {
-    align-items: center;
+    align-items: stretch;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     margin: 0 calc(50% - 50vw);
     max-width: none;
-    min-height: min(46rem, calc(100vh - 3.25rem));
+    min-height: max(42rem, calc(100svh - var(--site-header-height)));
     padding: 0;
   }
 
@@ -99,6 +100,10 @@
   }
 
   .story-hero.split .hero-copy {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     justify-self: end;
     padding: clamp(var(--space-7), 7vw, 5rem) clamp(var(--space-6), 5vw, var(--space-8)) clamp(var(--space-7), 7vw, 5rem) var(--gutter);
   }
@@ -227,7 +232,7 @@
   }
 
   .story-hero.immersive .hero-media {
-    min-height: min(48rem, calc(100vh - 3.25rem));
+    min-height: max(42rem, calc(100svh - var(--site-header-height)));
     position: relative;
   }
 
@@ -246,8 +251,8 @@
 
   .story-hero.immersive img {
     display: block;
-    height: min(48rem, calc(100vh - 3.25rem));
-    min-height: 34rem;
+    height: max(42rem, calc(100svh - var(--site-header-height)));
+    min-height: 0;
   }
 
   .hero-overlay {
@@ -290,6 +295,11 @@
 
   .story-body {
     padding: var(--space-4) var(--gutter) 0;
+  }
+
+  .story-hero.split + .story-body,
+  .story-hero.immersive + .story-body {
+    padding-top: var(--space-6);
   }
 
   @media (max-width: 860px) {

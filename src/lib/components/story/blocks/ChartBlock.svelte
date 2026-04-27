@@ -1,342 +1,516 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import type { ChartStoryBlock } from '$lib/content/types';
-  import * as Plot from '@observablehq/plot';
-  import * as d3 from 'd3';
-  import { onMount } from 'svelte';
+    import { base } from "$app/paths";
+    import type { ChartStoryBlock } from "$lib/content/types";
+    import * as Plot from "@observablehq/plot";
+    import * as d3 from "d3";
+    import { onMount } from "svelte";
 
-  type CountRow = {
-    name: string;
-    votes: number;
-    allocation: number;
-    count: number;
-    status: string;
-    URI: string;
-    party: string;
-    election_year: number;
-    quota: number;
-    surname: string;
-  };
-
-  const PARTY_COLORS: Record<string, string> = {
-    'Fianna Fáil': '#40b34e',
-    'Sinn Féin': '#088460',
-    'Fine Gael': '#303591',
-    Independent: '#666666',
-    'Labour Party': '#c82832',
-    'Social Democrats': '#782b81',
-    'Green Party': '#b4d143'
-  };
-
-  const STATUS_COLORS = {
-    Continuing: '#8b816d',
-    Eliminated: '#cfc6b8',
-    Elected: '#1a1a1a'
-  } as const;
-
-  let { block }: { block: ChartStoryBlock } = $props();
-
-  let rows = $state<CountRow[]>([]);
-  let selectedCount = $state<number | null>(null);
-  let errorMessage = $state<string | null>(null);
-  let plotHost = $state<HTMLDivElement | null>(null);
-  let plotElement = $state<ChildNode | null>(null);
-
-  let availableCounts = $derived(
-    [...new Set(rows.map((row) => row.count))].sort((a, b) => a - b)
-  );
-
-  let finalCount = $derived(
-    selectedCount === null
-      ? []
-      : rows
-          .filter((row) => row.count === selectedCount)
-          .sort((a, b) => d3.descending(a.votes, b.votes))
-  );
-
-  let quota = $derived(finalCount[0]?.quota ?? 0);
-  let fxDomain = $derived(finalCount.map((row) => row.surname || row.name));
-
-  function memberImage(uri: string) {
-    return `https://www.oireachtas.ie/en/members/member/${encodeURI(uri)}/image/`;
-  }
-
-  function partyColor(party: string) {
-    return PARTY_COLORS[party] ?? '#8b816d';
-  }
-
-  onMount(() => {
-    async function loadData() {
-      try {
-        const loaded = await d3.csv(`${base}${block.data}`, d3.autoType);
-        rows = loaded as CountRow[];
-        selectedCount = d3.max(rows, (row: CountRow) => row.count) ?? null;
-      } catch (error) {
-        console.error(error);
-        errorMessage = 'Unable to load chart data.';
-      }
-    }
-
-    loadData();
-
-    return () => {
-      if (plotElement) {
-        plotElement.remove();
-      }
+    type CountRow = {
+        name: string;
+        votes: number;
+        allocation: number;
+        count: number;
+        status: string;
+        URI: string;
+        party: string;
+        election_year: number;
+        quota: number;
+        surname: string;
     };
-  });
 
-  $effect(() => {
-    if (!plotHost || !finalCount.length || selectedCount === null) return;
+    const PARTY_COLORS: Record<string, string> = {
+        "Fianna Fáil": "#40b34e",
+        "Sinn Féin": "#088460",
+        "Fine Gael": "#303591",
+        Independent: "#666666",
+        "Labour Party": "#c82832",
+        "Social Democrats": "#782b81",
+        "Green Party": "#b4d143",
+    };
 
-    if (plotElement) {
-      plotElement.remove();
-      plotElement = null;
+    const STATUS_COLORS = {
+        Continuing: "#1f77b4",
+        Eliminated: "#dadbdc",
+        Elected: "#ff7f0e",
+    } as const;
+
+    let { block }: { block: ChartStoryBlock } = $props();
+
+    let rows = $state<CountRow[]>([]);
+    let selectedYear = $state<number | null>(null);
+    let selectedCount = $state<number | null>(null);
+    let errorMessage = $state<string | null>(null);
+    let chartFrame = $state<HTMLDivElement | null>(null);
+    let plotHost = $state<HTMLDivElement | null>(null);
+    let plotElement: ChildNode | null = null;
+    let frameWidth = $state(0);
+
+    let availableYears = $derived(
+        [...new Set(rows.map((row) => row.election_year))].sort(
+            (a, b) => a - b,
+        ),
+    );
+
+    let yearRows = $derived(
+        selectedYear === null
+            ? []
+            : rows.filter((row) => row.election_year === selectedYear),
+    );
+
+    let availableCounts = $derived(
+        [...new Set(yearRows.map((row) => row.count))].sort((a, b) => a - b),
+    );
+
+    let finalCount = $derived(
+        selectedCount === null
+            ? []
+            : yearRows
+                  .filter((row) => row.count === selectedCount)
+                  .sort((a, b) => d3.descending(a.votes, b.votes)),
+    );
+
+    let quota = $derived(finalCount[0]?.quota ?? 0);
+    let fxDomain = $derived(finalCount.map((row) => row.name));
+
+    function partyColor(party: string) {
+        return PARTY_COLORS[party] ?? "#8b816d";
     }
 
-    const maxVotes = d3.max(finalCount, (row: CountRow) => row.votes) ?? 0;
-    const yTop = Math.max(quota, maxVotes) + 20;
-    const plotWidth = Math.max(640, fxDomain.length * 150);
+    function memberImage(uri: string) {
+        return `https://data.oireachtas.ie/ie/oireachtas/member/id/${encodeURI(uri)}/image/thumb`;
+    }
 
-    const plot = Plot.plot({
-      width: plotWidth,
-      height: 560,
-      marginTop: 96,
-      marginRight: 24,
-      marginBottom: 72,
-      marginLeft: 56,
-      style: {
-        background: 'transparent',
-        fontFamily: 'var(--font-sans)',
-        fontSize: '14px'
-      },
-      x: {
-        domain: fxDomain,
-        label: null,
-        tickSize: 0
-      },
-      y: {
-        domain: [0, yTop],
-        grid: true,
-        label: 'Votes'
-      },
-      color: {
-        domain: ['Continuing', 'Eliminated', 'Elected'],
-        range: [
-          STATUS_COLORS.Continuing,
-          STATUS_COLORS.Eliminated,
-          STATUS_COLORS.Elected
-        ],
-        legend: true,
-        label: 'Status'
-      },
-      marks: [
-        Plot.ruleY([0], { stroke: '#d8d1c4' }),
-        Plot.ruleY([quota], { stroke: '#9f9689', strokeDasharray: '4,4' }),
-        Plot.waffleY(finalCount, {
-          x: (row) => row.surname || row.name,
-          y: 'votes',
-          fill: 'status',
-          unit: 1,
-          gap: 1.5,
-          rx: 1.5,
-          title: (row) =>
-            `${row.name}\nParty: ${row.party}\nCount: ${row.count}\nVotes: ${row.votes}\nStatus: ${row.status}`,
-          tip: true
-        }),
-        Plot.text(finalCount, {
-          x: (row) => row.surname || row.name,
-          y: (row) => Math.max(row.votes, 2),
-          text: (row) => String(row.votes),
-          dy: -10,
-          fontWeight: 600,
-          fontSize: 12
-        }),
-        Plot.dot(finalCount, {
-          x: (row) => row.surname || row.name,
-          y: () => yTop - 7,
-          r: 21,
-          fill: '#f9f7f1',
-          stroke: (row) => partyColor(row.party),
-          strokeWidth: 3
-        }),
-        Plot.image(
-          finalCount,
-          {
-            x: (row: CountRow) => row.surname || row.name,
-            y: () => yTop - 7,
-            src: (row: CountRow) => memberImage(row.URI),
-            width: 34,
-            height: 34,
-            preserveAspectRatio: 'xMidYMid slice',
-            clip: 'circle'
-          } as any
-        ),
-        Plot.text(
-          [{ label: `Quota ${quota}`, x: fxDomain[0], y: quota }],
-          {
-            x: 'x',
-            y: 'y',
-            text: 'label',
-            textAnchor: 'start',
-            dx: 8,
-            dy: -8,
-            fill: '#5c564e',
-            fontSize: 12
-          }
-        )
-      ]
+    onMount(() => {
+        let resizeObserver: ResizeObserver | null = null;
+
+        async function loadData() {
+            try {
+                const loaded = await d3.csv(
+                    `${base}${block.data}`,
+                    d3.autoType,
+                );
+                rows = loaded as CountRow[];
+                selectedYear =
+                    d3.max(rows, (row: CountRow) => row.election_year) ?? null;
+            } catch (error) {
+                console.error(error);
+                errorMessage = "Unable to load chart data.";
+            }
+        }
+
+        loadData();
+
+        if (chartFrame) {
+            resizeObserver = new ResizeObserver((entries) => {
+                const entry = entries[0];
+                if (!entry) return;
+                frameWidth = entry.contentRect.width;
+            });
+            resizeObserver.observe(chartFrame);
+            frameWidth = chartFrame.getBoundingClientRect().width;
+        }
+
+        return () => {
+            resizeObserver?.disconnect();
+            if (plotElement) {
+                plotElement.remove();
+            }
+        };
     });
 
-    plotHost.append(plot);
-    plotElement = plot;
-  });
+    $effect(() => {
+        if (!availableYears.length) return;
+        if (selectedYear === null || !availableYears.includes(selectedYear)) {
+            selectedYear = availableYears[availableYears.length - 1];
+        }
+    });
+
+    $effect(() => {
+        if (!availableCounts.length) return;
+        if (
+            selectedCount === null ||
+            !availableCounts.includes(selectedCount)
+        ) {
+            selectedCount = availableCounts[availableCounts.length - 1];
+        }
+    });
+
+    $effect(() => {
+        if (
+            !plotHost ||
+            !finalCount.length ||
+            selectedYear === null ||
+            selectedCount === null
+        )
+            return;
+
+        if (plotElement) {
+            plotElement.remove();
+            plotElement = null;
+        }
+
+        const maxVotes = d3.max(finalCount, (row: CountRow) => row.votes) ?? 0;
+        const yTop = Math.max(quota, maxVotes) + 20;
+        const idealWidth = Math.max(860, finalCount.length * 170);
+        const plotWidth = frameWidth
+            ? Math.max(320, Math.min(idealWidth, frameWidth))
+            : idealWidth;
+        const compactPlot = plotWidth < 760;
+        const tightPlot = plotWidth < 560;
+
+        try {
+            const plot = Plot.plot({
+                width: plotWidth,
+                height: tightPlot ? 430 : compactPlot ? 480 : 550,
+                marginTop: tightPlot ? 72 : 96,
+                marginRight: 10,
+                marginBottom: tightPlot ? 84 : 100,
+                marginLeft: 10,
+                axis: null,
+                style: {
+                    background: "transparent",
+                    fontFamily: "IBM Plex Sans, var(--font-sans)",
+                    fontSize: compactPlot ? "11px" : "12px",
+                    padding: "5px",
+                },
+                fx: {
+                    domain: fxDomain,
+                    label: null,
+                },
+                y: {
+                    domain: [0, yTop],
+                    grid: false,
+                    label: "Votes",
+                },
+                color: {
+                    domain: ["Continuing", "Eliminated", "Elected"],
+                    range: [
+                        STATUS_COLORS.Continuing,
+                        STATUS_COLORS.Eliminated,
+                        STATUS_COLORS.Elected,
+                    ],
+                    legend: true,
+                    label: "Count status",
+                    swatchWidth: 25,
+                    columns: 3,
+                    marginLeft: 10,
+                    marginTop: 20,
+                } as any,
+                marks: [
+                    Plot.axisFx({
+                        lineWidth: 1,
+                        anchor: "bottom",
+                        dy: tightPlot ? 20 : 30,
+                        fontWeight: "bold",
+                    }),
+                    Plot.waffleY([{ length: 1 }], {
+                        y: quota,
+                        fillOpacity: 0.3,
+                        rx: "100%",
+                    } as any),
+                    Plot.waffleY(finalCount, {
+                        fx: "name",
+                        y: (row) => row.votes,
+                        rx: "100%",
+                        fill: "status",
+                        channels: {
+                            Name: "name",
+                            Votes: "votes",
+                            Party: "party",
+                            Quota: (row: CountRow) =>
+                                `${Math.round((row.votes / quota) * 100)}% of quota`,
+                            status: {
+                                value: "status",
+                                label: "Status in count",
+                            },
+                        },
+                        tip: {
+                            format: {
+                                Name: true,
+                                status: false,
+                                Votes: true,
+                                y: false,
+                                fx: false,
+                                stroke: false,
+                            },
+                        },
+                    }),
+                    Plot.text(finalCount, {
+                        fx: "name",
+                        text: (row) => `${row.votes} votes`,
+                        frameAnchor: "bottom",
+                        lineAnchor: "top",
+                        dy: 8,
+                        fill: "status",
+                        fontSize: tightPlot ? 12 : compactPlot ? 14 : 17,
+                        fontFamily: "IBM Plex Sans, var(--font-sans)",
+                        fontWeight: "bold",
+                    }),
+                    Plot.circle(finalCount, {
+                        fx: "name",
+                        y: "votes",
+                        filter: (row: CountRow) => row.votes > 1,
+                        r: tightPlot ? 20 : compactPlot ? 24 : 30,
+                        dy: tightPlot ? -34 : compactPlot ? -40 : -50,
+                        fill: "none",
+                        stroke: (row) => partyColor(row.party),
+                        strokeWidth: tightPlot ? 5 : 7,
+                    }),
+                    Plot.image(finalCount, {
+                        fx: "name",
+                        y: "votes",
+                        filter: (row: CountRow) => row.votes > 1,
+                        r: tightPlot ? 18 : compactPlot ? 22 : 28,
+                        dy: tightPlot ? -34 : compactPlot ? -40 : -50,
+                        href: (row: CountRow) =>
+                            `https://www.oireachtas.ie/en/members/member/${encodeURI(row.URI)}`,
+                        target: "_blank",
+                        src: (row: CountRow) => memberImage(row.URI),
+                        title: (row: CountRow) =>
+                            `Deputy ${row.name} has ${row.votes} votes. Click to see Member profile.`,
+                        preserveAspectRatio: "xMidYMin slice",
+                    } as any),
+                ],
+            });
+
+            plotHost.append(plot);
+            plotElement = plot;
+            errorMessage = null;
+        } catch (error) {
+            console.error(error);
+            errorMessage = "Unable to render chart.";
+        }
+    });
 </script>
 
 <section class="chart-block">
-  {#if block.title || block.caption}
-    <div class="chart-block__intro">
-      {#if block.title}
-        <h2>{block.title}</h2>
-      {/if}
-      {#if block.caption}
-        <p class="caption">{block.caption}</p>
-      {/if}
-    </div>
-  {/if}
+    {#if block.title || block.caption}
+        <div class="chart-block__intro">
+            {#if block.title}
+                <h2>{block.title}</h2>
+            {/if}
+            {#if block.caption}
+                <p class="caption">{block.caption}</p>
+            {/if}
+            {#if selectedCount !== null && quota}
+                <p class="chart-block__summary">
+                    After <strong>count No. {selectedCount}</strong>. A Deputy
+                    requires <strong>{quota} votes</strong> to be elected.
+                </p>
+            {/if}
+        </div>
+    {/if}
 
-  <div class="chart-control">
-    <label for="count-select">Count</label>
-    <select
-      id="count-select"
-      bind:value={selectedCount}
-      disabled={availableCounts.length < 2}
-    >
-      {#each availableCounts as count}
-        <option value={count}>Count {count}</option>
-      {/each}
-    </select>
-  </div>
+    <div class="chart-stage">
+        <div class="chart-control">
+            {#if availableYears.length > 1}
+                <label for="year-select">Year</label>
+                <select id="year-select" bind:value={selectedYear}>
+                    {#each availableYears as year}
+                        <option value={year}>{year}</option>
+                    {/each}
+                </select>
+            {/if}
 
-  {#if errorMessage}
-    <p class="chart-block__status">{errorMessage}</p>
-  {:else if !rows.length}
-    <p class="chart-block__status">Loading chart…</p>
-  {:else}
-    <div class="plot-container">
-      <div bind:this={plotHost} class="plot-host"></div>
+            {#if availableCounts.length > 0}
+                <div class="count-pills" role="group" aria-label="Count">
+                    {#each availableCounts as count}
+                        <button
+                            type="button"
+                            class:active={selectedCount === count}
+                            aria-pressed={selectedCount === count}
+                            onclick={() => (selectedCount = count)}
+                        >
+                            {count}
+                        </button>
+                    {/each}
+                </div>
+            {/if}
+        </div>
+
+        <div bind:this={chartFrame} class="plot-frame">
+            {#if errorMessage}
+                <p class="chart-block__status">{errorMessage}</p>
+            {:else if !rows.length}
+                <p class="chart-block__status">Loading chart…</p>
+            {:else}
+                <div class="plot-container">
+                    <div bind:this={plotHost} class="plot-host"></div>
+                </div>
+            {/if}
+        </div>
     </div>
-  {/if}
 </section>
 
 <style>
-  .chart-block {
-    margin: var(--block-space) auto;
-    max-width: min(var(--wide), calc(100vw - (var(--gutter) * 2)));
-  }
+    .chart-block {
+        margin: var(--block-space) auto;
+        max-width: min(var(--wide), calc(100vw - (var(--gutter) * 2)));
+    }
 
-  .chart-block__intro {
-    margin: 0 auto var(--space-4);
-    max-width: var(--measure);
-  }
+    .chart-block__intro {
+        margin: 0 auto var(--space-4);
+        max-width: var(--measure);
+    }
 
-  .chart-block__intro h2 {
-    color: var(--color-accent-2);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-heading);
-    line-height: var(--line-height-heading);
-    margin: 0 0 var(--space-2);
-    text-wrap: balance;
-  }
+    .chart-block__intro h2 {
+        color: var(--color-accent-2);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-heading);
+        line-height: var(--line-height-heading);
+        margin: 0 0 var(--space-2);
+        text-wrap: balance;
+    }
 
-  .chart-block__intro .caption {
-    margin: 0;
-  }
+    .chart-block__intro .caption {
+        margin: 0;
+        max-width: 100%;
+    }
 
-  .chart-control {
-    align-items: center;
-    display: flex;
-    gap: var(--space-2);
-    justify-content: flex-end;
-    margin: 0 0 var(--space-3);
-  }
+    .chart-block__summary {
+        color: var(--color-muted);
+        font-family: var(--font-serif);
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-body);
+        line-height: var(--line-height-body);
+        margin: var(--space-2) 0 0;
+        max-width: var(--measure-prose);
+    }
 
-  .chart-control label {
-    color: var(--color-muted);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-  }
+    .chart-block__summary :global(strong) {
+        color: var(--color-accent-2);
+        font-weight: 600;
+    }
 
-  .chart-control select {
-    appearance: none;
-    background: transparent;
-    border: 1px solid var(--color-line);
-    border-radius: 0;
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-    padding: 0.5rem 2rem 0.5rem 0.75rem;
-  }
-
-  .chart-control select:disabled {
-    color: var(--color-faint);
-  }
-
-  .plot-container {
-    overflow-x: auto;
-    padding-bottom: var(--space-2);
-  }
-
-  .plot-host {
-    min-width: min(42rem, 100%);
-  }
-
-  .plot-host :global(svg) {
-    height: auto;
-    max-width: none;
-  }
-
-  .plot-host :global(.plot) {
-    color: var(--color-ink);
-  }
-
-  .plot-host :global(.plot text),
-  .plot-host :global(.plot legend) {
-    font-family: var(--font-sans);
-  }
-
-  .plot-host :global(.plot .domain) {
-    stroke: var(--color-line);
-  }
-
-  .plot-host :global(.plot .tick line),
-  .plot-host :global(.plot .grid line) {
-    stroke: #ded7cb;
-  }
-
-  .plot-host :global(.plot .tick text),
-  .plot-host :global(.plot .label),
-  .plot-host :global(.plot .legend text) {
-    fill: var(--color-muted);
-  }
-
-  .chart-block__status {
-    color: var(--color-muted);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-small);
-    margin: 0;
-  }
-
-  @media (max-width: 700px) {
     .chart-control {
-      justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        justify-content: flex-start;
+        margin: 0 auto var(--space-3);
+        max-width: var(--measure-prose);
+    }
+
+    .chart-control label {
+        color: var(--color-muted);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+    }
+
+    .chart-control select {
+        appearance: none;
+        background: transparent;
+        border: 1px solid var(--color-line);
+        border-radius: 0;
+        color: var(--color-ink);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+        padding: 0.5rem 2rem 0.5rem 0.75rem;
+    }
+
+    .chart-control select:disabled {
+        color: var(--color-faint);
+    }
+
+    .count-pills {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: var(--space-1);
+    }
+
+    .count-pills button {
+        appearance: none;
+        background: transparent;
+        border: 1px solid var(--color-line);
+        border-radius: 999px;
+        color: var(--color-muted);
+        cursor: pointer;
+        font-family: var(--font-sans);
+        font-size: var(--font-size-small);
+        line-height: 1;
+        padding: 0.5rem 0.8rem;
+        transition:
+            background-color 120ms ease,
+            border-color 120ms ease,
+            color 120ms ease;
+    }
+
+    .count-pills button:hover,
+    .count-pills button:focus-visible {
+        border-color: var(--color-line-strong);
+        color: var(--color-ink);
+    }
+
+    .count-pills button.active {
+        background: var(--color-accent-2);
+        border-color: var(--color-accent-2);
+        color: var(--color-paper);
+    }
+
+    .chart-stage {
+        margin: 0 auto;
+        max-width: var(--wide);
+    }
+
+    .plot-frame {
+        margin: 0 auto;
+        max-width: var(--wide);
+        width: 100%;
+    }
+
+    .plot-container {
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+        padding-bottom: var(--space-2);
     }
 
     .plot-host {
-      min-width: 40rem;
+        min-width: 100%;
+        width: 100%;
     }
-  }
+
+    .plot-host :global(svg) {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .plot-host :global(.plot) {
+        color: var(--color-ink);
+    }
+
+    .plot-host :global(.plot .domain) {
+        stroke: var(--color-line);
+    }
+
+    .plot-host :global(.plot .tick line),
+    .plot-host :global(.plot .grid line) {
+        stroke: #ded7cb;
+    }
+
+    .chart-block__status {
+        color: var(--color-muted);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-small);
+        margin: 0;
+    }
+
+    @media (max-width: 700px) {
+        .chart-control {
+            justify-content: flex-start;
+        }
+
+        .chart-stage {
+            max-width: none;
+        }
+
+        .plot-host {
+            min-width: 100%;
+        }
+    }
 </style>
