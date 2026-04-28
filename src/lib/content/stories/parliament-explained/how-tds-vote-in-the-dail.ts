@@ -56,8 +56,12 @@ export const howDoTDsVoteInTheDail: Story = {
           overlayPosition: "left-center",
           focus: { x: 50, y: 45, scale: 1.03 },
           image: {
-            src: "/media/division-called.mp4",
+            src: "/media/ceann_comhairle_in_dail.jpg",
             alt: "A division or vote is called in the Dáil Chamber.",
+          },
+          video: {
+            src: "/media/division-called.mp4",
+            poster: "/media/ceann_comhairle_in_dail.jpg",
           },
         },
       ],
@@ -96,8 +100,12 @@ export const howDoTDsVoteInTheDail: Story = {
           overlayPosition: "right-center",
           focus: { x: 50, y: 42, scale: 1.02 },
           image: {
-            src: "/media/division-in-dail.mp4",
+            src: "/media/ceann_comhairle_in_the_chair.jpg",
             alt: "The Ceann Comhairle puts a question formally to the Dáil",
+          },
+          video: {
+            src: "/media/division-in-dail.mp4",
+            poster: "/media/ceann_comhairle_in_the_chair.jpg",
           },
         },
         {
@@ -107,8 +115,12 @@ export const howDoTDsVoteInTheDail: Story = {
           overlayPosition: "left-center",
           focus: { x: 50, y: 44, scale: 1.02 },
           image: {
-            src: "/media/dail-vote-screen.mp4",
+            src: "/media/full_chamber.jpg",
             alt: "A voting process in the Dáil Chamber",
+          },
+          video: {
+            src: "/media/dail-vote-screen.mp4",
+            poster: "/media/full_chamber.jpg",
           },
         },
         {
