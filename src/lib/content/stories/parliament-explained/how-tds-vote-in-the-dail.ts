@@ -125,7 +125,7 @@ export const howDoTDsVoteInTheDail: Story = {
         },
         {
           title: "Announcement of the vote results",
-          body: "When the time for voting expires, the results are given to designated TDs called <strong>tellers</strong>, who sign the results and present them to the Chair.",
+          body: "When the time for voting expires, the results are given to designated TDs called tellers, who sign the results and present them to the Chair.",
           //placeLabel: "Dáil Chamber",
           overlayPosition: "right-center",
           focus: { x: 50, y: 46, scale: 1.03 },
