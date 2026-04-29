@@ -9,7 +9,7 @@
     <title>Inside Parliament</title>
     <meta
         name="description"
-        content="Browse long-form media stories from Inside Parliament."
+        content="Browse our stories from Inside Parliament."
     />
 </svelte:head>
 
@@ -28,11 +28,24 @@
             <article>
                 <a href="{base}/stories/{story.slug}/">
                     {#if isVideoHero(story.hero.src)}
-                        <video autoplay muted loop playsinline aria-hidden="true">
-                            <source src="{base}{story.hero.src}" type="video/mp4" />
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            aria-hidden="true"
+                        >
+                            <source
+                                src="{base}{story.hero.src}"
+                                type="video/mp4"
+                            />
                         </video>
                     {:else}
-                        <img src="{base}{story.hero.src}" alt="" loading="lazy" />
+                        <img
+                            src="{base}{story.hero.src}"
+                            alt=""
+                            loading="lazy"
+                        />
                     {/if}
                     <div>
                         <p>{story.eyebrow}</p>
@@ -52,7 +65,8 @@
     }
 
     header {
-        border-bottom: 1px solid color-mix(in srgb, var(--color-line) 55%, transparent);
+        border-bottom: 1px solid
+            color-mix(in srgb, var(--color-line) 55%, transparent);
         margin-bottom: var(--space-section);
         padding-bottom: var(--space-6);
     }

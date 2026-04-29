@@ -152,12 +152,12 @@ a:focus-visible {
 
 .brand {
   align-items: center;
-  color: inherit;
+  color: var(--color-accent-2);
   display: inline-flex;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  gap: 0.52rem;
-  letter-spacing: 0;
+  gap: 0.62rem;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
@@ -165,13 +165,13 @@ a:focus-visible {
 
 .brand-mark {
   align-items: center;
-  color: color-mix(in srgb, var(--color-accent) 72%, var(--color-faint));
+  color: color-mix(in srgb, var(--color-accent) 88%, var(--color-faint));
   display: inline-flex;
   flex: 0 0 auto;
-  height: 15px;
+  height: 18px;
   justify-content: center;
   transform: translateY(-0.05em);
-  width: 35px;
+  width: 42px;
 }
 
 .brand-mark svg {

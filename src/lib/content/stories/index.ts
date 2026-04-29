@@ -13,14 +13,14 @@ export const storySections: StorySectionMeta[] = [
     title: "Parliament Now",
     //eyebrow: "Current work",
     intro:
-      "A running account of activity across the Houses of the Oireachtas.",
+      "The latest from Leinster House, the seat of the Houses of the Oireachtas.",
   },
   {
     slug: "parliament-explained",
     title: "Parliament Explained",
     //eyebrow: "Civic explainers",
     intro:
-      "Explore our guides to how Parliament works, including the work of Members, what happens in the Chambers, votes and our legislative process.",
+      "Explore our guides to how Parliament works, including what Members do, what happens in the Chambers, votes and our legislative process.",
   },
   {
     slug: "parliament-at-work",
@@ -46,7 +46,7 @@ const storyList: Story[] = Object.entries(storyModules)
   .map(([, story]) => story);
 
 export const stories: Story[] = [...storyList].sort(
-  (a, b) => storyDateValue(b) - storyDateValue(a)
+  (a, b) => storyDateValue(b) - storyDateValue(a),
 );
 
 export function getStory(slug: string) {
