@@ -4,12 +4,12 @@ export const thisWeekInTheChamber: Story = {
   slug: "this-week-dail-eireann",
   section: "parliament-now",
   heroLayout: "contained",
-  eyebrow: "The week ahead",
+  eyebrow: "The week ahead | 28-30 April",
   title: "Dáil Éireann",
-  dek: "Report Stage of the Social Welfare Bill will take place on Tuesday and Wednesday this week. Private Members' time will see debates on the agriculture sector and financial assistance for home carers.",
+  dek: "Report Stage of the Social Welfare Bill will take place on Tuesday. Private Members' time will see a Labour Party motion on the agriculture sector and a Sinn Féin Bill proposing financial assistance for home carers.",
   byline: "David Cass",
   date: "April 22, 2026",
-  readingTime: "4 min read",
+  readingTime: "2 min read",
   hero: {
     src: "/media/deputy_bacik.jpg",
     alt: "A wide view of the Dáil Chamber with the Taoiseach speaking during parliamentary business.",
@@ -17,39 +17,55 @@ export const thisWeekInTheChamber: Story = {
   blocks: [
     {
       type: "text",
-      heading: "What to Watch",
+      heading: "Government business",
       paragraphs: [
-        "The week’s parliamentary business often moves across several registers at once: chamber debate, committee scrutiny, written questions and the quieter work of preparing amendments or reports.",
-        "This update format is intended for stories that need to feel immediate without becoming a live blog. It gives editors room to explain what is happening now and why it matters.",
+        "Government business  on Tuesday will be Report Stage of the <strong>Social Welfare Bill 2026</strong>. There are more than 30 proposed amendments to the legislation to be dealt with.",
+        "On Wednesday there will be <strong>statements on fuel prices</strong> and the regular <strong>discussion of European Council priorities</strong> before the Taoiseach attends a summit in Copenhagen on Friday.",
+        "Questions this week will be directed to the Minister for Finance on Wednesday morning and the Minister for Defence on Thursday.",
       ],
     },
     {
       type: "media-text",
-      eyebrow: "Current business",
-      heading: "A compact update with context",
+      //eyebrow: "Private Members' time",
+      heading: "Private Member's time",
       paragraphs: [
-        "A contained media block can carry a short clip or still image beside the essential context, keeping the piece sharp while preserving the editorial reading flow.",
+        "The Labour Party's motion on <strong>supports for the agriculture sector</strong> will be debated on Wednesday morning.",
+        "The motion calls for tax reliefs for certain agricultural services and the extension of low-cost loans where needed.",
+        "Second Stage of the <strong>Home Carers (Taxation of Income) Bill 2026</strong>, proposed by Sinn Féin's Deputy Pearse Doherty, will taken place on Thursday evening.",
+        "The Bill proposes the exclusion of certain earnings by home carers from the tax net and the extension of certain income disregards for full and part-time carers.",
       ],
       media: {
         type: "video",
         asset: {
-          src: "/media/transparency_seanad.mp4",
+          src: "/media/Socials_tease-2.mp4",
           poster: "/media/full_chamber.jpg",
           caption:
-            "Current-feeling pieces can use short ambient motion without requiring a full-width video chapter.",
+            "A round-up of what's expected to be discussed this week in Dáil Éireann",
         },
       },
     },
     {
-      type: "quote",
-      text: "The useful question for readers is simple: what is moving this week, and what should I understand before it moves further?",
-      attribution: "Inside Parliament editorial note",
+      type: "text",
+      heading: "Other business",
+      paragraphs: [
+        "Legislation dealing with an inquiry into the Omagh bombing will be discussed on Wednesday. Second Stage of the Mental Health Bill 2026 continues on Thursday and motion on the voting rights of persons in presidential elections is also scheduled to be discussed.",
+      ],
     },
     {
-      type: "text",
-      heading: "What Happens Next",
-      paragraphs: [
-        "The next stage may be a vote, a committee session, a report or a return to departmental correspondence. The update should leave readers with enough structure to follow that next step when it arrives.",
+      type: "link-list",
+      eyebrow: "Explore further",
+      links: [
+        {
+          label: "Schedule of Dáil business",
+          href: "https://www.oireachtas.ie/en/dail-schedule-display-view/",
+          description: "The detailed schedule for the week ahead",
+        },
+        {
+          label: "Dáil Éireann video on demand",
+          href: "https://www.oireachtas.ie/en/oireachtas-tv/video-on-demand/?house=dail",
+          description:
+            "Watch recent and archived video on demand from Dáil sittings",
+        },
       ],
     },
   ],
