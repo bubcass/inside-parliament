@@ -80,6 +80,71 @@
         return `https://data.oireachtas.ie/ie/oireachtas/member/id/${encodeURI(uri)}/image/thumb`;
     }
 
+    function chartBaseId() {
+        return `plot-${(block.chart ?? "story-chart").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
+    }
+
+    function chartAriaLabel() {
+        const title = block.title?.trim() || "Ceann Comhairle election chart";
+        const year = selectedYear !== null ? `, ${selectedYear}` : "";
+        const count = selectedCount !== null ? `, count ${selectedCount}` : "";
+        return `${title}. Waffle chart showing Ceann Comhairle election vote totals by candidate and count status${year}${count}.`;
+    }
+
+    function chartAriaDescription() {
+        const caption = block.caption?.trim();
+        const summary =
+            selectedCount !== null && quota
+                ? `The chart updates by selected count and shows each candidate's vote total, status and progress towards the quota of ${quota} votes.`
+                : "The chart updates by selected count and shows each candidate's vote total, status and progress towards the quota.";
+
+        return caption ? `${caption} ${summary}` : summary;
+    }
+
+    function applyPlotAccessibility(plot: Element) {
+        const svgs =
+            plot instanceof SVGSVGElement
+                ? [plot]
+                : Array.from(plot.querySelectorAll("svg"));
+
+        if (!svgs.length) return;
+
+        const svg = svgs[svgs.length - 1];
+
+        const baseId = chartBaseId();
+        const titleId = `${baseId}-title`;
+        const descId = `${baseId}-desc`;
+
+        svg.setAttribute("role", "img");
+        svg.setAttribute("aria-labelledby", `${titleId} ${descId}`);
+
+        let title = svg.querySelector("title") as SVGTitleElement | null;
+        if (!title) {
+            title = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "title",
+            ) as SVGTitleElement;
+            svg.prepend(title);
+        }
+        title.setAttribute("id", titleId);
+        title.textContent = chartAriaLabel();
+
+        let desc = svg.querySelector("desc") as SVGDescElement | null;
+        if (!desc) {
+            desc = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "desc",
+            ) as SVGDescElement;
+            title.after(desc);
+        }
+        desc.setAttribute("id", descId);
+        desc.textContent = chartAriaDescription();
+
+        for (const node of plot.querySelectorAll("g[aria-label]")) {
+            node.removeAttribute("aria-label");
+        }
+    }
+
     onMount(() => {
         let resizeObserver: ResizeObserver | null = null;
 
@@ -273,6 +338,7 @@
                 ],
             });
 
+            applyPlotAccessibility(plot);
             plotHost.append(plot);
             plotElement = plot;
             errorMessage = null;

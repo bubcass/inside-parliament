@@ -73,6 +73,7 @@
   let tooltip = $state<Tooltip | null>(null);
   let errorMessage = $state<string | null>(null);
   let mapRoot: HTMLDivElement | undefined = $state();
+  let frameRoot: HTMLDivElement | undefined = $state();
 
   const partyColorMap: Record<string, string> = {
     'Fianna Fáil': '#2c8737',
@@ -96,6 +97,16 @@
   };
 
   const clean = (value: unknown) => (value == null ? '' : String(value).trim());
+
+  let blockSlug = $derived(
+    (block.title || 'vote-map')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+  );
+  let frameLabelId = $derived(`${blockSlug}-vote-map-label`);
+  let frameHintId = $derived(`${blockSlug}-vote-map-hint`);
+  let frameCaptionId = $derived(`${blockSlug}-vote-map-caption`);
 
   function normaliseMemberApiRows(rows: MemberRow[]): Member[] {
     return rows.map((row) => {
@@ -201,6 +212,20 @@
         ]
       : []
   );
+
+  function handleFrameKeydown(event: KeyboardEvent) {
+    if (!frameRoot) return;
+
+    const step = 80;
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      frameRoot.scrollBy({ left: step, behavior: 'smooth' });
+    } else if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      frameRoot.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  }
 
   onMount(() => {
     async function load() {
@@ -365,7 +390,7 @@
     <p class="vote-map-block__status">Loading chamber vote map…</p>
   {:else}
     <div class="vote-map-block__summary">
-      <h3 class="vote-map-block__subject">{selectedVote.debateShowAs || selectedVote.subject}</h3>
+      <h3 id={frameLabelId} class="vote-map-block__subject">{selectedVote.debateShowAs || selectedVote.subject}</h3>
       <div class="vote-map-block__tallies" aria-label="Vote tallies">
         {#each tallyItems as item}
           <span class="tally-chip">
@@ -374,9 +399,22 @@
           </span>
         {/each}
       </div>
+      <p id={frameHintId} class="vote-map-block__hint">
+        On smaller screens, swipe horizontally to explore the chamber map.
+      </p>
     </div>
 
-    <div class="vote-map-frame">
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <div
+      bind:this={frameRoot}
+      class="vote-map-frame"
+      role="region"
+      tabindex="0"
+      aria-labelledby={frameLabelId}
+      aria-describedby={block.caption ? `${frameHintId} ${frameCaptionId}` : frameHintId}
+      onkeydown={handleFrameKeydown}
+    >
       <div bind:this={mapRoot} class="vote-map-wrap">
         <div class="vote-map__svg" aria-label="Dáil chamber vote map">
           {@html svgMarkup}
@@ -443,7 +481,7 @@
     {/if}
 
     {#if block.caption}
-      <p class="caption vote-map-block__caption">{block.caption}</p>
+      <p id={frameCaptionId} class="caption vote-map-block__caption">{block.caption}</p>
     {/if}
   {/if}
 </section>
@@ -502,6 +540,14 @@
     margin-top: var(--space-3);
   }
 
+  .vote-map-block__hint {
+    color: var(--color-faint);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    margin: var(--space-2) 0 0;
+  }
+
   .tally-chip {
     align-items: center;
     color: var(--color-ink);
@@ -524,6 +570,11 @@
     border: 1px solid var(--color-line);
     overflow-x: auto;
     padding: var(--space-4);
+  }
+
+  .vote-map-frame:focus-visible {
+    outline: 2px solid var(--color-accent-2);
+    outline-offset: 2px;
   }
 
   .vote-map-wrap {
@@ -670,8 +721,18 @@
       min-width: 42rem;
     }
 
+    .vote-map-block__hint {
+      display: block;
+    }
+
     .vote-map-card__meta {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 701px) {
+    .vote-map-block__hint {
+      display: none;
     }
   }
 </style>
