@@ -12,7 +12,7 @@ export const thisWeekInTheChamber: Story = {
   readingTime: "2 min read",
   hero: {
     src: "/media/deputy_bacik.jpg",
-    alt: "A wide view of the Dáil Chamber with the Taoiseach speaking during parliamentary business.",
+    alt: "Deputy Ivana Bacik speaks in the Dáil Chamber",
   },
   blocks: [
     {
