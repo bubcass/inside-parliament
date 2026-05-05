@@ -100,16 +100,6 @@
           src: assetUrl('/brand/Inside Parliament.png', artworkVersion),
           sizes: '1080x1350',
           type: 'image/png'
-        },
-        {
-          src: assetUrl('/icons/icon-192.png', artworkVersion),
-          sizes: '192x192',
-          type: 'image/png'
-        },
-        {
-          src: assetUrl('/icons/icon-512.png', artworkVersion),
-          sizes: '512x512',
-          type: 'image/png'
         }
       ]
     });
