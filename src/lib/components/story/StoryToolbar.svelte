@@ -43,9 +43,17 @@
     return window.location.href;
   }
 
-  function assetUrl(path: string) {
-    if (!isClient) return `${base}${path}`;
-    return new URL(`${base}${path}`, window.location.origin).toString();
+  function assetUrl(path: string, version?: string) {
+    if (!isClient) {
+      return version ? `${base}${path}?v=${version}` : `${base}${path}`;
+    }
+
+    const url = new URL(`${base}${path}`, window.location.origin);
+    if (version) {
+      url.searchParams.set('v', version);
+    }
+
+    return url.toString();
   }
 
   function clearFeedbackSoon() {
@@ -80,23 +88,29 @@
   function configureMediaSession() {
     if (!isClient || !audio || !generatedAudioSrc || !('mediaSession' in navigator)) return;
 
+    navigator.mediaSession.metadata = null;
+    const artworkVersion = `story-${story.slug}-${Date.now()}`;
+
     navigator.mediaSession.metadata = new MediaMetadata({
       title: story.title,
       artist: 'Inside Parliament',
       album: 'Inside Parliament',
       artwork: [
         {
-          src: assetUrl('/brand/Inside%20Parliament.png'),
+          src: assetUrl('/brand/Inside Parliament.png', artworkVersion),
           sizes: '1080x1350',
           type: 'image/png'
         },
         {
-          src: assetUrl('/icons/inside-parliament-lockup-square.svg'),
-          sizes: '512x512',
-          type: 'image/svg+xml'
+          src: assetUrl('/icons/icon-192.png', artworkVersion),
+          sizes: '192x192',
+          type: 'image/png'
         },
-        { src: assetUrl('/icons/icon-192.png'), sizes: '192x192', type: 'image/png' },
-        { src: assetUrl('/icons/icon-512.png'), sizes: '512x512', type: 'image/png' }
+        {
+          src: assetUrl('/icons/icon-512.png', artworkVersion),
+          sizes: '512x512',
+          type: 'image/png'
+        }
       ]
     });
 
