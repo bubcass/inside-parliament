@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { StoryBlock } from '$lib/content/types';
   import ChartBlock from './blocks/ChartBlock.svelte';
+  import FlourishBlock from './blocks/FlourishBlock.svelte';
   import VoteMapBlock from './blocks/VoteMapBlock.svelte';
   import ImageBlock from './ImageBlock.svelte';
   import LinkListBlock from './LinkListBlock.svelte';
@@ -18,6 +19,8 @@
   <TextBlock {block} />
 {:else if block.type === 'chart'}
   <ChartBlock {block} />
+{:else if block.type === 'flourish'}
+  <FlourishBlock {block} />
 {:else if block.type === 'vote-map'}
   <VoteMapBlock {block} />
 {:else if block.type === 'media-text'}

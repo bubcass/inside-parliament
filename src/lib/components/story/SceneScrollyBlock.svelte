@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { base } from '$app/paths';
   import type { SceneScrollyBlock, SceneScrollyStep } from '$lib/content/types';
+  import { autoplayWhileVisible } from './videoAutoplayViewport';
 
   let { block }: { block: SceneScrollyBlock } = $props();
   let activeIndex = $state(0);
@@ -75,7 +76,8 @@
         >
           {#if step.video}
             <video
-              autoplay
+              use:autoplayWhileVisible={{ enabled: step.video.autoplay ?? true }}
+              autoplay={step.video.autoplay ?? true}
               muted
               loop
               playsinline
@@ -128,7 +130,8 @@
           <figure class="mobile-figure">
             {#if step.video}
               <video
-                autoplay
+                use:autoplayWhileVisible={{ enabled: step.video.autoplay ?? true }}
+                autoplay={step.video.autoplay ?? true}
                 muted
                 loop
                 playsinline

@@ -3,6 +3,7 @@ export type StoryBlock =
   | MediaTextBlock
   | ImageBlock
   | VideoBlock
+  | FlourishStoryBlock
   | ChartStoryBlock
   | VoteMapStoryBlock
   | LinkListBlock
@@ -38,6 +39,7 @@ export interface ImageAsset {
 
 export interface VideoAsset {
   src: string;
+  autoplay?: boolean;
   poster?: string;
   captions?: string | null;
   caption?: string | null;
@@ -73,6 +75,15 @@ export interface ImageBlock {
 export interface VideoBlock {
   type: 'video';
   video: VideoAsset;
+}
+
+export interface FlourishStoryBlock {
+  type: 'flourish';
+  embedType?: 'chart' | 'story' | 'visualisation';
+  dataSrc: string;
+  thumbnail?: string;
+  alt?: string;
+  caption?: string;
 }
 
 export interface ChartStoryBlock {

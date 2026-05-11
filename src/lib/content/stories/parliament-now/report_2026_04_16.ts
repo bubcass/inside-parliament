@@ -7,8 +7,8 @@ export const report20260416: Story = {
   eyebrow: "Report | Joint Committee on Justice",
   title: "National Cyber Security Bill 2026",
   dek: "Pre-legislative scrutiny highlights the a need for a grace period following the implementation of the proposed legislation and increasing the guidance available to affected stakeholders.",
-  byline: "Stephen Higgins",
-  date: "April 16, 2026",
+  byline: "Angharad Williams",
+  date: "May 9, 2026",
   readingTime: "5 min read",
   hero: {
     src: "/media/report_launch.jpg",

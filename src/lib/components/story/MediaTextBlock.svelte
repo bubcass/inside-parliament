@@ -1,11 +1,35 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import type { ImageAsset, MediaTextBlock, VideoAsset } from '$lib/content/types';
+  import { autoplayWhileVisible } from './videoAutoplayViewport';
+  import { shareVideoAsset } from './videoShare';
 
   let { block }: { block: MediaTextBlock } = $props();
   let mediaSide = $derived(block.mediaSide ?? 'right');
   let image = $derived(block.media.type === 'image' ? (block.media.asset as ImageAsset) : undefined);
   let video = $derived(block.media.type === 'video' ? (block.media.asset as VideoAsset) : undefined);
+  let shareFeedback = $state('');
+
+  function clearFeedbackSoon() {
+    window.setTimeout(() => {
+      shareFeedback = '';
+    }, 1800);
+  }
+
+  async function shareVideo() {
+    if (!video) return;
+
+    const result = await shareVideoAsset({
+      src: video.src,
+      title: 'Inside Parliament video',
+      text: video.caption ?? undefined
+    });
+
+    if (result === 'copied') {
+      shareFeedback = 'Link copied';
+      clearFeedbackSoon();
+    }
+  }
 </script>
 
 <section class="media-text {mediaSide}">
@@ -34,7 +58,8 @@
       {/if}
     {:else if video}
       <video
-        autoplay
+        use:autoplayWhileVisible={{ enabled: video.autoplay ?? true }}
+        autoplay={video.autoplay ?? true}
         controls
         controlslist="nodownload noremoteplayback"
         disablepictureinpicture
@@ -56,6 +81,14 @@
           />
         {/if}
       </video>
+      <div class="video-actions">
+        <button type="button" class="video-action" onclick={shareVideo}>
+          Share video
+        </button>
+        {#if shareFeedback}
+          <span class="video-feedback" role="status">{shareFeedback}</span>
+        {/if}
+      </div>
       {#if video.caption || video.credit}
         <figcaption class="caption">
           {video.caption}
@@ -159,6 +192,40 @@
 
   .video-figure video {
     margin: 0 auto;
+  }
+
+  .video-actions {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: var(--space-3);
+  }
+
+  .video-action {
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--color-line) 82%, transparent);
+    border-radius: var(--radius);
+    color: var(--color-accent-2);
+    cursor: pointer;
+    font: inherit;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .video-action:hover,
+  .video-action:focus-visible {
+    color: var(--link-hover);
+  }
+
+  .video-feedback {
+    color: var(--color-muted);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: var(--line-height-small);
+    margin-top: 0;
   }
 
   .caption {
