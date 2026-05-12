@@ -344,11 +344,6 @@
     margin-top: 0;
   }
 
-  .story-hero.split + :global(.story-toolbar),
-  .story-hero.immersive + :global(.story-toolbar) {
-    padding-top: var(--space-4);
-  }
-
   @media (max-width: 860px) {
     .story-hero.split,
     .story-hero.contained {

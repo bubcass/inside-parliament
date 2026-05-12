@@ -18,5 +18,10 @@
     "src": "/audio/stories/zelenskyy-visit-Louise.mp3",
     "generatedAt": "2026-05-03T00:00:00.000Z",
     "provider": "manual-elevenlabs"
+  },
+  "europe-day-2026-2026-05-11": {
+    "src": "/audio/stories/europe-day-2026.mp3",
+    "generatedAt": "2026-05-12T00:00:00.000Z",
+    "provider": "manual-elevenlabs"
   }
 }
