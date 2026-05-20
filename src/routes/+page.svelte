@@ -1,6 +1,7 @@
 <script lang="ts">
     import { base } from "$app/paths";
     import { onMount } from "svelte";
+    import ShortsCarousel from "$lib/components/home/ShortsCarousel.svelte";
     import { readBookmarks } from "$lib/components/story/bookmarks";
     import type { Story } from "$lib/content/types";
     import { stories } from "$lib/content/stories";
@@ -10,6 +11,58 @@
     const secondaryStories = featuredStory
         ? stories.filter((story) => story.slug !== featuredStory.slug)
         : stories;
+    const leadingStories = secondaryStories.slice(0, 4);
+    const trailingStories = secondaryStories.slice(4);
+    const shortVideos = [
+        {
+            slug: "health-report-23-April",
+            title: "Oversight of children in care",
+            eyebrow: "Committee report",
+            date: "16 May 2026",
+            poster: "/media/report-launch-example.jpg",
+            src: "/media/Committee_launch.mp4",
+        },
+        {
+            slug: "europe-day-2026-2026-05-11",
+            title: "Turning history's wounds into shared strengths",
+            eyebrow: "Europe Day 2026",
+            date: "11 May 2026",
+            poster: "/media/european-flag.png",
+            src: "/media/Cathaoirleach_Europe_Day.mp4",
+        },
+        {
+            slug: "ceann-comhairle-europe-day-2026-05-11",
+            title: "European unity in a time of uncertainty",
+            eyebrow: "Europe Day",
+            date: "11 May 2026",
+            poster: "/media/ceann-comhairle-europe-day.png",
+            src: "/media/ceann-comhairle-europe-day.mp4",
+        },
+        {
+            slug: "this-week-dail-eireann",
+            title: "This week in Dáil Éireann",
+            eyebrow: "The week ahead",
+            date: "22 April 2026",
+            poster: "/media/full_chamber.png",
+            src: "/media/Socials_tease-2.mp4",
+        },
+        {
+            slug: "the-seanad-at-work",
+            title: "European scrutiny in the Seanad",
+            eyebrow: "Parliament at Work",
+            date: "22 April 2026",
+            poster: "/media/cathaoirleach.png",
+            src: "/media/transparency_seanad.mp4",
+        },
+        {
+            slug: "how-do-tds-vote-in-the-dail",
+            title: "How do TDs vote in the Dáil?",
+            eyebrow: "Parliament Essentials",
+            date: "23 April 2026",
+            poster: "/media/ceann_comhairle_in_the_chair.jpg",
+            src: "/media/division-in-dail.mp4",
+        },
+    ];
     const isVideoHero = (src: string) => src.toLowerCase().endsWith(".mp4");
     let bookmarked = $state<Set<string>>(new Set());
 
@@ -26,17 +79,6 @@
     />
 </svelte:head>
 
-<section class="home-hero page-shell">
-    <div>
-        <p class="eyebrow">See for yourself</p>
-        <h1>Inside Parliament</h1>
-    </div>
-    <p class="lede">
-        Get to know the work of the Houses of the Oireachtas with our news
-        updates, explainers and in-depth features of how your Parliament works.
-    </p>
-</section>
-
 <section class="story-index page-shell">
     {#if featuredStory}
         <article class="featured-story">
@@ -52,11 +94,16 @@
                     <span class="featured-summary">
                         {plainTextFromHtml(featuredStory.dek)}
                     </span>
-                    <small>{featuredStory.date} · {featuredStory.readingTime}</small>
+                    <small
+                        >{featuredStory.date} · {featuredStory.readingTime}</small
+                    >
                 </div>
                 {#if isVideoHero(featuredStory.hero.src)}
                     <video autoplay muted loop playsinline aria-hidden="true">
-                        <source src="{base}{featuredStory.hero.src}" type="video/mp4" />
+                        <source
+                            src="{base}{featuredStory.hero.src}"
+                            type="video/mp4"
+                        />
                     </video>
                 {:else}
                     <img
@@ -70,15 +117,28 @@
     {/if}
 
     <div class="secondary-grid">
-        {#each secondaryStories as story}
+        {#each leadingStories as story}
             <article class="secondary-story">
                 <a href="{base}/stories/{story.slug}/">
                     {#if isVideoHero(story.hero.src)}
-                        <video autoplay muted loop playsinline aria-hidden="true">
-                            <source src="{base}{story.hero.src}" type="video/mp4" />
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            aria-hidden="true"
+                        >
+                            <source
+                                src="{base}{story.hero.src}"
+                                type="video/mp4"
+                            />
                         </video>
                     {:else}
-                        <img src="{base}{story.hero.src}" alt="" loading="lazy" />
+                        <img
+                            src="{base}{story.hero.src}"
+                            alt=""
+                            loading="lazy"
+                        />
                     {/if}
                     <div class="secondary-copy">
                         <div class="story-context">
@@ -88,7 +148,53 @@
                             {/if}
                         </div>
                         <h3>{story.title}</h3>
-                        <span class="secondary-summary">{plainTextFromHtml(story.dek)}</span>
+                        <span class="secondary-summary"
+                            >{plainTextFromHtml(story.dek)}</span
+                        >
+                        <small>{story.date} · {story.readingTime}</small>
+                    </div>
+                </a>
+            </article>
+        {/each}
+    </div>
+
+    <ShortsCarousel items={shortVideos} />
+
+    <div class="secondary-grid">
+        {#each trailingStories as story}
+            <article class="secondary-story">
+                <a href="{base}/stories/{story.slug}/">
+                    {#if isVideoHero(story.hero.src)}
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            aria-hidden="true"
+                        >
+                            <source
+                                src="{base}{story.hero.src}"
+                                type="video/mp4"
+                            />
+                        </video>
+                    {:else}
+                        <img
+                            src="{base}{story.hero.src}"
+                            alt=""
+                            loading="lazy"
+                        />
+                    {/if}
+                    <div class="secondary-copy">
+                        <div class="story-context">
+                            <p>{story.eyebrow}</p>
+                            {#if bookmarked.has(story.slug)}
+                                <span class="saved-chip">Saved</span>
+                            {/if}
+                        </div>
+                        <h3>{story.title}</h3>
+                        <span class="secondary-summary"
+                            >{plainTextFromHtml(story.dek)}</span
+                        >
                         <small>{story.date} · {story.readingTime}</small>
                     </div>
                 </a>
@@ -98,31 +204,8 @@
 </section>
 
 <style>
-    .home-hero {
-        align-items: end;
-        border-bottom: 1px solid color-mix(in srgb, var(--color-line) 55%, transparent);
-        display: grid;
-        gap: var(--space-6);
-        grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
-        min-height: 0;
-        padding-bottom: var(--space-8);
-        padding-top: clamp(var(--space-8), 8vw, 5rem);
-    }
-
-    h1 {
-        color: var(--color-accent-2);
-        font-family: var(--font-sans);
-        font-size: var(--font-size-h1);
-        font-weight: var(--font-weight-heading);
-        letter-spacing: 0;
-        line-height: var(--line-height-heading);
-        margin: 0;
-        max-width: 14ch;
-        text-wrap: balance;
-    }
-
     .story-index {
-        padding-top: var(--space-8);
+        padding-top: clamp(var(--space-7), 6vw, 4rem);
     }
 
     .featured-story {
@@ -130,7 +213,8 @@
     }
 
     .featured-story a {
-        border-bottom: 1px solid color-mix(in srgb, var(--color-line) 62%, transparent);
+        border-bottom: 1px solid
+            color-mix(in srgb, var(--color-line) 62%, transparent);
         display: grid;
         gap: clamp(var(--space-6), 4vw, var(--space-8));
         grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
@@ -164,7 +248,8 @@
     .saved-chip {
         -webkit-text-size-adjust: 100%;
         align-self: center;
-        border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+        border: 1px solid
+            color-mix(in srgb, var(--color-accent) 35%, transparent);
         border-radius: 999px;
         color: var(--color-muted);
         display: inline-flex;
@@ -271,14 +356,6 @@
     }
 
     @media (max-width: 760px) {
-        .home-hero {
-            display: block;
-        }
-
-        .home-hero .lede {
-            margin-top: 1.5rem;
-        }
-
         .featured-story a {
             gap: var(--space-5);
             padding-bottom: var(--space-6);
