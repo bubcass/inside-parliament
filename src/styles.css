@@ -192,7 +192,17 @@ a:focus-visible {
   font-weight: 600;
   justify-content: flex-end;
   letter-spacing: 0.08em;
+  position: relative;
   text-transform: uppercase;
+}
+
+.site-nav > .nav-links::before {
+  color: color-mix(in srgb, var(--color-line-strong) 82%, var(--color-faint));
+  content: "|";
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 0.35rem;
 }
 
 .nav-links a {
@@ -219,6 +229,10 @@ a:focus-visible {
     justify-content: flex-start;
     row-gap: 0.45rem;
     width: 100%;
+  }
+
+  .site-nav > .nav-links::before {
+    content: none;
   }
 }
 

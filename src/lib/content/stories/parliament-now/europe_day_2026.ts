@@ -82,8 +82,6 @@ export const parliamentNowStoryScaffold: Story = {
       dataSrc: "story/3664032?657582",
       thumbnail: "https://public.flourish.studio/story/3664032/thumbnail",
       alt: "Flourish visualisation",
-      caption:
-        "The economic benefits to Ireland from co-operation with the European Union",
     },
     {
       type: "text",
