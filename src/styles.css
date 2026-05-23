@@ -209,6 +209,34 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.my-parliament-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.38rem;
+}
+
+.my-parliament-icon {
+  align-items: center;
+  color: color-mix(in srgb, var(--color-accent) 80%, var(--color-faint));
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 0.92rem;
+  justify-content: center;
+  transform: translateY(-0.03em);
+  width: 0.92rem;
+}
+
+.my-parliament-icon svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.my-parliament-link:hover .my-parliament-icon,
+.my-parliament-link:focus-visible .my-parliament-icon {
+  color: var(--link-hover);
+}
+
 @media (max-width: 860px) {
   .site-nav {
     align-items: flex-start;

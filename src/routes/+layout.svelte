@@ -50,7 +50,15 @@
             <a href="{base}/parliament-now/">Parliament Now</a>
             <a href="{base}/parliament-explained/">Parliament Explained</a>
             <a href="{base}/parliament-at-work/">Parliament at Work</a>
-            <a href="{base}/my-parliament/">My Parliament</a>
+            <a class="my-parliament-link" href="{base}/my-parliament/">
+                <span class="my-parliament-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+                        <circle cx="12" cy="7.25" r="3.35" fill="currentColor" />
+                        <path d="M4.6 19.2C4.6 15.95 7.95 14.3 12 14.3C16.05 14.3 19.4 15.95 19.4 19.2V20.15H4.6V19.2Z" fill="currentColor" />
+                    </svg>
+                </span>
+                <span>My Parliament</span>
+            </a>
         </div>
     </nav>
 </header>
