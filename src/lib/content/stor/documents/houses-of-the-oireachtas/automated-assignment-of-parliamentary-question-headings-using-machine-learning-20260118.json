@@ -1,0 +1,2409 @@
+{
+  "id": "automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260118",
+  "slug": "automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260118",
+  "type": "article",
+  "destination": "houses-of-the-oireachtas",
+  "featured": false,
+  "heroLayout": "contained",
+  "showContents": true,
+  "flourishWidth": "prose",
+  "title": "Automated assignment of parliamentary question headings using machine learning",
+  "dek": "Parliamentary reporters currently assign headings to the thousands of parliamentary questions published each year. Machine learning tools could help them do it faster.",
+  "eyebrow": "Digital transformation",
+  "abstract": "This paper sets out a controlled, non‑generative machine‑learning approach to supporting the assignment of topic headings to parliamentary questions (PQs) as part of the publication process. It assesses whether historical publication data can be used to train a supervised machine learning model that could safely automate or assist a high‑volume editorial process while maintaining institutional accountability, auditability and human oversight.\nKey findings indicate that a hybrid model, combining machine‑learning classification with editorial review, could support the automatic or semi‑automatic handling of approximately 70–85% of PQs, with the remainder clearly flagged for human decision‑making. The approach deliberately avoids generative AI and operates strictly within an established and approved taxonomy of headings.",
+  "topics": [
+    "Machine learning",
+    "PQs"
+  ],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": [
+    "Machine learning",
+    "PQs"
+  ],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-01-18",
+  "contributors": [
+    {
+      "name": "David Cass",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true,
+      "profileRole": "Web content editor"
+    }
+  ],
+  "researcher": {
+    "name": "David Cass",
+    "role": "Web content editor",
+    "organisation": "Communications"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Automated assignment of parliamentary question headings using machine learning"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Background and operational context"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Parliamentary questions are a core component of parliamentary accountability. Each year, tens of thousands of PQs are asked by Members, processed by the Questions Office and "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/open-data/pq-explorer/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "published online"
+          },
+          {
+            "type": "text",
+            "text": " by the Debates Office."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-01.png",
+          "alt": "Number of questions published annually to the Oireachtas website (to 26 January 2026)",
+          "caption": "Figure 1: Number of questions published annually to the Oireachtas website (to 26 January 2026)",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "As part of publication, each question is assigned a "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "topic heading"
+          },
+          {
+            "type": "text",
+            "text": " by the Debates Office. This is currently a manual operation carried out with some automation in the Debates Authoring System, a HCL Notes/Domino-based publication workflow."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "PQ volumes have increased steadily since 2016, with single sitting days now frequently exceeding 1,000 questions. This growth places sustained operational pressure on existing manual processes and exposes scalability constraints in the current system."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-02.png",
+          "alt": "Scatterplot of the number of parliamentary questions and responses published to oireachtas.ie on a daily basis demonstrating an increasing volume of questions since 2016",
+          "caption": "Figure 2: Scatterplot indicating the number of questions published on a daily basis to the Oireachtas website, with volumes and single-day numbers above 1,500 increasing since 2016 and especially from 2022 onwards",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This work examines whether machine learning could assist with the assignment of headings in a manner that is:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "accurate and evidence‑based"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "scalable under sustained volume increases"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "transparent and auditable"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "consistent with parliamentary governance and editorial standards"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Design principles: Machine learning versus generative AI"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A foundational design decision was to exclude generative AI and to rely instead on predictive classification informed by historical data."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2.1 Machine‑learning classification (used in this project)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The approach"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-1",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[1]"
+          },
+          {
+            "type": "text",
+            "text": " implemented in this work:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "selects from an existing approved list of PQ headings, specifically an array of headings used in assigning topic headings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "produces models trained on approximately 220,000 historical PQs published by the Oireachtas from 2022 to 2025"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "does not generate new wording or subject categories"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "produces ranked predictions with explicit confidence scores"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "can be audited and evaluated quantitatively"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In operational terms, the system functions as an "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "advanced indexing and decision‑support tool"
+          },
+          {
+            "type": "text",
+            "text": " rather than as an autonomous content generator."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2.2 Generative AI (deliberately excluded)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Generative AI systems"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-2",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[2]"
+          },
+          {
+            "type": "text",
+            "text": " are designed to produce novel text or open‑ended responses. While powerful, such systems can generate plausible but incorrect outputs, or “hallucinations” and are inherently less predictable."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Given the editorial, reputational and governance requirements associated with parliamentary publications, this project deliberately avoids generative techniques in favour of controlled, deterministic classification methods whose behaviour can be measured and constrained."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Training data as institutional knowledge"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "3.1 Scope of data"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The models are trained using metadata from PQs published between 2022 and 2025, a period during which heading usage was stable and consistently applied. Testing for an initial proof of concept used PQ metadata from an earlier period between 2020 and 2024."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The dataset comprised approximately 220,000 questions as published to the Oireachtas website and each "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://api.oireachtas.ie/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "PQ metadata record"
+          },
+          {
+            "type": "text",
+            "text": " included:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "full question text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "destination Department"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "heading assigned at publication"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Collectively, this "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "dataset encodes several years of editorial and institutional judgement in structured form"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-03.png",
+          "alt": "Detail of a PQ as published on the Oireachtas website, with highlighting of the question heading assigned by the Debates Office, along with the question string and Department to which the question is directed.",
+          "caption": "Figure 3: Detail of a PQ as published on the Oireachtas website, with highlighted question heading, question string and Department to which the question was directed",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "3.2 Data preparation controls"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Prior to training, data were standardised through:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "text cleaning and standardisation"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "consolidation of very rare headings into a controlled “other” category"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "reduction of the taxonomy to approximately 1,000 headings, aligned with existing Debates Office practice"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These steps ensured consistency, reproducibility and alignment with current operational standards."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Preliminary model testing and evaluation"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4.1 Phase 1: Proof of concept training and testing"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Method: "
+          },
+          {
+            "type": "text",
+            "text": "Deep neural network model ("
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://tensorflow.org",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "TensorFlow"
+          },
+          {
+            "type": "text",
+            "text": ")"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4.1.1 Conceptual overview"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A deep neural network is a form of machine learning inspired loosely by the structure of the human brain. In simplified terms:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "text is converted into numerical representations"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "the model learns statistical relationships between language patterns and headings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "internal parameters are adjusted iteratively to improve predictive accuracy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Unlike rule-based systems, the model does not rely on predefined keywords and instead learns from examples."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4.1.2 Model selection and design"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initial system was built using TensorFlow and "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://keras.io/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Keras"
+          },
+          {
+            "type": "text",
+            "text": " and included:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "tokenisation and numerical encoding of question text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "an embedding layer to represent linguistic meaning"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "a multi-output architecture predicting both Department and heading for PQs"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The model was trained and made available for testing by a cohort of Debates Office staff in early 2025."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4.1.3 Proof-of-concept, initial testing and results"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Initial testing was carried out over 15 sitting days between January and March 2025, with 8,438 questions assigned headings using the trained TensorFlow model."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Headings assigned by the model were evaluated initially in a Boolean (true/false) judgement by Debates Office staff as an initial feasibility test. Assigned headings were examined manually and either deemed “Valid”, meaning suitable for the question text, or “Invalid”, where the heading was judged unsuitable for the question text."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-04.png",
+          "alt": "Bar chart of results from initial proof-of-concept testing of assigning PQ headings by machine learning.",
+          "caption": "Figure 4: Headline proof-of-concept testing results from spring 2025",
+          "credit": "",
+          "layout": "full"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Results for the testing corpus indicated that 6,223 question headings were deemed as suitable for the question text. The balance of 2,215 were deemed to have an invalid or unsuitable heading for the question text."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Further examination determined how many of the headings assigned by the machine-learning model matched exactly the headings as published by the Debates Office (either “Matched” or “Unmatched”). In the test sample, 2,943 headings assigned by the machine-learning model matched the heading as assigned by the Debates Office (top-1 accuracy), with the balance of 3,770 headings differing from the heading as assigned by the Debates Office."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-05.png",
+          "alt": "Approximately 44% of headings generated by the machine-learning model at proof-of-concept stage matched the headings as published by the Debates Office",
+          "caption": "Figure 5: Approximately 44% of headings generated by the machine-learning model at proof-of-concept stage matched the headings as published by the Debates Office",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Objective baseline evaluation"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "5.1 Programmatic evaluation"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These preliminary results were deemed to prove that a process of using a machine-learning model to assign headings to PQs was feasible. In order to train, test, evaluate and compare different models, an evaluation script was created to operate as a controlled benchmark for results."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This script would compare predictions from different models against a reserved dataset from PQs outside the training data. Test data were from 4,968 PQs published in 2026, ensuring that performance metrics reflected genuine generalisation rather than memorisation of the training data (which covered the period 2022-2025)."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The script would facilitate the initial evaluation of three models to allow for comparison."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-06.png",
+          "alt": "Process of testing, iterating and evaluating machine learning models.",
+          "caption": "Figure 6: Proposed evaluation process of machine-learning models (TensorFlow, DistilBERT and DeBERTa)",
+          "credit": "",
+          "layout": "full"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Figure 6: Proposed evaluation process of machine-learning models (TensorFlow, DistilBERT and DeBERTa)"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "5.2 Evaluation metrics"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The script reports:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Top-1"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "top-4"
+                  },
+                  {
+                    "type": "text",
+                    "text": " accuracy"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Top-1 accuracy measures how often the models’ first choice matched the heading assigned by the Debates Office"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Top-4 accuracy measures how often the correct heading appears anywhere in the model’s top-4 suggestions"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "confidence-based thresholds, which would allow quantification of how many PQs could be safely automated, semi-automated or manually reviewed by humans if appropriate"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This approach allows different trained models to be assessed using the same criteria, supporting an iterative improvement cycle in which models may be tested, compared or refined based on measurable evidence."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "From this baseline evaluation script, the TensorFlow model returned:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-1 accuracy of approximately 43% (broadly reflecting the initial manual proof-of-concept testing by Debates Office staff),"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-4 accuracy of 66% (broadly reflecting the findings of “Valid” and “Invalid” headings in initial testing)."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These results confirmed that automated classification was viable, albeit with limitations in capturing complex linguistic nuance with the TensorFlow model."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Iteration and comparison"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.1 Phase 2: Transformer model"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Method: "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://arxiv.org/abs/1910.01108",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "DistilBERT"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.1.1 Conceptual overview"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Transformers are a newer class of language models designed to understand context more effectively than traditional neural networks like TensorFlow."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Where earlier models treat text as a sequence of tokens, transformers:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "analyse relationships between words across entire sentences"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "capture meaning based on context rather than isolated terms"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "better distinguish subtle differences in phrasing"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is particularly important for parliamentary debate language and departmental response idiosyncrasies, which often contain:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "formal phrasing"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "indirect references"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "overlapping policy domains"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.1.2 Results with DistilBERT"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Upgrading to a transformer-based model led to slight improvements:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-1 accuracy increased to approximately 51%"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-4 accuracy increased to approximately 73%"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "confidence scores became more reliably consistent, representing a marked improvement in potential practical usability"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.2 Phase 3: Advanced transformer model (DeBERTa)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Method: "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://github.com/microsoft/DeBERTa",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "DeBERTa"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.2.1 Rationale"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "It was decided to subsequently evaluate a more advanced transformer architecture, specifically DeBERTa (Decoding-enhanced BERT with disentangled attention)."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Compared with earlier models, DeBERTa:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "captures linguistic structure more precisely"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "performs strongly on complex classification tasks"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "requires substantially greater computational resources"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The purpose of this phase was empirical evaluation and determine whether increased model sophistication yielded practical benefits for parliamentary question workflows."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.2.2 Results with DeBERTa"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Using the holdout dataset of PQs from 2026, the DeBERTa model achieved:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-1 accuracy of 52.5%"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Top-4 accuracy of 78%"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.3 Findings matrix"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p>Model type</p></th><th scope=\"col\"><p>Architecture</p></th><th scope=\"col\"><p>Top-1 accuracy</p></th><th scope=\"col\"><p>Top-<em>k</em> accuracy</p></th><th scope=\"col\"><p>Key characteristics</p></th></tr></thead><tbody><tr><td><p>Phase 1: Deep Neural Network</p></td><td><p>TensorFlow (LSTM-style)</p></td><td><p>~43%</p></td><td><p>~66%</p></td><td><p>Baseline model. Learns statistical patterns but limited contextual understanding.</p></td></tr><tr><td><p>Phase 2: Transformer</p></td><td><p>DistilBERT</p></td><td><p>~51%</p></td><td><p>~73%</p></td><td><p>Improved language understanding and more stable predictions. Better handling of nuanced parliamentary phrasing.</p></td></tr><tr><td><p>Phase 3: Advanced Transformer</p></td><td><p>DeBERTa</p></td><td><p>~52.5%</p></td><td><p>~78%</p></td><td><p>Strongest overall performance. More reliable confidence scores and improved ranking of alternative headings.</p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.4 Confidence-based workflows"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Confidence thresholds are predefined cut-off scores that determine whether a model’s predictions would be accepted automatically or should be reviewed by Debates Office staff. By applying confidence thresholds, the system may support a hybrid operational model in which machine predictions could be combined with human oversight."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "For example, with the DeBERTa model findings:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "At a confidence threshold of 0.30:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "approximately 83% of questions could be handled automatically or semi-automatically"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "approximately 17% would be flagged for human review"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "At a confidence threshold of 0.40:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "approximately 71% could be automated"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "approximately 29% would be flagged for human review"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Percentages vary by model but this threshold-based approach could be applied to TensorFlow and DistilBERT models."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Conclusion and further considerations"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "7.1 Summary assessment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This work demonstrates that machine‑learning classification can be used to support the assignment of parliamentary question headings without reliance on generative AI and without departing from established editorial practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The approach:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "operates strictly within an existing, approved taxonomy of headings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "does not generate new text or categories"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "produces measurable confidence scores for each prediction"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "supports audit, review and retrospective analysis"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "By training models on historically published PQs, existing institutional judgement has been formalised in a controlled and reusable form. The resulting system is best characterised as decision‑support, rather than decision‑making."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Importantly, the findings indicate that meaningful efficiency gains can be achieved without removing human oversight. Model confidence scoring allows routine and unambiguous cases to be handled automatically or semi‑automatically, while clearly identifying those cases that require editorial judgement."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "On this basis, a hybrid deployment model is assessed as the most appropriate from both an operational and governance perspective."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "7.2 Governance and accountability considerations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Any use of machine learning within parliamentary publication workflows must preserve clear accountability for editorial outcomes. The approach described in this paper supports this requirement in several ways:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Editorial authority remains with staff"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": headings may be assigned automatically within agreed confidence thresholds or reviewed by staff with reference to confidence levels."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Decisions are explainable and auditable"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": predictions are derived from historical precedent and accompanied by confidence scores that can be logged and reviewed."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Risk is bounded"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": the system cannot introduce new or unapproved headings, nor can it alter question text."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Human override is always available"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": staff can amend or reject model suggestions at any stage."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These characteristics distinguish the approach from generative AI systems and support its suitability for use in a parliamentary context."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "7.3 Indicative operational model"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Based on testing to date, an indicative workflow could operate as follows:"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "High‑confidence predictions"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Headings are assigned automatically within defined thresholds, with results logged for audit and review."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Medium‑confidence predictions"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Staff are presented with a ranked list of suggested headings, enabling rapid confirmation or adjustment."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Low‑confidence predictions"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Questions are routed for full manual handling, consistent with current practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Indicative outcomes based on testing suggest that approximately 70–85% of PQs could be handled automatically or semi‑automatically under this model, with 15–30% receiving focused human attention."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This approach preserves institutional accountability while affording the possibility of drastically reducing routine workload for the Debates Office."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/imported/houses-of-the-oireachtas/automated-assignment-of-parliamentary-question-headings-using-machine-learning-20260518/image-07.png",
+          "alt": "Work process involving a machine-learning model to predict PQ headings",
+          "caption": "Figure 7: Possible work process involving deployment of a DeBERTa-trained machine learning model for assigning PQ headings",
+          "credit": "",
+          "layout": "portrait"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "7.4 Further work and potential next steps"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Building on the analytical work completed to date, the following areas represent potential next steps for the Debates Office, should further development be considered:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Optimisation and further evaluation of transformer models, where required, to assess whether additional performance gains can be achieved within acceptable computational and operational constraints."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Evaluation of a hierarchical heading structure for the transformer models, with a view to simplifying classification decisions while improving efficiency in the trained model."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Continuous learning from human corrections, allowing the system to incorporate editorial feedback over time while preserving appropriate controls and review processes."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Integration with parliamentary data pipelines and publishing systems to support streamlined workflows and minimise duplication of effort within existing processes."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These activities could be undertaken incrementally and independently, allowing progress to be aligned with operational priorities and available capacity without committing to full deployment."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.ibm.com/think/topics/supervised-learning",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "What Is Supervised Learning? | IBM"
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-1",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://research.ibm.com/blog/what-is-generative-AI",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "What is generative AI? - IBM Research"
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

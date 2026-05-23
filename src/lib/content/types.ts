@@ -1,5 +1,6 @@
 export type StoryBlock =
   | TextBlock
+  | TableStoryBlock
   | MediaTextBlock
   | ImageBlock
   | VideoBlock
@@ -17,14 +18,34 @@ export type StoryHeroLayout = 'contained' | 'split' | 'immersive';
 export interface Story {
   slug: string;
   section: StorySection;
+  documentType?:
+    | 'article'
+    | 'scrollytelling-article'
+    | 'briefing'
+    | 'visual-data-analysis'
+    | 'research-note'
+    | 'bill-digest';
   featured?: boolean;
   heroLayout?: StoryHeroLayout;
+  heroImagePosition?: string;
+  showContents?: boolean;
+  flourishWidth?: 'wide' | 'prose';
   title: string;
   /** Trusted inline HTML is supported for the story-page dek. */
   dek: string;
   eyebrow: string;
   byline: string;
+  abstract?: string;
+  researcher?: {
+    name?: string;
+    role?: string;
+    organisation?: string;
+    bio?: string;
+    image?: string;
+    imageAlt?: string;
+  };
   date: string;
+  publishedDate?: string | null;
   readingTime: string;
   hero: ImageAsset;
   blocks: StoryBlock[];
@@ -49,8 +70,14 @@ export interface VideoAsset {
 export interface TextBlock {
   type: 'text';
   heading?: string;
+  headingLevel?: 2 | 3;
   /** Trusted inline HTML is supported for links and emphasis. */
   paragraphs: string[];
+}
+
+export interface TableStoryBlock {
+  type: 'table';
+  html: string;
 }
 
 export interface MediaTextBlock {
@@ -68,8 +95,9 @@ export interface MediaTextBlock {
 
 export interface ImageBlock {
   type: 'image';
+  heading?: string;
   image: ImageAsset;
-  layout?: 'inline' | 'wide' | 'full';
+  layout?: 'inline' | 'wide' | 'full' | 'portrait';
 }
 
 export interface VideoBlock {
@@ -80,6 +108,7 @@ export interface VideoBlock {
 export interface FlourishStoryBlock {
   type: 'flourish';
   embedType?: 'chart' | 'story' | 'visualisation';
+  width?: 'wide' | 'prose';
   dataSrc: string;
   thumbnail?: string;
   alt?: string;

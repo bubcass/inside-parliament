@@ -5,8 +5,10 @@
   import StoryToolbar from './StoryToolbar.svelte';
 
   let { story }: { story: Story } = $props();
-  let heroLayout = $derived(story.heroLayout ?? 'contained');
-  let heroIsVideo = $derived(story.hero.src.toLowerCase().endsWith('.mp4'));
+  let heroSrc = $derived(story.hero?.src ?? '');
+  let hasHeroMedia = $derived(Boolean(heroSrc.trim()));
+  let heroLayout = $derived(hasHeroMedia ? (story.heroLayout ?? 'contained') : 'contained');
+  let heroIsVideo = $derived(heroSrc.toLowerCase().endsWith('.mp4'));
 </script>
 
 <article class="story">
@@ -65,23 +67,25 @@
         </div>
       </div>
 
-      <figure class="hero-media">
-        {#if heroIsVideo}
-          <video autoplay muted loop playsinline aria-label={story.hero.alt}>
-            <source src="{base}{story.hero.src}" type="video/mp4" />
-          </video>
-        {:else}
-          <img src="{base}{story.hero.src}" alt={story.hero.alt} fetchpriority="high" />
-        {/if}
-        {#if story.hero.caption || story.hero.credit}
-          <figcaption class="caption">
-            {story.hero.caption}
-            {#if story.hero.credit}
-              <span>{story.hero.credit}</span>
-            {/if}
-          </figcaption>
-        {/if}
-      </figure>
+      {#if hasHeroMedia}
+        <figure class="hero-media">
+          {#if heroIsVideo}
+            <video autoplay muted loop playsinline aria-label={story.hero.alt}>
+              <source src="{base}{heroSrc}" type="video/mp4" />
+            </video>
+          {:else}
+            <img src="{base}{heroSrc}" alt={story.hero.alt} fetchpriority="high" />
+          {/if}
+          {#if story.hero.caption || story.hero.credit}
+            <figcaption class="caption">
+              {story.hero.caption}
+              {#if story.hero.credit}
+                <span>{story.hero.credit}</span>
+              {/if}
+            </figcaption>
+          {/if}
+        </figure>
+      {/if}
     {/if}
   </header>
 

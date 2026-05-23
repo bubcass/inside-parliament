@@ -9,6 +9,7 @@
   import QuoteBlock from './QuoteBlock.svelte';
   import ScrollyBlock from './ScrollyBlock.svelte';
   import SceneScrollyBlock from './SceneScrollyBlock.svelte';
+  import TableBlock from './TableBlock.svelte';
   import TextBlock from './TextBlock.svelte';
   import VideoBlock from './VideoBlock.svelte';
 
@@ -17,6 +18,8 @@
 
 {#if block.type === 'text'}
   <TextBlock {block} />
+{:else if block.type === 'table'}
+  <TableBlock {block} />
 {:else if block.type === 'chart'}
   <ChartBlock {block} />
 {:else if block.type === 'flourish'}

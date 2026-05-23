@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "svelte-kit sync && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "audio:stories": "node scripts/generate-story-audio.mjs",
     "audio:stories:force": "node scripts/generate-story-audio.mjs --force",
@@ -22,8 +22,17 @@
     "vite": "^6.1.0"
   },
   "dependencies": {
+    "@tiptap/core": "^3.23.4",
+    "@tiptap/extension-link": "^3.23.4",
+    "@tiptap/extension-placeholder": "^3.23.4",
+    "@tiptap/extension-subscript": "^3.23.4",
+    "@tiptap/extension-superscript": "^3.23.4",
+    "@tiptap/extension-underline": "^3.23.4",
+    "@tiptap/starter-kit": "^3.23.4",
     "@observablehq/plot": "^0.6.17",
     "d3": "^7.9.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.12.0"
   }
 }

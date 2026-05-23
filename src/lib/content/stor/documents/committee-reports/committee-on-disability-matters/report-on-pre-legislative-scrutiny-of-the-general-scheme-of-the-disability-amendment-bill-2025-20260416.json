@@ -1,0 +1,3499 @@
+{
+  "id": "report-on-pre-legislative-scrutiny-of-the-general-scheme-of-the-disability-amendment-bill-2025-20260416",
+  "slug": "report-on-pre-legislative-scrutiny-of-the-general-scheme-of-the-disability-amendment-bill-2025-20260416",
+  "type": "committee-report",
+  "destination": "committee-reports",
+  "featured": false,
+  "heroLayout": "contained",
+  "showContents": true,
+  "flourishWidth": "prose",
+  "title": "Report on Pre-Legislative Scrutiny of the General Scheme of the Disability (Amendment) Bill 2025",
+  "dek": "The report reflects the Committee's view that the general scheme addresses real and pressing operational issues but it must be strengthened to ensure reform is rights-based, fair in practice and capable of improving outcomes for children and families",
+  "eyebrow": "Committee on Disability Matters",
+  "committeeName": "Committee on Disability Matters",
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": [],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-04-16",
+  "contributors": [
+    {
+      "name": "Sinead O'Reilly",
+      "role": "author",
+      "affiliation": "Committee secretariat",
+      "showAsAuthor": false,
+      "profileRole": "Committee Clerk"
+    },
+    {
+      "name": "David Cass",
+      "role": "reviewer",
+      "affiliation": "Communications",
+      "showAsAuthor": false,
+      "profileRole": "Web content editor"
+    }
+  ],
+  "researcher": {
+    "name": "Sinead O'Reilly",
+    "role": "Committee Clerk",
+    "organisation": "Committee secretariat"
+  },
+  "hero": {
+    "src": "/media/report-launch-pac.jpg",
+    "alt": "Cover of a disability committee report from April 2026",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "An Comhchoiste um Nithe a Bhaineann le Míchumas"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Tuarascáil maidir le Grinnscrúdú Réamhreachtach ar Scéim Ghinearálta an Bhille um Míchumas (Leasú) 2025"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aibreán 2026"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Joint Committee on Disability Matters"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Report on Pre-Legislative Scrutiny of the General Scheme of the Disability (Amendment) Bill 2025"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "April 2026"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "34/DM/07"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Contents"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238700",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Related information 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238701",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Publications 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238702",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee videos 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238703",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee debates 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238704",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Contact details 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238705",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Orders of reference 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238706",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee Membership 6"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238707",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Cathaoirleach 6"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238708",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Leas-Cathaoirleach 6"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238709",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Members 6"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238710",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Cathaoirleach’s Foreword 7"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238711",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "1. Introduction 9"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238712",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "2. Background and Context 9"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238713",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "3. Recommendations 15"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238714",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Head-by-Head Recommendations 15"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238715",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "General and Cross-Cutting Recommendations 20"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238716",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "4. Overview of the Committee’s Consideration 22"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238717",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "4.1 Procedural basis for scrutiny 22"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238718",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "4.2 Pre-Legislative Scrutiny of the General Scheme 22"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238719",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "4.3 Engagement with Stakeholders 22"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238720",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5. Consideration of the General Scheme 25"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238721",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1 Summary of Evidence 25"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238722",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.1. Rights framework, legislative purpose and the statutory conception of disability 25"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238723",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.2. Disability determination, access to assessment, and early specialist input 27"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238724",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.3. Scope, quality and multidisciplinary character of assessment 30"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238725",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.4. Needs-based reform, diagnosis and alignment with education 31"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238726",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.5. Closure, withdrawal and fair procedures 33"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238727",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.6. Statutory guidelines, legal interpretation and the “high threshold” 34"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238728",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.7. Transitional arrangements and applicants already waiting 36"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238729",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.8. Workforce, staffing and implementation capacity 37"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238730",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "5.1.9. Service linkage, system integration and broader reform 37"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc227238731",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Appendix 1 – Opening Statements and Written Submissions 41"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Related information"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Publications"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "All publications for this committee are available on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/publications/?q=&date=&term=%2Fie%2Foireachtas%2Fhouse%2Fdail%2F33&fromDate=07%2F10%2F2024&toDate=07%2F10%2F2024&committee%5B%5D=%2Fen%2Fcommittees%2F33%2Fenvironment-and-climate-action%2F",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Oireachtas website"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee videos"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Footage of Committee proceedings can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/34/disability-matters/videos/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee videos page"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee debates"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Transcripts of Committee debates can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/34/disability-matters/debates/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee debates page"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Contact details"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The contact details for the Committee can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/34/disability-matters/#:~:text=all%20recent%20reports-,Contact%20details,-Committee%20on%20Disability",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee page"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Orders of reference"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Read the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/about-committees/functions-powers-and-remit-of-departmental-joint-committees/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Orders of reference"
+          },
+          {
+            "type": "text",
+            "text": " for the Committee."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee Membership"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Maurice-Quinlivan.D.2016-10-03/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Maurice Quinlivan TD"
+          },
+          {
+            "type": "text",
+            "text": ", Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Leas-Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Margaret-Murphy-O'Mahony.D.2016-10-03/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Margaret Murphy O’Mahony"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Members"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Miche%C3%A1l-Carrigy.S.2020-03-30/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Micheál Carrigy TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Peter-'Chap'-Cleere.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Peter 'Chap' Cleere TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Martin-Daly.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Martin Daly TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Seamus-Healy.D.2000-06-22/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Seamus Healy TD"
+          },
+          {
+            "type": "text",
+            "text": ", Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Keira-Keogh.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Keira Keogh TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Liam-Quaide.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Liam Quaide TD"
+          },
+          {
+            "type": "text",
+            "text": ", Social Democrats"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Gillian-Toole.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Gillian Toole TD"
+          },
+          {
+            "type": "text",
+            "text": ", Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Ruair%C3%AD-%C3%93-Murch%C3%BA.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Ruairí Ó Murchú TD"
+          },
+          {
+            "type": "text",
+            "text": ", Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Nikki-Bradley.S.2024-07-10/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Nikki Bradley"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Maria-Byrne.S.2016-04-25/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Maria Byrne"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Tom-Clonan.S.2022-04-04/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Tom Clonan"
+          },
+          {
+            "type": "text",
+            "text": ", Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Laura-Harmon.S.2025-01-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Laura Harmon"
+          },
+          {
+            "type": "text",
+            "text": ", Labour Party"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Cathaoirleach’s Foreword"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Joint Committee on Disability Matters welcomes the opportunity to present this Report on its pre-legislative scrutiny of the General Scheme of the Disability (Amendment) Bill 2025."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The evidence received by the Committee, in both written submissions and oral hearings, made clear that there is broad agreement on one central point: the current Assessment of Need (AON) system is under very significant strain and requires reform. The Committee heard consistent evidence of long waiting times, increasing demand, pressures on multidisciplinary services, and the frustration experienced by children, young people and families as they attempt to navigate a system that is often complex, fragmented and prolonged. National Data from 2025 tells us that 87% of children did not receive their Assessment of Need (AON) within the legally required six-month timeframe. The Committee heard that reform must not be pursued in a manner that narrows access, weakens procedural safeguards, or reduces the quality and integrity of assessment."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A recurring message throughout the Committee’s work was that the AON process cannot be considered in isolation from the wider disability, health and education systems. Stakeholders repeatedly stressed that assessment is only one part of a broader pathway and that, for families, the real question is whether assessment leads in practice to timely and appropriate supports. The Committee was particularly mindful of the evidence that legislative changes, even when presented as clarificatory or procedural, can have substantial effects on access to statutory assessment and on the lived experience of those relying on the system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee is grateful to all those who contributed to this scrutiny process, including Disabled Persons’ Organisations, advocacy groups, professional representative bodies, State agencies, service providers and individuals with lived experience. Their submissions and oral evidence have made a substantial contribution to the Committee’s consideration of the General Scheme and to the recommendations contained in this Report."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This Report reflects the Committee’s view that the General Scheme addresses real and pressing operational issues, but that it must be strengthened to ensure that reform is rights-based, fair in practice, and capable of improving outcomes for children and families. The Committee hopes that the practical recommendations contained in this Report will assist the Minister and the Department in refining the legislation and in ensuring that any reform of the AON process is matched by the wider policy, service and implementation measures necessary for its success."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Thank you to Committee Members for all of their hard work. I also wish to acknowledge the assistance of the Committee Secretariat in preparing this report."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Maurice Quinlivan T.D."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Introduction"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Joint Committee on Disability Matters has undertaken pre-legislative scrutiny of the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://assets.gov.ie/static/documents/8305aa31/DisabilityAmendmentBill_GeneralScheme_022026.pdf",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "General Scheme of the Disability (Amendment) Bill 2025"
+          },
+          {
+            "type": "text",
+            "text": ", referred to in this Report as “the General Scheme”. The General Scheme proposes a series of amendments to Part 2 of the Disability Act 2005, which establishes the statutory framework for the Assessment of Need (AON) process. In broad terms, the General Scheme proposes changes in relation to the definition of “assessment”, the treatment of disability determination within the assessment process, the sequencing of educational input, the closure or withdrawal of applications, the making of statutory guidelines, and the application of transitional provisions to cases already in the system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Report sets out the Committee’s consideration of the General Scheme, the evidence received from stakeholders, and the recommendations arising from that scrutiny."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Background and Context"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee’s consideration of the General Scheme took place in the context of a statutory framework and service environment that have been the subject of sustained concern among stakeholders. The following section sets out the broader legislative, policy and operational context within which the proposed reforms arise."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The AON process is one of the principal statutory mechanisms through which the State recognises disability-related need in the case of children and engages, at least in legislative terms, with the identification of health and education needs arising from disability. It therefore occupies a significant place in Ireland’s disability framework. For many children and families, however, the importance of AON extends beyond its formal statutory purpose. The Committee heard clearly and repeatedly that, in practice, the AON process is often experienced not simply as a mechanism for identifying need, but as a key route through which families seek clarity, recognition, professional engagement, and ultimately access to services and supports. Inclusion Ireland captured this distinction succinctly in its submission when it stated that AON is “a starting point, not the support itself.” The Committee further notes that, for many families, AON is pursued not because it is necessarily the preferred or most clinically appropriate route, but because it is the only route carrying a clear legal entitlement to engagement in a wider system where access to supports is too often delayed, fragmented or effectively out of reach."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "It was also apparent from the evidence that the current AON system is under sustained and significant pressure. The Committee heard from the HSE that more than 20,000 applications were overdue at the end of 2025 and that the number of applications, as well as the legal and operational burden associated with the system, had increased substantially in recent years. Similar concerns were reflected across the written submissions. Professional bodies pointed to staffing shortages and capacity constraints within multidisciplinary teams. Advocacy organisations highlighted the effect of delay on children and families. State bodies referred to the difficulty of operating the existing statutory system within available resources. These difficulties formed the immediate context in which the General Scheme was brought forward. The Committee considers that the present level of demand for AON cannot be understood separately from severe wider pressures across Primary Care, Children’s Disability Network Teams (CDNTs) and Child and Adolescent Mental Health Services (CAMHS), and from the limited accessibility of frontline supports in many areas."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee notes, however, that the evidence received did not suggest that the current difficulties are solely procedural in nature. Rather, the evidence pointed to a system marked by a combination of legal, operational and structural problems. Among the most significant issues identified were:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "prolonged delays in commencing and completing assessments;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "pressure on professional staff and services;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "fragmentation between health, education and social care systems;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "uncertainty regarding the practical relationship between assessment and access to services;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "concern that legal changes intended to improve efficiency could have the effect of restricting access or weakening safeguards."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that these pressures arise to a significant extent from wider failures of service capacity and integration, rather than from any single defect in the statutory architecture of AON alone. The Committee considers that Primary Care services have in many areas been especially affected by workforce shortages and recruitment challenges, with significant knock-on effects throughout the wider pathway of care."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In carrying out this scrutiny, the Committee was particularly mindful of the fact that the General Scheme is not presented as a comprehensive reform of the Disability Act 2005. Several stakeholders, including the Ombudsman for Children’s Office, the National Disability Authority (NDA) and Inclusion Ireland, expressly noted that the proposed amendments are limited in scope and do not of themselves address wider structural questions concerning the operation of the AON framework or the relationship between assessment and service delivery. The Committee accepts that the immediate purpose of the General Scheme is more modest than wholesale legislative reform. Nevertheless, the Committee also considers that even targeted or clarificatory amendments can have significant practical consequences, particularly where they affect thresholds, sequencing, guidance or procedural safeguards."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee’s scrutiny therefore proceeded on two levels. First, the Committee considered the specific provisions proposed in the General Scheme and the likely effect of those provisions in practice. In particular, the Committee examined the implications of explicitly embedding disability determination within the concept of “assessment”; the proposal that certain forms of input, including educational involvement under section 8(3), arise only after disability has been determined; the introduction of a legislative basis for closure or withdrawal of applications; the proposed role and legal effect of statutory guidelines; and the application of the new regime to existing applications where the assessment process has not yet commenced."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Second, the Committee considered those specific proposals in the wider policy and legal context identified by stakeholders. A number of submissions stated that the current legislative framework remains insufficiently aligned with the UN Convention on the Rights of Persons with Disabilities (UNCRPD), particularly in relation to the social model of disability, participation, accessibility, and the need for a rights-based approach to public decision-making. The Committee also heard evidence that the AON process continues to operate in a system where diagnosis may still be relevant to access to services, especially in education, and where workforce and service capacity significantly affect how any statutory process is experienced by children and families. The Committee was therefore concerned not only with whether the proposed amendments are coherent as a matter of legislative drafting, but also with whether they are likely to produce fair, workable and rights-compliant outcomes in practice. In the absence of corresponding service development elsewhere, reforms presented as procedural or clarificatory may in practice operate chiefly as a means of managing backlog at the front end by filtering some children out of the statutory process without resolving the unmet need that gave rise to those applications in the first place."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In support of its scrutiny, the Committee invited written submissions from stakeholders and held public hearings on 3"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "rd"
+          },
+          {
+            "type": "text",
+            "text": " March, 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March, and 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March 2026. The oral evidence that was received added important practical, legal and rights-based context to the written submissions. It also enabled the Committee to test with stakeholders the likely real-world implications of the proposed amendments, particularly in relation to disability thresholds, multidisciplinary input, the role of guidance, closure of applications, and implementation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The written submissions considered by the Committee came from a broad range of perspectives. Advocacy and family-focused submissions emphasised access, lived experience, rights and procedural safeguards. Professional submissions focused on clinical robustness, multidisciplinary practice, staffing and implementation. State and statutory bodies highlighted system pressures, legal compliance, and operational consistency. Specialist and impairment-specific submissions drew attention to accessibility, fluctuating conditions, communication barriers and the risks faced by applicants whose needs may not fit neatly into standard assumptions or administrative pathways. The Committee regarded this diversity of evidence as a strength of the scrutiny process."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In addition to submissions from organisations and representative bodies, the Committee also received a number of submissions from people with direct experience of the AON process. These submissions provided important insight into the lived experience of navigating the system. Due to the inclusion of personal and sensitive information, the Committee agreed that these submissions will not be published. However, the Committee wishes to acknowledge their contribution and to note that they informed its consideration of the General Scheme and the development of its recommendations."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A number of broad themes emerged consistently across the material considered by the Committee. These included:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "broad agreement that reform of the AON system is necessary;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "strong concern that reform must not narrow access or weaken safeguards;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "repeated emphasis on the need to preserve multidisciplinary and professionally informed assessment;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "a clear warning that a more explicit disability determination process may operate restrictively if not carefully framed;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "concern regarding the proposed role of statutory guidelines, especially if they come to shape legal interpretation or access in practice;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "recognition that workforce and service capacity are central to the current crisis and will be central to the success or failure of any legislative reform; and"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "repeated calls for better integration between disability, health and education frameworks, including the practical interface with the EPSEN Act 2004 and access to educational supports."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This Report seeks to reflect those concerns and proposals in a structured and balanced way. It sets out the Committee’s recommendations, summarises the evidence that informed those recommendations, and identifies the key issues arising under the General Scheme. In doing so, the Committee is guided by the view that reform of the AON system must be judged not merely by whether it promises greater administrative efficiency, but by whether it supports a process that is accessible, fair, transparent, rights-compliant and genuinely capable of improving outcomes for children and families."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that, while this General Scheme addresses important issues, it cannot be regarded as the end point of legislative reform in this area. Several stakeholders urged the Government to proceed to broader review and reform of the Disability Act 2005. The Committee notes that wider structural questions concerning the operation of disability law, the relationship between assessment and service provision, and the coherence of disability and education legislation remain unresolved. Those questions are not displaced by the present General Scheme, and they remain important to the future development of a fair and effective system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In that context, the Committee considers that the current difficulties within the AON system are, to a significant extent, a manifestation of wider issues of service capacity, access and system integration, against the backdrop of increased demand for AON."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee further considers that reform of the Assessment of Need process, if pursued in the absence of major service development across Primary Care, CDNTs and CAMHS, risks deepening exclusion by narrowing access to the one enforceable route on which many families currently depend."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Recommendations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Joint Committee on Disability Matters makes the following recommendations in relation to specific Heads of the General Scheme of the Disability (Amendment) Bill 2025."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These recommendations are informed by the evidence received and reflect the Committee’s assessment of how the proposed legislative framework can be strengthened to ensure that it operates in a manner that is fair, transparent, rights-compliant and effective in practice. In particular, the Committee has sought to ensure that any reforms to the Assessment of Need process:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "do not restrict access for children and families;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "preserve the integrity and quality of multidisciplinary assessment;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "provide clear and robust procedural safeguards; and"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "are capable of being implemented in a system that is already under significant operational pressure."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In formulating its recommendations, the Committee regarded Ireland’s obligations under the United Nations Convention on the Rights of Persons with Disabilities (UNCRPD). In this context, the Committee emphasises the importance of Article 7 of the Convention, which provides that, in all actions concerning children with disabilities, the best interests of the child shall be a primary consideration. The Committee also notes Article 25, which recognises the right of persons with disabilities to the enjoyment of the highest attainable standard of health, without discrimination on the basis of disability. The Committee considers that these principles are of direct relevance to the proposed reforms to the Assessment of Need process."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee has structured its recommendations so as to clearly distinguish between those that relate directly to specific Heads of the General Scheme and those that arise more broadly from the evidence and concern the wider operation of the AON system and the legislative framework within which it sits."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Head-by-Head Recommendations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that the starting point for its recommendations should be the individual Heads of the General Scheme. This reflects the structure of the draft legislation and allows the Committee to set out clearly where amendments, clarifications or additional safeguards are required in relation to specific proposed provisions."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The recommendations set out below are therefore organised by reference to the relevant Head of Bill. They are intended to identify where the Committee considers that the General Scheme should be amended, clarified or supplemented in order to address concerns raised in the evidence and to improve the fairness, clarity and effectiveness of the proposed legislation."
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p><strong>Head</strong></p></th><th scope=\"col\"><p><strong>Recommendation</strong></p></th></tr></thead><tbody><tr><td><p>Head 3</p></td><td><p><strong>1.</strong>&nbsp;The Committee recommends that Head 3 be amended or accompanied by an explicit statutory statement that disability determination must be applied in a child-centred, evidence-based and rights-compliant manner.</p></td></tr><tr><td><p>Head 3</p></td><td><p><strong>2.</strong>&nbsp;The Committee recommends that the operation of Head 3 should not result in a higher practical threshold for access to assessment, particularly for children with complex, fluctuating or less visible disabilities, including neurodevelopmental and psychosocial disabilities.</p></td></tr><tr><td><p>Head 3</p></td><td><p><strong>3.</strong>&nbsp;The Committee recommends that the Government undertake a broader review of the statutory definition of disability in section 2 of the Disability Act 2005 to ensure fuller alignment with the social model of disability and Ireland’s international obligations.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>4.</strong> The Committee recommends that Head 4 be clarified to ensure that Assessment Officers retain access to appropriate specialist and multidisciplinary input at an early stage, where such input is required to determine whether an applicant has a disability and what needs arise, and that clear safeguards be included to ensure that early-stage threshold determinations are not made in a manner that excludes children from the statutory process without appropriate clinical expertise.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>5.</strong>&nbsp;The Committee recommends that Head 4 explicitly preserve the comprehensive, multidisciplinary and person-centred nature of the Assessment of Need process, and that proportionality not be interpreted so as to justify superficial or unduly limited assessments.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>6.</strong>&nbsp;The Committee recommends that the implementation of Head 4 make clear that a needs-based approach does not remove access to diagnostic assessment where clinically or practically necessary.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>7.</strong>&nbsp;The Committee recommends that the Government set out clearly how the operation of Head 4 will align with education policy and access to educational supports, and that changes to sequencing under Head 4 should not reduce, dilute or delay access to appropriate educational input or weaken the professional basis on which education-related needs are identified.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>8.</strong>&nbsp;The Committee recommends that any determination that an applicant does not meet the statutory threshold for disability be communicated in writing, with clear reasons, in an accessible manner, and be subject to an accessible review or appeal mechanism.</p></td></tr><tr><td><p>Head 4</p></td><td><p><strong>9.</strong> The Committee recommends that the Government set out minimum qualification, competence and experience requirements for the Assessment Officer role, including relevant clinical qualifications and post-qualification experience.</p></td></tr><tr><td><p>Head 5</p></td><td><p><strong>10.</strong>&nbsp;The Committee recommends that Head 5 set out core procedural safeguards in primary legislation (that is, in the Act itself) and that these not be left entirely to regulations.</p></td></tr><tr><td><p>Head 5</p></td><td><p><strong>11.</strong>&nbsp;The Committee recommends that those safeguards include multiple documented attempts to contact the applicant or family, use of accessible and appropriate communication methods, prior written notice of intention to close the application, written reasons for closure, a genuine opportunity to re-engage before closure, and a straightforward mechanism to reopen the application.</p></td></tr><tr><td><p>Head 5</p></td><td><p><strong>12.</strong>&nbsp;The Committee recommends that Head 5 be framed and implemented in a manner that protects vulnerable applicants, including those experiencing crisis, fluctuating mental health, communication barriers, unstable housing or other circumstances that may affect engagement.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>13.</strong>&nbsp;The Committee recommends that Head 6 make clear that statutory guidelines are non-binding, cannot alter or narrow statutory rights or legal definitions, or inadvertently impose a higher threshold for access than is provided for in the Act itself.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>14.</strong>&nbsp;The Committee recommends that any guidance issued under Head 6 be published in full and, where it materially affects access to assessment or procedural rights, be laid before the Houses of the Oireachtas.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>15.</strong>&nbsp;The Committee recommends that any reference in the guidance to a “high threshold” for entitlement to assessment be carefully framed and controlled and not operate in practice to exclude children whose needs are substantial but not easily captured by a narrow interpretation of disability.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>16.</strong>&nbsp;The Committee recommends that the regulation-making powers under Head 6 in relation to closure of applications be confined to operational detail, with the essential safeguards remaining in Head 5 itself.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>17.</strong>&nbsp;The Committee recommends that statutory guidance issued under Head 6 include explicit requirements in relation to accessible communication with applicants and families, including communication formats appropriate to disability, literacy, language and family circumstance.</p></td></tr><tr><td><p>Head 6</p></td><td><p><strong>18.</strong>&nbsp;The Committee recommends that the statutory guidelines be developed with clinicians and that wider consultation be carried out in relation to the Disability Act, including public consultation and co-creation with DPOs.</p></td></tr><tr><td><p>Head 7</p></td><td><p><strong>19.</strong>&nbsp;The Committee recommends that Head 7 expressly provide that applicants already on waiting lists whose assessment process has not commenced will not be disadvantaged by the transition to the new regime.</p></td></tr><tr><td><p>Head 7</p></td><td><p><strong>20.</strong>&nbsp;The Committee recommends that the Government publish a clear transition and implementation plan prior to commencement, setting out how existing applications will be handled, how families will be informed, and what review routes will exist where fairness concerns arise.</p></td></tr><tr><td><p>Head 7</p></td><td><p><strong>21.</strong>&nbsp;The Committee recommends that particular care be taken to ensure that children and families already subject to long delays are not exposed to additional procedural disadvantage as a result of the reforms.</p></td></tr><tr><td><p>Head 7</p></td><td><p><strong>22.</strong>&nbsp;The Committee recommends that the impact of the transitional provisions under Head 7 be monitored and reported on in a timely manner, including the number of existing applicants affected and any changes in outcomes for applicants already on waiting lists.</p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "General and Cross-Cutting Recommendations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "While many of the issues considered by the Committee arise in the context of specific Heads, the Committee also notes that a number of important matters identified in the evidence are not confined to any one provision of the General Scheme. Rather, they concern the wider operation of the AON system, the broader statutory and policy framework in which it sits, and the practical conditions necessary for the legislation to succeed in implementation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The recommendations in this subsection are therefore intended to address those broader matters. They should be read alongside the Head-by-Head Recommendations and as complementary to them. Taken together, they reflect the Committee’s view that legislative reform, while necessary, must also be supported by wider system reform, implementation planning and continued review if it is to deliver meaningful improvement for children and families."
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p><strong>Recommendation</strong></p></th></tr></thead><tbody><tr><td><p><strong>23.</strong> The Committee recommends that the legislation explicitly provide that participation in non-statutory pathways does not replace, limit or defer an applicant’s statutory right to an Assessment of Need under Part 2 of the Disability Act 2005.</p></td></tr><tr><td><p><strong>24.</strong>&nbsp;The Committee recommends that the Bill as a whole be framed and interpreted in a manner consistent with the United Nations Convention on the Rights of Persons with Disabilities (UNCRPD) and the United Nations Convention on the Rights of the Child (UNCRC), and that this be reflected expressly in the legislation.</p></td></tr><tr><td><p><strong>25.</strong>&nbsp;The Committee recommends that all key decisions under the revised Assessment of Need framework, including disability determination, closure decisions and decisions affecting the scope of assessment, be subject to clear, independent and accessible review or appeal mechanisms, with written reasons provided in an accessible manner.</p></td></tr><tr><td><p><strong>26.</strong>&nbsp;The Committee recommends that implementation of the Bill be accompanied by a funded workforce and service capacity plan, including multidisciplinary staffing, so that legislative reform is matched by operational capacity.</p></td></tr><tr><td><p><strong>27.</strong>&nbsp;The Committee recommends that the Government set out how reform of the Assessment of Need process will align with health, education and social care systems, including the practical interface with the Education for Persons with Special Educational Needs (EPSEN) Act 2004 and access to interventions and educational supports.</p></td></tr><tr><td><p><strong>28.</strong>&nbsp;The Committee recommends that the Department of Children, Disability and Equality and the Health Service Executive publish regular data on waiting times, determinations, no-disability outcomes, closure decisions, review outcomes and implementation impacts.</p></td></tr><tr><td><p><strong>29.</strong>&nbsp;The Committee recommends that the operation of the legislation be formally reviewed within 12 months of commencement, with a further review within 24 months to assess longer term impacts.</p></td></tr><tr><td><p><strong>30.</strong>&nbsp;The Committee recommends that the Government proceed without delay to the broader review of the Disability Act 2005, given the evidence that the issues identified in the AON system are structural as well as procedural.</p></td></tr><tr><td><p><strong>31. </strong>The Committee recommends that the language used throughout the Bill be reviewed to ensure that it is clear, consistent and accessible, and that it reflects a rights-based and person-centred approach to disability. In particular, terminology should be carefully defined so as to avoid ambiguity in interpretation, to support consistent application in practice, and to ensure alignment with the social model of disability and Ireland’s obligations under the United Nations Convention on the Rights of Persons with Disabilities.</p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Overview of the Committee’s Consideration"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Procedural basis for scrutiny"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Pre-legislative consideration was conducted in accordance with "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBusiness/standingOrders/dail/2025/2025-04-07_consolidated-dail-eireann-standing-orders-april-2025_en.pdf",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Standing Order 181"
+          },
+          {
+            "type": "text",
+            "text": " which provides that the General Scheme of all Bills shall be given to the Committee empowered to consider Bills published by the member of Government."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Pre-Legislative Scrutiny of the General Scheme"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The General Scheme of the Disability (Amendment) Bill 2025 was referred to the Joint Committee on Disability Matters by the Minister for Children, Disability and Equality, Norma Foley T.D., on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " February 2026. In March 2026, the Committee engaged with nine key stakeholder groups at pre-legislative scrutiny meetings in public session, which are detailed in the following section of this report. Further stakeholders were invited in February 2026 to make written submissions to assist the Committee with its pre-legislative scrutiny. A list of the submissions received and considered is provided in "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Appendix_1_–",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Appendix 1"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Engagement with Stakeholders"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p><strong>Date</strong></p></th><th scope=\"col\"><p><strong>Witness(es)</strong></p></th><th scope=\"col\"><p><strong>Official record</strong></p></th></tr></thead><tbody><tr><td><p>3<sup>rd</sup> March 2026</p></td><td><p><strong>Disabled Women Ireland (DWI)</strong></p><ul><li>Dr. Amy Hassett</li><li>Mx. Nem Kearns</li></ul><p><strong>AsIAm</strong></p><ul><li>Mr. Adam Harris</li><li>Mr. Michael O'Flanagan</li></ul><p><strong>Disability Federation of Ireland (DFI)</strong></p><ul><li>Dr. Emer Begley</li><li>Ms. Treasa McAuliffe</li></ul><p><strong>Enable Ireland</strong></p><ul><li>Ms. Gillian Darrer</li><li>Dr. Claire Milner</li><li>Ms. Frances Fitzell</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/debateRecord/joint_committee_on_disability_matters/2026-03-03/debate/mul@/main.pdf\">Transcript</a></p></td></tr><tr><td><p>4<sup>th</sup> March 2026</p></td><td><p><strong>Ombudsman for Children's Office</strong></p><ul><li>Dr. Niall Muldoon</li><li>Dr. Tricia Keilthy</li><li>Ms. Nuala Ward</li></ul><p><strong>Psychological Society of Ireland (PSI)</strong></p><ul><li>Dr. Sarah Cassidy</li><li>Dr. Lauren Burns</li></ul><p><strong>Centre for Disability Law and Policy (CDLP) - University of Galway</strong></p><ul><li>Professor Eilionóir Flynn</li><li>Dr. Clíona de Bhailís</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/debateRecord/joint_committee_on_disability_matters/2026-03-04/debate/mul@/main.pdf\">Transcript</a></p></td></tr><tr><td><p>18<sup>th</sup> March 2026</p></td><td><p><strong>Health Service Executive (HSE)</strong></p><ul><li>Ms. Martina Queally, Regional Executive Officer, HSE Dublin and South-East</li><li>Dr. Aoife O’Donohue, Assistant National Director, Access &amp; Integration, Disability Services</li><li>Mr. John Fitzmaurice, Integrated Healthcare Area Manager, HSE West and North-West</li></ul><p><strong>Department of Children, Disability and Equality (DCDE)</strong></p><ul><li>Mr. Mark Considine, Principal Officer, Disability Children’s Services Unit</li><li>Ms. Sarah O' Halloran, Assistant Principal Officer, Disability Children’s Services Unit</li><li>Ms. Nicole Dyrssen, Clinical Specialist/Therapy Advisor, Disability Children’s Services Unit</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/debateRecord/joint_committee_on_disability_matters/2026-03-18/debate/mul@/main.pdf\">Transcript</a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Consideration of the General Scheme"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Summary of Evidence"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In order to provide context for the recommendations set out above, and to ensure transparency in how those recommendations have been reached, the Committee sets out below a detailed summary of the evidence received during the course of its pre-legislative scrutiny."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This section draws together the principal themes arising from written submissions and oral hearings and reflects the range of perspectives presented to the Committee, including those of Disabled Persons’ Organisations, advocacy groups, professional representative bodies, State agencies and service providers."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The summary is structured to reflect the key issues arising under the General Scheme, including disability determination, the assessment process, procedural safeguards, the role of statutory guidance, transitional arrangements, and wider system issues such as workforce capacity and service integration. In doing so, it illustrates how the evidence received informed the Committee’s consideration of the General Scheme and the development of its recommendations."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Rights framework, legislative purpose and the statutory conception of disability"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A strong and recurring theme across submissions and hearings was that the current legislative framework remains insufficiently aligned with a rights-based and social model understanding of disability. The Ombudsman for Children’s Office submitted, in both its written submission and oral evidence, that reform should be grounded in a child-centred, rights-based framework reflecting the UNCRC and UNCRPD, and stressed that the current Scheme does not address broader structural reforms previously identified by the Office, including the absence of clear guiding principles, a more modern definition of disability, and stronger accountability mechanisms. At the meeting on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March 2026, Dr. Niall Muldoon emphasised the need for a “child-centred, rights-based approach to disability law, grounded in a holistic and multidisciplinary understanding of children’s development and needs.”"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Disabled Women Ireland (DWI) stated that the existing statutory framework remains rooted in an impairment-led understanding of disability, and that the proposed amendments do not alter the foundational definition in section 2. In its oral evidence on 3"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "rd"
+          },
+          {
+            "type": "text",
+            "text": " March 2026, DWI stated that the General Scheme “represents a missed opportunity” because it does not fundamentally reorient the AON framework towards a holistic, rights-based understanding of disability consistent with the UNCRPD. DWI also pointed to the continued use of a high threshold of “substantial restriction” and warned that the proposed amendments, particularly Heads 3 and 4, reinforce a threshold-based model rather than a participation-based approach."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Centre for Disability Law and Policy (CDLP) echoed this concern at the meeting on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March 2026. Professor Eilionóir Flynn told the Committee that the proposed amendments do not bring the Disability Act into closer alignment with the UNCRPD and that Head 3, in particular, continues to frame substantial restrictions as occurring because of impairment rather than through the interaction between impairment and barriers in society. That evidence reinforced similar arguments made in the submissions from DWI and Association of Occupational Therapists of Ireland (AOTI)."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "AOTI’s submission emphasised that any reform of the AON process should reflect contemporary understandings of disability, particularly the functional impact of disability and barriers to participation, rather than a narrow focus on diagnosis or impairment. Voice of Vision Impairment (VVI), while focusing strongly on accessibility and consultation, also stressed that the framework must reflect lived experience and must be accessible in how it communicates and engages with disabled people and families. VVI additionally stated that assessment of need should not be confined only to children in the longer term."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee also notes that some submissions were more supportive of the drafting direction in Head 3. The Irish Society of Chartered Physiotherapists (ISCP) welcomed the clearer structure around determination and the move in wording from repeated reference to “disability” towards “restriction”, regarding that as potentially helpful in shifting attention towards participation barriers and practical needs. The Committee took this view into account. However, the balance of evidence remained that, if disability determination is being given greater operational emphasis, the wider statutory and rights framework matters even more, not less."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inclusion Ireland and PSI reinforced these broader concerns by stressing that the present legislative exercise should not be understood as sufficient in itself, and that wider reform of the Disability Act 2005 remains necessary."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Disability determination, access to assessment, and early specialist input"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The evidence demonstrated that one of the most consequential features of the General Scheme is the clearer embedding of disability determination within the assessment process and the sequencing consequences that flow from that. Although the Department of Children, Disability and Equality (DCDE) described these amendments as clarificatory, many stakeholders regarded them as likely to have significant practical effect."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tusla’s written submission was especially clear that, if disability determination is treated as a strengthened threshold before a fuller assessment proceeds, some children may not receive an assessment at all if professionals decide that their needs do not meet the legal definition. Tusla raised the specific concern that children with significant needs who may not, at an early age, fit neatly into the statutory definition could be screened out earlier than under current practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Voices for Change Ireland similarly framed disability determination as a potential “exclusionary gatekeeping mechanism” if applied narrowly. Its submission also drew attention to historic divergence between the statutory definition and how the threshold has been applied in practice, and stated that the legislation should contain strong safeguards, monitoring and review."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE Office of Mental Health Engagement and Recovery (HSE MHER) highlighted a related but distinct concern for children and young people with psychosocial disabilities. HSE MHER warned that fluctuating or episodic conditions, executive functioning difficulties, trauma, anxiety and crisis can affect how disability is evidenced and how families engage with the system, and therefore risk being disadvantaged by a rigid threshold model. That concern also surfaced during the hearing on 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March, where the Committee expressly referred to the HSE MHER submission and raised concerns about “families disengaging”, fluctuating conditions and the phrase “high threshold”, asking what detail in guidelines or regulations would ensure that no child fell through the net."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Professional bodies and service organisations focused less on the rights framing of this issue and more on its operational implications. PSI stated that many children arrive at AON because it offers a more timely or more structured route to understanding need than ordinary service pathways, and that the system should not respond by making the front door narrower. In oral evidence on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March 2026, PSI stated that the high volume of referrals reflects the reality that families often have “no other avenue” to explore their concerns. AOTI and Irish Nurses and Midwives Organisation (INMO) both stressed that, in many cases, determining whether a child falls within the statutory threshold may itself require specialist and multidisciplinary expertise."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "On 3"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "rd"
+          },
+          {
+            "type": "text",
+            "text": " March 2026, DFI and Enable Ireland added a service delivery perspective. Their evidence highlighted that the needs of children do not present in a linear or administratively neat way, that families often arrive at services in distress or uncertainty, and that rigid thresholding can be difficult to reconcile with real-world patterns of need. Enable Ireland also stressed that statutory AON work can draw professional time away from interventions for children already within services, which in turn shapes how threshold processes are experienced by families and staff."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE and DCDE, by contrast, stated at the meeting on 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March 2026 that the reforms do not change eligibility and are intended to clarify the proper sequence of decision-making rather than narrow entitlement. DCDE officials stated that they were “not narrowing eligibility” and that the definition of disability remained unchanged. The Committee notes that this clarification is important, but it does not remove the concerns raised by stakeholders that operational practice may still change materially if disability determination becomes more explicit and more structured."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The more supportive position of ISCP is also relevant here. ISCP’s submission accepted the value of clearer disability determination and a more structured process but still sought a clinically informed and flexible application. That submission therefore supports clarity, but not rigidity."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee also considered the role of Assessment Officers within the proposed framework, particularly in light of the increased emphasis on disability determination under Head 3 and the sequencing changes proposed in Head 4."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tusla, in its written submission, highlighted that determining whether a child meets the statutory definition of disability may itself require specialist input, particularly where needs are emerging or not yet fully understood. This concern was reflected in evidence from professional bodies including the PSI and the Association of Occupational Therapists of Ireland (AOTI), which emphasised the importance of clinical judgement and multidisciplinary expertise in early-stage decision-making."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee notes that, in practice, Assessment Officers may be required to make threshold determinations at an early point in the process, including in complex or unclear cases. Evidence from DFI and Enable Ireland underlined that children’s needs do not always present in a linear or easily categorised way, and that rigid or overly front-loaded decision-making can be difficult to apply in practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE, in its submission and oral evidence, highlighted the operational context in which Assessment Officers work, including high volumes of applications and resource constraints. The Committee considers that these pressures are relevant to how threshold decisions are made and how consistently processes can be applied."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee further considers that the enhanced role of Assessment Officers within the proposed framework raises important questions regarding the level of expertise required to make complex determinations at an early stage of the process. In circumstances where such determinations may have significant implications for access to assessment and support, it is essential that they are informed by appropriate clinical knowledge and experience."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee notes that the legislation does not specify particular qualification or experience requirements for Assessment Officers. In that context, the Committee considers that the role must be supported by clearly defined standards, including appropriate professional competence, access to multidisciplinary expertise, and sufficient experience to ensure that decisions are consistent, evidence-based and appropriate to the complexity of children’s needs."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Where an Assessment Officer is involved in a determination that an applicant does not meet the statutory threshold for disability, that role should be underpinned by relevant clinical qualifications and post-qualification experience in child disability, child development, CDNTs, Primary Care or CAMHS, or alternatively by a requirement that any such determination be subject to review or sign-off by an appropriately qualified clinician."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Concerns were also raised by advocacy organisations, including Inclusion Ireland and Voices for Change Ireland, that where disability determination operates as a distinct threshold stage, there is a risk that access to the full assessment process may be limited in practice. In that context, the role of Assessment Officers in applying statutory definitions and any associated guidance is of particular significance."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee further notes the importance of transparency and fair procedures in decisions taken by Assessment Officers, particularly where an applicant is determined not to meet the statutory definition of disability. Evidence from the NDA and the Ombudsman for Children’s Office emphasised the need for clear reasoning and access to review mechanisms in such cases."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Overall, the evidence indicates that the operation of the proposed framework will depend to a significant extent on how Assessment Officers are supported to make decisions, including their access to specialist input, the clarity of the legal and policy framework within which they operate, and the safeguards available to applicants."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Scope, quality and multidisciplinary character of assessment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "There was substantial consensus across the evidence that any reform must preserve the comprehensive, multidisciplinary and person-centred nature of assessment. This was among the strongest themes in the professional submissions and in the oral evidence on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "PSI told the Committee that assessment must remain timely, clinically robust and person-centred, and linked the strain in the AON system to longstanding underfunding and under-resourcing rather than excessive professional thoroughness. INMO similarly submitted that timely assessment must not become shorthand for reduced or superficial assessment and emphasised that the skill mix within teams matters greatly. Its submission specifically identified the role of registered nurse intellectual disability expertise and called for fuller recognition of RNID input within multidisciplinary teams and staffing frameworks."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "AOTI stressed that assessment should identify functional barriers to participation and the supports needed to address them, rather than focusing narrowly on impairment. ISCP broadly agreed that the process should focus on restrictions and required supports, although it took a more favourable view of the wording changes. The HSE itself, while arguing for proportionate assessment, did not suggest that all cases should be handled identically and acknowledged the need to match input to the circumstances of each case."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "HIQA’s submission, summarising international evidence, reinforced this point by showing that many jurisdictions favour multidisciplinary, best-interests-based and needs-led approaches to assessment, often with clearer links to service provision than currently exist in Ireland. That material gave the Committee important comparative context and reinforced the concern that proportionality must not become a proxy for thin or truncated assessment."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "DFI and Enable Ireland’s oral evidence gave this question practical content. They described the tension between carrying out statutory assessments and providing interventions and noted that when assessments are prioritised because of legal obligation, children already engaged with services may experience delays in access to intervention. That evidence underscored the importance of ensuring that quality and breadth of assessment are protected while also addressing the wider system pressures that distort how professionals work."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Needs-based reform, diagnosis and alignment with education"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A number of submissions accepted the underlying case for a more needs-based model of assessment. The NDA pointed to international trends away from purely diagnosis-driven approaches, and HIQA’s material similarly suggested that modern systems often focus on support needs, participation and early intervention. The HSE and DCDE also presented the reforms as part of a move towards a more proportionate and needs-oriented process."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "However, stakeholders were equally clear that diagnosis remains practically significant in Ireland, especially in education. The NDA’s submission explicitly acknowledged the continuing discrepancy between health and education criteria. AsIAm made this point forcefully in both written and oral evidence. It stated that diagnosis continues to matter profoundly for autistic children and adults, not only because of service routes, but because diagnosis can be affirming, identity-relevant and practically necessary. In oral evidence, Mr. Harris referred to rising misinformation about autism and warned against a narrative that treats diagnosis as nothing more than a route to resources. He argued that such a view is stigmatising and fails to understand the transformative impact diagnosis can have."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "PSI similarly warned that diagnosis and needs-based assessment should not be treated as opposites. DFI and Enable Ireland added that families frequently pursue AON because other pathways are unclear, because diagnosis remains relevant in practice, or because educational and service systems remain fragmented. On 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March, DCDE officials referred to cross-sectoral work involving education, health and the Department, and stated that communications and consultation would be important around next steps. However, the Committee also heard persistent concern that the practical interface between AON reform and education policy remains insufficiently clear."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "DWI and AsIAm, at the meeting on 3"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "rd"
+          },
+          {
+            "type": "text",
+            "text": " March, located the issue within a wider social context. DWI viewed the reforms as entrenching gatekeeping rather than modernising the model. AsIAm, by contrast, did not reject reform, but insisted that any move away from diagnosis in a fragmented system could have serious consequences if not accompanied by corresponding change in education and service access. The overall evidence therefore supported a needs-based direction in principle, but not one that removes access to diagnosis where clinically or practically required."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Ombudsman for Children’s Office, in its submission, also raised the importance of ensuring that participation in alternative pathways, including the Autism Assessment and Intervention Pathways Protocol, does not dilute or defer statutory entitlements under Part 2 of the Disability Act 2005. The Ombudsman emphasised that children and families must not be required, either explicitly or in practice, to rely on non-statutory processes in place of their legal entitlement to an AON."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In that context, the Ombudsman highlighted the importance of maintaining clarity for families as to the relationship between statutory and non-statutory pathways, and of ensuring that engagement with service pathways or pilot programmes does not result in delay, substitution or diminution of statutory rights."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that this distinction is essential to ensuring that reform of the system does not result in any erosion of statutory entitlements. There is a risk that, if not carefully framed and implemented, the proposed reforms may have the effect of restricting access to the statutory assessment process without addressing the underlying level of unmet need across services. In particular, where disability determination operates as a more defined threshold at an earlier stage, there is a possibility that some children may not proceed to full assessment in circumstances where alternative pathways to support remain limited or unclear."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee therefore considers that reform of the Assessment of Need process must be accompanied by corresponding improvements in service capacity and access, in order to ensure that changes to the statutory framework do not result in unintended exclusion."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Closure, withdrawal and fair procedures"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The proposed closure or deemed withdrawal provisions in Head 5 drew particularly strong concern. Although most stakeholders accepted that the legislation should deal expressly with inactive or withdrawn applications, the overwhelming view was that closure powers engage fundamental questions of fairness and vulnerability."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inclusion Ireland submitted that any such mechanism must be narrowly defined and accompanied by safeguards, including accessible notice, written reasons, a real chance to re-engage, and a clear route to reopen an application. DWI emphasised that families navigating the disability system often face poverty, housing instability, disability within the family, health crises, language barriers and other structural barriers, and that “lack of engagement” may therefore say more about the system than about the absence of need. FUSS Ireland also criticised the proposed approach, warning against procedural measures that could weaken accountability or obscure legal entitlements."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE MHER’s submission gave particularly detailed evidence on vulnerability and engagement. It pointed to crisis, trauma, anxiety, executive functioning difficulties and unstable circumstances as factors that may prevent timely response to correspondence."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "ISCP, although generally supportive of clearer process, also stressed the need for informed withdrawal and for clarity around what would constitute sufficient engagement. Voices for Change Ireland emphasised that transitional fairness and procedural protections are especially important where families have already been waiting for long periods."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE and DCDE both framed closure provisions as addressing a procedural omission and allowing inactive cases to be managed more clearly. The Committee understands that rationale. However, the evidence as a whole showed that closure cannot be treated as merely administrative: it is, for many applicants, a decision with real implications for access to statutory rights. That is why the Committee regarded fair procedures, written reasons, reopening mechanisms and accessible communication as essential rather than optional."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Statutory guidelines, legal interpretation and the “high threshold”"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Head 6 generated sustained concern because it would allow the Minister to require the HSE to issue statutory guidelines covering the interpretation of legal definitions, the disability determination process, assessment procedures, operational matters and report-writing, while also enabling regulations about closure. The General Scheme explicitly indicates that the guidelines will emphasise a “high threshold” for entitlement to assessment."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE and DCDE saw guidance as a practical means of improving consistency and legal robustness. On 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March, HSE witnesses referred to the need for clearer guidance, while DCDE officials indicated that consultation and communication would be part of the process. The Committee also notes that members raised concerns during that hearing about whether guidelines might effectively reinterpret the law, about the position of Assessment Officers declaring a “no disability” outcome, and about how a “high threshold” would operate in practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inclusion Ireland warned that guidelines must not narrow access or safeguards in practice. AOTI stressed that interpretation of statutory definitions is ordinarily a matter for the courts and Legislature. FUSS Ireland went further, arguing that the State was already capable of issuing internal guidance and that creating new statutory guidance of a non-binding kind risked ambiguity and reduced accountability. The HSE MHER was particularly concerned about how a high-threshold framing would affect psychosocial disabilities. Voice of Vision Impairment stressed that accessibility and meaningful consultation with Disabled Persons’ Representative Organisations were essential."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "ISCP’s submission again took a somewhat different tone. It supported practical guidelines in principle, particularly if they clarify process and assist consistent decision-making, but sought clinician input, clarity on legal status and a careful approach to closure."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The oral evidence on 4"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March from the Ombudsman for Children’s Office and CDLP also reinforced the concern that rights and thresholds must be defined by law and interpreted in a rights-compliant way, not effectively reshaped by administrative material. Taken together, the evidence strongly supported consultation, transparency, careful definition of legal status, and control of how “high threshold” language is used."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The NDA, in its submission, referred to relevant case law in the interpretation of the statutory framework, highlighting the importance of ensuring that statutory provisions and any associated guidelines are consistent with established legal principles. The NDA emphasised that clarity in legislative drafting is particularly important in this context, as ambiguity in key terms may give rise to differing interpretations and increased legal challenge."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee also notes that a number of submissions raised concerns regarding the language and terminology used in the General Scheme. The NDA, in its submission, emphasised the importance of clear, consistent and well-defined statutory language, noting that ambiguity in key terms may give rise to difficulties in interpretation and application in practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inclusion Ireland and DWI both highlighted the importance of ensuring that the language used in the legislation is accessible and reflects a person-centred and rights-based approach to disability. In particular, these organisations expressed concern that terminology which is unclear or overly narrow in its interpretation may affect how eligibility for assessment is understood and applied in practice."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "VVI drew attention to the importance of accessible communication and clarity of language, particularly for applicants and families engaging with the system, noting that complex or unclear terminology may create barriers to understanding and engagement."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The AOTI and the PSI emphasised the importance of ensuring that statutory terminology is compatible with clinical and functional understandings of disability, so as to support consistent and evidence-based decision-making."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that these issues highlight the importance of careful drafting of statutory language, both to ensure legal clarity and to support consistent, transparent and fair application of the legislative framework in practice."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Transitional arrangements and applicants already waiting"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The transitional provisions in Head 7 were another area of notable concern. DCDE’s explanatory note makes clear that the amendments are intended to apply to applications already received where substantive assessment has not commenced, including cases that have undergone only administrative processing."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inclusion Ireland, DWI and Voices for Change Ireland each emphasised that families already waiting for long periods should not be placed at a new disadvantage because of delays within the system itself. DWI highlighted in oral evidence that families on waiting lists would be deeply concerned if they were now to be subject to a strengthened preliminary determination stage. Voices for Change Ireland stated that explicit transitional protection and monitoring are necessary. Inclusion Ireland made a similar point in calling for robust family safeguards and protections for those already waiting."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee notes that the DCDE’s position is that the amendments do not reduce or remove existing rights. However, the evidence showed that transition can still affect fairness in practical ways even where formal rights language is unchanged. Families who have already waited beyond statutory timelines may experience the commencement of a new regime as a changed threshold or changed process. That is why the Committee attached importance to communication, monitoring and non-disadvantage in transition."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE emphasised the need for clarity in relation to the operation of the transitional provisions, particularly in defining when an assessment process is considered to have commenced. The HSE noted that, in practice, an initial review of an application by an Assessment Officer, sometimes referred to as a “desktop examination”, may take place prior to the commencement of a full clinical assessment. In that context, the HSE highlighted the importance of clarifying whether such preliminary activity constitutes the commencement of the assessment process for the purposes of transitional arrangements."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE further indicated that a lack of clarity in this area may give rise to uncertainty in determining which applicants fall within the scope of the new provisions and may have implications for the fair and consistent treatment of applications already in the system. The Committee considers that this issue requires clear definition in the legislation or accompanying guidance to ensure consistency and fairness in the application of transitional provisions."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Workforce, staffing and implementation capacity"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Across virtually every submission and hearing, the strongest operational theme was that delay and dysfunction in the AON system are inseparable from workforce and service capacity problems. The HSE’s submission set out the scale of demand and the challenge of complying with statutory obligations while also supporting interventions. PSI linked the present crisis to years of underfunding and under-resourcing. INMO highlighted staffing shortages and called specifically for safe staffing frameworks and explicit recognition of registered nurse intellectual disability roles in teams. AOTI and ISCP also emphasised the need for adequate professional capacity to make any reform workable."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "DFI and Enable Ireland gave particularly practical evidence on the effect of staffing and caseload pressure. Enable Ireland told the Committee that statutory assessment work can delay interventions because AONs are always prioritised due to the legal obligation. Witnesses also described recruitment and retention challenges, including staff leaving because caseload pressure had become too great, even where they valued the service model. On 18"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "th"
+          },
+          {
+            "type": "text",
+            "text": " March, DCDE officials referred to cross-sectoral work on therapist supply and wider system movement, but members of the Committee pressed them on whether service development and workforce planning were being addressed quickly enough."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The evidence therefore supported the view that the success of the legislation depends not just on legal drafting, but on funded implementation, workforce planning, training, and realistic operational support for those administering the system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that legislative reform, however carefully framed, will not be sufficient to address the current challenges within the AON system unless it is accompanied by significant development of services, workforce capacity, system integration and multi-annual funding. In the absence of such development, there is a risk that reform of the statutory process may not achieve its intended outcomes and may instead place additional pressure on an already constrained system."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Service linkage, system integration and broader reform"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A further major theme, running through nearly all submissions, was that the AON process cannot be treated in isolation from the broader systems of health, education and social care. Inclusion Ireland repeatedly stated that assessment alone does not secure outcomes, and that assessment without timely follow-through can become another barrier rather than a support. The NDA emphasised that the Disability Act 2005 and the EPSEN Act 2004 were intended to work together but have not done so in practice. AsIAm, DFI and Enable Ireland all described a fragmented environment in which families often pursue AON because other routes are unclear, overloaded or inconsistent."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "HIQA’s international review strengthened this point by showing that, in many jurisdictions, assessment is more clearly connected to service provision and operates within more integrated structures. FUSS Ireland framed the current Bill as “another patch over a broken system” and stated that the underlying structural failures remain unresolved. VVI raised the parallel issue that assessment must be accessible and responsive to impairment-specific needs and should not be treated as a purely procedural exercise. The supplementary submissions from Inclusion Ireland and PSI also reinforced that the current legislative exercise is limited in scope relative to the system-wide issues at stake."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This body of evidence placed the General Scheme in its proper context. The Heads under scrutiny matter, but they sit within a wider system marked by uneven access, diagnosis-dependent educational routes, staffing shortages, service fragmentation and inconsistent family experience. That wider context explains why so many stakeholders called not only for amendment of specific Heads, but also for broader reform of the Disability Act 2005 and closer integration across sectors."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee notes that this is not solely a matter of imperfect policy alignment in the abstract, but a practical day-to-day reality for families. The evidence indicates that disputes or uncertainty as to whether Primary Care, CDNTs or CAMHS should assume responsibility can leave children and families without a clear service response and can encourage defensive practice within a resource-constrained system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee further notes that, while the HSE’s Single Point of Access arrangements may offer part of the solution, the underlying problem is also one of human resourcing and the absence of a clear and timely HSE mechanism for adjudicating on contested referrals or service-boundary disputes. The Committee considers that reform of the AON process will remain incomplete unless accompanied by operational arrangements capable of resolving such disputes quickly, clearly and accountably."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee also considered the issue of consultation in the development and implementation of the proposed reforms, including the preparation of statutory guidelines and the broader policy framework within which the AON process operates."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The HSE, in its submission, indicated its willingness to engage in the development of statutory guidelines and emphasised the importance of ensuring that such guidelines are operationally practicable and informed by the experience of those responsible for implementing the process in practice. The HSE also highlighted the need for engagement with relevant bodies, including those involved in complaints and appeals processes, in order to ensure that reforms are workable and do not give rise to unintended consequences in the operation of the system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "DCDE indicated that consultation with stakeholders, including those with lived experience, would form part of the development of statutory guidelines and the implementation of the reforms. The Department emphasised the importance of engagement in ensuring that the reforms are effective and responsive to the needs of children and families."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Ombudsman for Children’s Office emphasised the importance of meaningful consultation with children and young people with disabilities, in line with Ireland’s obligations under the UNCRPD and the UNCRC. The Ombudsman highlighted that children should be supported to participate in decisions that affect them and that their views should be given due weight, in accordance with their age and maturity."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In that context, the Committee notes the relevance of UNCRPD indicators relating to participation and consultation, including the requirement that persons with disabilities, including children, be actively involved in decision-making processes concerning issues that affect them. The evidence before the Committee indicates that this principle is of particular importance in the development of statutory guidance and in the ongoing evaluation of the AON framework."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Overall, the Committee considers that effective consultation, including the active involvement of children and young people with disabilities and engagement with relevant stakeholders across the system, will be an important factor in ensuring that the proposed reforms are implemented in a manner that is practical, rights-based and responsive to the needs of those who rely on the system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Committee considers that such consultation should be structured, ongoing and meaningful, and should include mechanisms to ensure that the voices of children and young people are reflected in both policy development and implementation."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Appendix 1 – Opening Statements and Written Submissions"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Opening Statements"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p><strong>Date</strong></p></th><th scope=\"col\"><p><strong>Witnesses</strong></p></th><th scope=\"col\"><p><strong>Link to Submission</strong></p></th></tr></thead><tbody><tr><td><p>3<sup>rd</sup> March 2026</p></td><td><p><strong>Disabled Women Ireland</strong></p><ul><li>Dr. Amy Hassett</li><li>Mx. Nem Kearns</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-03_opening-statement-dr-amy-hassett-co-director-disabled-women-ireland_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>3<sup>rd</sup> March 2026</p></td><td><p><strong>AsIAm</strong></p><ul><li>Mr. Adam Harris</li><li>Mr. Michael O'Flanagan</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-03_opening-statement-adam-harris-chief-executive-officer-asiam_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>3<sup>rd</sup> March 2026</p></td><td><p><strong>Disability Federation of Ireland</strong></p><ul><li>Dr. Emer Begley</li><li>Ms. Treasa McAuliffe</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-03_opening-statement-dr-emer-begley-director-of-advocacy-et-al-disability-federation-of-ireland_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>3<sup>rd</sup> March 2026</p></td><td><p><strong>Enable Ireland</strong></p><ul><li>Ms. Gillian Darrer</li><li>Dr. Claire Milner</li><li>Ms. Frances Fitzell</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-03_opening-statement-dr-claire-milner-principal-psychologist-northeast-dublin-west-et-al-enable-ireland_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>4<sup>th</sup> March 2026</p></td><td><p><strong>Ombudsman for Children's Office</strong></p><ul><li>Dr. Niall Muldoon</li><li>Dr. Tricia Keilthy</li><li>Ms. Nuala Ward</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-04_opening-statement-dr-niall-muldoon-ombudsman-for-children-ombudsman-for-children-s-office_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>4<sup>th</sup> March 2026</p></td><td><p><strong>Psychological Society of Ireland (PSI)</strong></p><ul><li>Dr. Sarah Cassidy</li><li>Dr. Lauren Burns</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-04_opening-statement-dr-sarah-cassidy-president-the-psychological-society-of-ireland_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>4<sup>th</sup> March 2026</p></td><td><p><strong>Centre for Disability Law and Policy - University of Galway</strong></p><ul><li>Professor Eilionóir Flynn</li><li>Dr. Clíona de Bhailís</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-04_opening-statement-professor-eilionoir-flynn-director-of-the-centre-for-disability-law-policy-and-established-professor-centre-for-disability-law-and-policy-university-of-galway_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>18<sup>th</sup> March 2026</p></td><td><p><strong>Health Service Executive (HSE)</strong></p><ul><li>Ms. Martina Queally, Regional Executive Officer, HSE Dublin and South-East</li><li>Dr. Aoife O’Donohue, Assistant National Director, Access &amp; Integration, Disability Services</li><li>Mr. John Fitzmaurice, Integrated Healthcare Area Manager, HSE West and North-West</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-18_opening-statement-martina-queally-regional-executive-officer-hse-dublin-and-south-east-health-service-executive_en.pdf\">Opening Statement</a></p></td></tr><tr><td><p>18<sup>th</sup> March 2026</p></td><td><p><strong>Department of Children, Disability and Equality (DCDE)</strong></p><ul><li>Mr. Mark Considine, Principal Officer, Disability Children’s Services Unit</li><li>Ms. Sarah O' Halloran, Assistant Principal Officer, Disability Children’s Services Unit</li><li>Ms. Nicole Dyrssen, Clinical Specialist/Therapy Advisor, Disability Children’s Services Unit</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-03-18_opening-statement-mark-considine-principal-officer-disability-children-s-services-unit-department-of-children-disability-and-equality_en.pdf\">Opening Statement</a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Written Submissions"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p><strong>Stakeholder</strong></p></th><th scope=\"col\"><p><strong>Link to Submission</strong></p></th></tr></thead><tbody><tr><td><p>Association of Occupational Therapists of Ireland (AOTI)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-association-of-occupational-therapists-of-ireland-aoti_en.pdf\">Submission</a></p></td></tr><tr><td><p>AsIAm</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-asiam_en.pdf\">Submission</a></p></td></tr><tr><td><p>Disabled Women Ireland (DWI)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-disabled-women-ireland-dwi_en.pdf\">Submission</a></p></td></tr><tr><td><p>Fuss Ireland</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-fuss-ireland_en.pdf\">Submission</a></p></td></tr><tr><td><p>Health Information and Quality Authority (HIQA)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-health-information-and-quality-authority-hiqa_en.pdf\">Submission</a></p></td></tr><tr><td><p>Health Service Executive (HSE)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-health-service-executive-hse_en.pdf\">Submission</a></p></td></tr><tr><td><p>HSE Office of Mental Health Engagement and Recovery</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-hse-office-of-mental-health-engagement-and-recovery_en.pdf\">Submission</a></p></td></tr><tr><td><p>Inclusion Ireland</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-inclusion-ireland_en.pdf\">Submission</a></p></td></tr><tr><td><p>Irish Nurses and Midwives Organisation (INMO)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-irish-nurses-and-midwives-organisation-inmo_en.pdf\">Submission</a></p></td></tr><tr><td><p>Irish Society of Chartered Physiotherapists (ISCP)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-irish-society-of-chartered-physiotherapists_en.pdf\">Submission</a></p></td></tr><tr><td><p>National Disability Authority (NDA)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-national-disability-authority_en.pdf\">Submission</a></p></td></tr><tr><td><p>Ombudsman for Children’s Office</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-ombudsman-for-children-s-office_en.pdf\">Submission</a></p></td></tr><tr><td><p>Psychological Society of Ireland (PSI)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-psychological-society-of-ireland_en.pdf\">Submission</a></p></td></tr><tr><td><p>Tusla, the Child and Family Agency</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-tusla-the-child-and-family-agency_en.pdf\">Submission</a></p></td></tr><tr><td><p>Voices for Change Ireland</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-voices-for-change-ireland_en.pdf\">Submission</a></p></td></tr><tr><td><p>Voice of Vision Impairment (VVI)</p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_disability_matters/submissions/2026/2026-04-17_submission-voice-of-vision-impairment_en.pdf\">Submission</a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

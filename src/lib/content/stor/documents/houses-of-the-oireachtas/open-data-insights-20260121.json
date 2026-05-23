@@ -1,0 +1,1386 @@
+{
+  "id": "open-data-insights-20260121",
+  "slug": "open-data-insights-20260121",
+  "type": "article",
+  "destination": "houses-of-the-oireachtas",
+  "featured": false,
+  "heroLayout": "split",
+  "showContents": false,
+  "flourishWidth": "prose",
+  "title": "Open data insights",
+  "dek": "Open data comes with a promise of transparency and making our information available and useful to the public. We need to bring that promise out in the work we do.",
+  "eyebrow": "Digital communications",
+  "topics": [
+    "open data",
+    "transparency",
+    "digital communications"
+  ],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": [
+    "open data",
+    "transparency",
+    "digital communications"
+  ],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-01-21",
+  "contributors": [
+    {
+      "name": "David Cass",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true,
+      "profileRole": "Web content editor"
+    }
+  ],
+  "researcher": {
+    "name": "David Cass",
+    "role": "Web content editor",
+    "organisation": "Communications"
+  },
+  "hero": {
+    "src": "/media/election.mp4",
+    "alt": "People in a general election count centre",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Making parliamentary open data real and relevant"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Open Data Insights"
+          },
+          {
+            "type": "text",
+            "text": " is not a specific project or plan but rather an editorial ethos adopted by the Houses of the Oireachtas web team focused on transforming parliamentary open data into accessible, visual and interactive public information experiences that puts users in control of what they need to see."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative is built on a simple principle. The Houses of the Oireachtas already "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://api.oireachtas.ie",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "publishes extensive open data"
+          },
+          {
+            "type": "text",
+            "text": " and is committed to "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/open-data/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "making the work done in Ireland’s Parliament"
+          },
+          {
+            "type": "text",
+            "text": " as transparent as possible. However, much of the information can remain abstract, technical or difficult for non-specialist audiences to engage with. Much work is done in Parliament, with thousands of hours of debate translating to millions of written words, including tens of thousands of parliamentary questions, each year. A commitment to open data improves transparency but transparency alone does not guarantee public engagement or even understanding."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insights seeks to bridge that gap by reimagining how parliamentary information is presented to the public. Through interactive visualisations, intuitive interfaces and data-driven storytelling, the initiative aims to bring Parliament closer to its people and make parliamentary activity more understandable, discoverable and engaging for all audiences."
+          }
+        ]
+      },
+      {
+        "type": "flourishBlock",
+        "attrs": {
+          "dataSrc": "visualisation/26917154?2729416",
+          "alt": "Flourish visualisation",
+          "caption": "A Flourish ticker visual. Data does not necessarily have to mean a spreadsheet and we should make our information as accessible as possible",
+          "thumbnail": "https://public.flourish.studio/visualisation/26917154/thumbnail",
+          "embedType": "visualisation",
+          "width": "prose"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Rather than focusing on a single digital product, the initiative represents a broader shift in mindset, moving from publishing data for availability alone or an obligation to European directives towards publishing data for public understanding, accessibility and civic engagement."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative has been spearheaded by two areas of parliamentary activity in which open data has existed but there has been a gap between the information and public understanding. These are Dáil parliamentary questions and the Seanad elections."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "An initial proof-of-concept for the Open Data Insights initiative was delivered through "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/open-data/pq-explorer/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "PQ Explorer"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Arising from the positive response to PQ Explorer, a project to cover the Seanad elections of early 2025 with the Open Data Insight ethos delivered the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/elections/seanad-general-election/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Seanad Election Explorer"
+          },
+          {
+            "type": "text",
+            "text": ", which for the first time saw Seanad election results displayed in a rich and data-driven user experience on the Oireachtas website in real time as counts progressed."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Open Data Insight initiative has subsequently been applied to other elements of parliamentary business, including the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/elections/selection-of-the-ceann-comhairle/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "selection of the Ceann Comhairle"
+          },
+          {
+            "type": "text",
+            "text": " and Leas-Cheann Comhairle, the displaying of party strengths and constituency make-up on the Oireachtas website and a resource for "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/dail-chamber",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "exploring the Dáil Chamber"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Together, these projects demonstrate how parliamentary open data can be transformed into meaningful public insight by focusing on user experience, accessibility and using data in innovative ways."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Using open data to improve public understanding"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Open Data Insight initiative derives entirely from existing open datasets published by the Houses of the Oireachtas."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Our open data includes:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Parliamentary questions data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Election and membership data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Voting and chamber seating data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Member and party information"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "These datasets contain rich and valuable information about parliamentary activity and democratic processes. However, much of this information traditionally exists in formats that can be difficult for non-specialist audiences to interpret or explore."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insights focuses on transforming these datasets into visual and interactive experiences that make parliamentary information more approachable and meaningful."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative demonstrates that open data achieves greater public value when it is not only available, but understandable."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/vote-result.png",
+          "alt": "A visualisation of a vote in Dáil Éireann",
+          "caption": "Voting visualised. The information is already there; it's a question of finding the right way to get the message across",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Proof-of-concept - PQ Explorer"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://bubcass.github.io/pq-explorer/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "PQ Explorer"
+          },
+          {
+            "type": "text",
+            "text": " transforms large volumes of Parliamentary questions data into an interactive exploration platform."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Instead of requiring users to navigate thousands of rows of raw data, the tool enables users to:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "explore trends by department, topic, Member and timeframe"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "search and filter parliamentary activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "identify patterns in parliamentary scrutiny"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "better understand how elected representatives engage with public policy issues"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "By visualising parliamentary activity in a more intuitive way, PQ Explorer helps make parliamentary oversight and accountability more visible to the public."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insight in real time - Seanad Election Explorer"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://bubcass.github.io/seanad-election-explorer/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Seanad Election Explorer"
+          },
+          {
+            "type": "text",
+            "text": " was initially developed during the Seanad election process to help users better understand a complex electoral system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Using data from the bespoke election software developed for the Seanad process, the project looked to create a visual and navigable representation of:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "election outcomes"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "candidate performance"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "panel composition"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The project demonstrated how open data visualisation can improve understanding of parliamentary elections and democratic processes that are often perceived as inaccessible or difficult to interpret."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Embedding Open Data Insight into everyday thinking"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "An important aspect of the Open Data Insights ethos is that we are reframing how we present or re-present our parliamentary open data. To that end, the initiative is evident in some recent additions to the Houses of the Oireachtas website:"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Dáil Chamber Map"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A map of the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBusiness/other/2026-04-21_dail-chamber-seating-plan-21-april-2026_en.pdf",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Dáil Chamber"
+          },
+          {
+            "type": "text",
+            "text": " indicating the seating and voting position of Members has been published in PDF form on the website for many years. However, the PDF is a closed proprietary format with no easy way to reuse the data."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The interactive "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/dail-chamber/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Dáil Chamber map"
+          },
+          {
+            "type": "text",
+            "text": " transforms the parliamentary seating resource into an intuitive visual representation of the Chamber itself, integrating the existing rich member data available on the Oireachtas open data portal."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Rather than presenting the information as a static document or list, the interactive Chamber map means users can:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "visually explore chamber composition"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "understand party distribution"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "identify Members and constituencies interactively"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A planned project will bring further benefit by "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://bubcass.github.io/chamber-vote-poc/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "layering in the voting data"
+          },
+          {
+            "type": "text",
+            "text": " that is already available on the Oireachtas open data portal, allowing users to examine voting outcomes spatially and contextually."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Innovation with openness and accessibility"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A central goal of the initiative is to make parliamentary information more accessible to wider audiences."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Many parliamentary and electoral processes are inherently complex. While the underlying data may already be open, open publication alone does not necessarily create meaningful engagement."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insights explores how:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "open data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "visual storytelling"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "interactive interfaces"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "modern web technologies"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "reusable public datasets"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "can work together to improve democratic understanding."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative seeks to move parliamentary open data from passive publication toward active public engagement."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This approach supports:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "transparency"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "accessibility"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "discoverability"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "data reuse"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "civic understanding"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "democratic literacy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "and aims to make parliamentary information approachable for users regardless of technical expertise or prior knowledge of parliamentary systems."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Impact and organisational value"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The primary impact of the initiative has been cultural as well as technical."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The projects demonstrate how parliamentary open data can move beyond compliance-oriented publication and become an active public engagement resource."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative has helped:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "improve accessibility of parliamentary information"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "increase transparency of parliamentary processes"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "support civic understanding"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "demonstrate new approaches to public-sector open data communication"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "encourage innovation in how parliamentary services present information"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The work also establishes reusable technical and design approaches for future parliamentary data initiatives."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Importantly, the initiative demonstrates that with an overarching ethos of making our data as accessible and user-driven as possible, even relatively small, agile and iterative digital projects can generate significant public value when the focus is on understanding and openness."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Scalability and future development"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A key strength of the initiative is that it goes beyond any one specific project. As an ethos it can drive projects of any size."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initial tools emanating from this Open Data Insights ethos demonstrate how parliamentary open data can be transformed into accessible public experiences while also establishing a framework that can continue to grow across parliamentary services and public engagement initiatives."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Future development plans include:"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "expanding the current Dáil Chamber map into a full "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://bubcass.github.io/chamber-vote-poc/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Vote Explorer"
+                  },
+                  {
+                    "type": "text",
+                    "text": " platform, enabling users to visually explore parliamentary voting behaviour and outcomes over time"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "extending chamber visualisation tools to Seanad Éireann"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "continuing to develop additional public-facing parliamentary insight tools using existing open datasets, including a Constituency Insights resource"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "supporting broader civic and educational engagement through reusable visualisation models"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The election explorer approach also has potential applications beyond parliamentary reporting itself. The visualisation model could support civic education, electoral awareness initiatives and educational use across schools, universities and public-sector organisations seeking to explain Ireland’s democratic and electoral systems."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/election-results.png",
+          "alt": "Election count result visualisation",
+          "caption": "Bridging the gap between our data and users is key to engaging people in the events that matter, including elections",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The initiative is built upon the idea of working with existing reusable open datasets and scalable visualisation approaches, so new tools and services can be developed iteratively without being dependent on the development of new infrastructure."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insights therefore represents not simply a collection of individual projects, but the beginnings of a broader ecosystem for parliamentary open data engagement."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Conclusion"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Open Data Insights demonstrates how with a driving ethos, open parliamentary data can be transformed into accessible, engaging and meaningful public information experiences by seeing our existing information in a new and innovative ways."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Moreover, the initiative shows that transparency is most effective when information is not only available but understandable."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "By combining open data, visual communication and interactive exploration, the Open Data Insights approach seeks to strengthen the connection between Parliament and the public it serves, helping to bring parliamentary information to life for a wider audience and supporting a more open, accessible and understandable democratic process."
+          }
+        ]
+      }
+    ]
+  }
+}

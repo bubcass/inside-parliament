@@ -1,0 +1,1280 @@
+{
+  "id": "digital-communications-strategy-2026-2028-20260316",
+  "slug": "digital-communications-strategy-2026-2028-20260316",
+  "type": "article",
+  "destination": "houses-of-the-oireachtas",
+  "featured": false,
+  "showContents": true,
+  "flourishWidth": "prose",
+  "title": "Digital Communications Strategy 2026–2028",
+  "dek": "This strategy will guide the work to create trusted, engaging and innovative digital experiences that make Parliament accessible, relatable and relevant to all of its audiences. The work is vital in reinforcing democratic accountability and transparency.",
+  "eyebrow": "Strategy",
+  "abstract": "This strategy sets out how the Digital Communications Team will deliver cohesive, narrative-driven and accessible messaging that will engage people with their Parliament in meaningful ways.\nIt will evolve our communications on parliamentary updates and move towards planning storytelling in our digital outputs It moves digital output from primarily procedural updates to planned storytelling, using a newsroom style workflow with clear editorial pipelines and priorities paired with consistent brand standards.\nIt strengthens trust and transparency through robust accessibility, bilingual delivery as standard, and adoption of content integrity standards (e.g., C2PA) where appropriate.\nIt supports continued improvements to Oireachtas.ie.\nSuccess will be tracked through a small set of performance measures across reach, engagement, service quality, accessibility compliance and delivery efficiency, with regular reporting and review.",
+  "topics": ["digital", "communications", "strategy", "corporate"],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": ["digital", "communications", "strategy", "corporate"],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-03-16",
+  "contributors": [
+    {
+      "name": "Karin Whooley",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true,
+      "profileRole": "Principal Officer"
+    },
+    {
+      "name": "Michelle Conville",
+      "role": "contributor",
+      "affiliation": "Communications",
+      "showAsAuthor": false,
+      "profileRole": "Web manager"
+    },
+    {
+      "name": "Orla Donhoe",
+      "role": "contributor",
+      "affiliation": "Communications",
+      "showAsAuthor": false,
+      "profileRole": "Social media manager"
+    }
+  ],
+  "researcher": {
+    "name": "Karin Whooley",
+    "role": "Principal Officer",
+    "organisation": "Communications"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Digital Communications Strategy 2026–2028"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "1. Introduction"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The digital environment is changing at an unprecedented pace. The public now expect not only timely and accurate information but also engaging, interactive, and accessible experiences across multiple platforms."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This strategy outlines how the newly formed "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Digital Communications Team"
+          },
+          {
+            "type": "text",
+            "text": " will deliver integrated, proactive, and creative outputs that connect people with Parliament in meaningful ways. It builds on lessons learned from recent successes and aligns with the overarching Communications Strategy to ensure consistency, trust, and innovation."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2. Vision"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "To create trusted, engaging and innovative digital experiences that make Parliament accessible, relatable and relevant to all audiences, while reinforcing democratic accountability and transparency."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "3. Strategic outcomes (2026–2028)"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A unified digital service with common standards and a single editorial direction."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "More message-led storytelling that improves public understanding of parliamentary work and increases engagement."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Accessible, inclusive and bilingual digital communications delivered as standard practice"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Stronger trust signals through content integrity practices and transparent, reliable publishing workflows."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Improved user experience on "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Oireachtas.ie"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and related digital services."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4. Objectives"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Commit to foundational principles of impartiality, creativity and collaboration within the team and across the organisation, building a culture of innovation and shared success."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Unify digital services under a single strategic structure to eliminate silos and foster collaboration."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Shift from reactive updates to proactive storytelling, moving beyond fragmented content to narratives that inform, inspire and humanise parliamentary work."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Adopt a nimble, message-driven approach to sharing news and updates on parliamentary proceedings, with clear editorial standards, impartiality"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[1]"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and accountability."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Improve accessibility and inclusivity, ensuring compliance with the Web Accessibility Directive and delivering bilingual content as standard."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Embed authenticity and trust through adoption of content integrity standards such as C2PA, where appropriate."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "5. Guiding principles"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Impartiality and accuracy:"
+          },
+          {
+            "type": "text",
+            "text": " All content will remain objective and fact-based, guided by a strong editorial ethos."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Accessibility and inclusivity:"
+          },
+          {
+            "type": "text",
+            "text": " Design and language will cater to diverse audiences, including people with disabilities and Irish language users."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Innovation and adaptability:"
+          },
+          {
+            "type": "text",
+            "text": " We will test emerging formats (shortform video, interactive storytelling, mobile first delivery) to align with users evolving expectations and real-world behaviour."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Collaboration and transparency:"
+          },
+          {
+            "type": "text",
+            "text": " We will work openly with internal stakeholders to ensure alignment, shared ownership and clear expectations."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6. Strategic pillars"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The five strategic pillars below are interconnected and mutually reinforcing. Progress in one area strengthens the others — technical development enables content innovation, while strong branding supports consistent storytelling and audience trust."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.1 Team identity and culture"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Rename Social Media and Web teams as "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Digital Communications team"
+                  },
+                  {
+                    "type": "text",
+                    "text": " to reflect a unified, strategic approach."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Adopt a "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "newsroom mentality"
+                  },
+                  {
+                    "type": "text",
+                    "text": ":"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Weekly editorial planning meetings to prioritise content and share updates."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Agree either shared calendars or Kanban boards for visibility and accountability."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Promote cross-team collaboration and upskilling to build capacity for creative content production."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.2 Content strategy evolution"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Expand beyond parliamentary outputs to include human-interest and evergreen content."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Develop branded series (e.g., "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Inside Parliament"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Climate Focus"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Day in the Life"
+                  },
+                  {
+                    "type": "text",
+                    "text": ")."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Increase shortform video and on-campus filming for dynamic, shareable content."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Use interactive storytelling formats and multimedia."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Consider content integrity approaches (e.g., C2PA) to support trust."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Use survey-based data collection and analytics to understand audiences."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.3 Service review and branding"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Position graphic design as ‘Brand Services’ to reflect strategic identity work."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Develop accessibility templates and inclusive design standards."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Support organisational events and campaigns with integrated digital and physical assets."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.4 Technical development"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Continue planned improvements to Oireachtas.ie."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Support video-on-demand improvements and explore smart TV integration."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Prioritise mobile first design."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "6.5 Data and standards"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Implement appropriate content integrity practices (including C2PA)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Standardise tagging, metadata and publishing conventions."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Explore open data initiatives."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Introduce a performance dashboard and a monthly “what we learned” insights practice."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "7. Governance and ways of working"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Weekly editorial meeting to agree priorities."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Quarterly planning for campaigns and parliamentary milestones."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Shared content calendar and Kanban workflow."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Annual strategy review."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "8. Risks, dependencies and mitigations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Capacity constraints:"
+          },
+          {
+            "type": "text",
+            "text": " Prioritise high impact work and implement selective automation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Cultural shift:"
+          },
+          {
+            "type": "text",
+            "text": " Provide leadership support, training and encouragement of innovation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Technical investment:"
+          },
+          {
+            "type": "text",
+            "text": " Maintain a multi‑year roadmap aligned to organisational planning."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Cross team collaboration:"
+          },
+          {
+            "type": "text",
+            "text": " Agree roles, expectations and communications rhythm."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Accessibility compliance risk:"
+          },
+          {
+            "type": "text",
+            "text": " Embed accessibility checks and provide training."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Appendix: Glossary"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "C2PA:"
+          },
+          {
+            "type": "text",
+            "text": " A technical standard signalling content provenance and integrity."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Kanban:"
+          },
+          {
+            "type": "text",
+            "text": " A workflow method that visualises tasks to improve flow and transparency."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Newsroom model:"
+          },
+          {
+            "type": "text",
+            "text": " A structured editorial approach involving regular planning meetings, prioritisation and coordinated storytelling."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Metadata:"
+          },
+          {
+            "type": "text",
+            "text": " Descriptive information attached to digital content (e.g., tags, categories) that enhances searchability and organisation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Alt text:"
+          },
+          {
+            "type": "text",
+            "text": " A written description of an image used by screen readers to support accessibility."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Open data:"
+          },
+          {
+            "type": "text",
+            "text": " Machine readable data released publicly to support transparency, reuse and analysis."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Video-on-demand (VOD):"
+          },
+          {
+            "type": "text",
+            "text": " Recorded video content users can access at any time."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.bbc.co.uk/editorialguidelines/guidelines/impartiality",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Section 2: Impartiality"
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 import type { Story, StorySection } from "../types";
+import { storStories } from "../stor";
 
 export interface StorySectionMeta {
   slug: StorySection;
@@ -32,7 +33,7 @@ export const storySections: StorySectionMeta[] = [
 ];
 
 function storyDateValue(story: Story) {
-  const timestamp = Date.parse(story.date);
+  const timestamp = Date.parse(story.publishedDate ?? story.date);
   return Number.isNaN(timestamp) ? 0 : timestamp;
 }
 
@@ -45,7 +46,17 @@ const storyList: Story[] = Object.entries(storyModules)
   .filter(([path]) => !path.endsWith("/index.ts"))
   .map(([, story]) => story);
 
-export const stories: Story[] = [...storyList].sort(
+const mergedStories = new Map<string, Story>();
+
+for (const story of storyList) {
+  mergedStories.set(story.slug, story);
+}
+
+for (const story of storStories) {
+  mergedStories.set(story.slug, story);
+}
+
+export const stories: Story[] = [...mergedStories.values()].sort(
   (a, b) => storyDateValue(b) - storyDateValue(a),
 );
 

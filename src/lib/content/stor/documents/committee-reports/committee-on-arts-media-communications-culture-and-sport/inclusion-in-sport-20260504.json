@@ -1,0 +1,4193 @@
+{
+  "id": "inclusion-in-sport-20260504",
+  "slug": "inclusion-in-sport-20260504",
+  "type": "committee-report",
+  "destination": "committee-reports",
+  "featured": false,
+  "heroLayout": "contained",
+  "showContents": true,
+  "flourishWidth": "prose",
+  "title": "Inclusion in Sport",
+  "dek": "Certain societal groups experience lower participation rates in sport, highlighting the need for inclusive practices.",
+  "eyebrow": "Committee on Arts, Media, Communications, Culture and Sport",
+  "committeeName": "Committee on Arts, Media, Communications, Culture and Sport",
+  "topics": [
+    "inclusion",
+    "disability",
+    "sport"
+  ],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": [
+    "inclusion",
+    "disability",
+    "sport"
+  ],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-05-04",
+  "contributors": [
+    {
+      "name": "Darren Lawlor",
+      "role": "editor",
+      "affiliation": "Committee secretariat",
+      "showAsAuthor": false
+    },
+    {
+      "name": "David Cass",
+      "role": "reviewer",
+      "affiliation": "Communications",
+      "showAsAuthor": false
+    }
+  ],
+  "researcher": {
+    "name": "Darren Lawlor",
+    "organisation": "Committee secretariat"
+  },
+  "hero": {
+    "src": "/media/inclusion-in-sport.jpg",
+    "alt": "Inclusion in Sport report cover",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "An Comhchoiste um Thurasóireacht, Cultúr, Ealaíona, Spórt agus Meáin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tuarascáil maidir le hUilechuimsitheacht sa Spórt"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Feabhra 2024"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Joint Committee on Tourism, Culture, Arts, Sport and Media"
+          },
+          {
+            "type": "text",
+            "text": "Report on Inclusion in Sport"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "February 2024"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "TCASM/24/01"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Contents"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159775",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Related information 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159776",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Publications 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159777",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee videos 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159778",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Contact details 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159779",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Terms of reference 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159780",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee Membership 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159781",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Cathaoirleach 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159782",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Leas-Cathaoirleach 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159783",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Members 5"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159784",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Executive summary 8"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159785",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Key Recommendations 9"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159786",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Background 13"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159787",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Policy Framework 13"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159788",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Stakeholder contributions 15"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159789",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Cross cutting issues 15"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159790",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Sport and women 16"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159791",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Sport and disability 22"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159792",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Sport and LGBTQIA+ communities 26"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159793",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Sport and ethnic minority 29"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159794",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Grassroots sport and socioeconomic diversity 31"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159795",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Sport and older people 32"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159796",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Intersectionality in sport 35"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159797",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Appendix 1 38"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159798",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "List of public oral hearings 38"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159799",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "List of witnesses 38"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159800",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Appendix 2 40"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#_Toc157159801",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "List of written submissions 40"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Related information"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Publications"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "All publications for this committee are available on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/publications/?q=&date=&term=%2Fie%2Foireachtas%2Fhouse%2Fdail%2F33&fromDate=&toDate=&committee%5B%5D=%2Fen%2Fcommittees%2F33%2Ftourism-culture-arts-sport-and-media%2F",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Oireachtas website"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee videos"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Footage of Committee proceedings can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/33/tourism-culture-arts-sport-and-media/videos/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee videos page"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Contact details"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The contact details for the Committee can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/33/tourism-culture-arts-sport-and-media/#contact",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee page"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Terms of reference"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Read the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/committee_on_standing_orders_and_dail_reform/reports/2020/2020-07-22_report-on-amendments-to-standing-orders-relating-to-committees_en.pdf",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "terms of reference"
+          },
+          {
+            "type": "text",
+            "text": " for the Committee."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee Membership"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Niamh-Smyth.D.2016-10-03/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Niamh Smyth TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Leas-Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Alan-Dillon.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Alan Dillon TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Members"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Chris-Andrews.D.2007-06-14/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Chris Andrews TD"
+          },
+          {
+            "type": "text",
+            "text": ", Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Ciaran-Cannon.S.2007-07-23/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Ciaran Cannon TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Peter-Fitzpatrick.D.2011-03-09/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Peter Fitzpatrick TD"
+          },
+          {
+            "type": "text",
+            "text": ", Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Brendan-Griffin.D.2011-03-09/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Brendan Griffin TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Mattie-McGrath.D.2007-06-14/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Mattie McGrath TD"
+          },
+          {
+            "type": "text",
+            "text": ", Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Imelda-Munster.D.2016-10-03/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Imelda Munster TD"
+          },
+          {
+            "type": "text",
+            "text": ", Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Christopher-O'Sullivan.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Christopher O'Sullivan TD"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Malcolm-Byrne.D.2019-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Malcolm Byrne"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Miche%C3%A1l-Carrigy.S.2020-03-30/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Micheál Carrigy"
+          },
+          {
+            "type": "text",
+            "text": ", Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Shane-Cassells.D.2016-10-03/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Shane Cassells"
+          },
+          {
+            "type": "text",
+            "text": ", Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Annie-Hoey.S.2020-03-30/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Annie Hoey"
+          },
+          {
+            "type": "text",
+            "text": ", Labour Party"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Fintan-Warfield.S.2016-04-25/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Senator Fintan Warfield"
+          },
+          {
+            "type": "text",
+            "text": ", Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Foreword"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The father of the modern Olympic Games, Pierre de Coubertin, argued that sport “is the birthright of all, equally and to the same degree”. This ideal rings true today, and the manifold benefits to society of broad participation in sport include community development and social cohesion, health and wellbeing, economic activity, and education and lifelong learning."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Joint Committee on Tourism, Culture, Arts, Sport and Media therefore identified inclusion in sport as an important topic for examination. We are concerned that certain societal groups experience lower participation rates than others and consider it important to identify and address barriers to participation in sports policy in Ireland."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This report includes several conclusions addressing the major themes arising from the evidence presented to the Committee. These themes include the importance of broad based funding and accountability for use of funds, co-design of programmes and policies affecting marginalised communities, the importance of accessible and fit for purpose facilities with appropriate transport links, appropriate procedures for dealing with discriminatory conduct, messaging and visibility measures, hosting of major tournaments, supporting the growth of LGBTQIA+ orientated sports clubs, the need for guidance on transgender and non-binary inclusion in sport, and the importance of support, training and education for club leaders, volunteers, coaches and P.E. teachers, and others working in sport."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In preparing this report, the Committee engaged with a broad range of stakeholders with expertise and experience on the issue of inclusion in sport. On behalf of the Committee, I would like to thank all stakeholders for their contributions. I also wish to express my appreciation for my Committee colleagues and to the Committee secretariat for its assistance in compiling the report."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "I trust that this report will be a valuable resource to the Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media, and a positive contribution towards our shared vision of a sporting landscape with equal opportunities for participation to all."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Niamh Smyth T.D."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "February 2024"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Executive summary"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The benefits of wide participation in sport, both to individuals and the country as a whole, are manifold and include community development and social cohesion, health and wellbeing, economic activity, education and lifelong learning. It is concerning therefore that there are groups within Irish society that participate in sports at lower rates and who experience barriers to participation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In order to examine the factors impacting on inclusion in sport and the policy response, the Joint Committee on Tourism, Culture, Arts, Sport and Media has engaged on this issue. The Committee has held two (2) public oral hearings and received twenty (20) written submissions on the topic of inclusion in sport. Details of public oral hearings and written submissions can be accessed in "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#_APPENDIX_1",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Appendix 1"
+                  },
+                  {
+                    "type": "text",
+                    "text": " and "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#_APPENDIX_2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Appendix 2"
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee identified a number of key issues in this domain, which are examined in depth in this report:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Sport and women"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Sport and disability"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Sport and LGBTQIA+ communities"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Sport and ethnic minority"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Grassroots sport and socioeconomic diversity"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Sport and older people"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Intersectionality in sport"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Key Recommendations"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In its report, the Committee outlines 17 recommendations in support of enhancing inclusion in sport:"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p>No.</p></th><th scope=\"col\"><p>Recommendation</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p><a id=\"_Hlk149816594\"></a>Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media policy regarding inclusion in sport should be underpinned by adequate funding on a broad basis, with particular regard to the support needs of smaller volunteer-led national governing bodies and with regard to the furthest behind first principle. Public funding to sporting organisations should take account of public sector duty legislation and rights-based and outcomes-driven approaches to sport provision. </p></td></tr><tr><td><p>2</p></td><td><p><a id=\"_Hlk149816788\"></a>The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media should invest in robust research and outcome oriented disaggregated data to inform evidence-based policymaking, advocacy, and impact assessment across the multiple policies in Ireland that focus on or use sport, physical activity, health, education, and inclusion of specific groups, including but not limited to women, LGBTQIA+ individuals, disabled individuals, racially and ethnically diverse individuals. This will help orient sports investments as an enabler of sustainable development. Convergence with cross-cutting data developments on SDGs, Well-being Index and Equality should be examined. Policies and programmes affecting those belonging to marginalised communities should be co-designed in consultation with members of those communities and Disabled Persons’ Organisations (DPOs) where possible. While implementation of this co-design principle is relevant to all vectors of inclusion in sport, the Department should have specific regard to the State’s responsibility under Article 30 of the UN Convention on the Rights of Persons with Disabilities to ensure that disabled people have the opportunity to organise, develop and participate in disability-specific sports.</p></td></tr><tr><td><p>3</p></td><td><p><a id=\"_Hlk149816819\"></a>The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media’s Major Sports Events Policy should, in its methodology for assessing proposals for state support in the hosting of major sports events, consider the inclusion in sport dividends of such events.</p></td></tr><tr><td><p>4</p></td><td><p><a id=\"_Hlk149816848\"></a>Investment in the development of accessible and fit-for-purpose facilities is an important prerequisite to removal of barriers to inclusion in sport across a range of vectors, and new public-private funding streams to support this development should be explored. Funding for accessible facilities should be holistic in nature in order to avoid the risk of inclusive projects being deferred or cancelled due to a lack of joined-up assessment (eg funding for accessible equipment at a sports facility being granted through one scheme but funding for accessible toilets at the same sports facility being denied through another).</p></td></tr><tr><td><p>5</p></td><td><p><a id=\"_Hlk149816879\"></a>The Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media should engage with cabinet colleagues in order to ensure that accessible facilities are located with accessible transport options. In respect of the fact that training and competition windows often fall outside of standard peak public transport hours, there should be an expanded transport support for participants with additional mobility needs.</p></td></tr><tr><td><p>6</p></td><td><p><a id=\"_Hlk149816995\"></a>The <a id=\"_Hlk150267118\"></a>Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media should support the development of leadership positions in the space of inclusion in sport within sporting organisations, including at corporate governance or board level. Existing funding streams such as the Dormant Accounts Fund could be utilised to support training and staffing for leadership positions. Existing schemes for the funding of Sport Inclusion Disability Officers and Community Sport Development Officers to local sports partnerships should be rolled out to a broader range of recipients including national governing bodies.</p></td></tr><tr><td><p>7</p></td><td><p><a id=\"_Hlk149816911\"></a>Club volunteers have a crucial role in delivering on inclusion in sport on the ground. <a id=\"_Hlk150267147\"></a>The Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media should engage with cabinet colleagues to support education and capacity-building measures to support volunteers in delivering on inclusion and diversity. Sport Ireland should work with National Governing Bodies to support and promote the roll-out of such training.</p></td></tr><tr><td><p>8</p></td><td><p><a id=\"_Hlk150267178\"></a>The Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media should engage with cabinet colleagues to ensure Coaches and Physical Educators working with women receive training on issues impacting on the performance and participation of women in sport, including on the impacts of the menstrual cycle.</p></td></tr><tr><td><p>9</p></td><td><p>The Minister for Tourism, Culture, Arts, Gaeltacht, Sport and Media should engage with cabinet colleagues to support the development and rollout of core modules in inclusive practices in sports as a part of all advanced qualifications in sports so that such values can be embedded throughout higher education sports learning.</p></td></tr><tr><td><p>10</p></td><td><p><a id=\"_Hlk149817039\"></a>The Criminal Justice (Incitement to Violence or Hatred and Hate Offences) Bill 2022, once enacted, should be used as a basis for providing sporting organisations with certainty and clarity around their responsibilities in dealing with discriminatory conduct in sport.</p></td></tr><tr><td><p>11</p></td><td><p>There should be a consistency of messaging across sports regarding acceptable behaviour. National governing bodies should be encouraged to share best practice examples that can be rolled out on a multisports basis.</p></td></tr><tr><td><p>12</p></td><td><p>There is a need for accountability mechanisms for sporting organisations in receipt of public funds that do not meet high standards of inclusion. Such organisations must adopt robust procedures as part of their governance codes regarding discriminatory or abusive conduct.</p></td></tr><tr><td><p>13</p></td><td><p>Visibility is critical to removing barriers to inclusion in sport. Public service media should commit to broadcasting women’s sport on an equal basis to men’s sport. Broadcasting of disability sports should not be limited to the Paralympic Games.</p></td></tr><tr><td><p>14</p></td><td><p>The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media and Sport Ireland should work with National Governing Bodies to promote and increase visibility of athletes from marginalised communities or minority groups, including but not limited to women, LGBTQIA+ individuals, disabled individuals, racially and ethnically diverse individuals.</p></td></tr><tr><td><p>15</p></td><td><p>The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media, national governing bodies and Sport Ireland should support the growth of LQBTQIA+ orientated sports clubs.</p></td></tr><tr><td><p>16</p></td><td><p>The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media and Sport Ireland should support the hosting of a major international LGBTQIA+ multi sport tournament. </p></td></tr><tr><td><p>17</p></td><td><p>The Committee notes that Sport Ireland is finalising guidance in the area of transgender and non-binary inclusion in sport and physical activity. The Committee calls for the expedition of this guidance. The Department, Sport Ireland and national governing bodies should work with transgender community members and organisations to develop policies and programmes for individual sports.</p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Background"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Policy Framework"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The overarching policy document guiding sports policy in Ireland is the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/aaa7d9-national-sports-policy-2018-2027/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "National Sports Policy 2018-2027"
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Among its core values is the promotion of inclusion, stating that “sport must be welcoming and inclusive, offering appropriate opportunities for participation and improvement to all [and] we will promote inclusion to deliver our desired outcomes with a focus on addressing social, disability, gender, ethnic and other gradients”. The "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/7e05d-programme-for-government-our-shared-future/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Programme for Government"
+                  },
+                  {
+                    "type": "text",
+                    "text": " reinforces these commitments, stating that “gender, age, disability, ethnic and socio-economic background must not be barriers to participation” and outlining a headline target of 60% of the population participating in sport by 2027. The "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/93232-sports-action-plan-2021-2023/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Sports Action Plan 2021-2023"
+                  },
+                  {
+                    "type": "text",
+                    "text": " sets out the key initiatives to pursue the overarching National Sports Policy, and takes particular account of the importance of inclusion."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "At international level, Ireland has general commitments under the Treaty on the European Union and the Treaty on the Functioning of the European Union to prohibit discrimination on grounds such as race, colour, ethnic or social origin, genetic features, language, religion or belief, political opinion or any other opinion, membership of a national minority, property, birth, disability, age or sexual orientation. Ireland has specific commitments on inclusion in sport under Article 30 of the UN Convention on the Rights of Persons with Disabilities to safeguard the participation of persons with disabilities in cultural life, recreation, leisure and sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland is public body with responsibility for sports development and it has a suite of policies in place in support of inclusion in sport. The "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.sportireland.ie/sites/default/files/media/document/2023-05/Sport%20Ireland%20Policy%20on%20Diversity%20and%20Inclusion%20in%20Sport%20%281%29.pdf",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Diversity and Inclusion in Sport Policy"
+                  },
+                  {
+                    "type": "text",
+                    "text": " expresses a vision for a diverse and inclusive sports sector and aims to remove barriers to inclusion. Its intended outcome is “to see more people from diverse communities participating and engaging in lifelong sport and physical activity and reaching their full potential, whatever that might be”. The "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.sportireland.ie/sites/default/files/2019-11/wis_policy.pdf",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Women in Sport Policy"
+                  },
+                  {
+                    "type": "text",
+                    "text": " sets out a vision for women to have an equal opportunity to achieve their full potential, while enjoying a lifelong involvement in sport. It aims to address current gaps and future opportunities across four key areas: coaching and officiating, active participation, leadership and governance, and visibility. The "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.sportireland.ie/sites/default/files/media/document/2020-05/sport-ireland-policy-on-participation-in-sport-by-people-with-disabilities.pdf",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Policy on Participation in Sport by People with Disabilities"
+                  },
+                  {
+                    "type": "text",
+                    "text": " acknowledges pre-existing work contributing to the advancement of participation in sport of people with disabilities, while setting out actions to underpin the work with a greater sense of policy coherence and coordination and with enhanced transparency and accountability."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Stakeholder contributions"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Cross cutting issues"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "From a broad perspective, there are several factors impacting on more than one group experiencing barriers to inclusion in sport. A number of stakeholders stated in evidence to the Committee that they are not in competition with each other in relation to resources and removal of barriers to inclusion. Models successfully applied to one group can serve as a best practice example for others, and Sporting Pride Ireland cites the success of Sport Ireland’s Women in Sport policy as one that could be applied to all minority groups."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Investment in facilities and equipment is an issue impacting upon multiple groups experiencing barriers to inclusion. Investment in accessibility measures at sports grounds supports the inclusion in sport of both older people and people with disabilities, while investment in separate changing facilities for women supports the inclusion in sport of women. The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media outlines two funds aimed at improving facilities, the sports capital and equipment programme and the large-scale sport infrastructure fund, both of which prioritise projects that increase active sport participation by persons and groups that may be underrepresented in participation in sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A number of stakeholders raised the issue of Government support for Irish participation in or hosting of international events aimed at groups experiencing barriers to sport: the Disabled Persons Organisation Network outlined its call for Government support for the Deaflympics, while Sporting Pride Ireland has outlined the potential for Ireland to host LGBTQIA+ orientated tournaments such as Gay Games or Eurogames. The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media is currently preparing a new major events policy that will provide clarity to sporting bodies seeking support to host international events."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Implementation of equality and diversity strategies by clubs, governing bodies and local sports partnerships can often be achieved by taking a holistic approach to inclusion in sport. The Trust Ireland partnership notes that while specific groups have specific needs, inclusion requires an overarching culture of inclusion as a starting point, which has regard to public sector duty human rights provisions which apply to sporting organisations in receipt of public funds. A number of sporting bodies outlined how the appointment of an officer with overall responsibility for equality, diversity and inclusion to drive improved inclusion. The Federation of Irish Sport recommends that funding for the appointment of inclusion officers that is currently available to local sports partnerships be rolled out also to national governing bodies."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Across all vectors of inclusion in sport, collaboration is an important means of removing barriers. The Committee has received evidence on a broad range of successful examples of collaboration between stakeholders including national governing bodies, local sports partnerships, clubs and schools and advocacy organisations in order to deliver inclusion programmes."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Accountability and consequences is a further issue that impacts across multiple vectors of inclusion, and Sport Ireland noted that it does not hold a regulatory function. Access to public funding is a means of holding sporting bodies accountable for failures in inclusion, and the Department of Tourism, Culture, Arts, Gaeltacht, Sports and Media outline its intention to penalise sporting bodies that do not meet gender balance targets on boards. Sport Ireland’s code of conduct template is cited as a resource to raise awareness of and promote behaviours to uphold best practice and fair play in all sport."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Sport and women"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Women in Sport states that the inclusion or exclusion of women from sport does not exist in a vacuum, as sport is a reflection of wider society; Women in Sport therefore states that one significant barrier to women being and feeling included in sport is the prevalence of misogyny and sexism in wider society."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Furthermore, Women in Sport states that gender stereotyping affects the relationship girls and women have with sport at all levels and at all stages of life, and points to research it has undertaken through its "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://womeninsport.org/press-release/more-sporty-girls-now-dream-of-reaching-the-top-in-sport/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Dream Deficit survey"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", which demonstrates that 40% of girls in the research cohort feel that women’s sport is still valued less highly than men’s sport, and that girls are not expected to be good at sport. Its "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://womeninsport.org/wp-content/uploads/2023/03/SportStereotypes-and-Stolen-Dreams_exec-Summary.pdf",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "research concerning primary school-aged girls"
+                  },
+                  {
+                    "type": "text",
+                    "text": " found that certain personality traits tend to be associated with girls, based on gendered labels, that limits opportunities for girls in early life, including within sport; these include the notion that girls are “not sporty” or that they are “delicate”."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland observes that, despite similar levels of weekly sports participation in primary school between boys and girls, primary school boys tend to play sport more frequently than girls, contributing to a gender difference in meeting the World Health Organisation guidelines for physical activity between primary school girls (13%) and primary school boys (23%). Sport Ireland states that this gap persists into post-primary schooling, with 14% of boys meeting the guidelines of daily activity, compared to 7% of girls."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland notes that, from its "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.sportireland.ie/GirlsGetActive",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "2021 Adolescent Girls Get Active research report"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", there are stereotypes that prevent teenage girls from participating in sport, as well as a lack of social space; Sport Ireland further remarks that, as adolescence is crucial for forming future attitudes and behaviours, developing a positive relationship with sport and exercise during teenage years is key to ensuring lifelong participation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Women in Sport states that any initiative that aims to increase women’s representation in coaching and leadership roles must focus on the attitudes and understanding of those currently in power, and must be based on the principle of changing the structures and culture to empower women to put themselves forward for coaching and leadership roles. Women in Sport warns against the “top-down” approach of fast-tracking existing leaders and elite coaches into high-profile positions, and calls for relevant stakeholders to address the systemic issue of a lack of women in coaching and leadership roles across sport. Sport Ireland cites research on the lack of representation of women in coaching roles, noting that at post primary level 79% of students reported being coached by men while 18% report being coached by women. Sport Ireland cites its work in promoting more women coaches through its women in coaching toolkit and notes that 42% of coaches certified in 2022 by Sport Ireland were women. Camogie Ireland cites its role in developing women in leadship, through programmes such as the Gaelic Games Female Coach Mentorship Programme, its Leading Provincial Females Programme, and the Female Referee Academy."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Women in Sport also makes observations on the role of media outlets in growing audiences and revenues for women’s sport, and calls for public service broadcasters to introduce a target for 50% of total sports coverage to be ringfenced for women’s sport. Her Sport echoes this point, stating that media coverage has a critical role in driving inclusion, participation, and visibility in sport, and that approximately only 6% of sports media coverage consists of women’s sport. Sport Ireland cites its work in providing punditry training to women with a view to increasing visibility of women in sports broadcasting."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Her Sport remarks that, through a lack of equitable visibility, the portrayal of women’s sport in media outlets conveys that women are undervalued and insignificant. Sport Ireland cites the success of campaigns such as the 20x20 campaign in promoting awareness of women in sport and reaching a breadth of women not reached by previous campaigns. However Sport Ireland also notes that the campaign was commercially resourced with a defined end date, and that effort is needed to follow on from it with implementation and actions."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Women in Sport comments that, in addition to other aspects of cultural change, a zero-tolerance approach to abuse and harassment will further secure inclusion of women; Women in Sport notes that girls and women are at most risk of abuse such that, coupled with barriers to raising concerns in this regard, there is significant endangerment of inclusive participation in sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Two students from St Joseph’s Mercy Secondary School in Navan, Co. Meath submitted details of their BT Young Scientist Award-winning research project on the impact of menstruation on performance and participation in physical education. The pupils highlight the potential benefits of physical activity and sport to athletes who menstruate, and recommend that menstruation awareness training be delivered to physical educators and sports coaches. The Camogie Association outlines its work in delivering workshops to coaches on meeting the needs of teenage girls and notes its intention to make participation in such workshops mandatory for coaches working with teenagers."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland states that the major barriers to participation of women and girls in sport are as follows:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Strong focus on competition at the expense of fun and social aspects of team activities;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Safety concerns with regard to travelling to and from training and/or in undertaking outdoor exercise;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of female coaches, instructors, and leaders in sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Prioritisation of male and men’s team access to facilities at prime times;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Exclusion in mixed settings, with male participants refusing to engage with women and girls on teams or in activities;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Harassment and sexist language;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Time constraints due to disproportionate caring and domestic work undertaken by women."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The FAI identifies facilities as a barrier to inclusion of women in sport, noting more than 30% of our grassroots clubs do not have toilet facilities or changing facilities that are designated for female players. The FAI further notes that the large proportion of clubs that do not own their own facilities can prevent them drawing down on sports capital funding, and outlines its work in developing a proposed facilities investment strategy. The Camogie Association notes that female players do not get the same recognition and access to Gaelic Games facilities, and that planning requirements and declarations should be enforced to ensure this does not happen."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "D/TCAGSM highlights the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/aaa7d9-national-sports-policy-2018-2027/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "National Sports Policy’s"
+                  },
+                  {
+                    "type": "text",
+                    "text": " goal of eliminating the gender participation gap in sport entirely by 2027, and states that the Irish Sports Monitor demonstrates that, for Q2 2022, the gender participation gap was at 5%. D/TCAGSM notes its role in funding Sport Ireland to operate its Women in Sport Programme, which aims to support the creation of initiatives to target the participation of women and girls in sport, as well as its role in supporting Sport Ireland in its efforts to increase visibility in women’s sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "D/TCAGSM also highlights the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/93232-sports-action-plan-2021-2023/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Sports Action Plan’s"
+                  },
+                  {
+                    "type": "text",
+                    "text": " target for all National Governing Bodies to achieve a minimum of 40% representation of women on their boards by the end of 2023, and iterates that it is a priority to enable women to increasingly reach leadership positions in sporting organisations. D/TCAGSM and the Federation of Irish Sport state that Sport Ireland’s December 2022 Board Composition Snapshot demonstrates that the average percentage of women on NGB boards has increased from 24% in 2019 to 36% in 2022; the snapshot also shows that 33 sporting organisations have already achieved 40% or more female representation on their boards. D/TCAGSM further notes that the responsible Ministers are examining supports and funding streams currently available to sporting organisations at all levels, with a view to stipulating repercussions for organisations which do not reach the 40% target."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland outlined that barriers to achieving the 40% target are broad but include areas around opportunities, training, education and awareness. Sport Ireland has developed a gender balance on boards toolkit, while the Federation of Irish Sport has developed a project around board-readiness training aimed at females. Sport Ireland outlines its support for women in leadership programmes delivered by various governing bodies and local sports partnerships, citing the example of Swim Ireland’s programme that has trained over 250 women from across 30+ organisations in leadership skills. The FAI emphasises the importance of providing support, mentorship, and pathways for females to put themselves forward for board membership and leadership positions."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland’s "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.sportireland.ie/women-in-sport/women-in-sport-policy",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Policy on Women in Sport"
+                  },
+                  {
+                    "type": "text",
+                    "text": " identifies four key areas as gaps and/or future opportunities for women in sport, including: (i), leadership and governance; (ii), coaching and officiating; (iii), active participation; and, (iv), visibility. Sport Ireland notes that disparities in female participation in physical activity tend to be affected by age, socioeconomic status, disability, and pregnancy, and that, more recently, it has engaged in work to identify the specific needs of women at perimenopause or menopause stages of life and the impact that this can have on levels of activity. Through this policy Sport Ireland has invested €2 million in 2023 across 50 organisations to support the development and implementation of programmes and initiatives targeting women in sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Federation of Irish Sport observes that 30% of CEOs in sporting bodies are women, with 12 funded bodies having a female president, and 15% of boards having a female chairperson across sporting organisations. The Federation of Irish Sport also notes that 39% of board members of Local Sports Partnerships are women, and that 14% of chairpersons of LSP boards are female (which has decreased from the figure of 21% in 2021). The Federation of Irish Sport also remarks that, of the Sport Ireland coaches certified in 2022, 41% were female; the percentage of female coaches certified, according to the Federation, has increased by 7% since 2018."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The OFI draws attention to the report of the EU’s High-Level Group on Gender Equality in Sport, "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://op.europa.eu/en/publication-detail/-/publication/684ab3af-9f57-11ec-83e1-01aa75ed71a1/language-en/format-PDF/source-253030231",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Towards More Gender Equality in Sport"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", which includes recommendations pertaining to gender mainstreaming, intersectionality, gender budgeting, policy interventions, education, communications, coordinators for gender equality, and men as allies; the OFI calls for the Committee to consider the recommendations arising from the report."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The pillar sports highlight several initiatives in the area of sport and women. The FAI cites the success and public support enjoyed by the women’s national team as indicative of success in promoting women’s football in Ireland, and points to its Soccer Sisters programme, of which the aim is to increase the number of girls playing football, its UEFA Disney Playmakers programme, its rebranding of the League of Ireland to explicitly include women, and its Women and Girls Leadership Academy. The IRFU outlines its Women in Rugby Action Plan 2018-2023, its “Give It A Try” participation programme to target young girls, a female-only Referee Development Day, and the Referees Tutor Course to upskill female tutors."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Significant structural change at governing body level is taking place in Gaelic Games, and a consultation process regarding the integration of the GAA, LGFA and Camogie Association is underway. This builds on existing cooperation under the One Club model that allows clubs and their facilities to facilitate the participation of both men and women in Gaelic Games. The GAA notes that 27% of its adult members and 52% of its youth members are female, that 47% of its club executive committees have at least 30% female representation, and that 29% of club officers are female. The GAA also cites its efforts to promote Gaelic Games among girls through its Cúl Camps and nursery programmes, and the efforts of the LGFA to provide social gaelic games to women through Gaelic for Mothers & Others."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Sport and disability"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cara notes that disabled people in Ireland are less likely to be active than those without a disability; it highlights the Irish Sports Monitor 2021, which demonstrates that 27% of disabled people in the research cohort, as opposed to 49% of those without a disability, engage in physical activity. Furthermore, Cara points to research conducted by Sport Ireland through the Children’s Sport Participation and Physical Activity Study, which provided evidence to suggest that disabled children are less likely to be active compared to peers without a disability."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland states that the primary barriers to participation of disabled people in sport are as follows:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of understanding of the spectrum covered by disability and the individual experience of disability;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of consideration in programme design for the lived experience of disabled people;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Where sport is used as part of a treatment regime, it often does not move beyond the “therapeutic” aspect to a continuous involvement in the sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of visibility for involvement of disabled people in sport at player, coach, administrative, and leadership levels;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of prioritisation of social and spectator accessibility for sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of opportunities and supports for employment of disabled people;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "A preference for “doing nothing rather than ‘incorrect’ inclusion”;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Underestimation and patronisation of people with intellectual disabilities;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of provision of initiatives for adults with intellectual disabilities;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Overreliance on volunteerism; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Ignorance or discrimination by others when participating in social aspects of sport."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Disabled Persons Organisation Network further outlines barriers such as access to resources and information, lack of universal design principles for sporting equipment, environments unsuitable for people with sensory processing issues, and the need for training for coaches and volunteers."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cara notes its role in the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://caracentre.ie/sport-inclusion-disability-charter/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Sports Inclusion Disability Charter"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", which establishes five principles to ensure that organisations adopt an inclusive approach to programmes and sport offerings. Cara states that, at the time of its submission, over 1,700 organisations have signed the Charter. Cara also highlights its role in supporting NGBs to deliver inclusivity training workshops to boards, staff, and volunteers, and in providing guidance regarding inclusive programme design and implementation; it particularly outlines the role of its "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://caracentre.ie/xcessible/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Xcessible"
+                  },
+                  {
+                    "type": "text",
+                    "text": " programme in this regard, which aims to positively and meaningfully provide opportunities for disabled people to participate in sport and physical activity."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Dedicated programmes for making sports accessible to people with disabilities play an important role in facilitating greater inclusion. The Gaelic Athletic Association points to its All Star programme and its wheelchair codes, which provides playing and game experiences for persons across a broad spectrum of intellectual and physical disabilities. The Irish Rugby Football Union provides rugby activities to 1,000 people with disabilities, while Sport Ireland notes the broad range of sports that offer inclusive opportunities and that 17,773 people with disabilities took part in Local Sports Partnership programmes in 2022. The Federation of Irish Sport highlighted a successful case study of a Badminton Ireland project regarding autism awareness that can be a model for other national governing bodies."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cara indicates that the ability to increasingly reach and empower disabled people to lead active and healthy lifestyles is heightened by connections with organisations external to the sporting sector; Cara emphasises the role of its own collaborations with the Health Service Executive and outdoor recreation activity providers in this regard. Likewise the Disabled Persons Organisation Network outlined its role in facilitating collaborative between organisations with a common interest in working towards the overall implementation of the UN Convention on the Rights of Persons with Disabilities."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The IWA notes that about two-thirds of Irish counties do not have specific sporting clubs for disabled children; the IWA states that one should not have to travel more than 45 minutes from home to access meaningful sport, and outlines its aim to provide an initial positive parasport experience for disabled children. The IWA notes that the level of core and dormant funding currently received is insufficient to address its needs and the needs of its members, and further states that there is no long-term commitment to funding, which, if provided, could allow the IWA to specifically target Donegal, Monaghan, Cavan, Mayo, Roscommon, Leitrim, South Dublin, Wicklow, Wexford, Laois, Offaly, Longford, Limerick, Waterford, and Clare."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The IWA also emphasises its role in supporting and in coordinating underage and senior national teams to compete at major international competitions, but notes that, as many of these teams are not competing at the “high performance” level as defined by Sport Ireland, they fall outside of the “high performance” model and funding structure, despite what the IWA states are additional costs as a result of additional requirements necessitated by parasport teams. The IWA further calls for provision in sports capital funding to allow specifically for sports equipment that is personal in nature, so as to encapsulate the needs of disabled participants in terms of additional equipment required."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Paralympics Ireland states that disabled people face additional challenges in everyday life when compared to those without disabilities, including access to sporting opportunities, coaches qualified in disability issues, access to transport, and access to sporting facilities. Sport Ireland identifies enhancing club environments as key to facilitating disability inclusion."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In terms of transport, Paralympics Ireland states that the reliance on public transport on the part of some disabled individuals can make the difference between participating in sport at the highest level and never progressing beyond participatory level in spite of any talent an individual may possess. Paralympics Ireland gives the example of travel by train or bus, whereby train bookings severely limit wheelchair users in terms of wheelchair dimensions and advance bookings, and transport by bus also offers limited space for wheelchair users. Paralympics Ireland also notes that, when it hosted the World Para Swimming Allianz European Championships in Dublin in 2018, the transportation infrastructure available was insufficient to host a large disability sporting event without the use of private transportation solutions—which is not without significant additional cost."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In terms of training environments, Paralympics Ireland states that barriers to participation at the highest level are not just physical in nature; additional attention, and adaptation to coaching environments, may be needed. Paralympics Ireland states that, while para-athletes improve performance at a faster rate when training with able-bodied peers, disabled athletes may often be marginalised, be asked to train separately, or to train with peer disability groups where their performance does not align with able-bodied counterparts. Paralympics Ireland states that, for a Paralympian to flourish, they must be nurtured and have access to a trained and disability-aware support network, alongside coaching, accessible facilities, inclusive clubs, and transport infrastructure. Furthermore, Paralympics Ireland states that venue accessibility for disabled people must be a key consideration when permissions are granted for infrastructural (re)developments and retrofitting, including access and egress points for disabled people."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Paralympics Ireland recommends the following:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The establishment of a Disability Sport Unit in Sport Ireland;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The use of a holistic approach to funding schemes for sporting organisations;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The creation of opportunities in funding initiatives to cover both Olympic and Paralympic sport, and the removal of limitations on applications per NGB for this purpose;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The incentivisation of retrofitting for accessible infrastructure;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The provision of additional transport and personal assistance allowances for sport competition and training for disabled athletes;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The provision of supports to create a professional coaching workforce for para sport in NGBs and clubs;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The education of coaches to include training specific to disability sport; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The development of media coverage for para sport to ensure that coverage is not limited to that of the Paralympic Games."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Irish Deaf Society highlights the communicative barriers faced by Deaf athletes when trying to integrate into mainstream sporting communities, compounded by a general lack of Irish Sign Language provision. The Irish Deaf Society recommends Deaf awareness training for coaches, teammates, and club officials, encompassing knowledge regarding Deaf culture, effective communication strategies, and the use of ISL interpreters. The Irish Deaf Society also notes that there is a need for accessible sporting facilities that cater to the specific needs of Deaf athletes, with visual cues, clear signage, and accessible technologies. The Irish Deaf Society outlines that representation and leadership opportunities within sporting organisations must be provided to allow for the development of more inclusive policies and practices. Examples of Deaf inclusive initiatives include the Gaelic Athletic Association’s #Signmeup initiative which offers ISL video resources."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The CCMA outlines that many LSPs offer training workshops to sporting communities that focus on promoting inclusion of disabled people, such as sports inclusion disability awareness training, autism in sport, inclusive outdoor adventure training, accessing the great outdoors, and inclusive fitness training. The CCMA states that LSPs also provide disability inclusion sports and physical activity camps and programmes for disabled and neurodiverse children and teenagers."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Sport and LGBTQIA+ communities"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sporting Pride Ireland states that, on a broad scale, healthcare for transgender people is inadequate, and, further to this, that progress for participation of transgender people in sport is difficult. Sporting Pride Ireland states that one of the primary reasons for such difficulty is a lack of policy focused on transgender inclusion, but remarks that sport should be welcoming to everyone, regardless of gender, and, as such, that it is necessary to address the issue of transgender participation in a manner that is fair and inclusive. Sporting Ireland points to the formation of a Sport Ireland focus group on “Transgender and Non-Binary Inclusion in Sport and Physical Activity” as a potential positive step toward inclusion."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland states that it is currently developing guidance and supports for the sporting sector in the area of transgender and non-binary inclusion in sport and physical activity, a process which Sport Ireland states will include wide-ranging consultation with stakeholders, a review of existing research, and consideration of the legal landscape. Sport Ireland anticipates that this process will conclude in autumn 2023. Activities relating to transgender and non-binary inclusion are also taking pace at governing body level in many sports. The GAA for instance points to its Gaelic Games Transgender Working Group which has produced a white paper designed to inform policy regarding the participation in Gaelic Games by persons from the transgender/non-binary community."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The OFI notes that, on the international scale, there are attempts to ensure fairness and safety in elite competition while simultaneously recognising the rights of transgender athletes; the OFI points to the ten-point "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://stillmed.olympics.com/media/Documents/Beyond-the-Games/Human-Rights/IOC-Framework-Fairness-Inclusion-Non-discrimination-2021.pdf",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "International Olympic Committee Framework on Fairness, Inclusion, and Non-Discrimination on the Basis of Gender Identity and Sex Variations"
+                  },
+                  {
+                    "type": "text",
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sporting Pride Ireland notes that it is a volunteer organisation that has had responsibility for working with national governing bodies and local sports partnerships on delivering inclusion for sport and questions the lack of direct funding for measures supporting LGBTQIA+ inclusion in sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland states that the following are barriers to the participation of LGBTQIA+ communities in sport:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Homophobic and transphobic hate speech;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Poor diversity at governance level;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Poor understanding of the LGBTQIA+ umbrella and the different needs therein;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of engagement with LGBTQIA+ organisations for policymaking;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Pressure exerted on individuals to integrate into existing clubs and spaces, as opposed to a recognition of the role of clubs specific to LGBTQIA+ communities in creating a safe space;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of visibility of LGBTQIA+ people in sport; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of national guidance on the inclusion of transgender athletes."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sporting Pride Ireland notes the following as issues relative to the inclusion of LGBTQIA+ communities in sport:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The voluntary nature of Sport Ireland’s Policy on Diversity and Inclusion in Sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The outsourcing of responsibility to Sporting Pride Ireland for LGBTQIA+-specific services for sporting organisations, while Sporting Pride Ireland is not funded by Sport Ireland. Sporting Pride Ireland calls for a specific LGBTQIA+ officer to be established in Sport Ireland;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of core funding for LGBTQIA+ sport funding through Sport Ireland;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of key performance indicators set for dormant account funding allocation;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of ancillary support, such as leadership and development programmes, for organisations outside of the Sport Ireland network, that are available currently to organisations such as Cara or Age and Opportunity;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of representation of LGBTQIA+ communities at leadership and/or governance levels; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of visibility for LGBTQIA+ athletes in sport."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sporting Pride Ireland furthermore calls for the following measures to be introduced:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "More Irish-based research on LGBTQIA+ participation in sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The implementation of transgender inclusion policies;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The coordination of visibility campaigns for LGBTQIA+ athletes, communities, and Pride events;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The provision of training and education to those working, volunteering, and participating in sport on LGBTQIA+ inclusion;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The hosting of an international LGBTQIA+ multisport tournament as a major event, such as the Eurogames or Gay Games."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Measures promoting LGBTQIA+ visibility and providing LGBTQIA+ role models are identified as important for encouraging a culture of inclusivity. Sporting Pride Ireland noted that male sport may be able to learn from female sport in fostering an inclusive atmosphere. The FAI outlined visibility initiatives taking place in domestic football such as the donation of advertising space by the League of Ireland sponsor Airtricity to LGBTQIA+ helplines. Sport Ireland and Sporting Pride Ireland partner on the Lets Get Visible campaign to improve visibility and outward expressions of inclusion."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Across a number of sports including soccer, gaelic games and rugby the emergence of LGBTQIA+ orientated clubs offer a means to provide a safe, welcoming and inclusive environment to LGBTQIA+ players that may be new to the sport."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Sport and ethnic minority"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "SARI states that, while the Irish Sports Monitor 2022 mid-year report, and previous iterations of same, considered social gradients such as gender, social class, and disability when reviewing sport participation rates, they did not consider ethnic minority representation. SARI further notes that, despite the publication of Sport Ireland’s Policy on Diversity and Inclusion in Sport in 2022, no call for data collection on the evidencing of progress on ethnic minority participation progress has been made at the time of its submission to the Committee."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "SARI observes that, while Ireland is increasingly diverse, there is evidence of racism and discrimination faced by marginalised communities in Ireland, and that stereotypical representations of ethnic minority communities held by the public can infiltrate existing sporting policies, regulations, and institutions that can subsequently impact the experience of and access to sport on the part of ethnic minority communities. SARI calls for social inclusion and cohesion to be incorporated into the curricula of educational institutions to promote a culture of respect and inclusion in local communities across the country, as well as long-term engagement with schools to build their capacity in challenging discrimination and in promoting an ethos of inclusion that celebrates and embraces difference and diversity. SARI further calls for adequate resourcing to organisations active in promoting inclusion to rollout programmes to a wider range of schools."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "SARI emphasises that inclusion in sport, while a worthy objective in itself, has a wider significance in challenging broader racism and discrimination in society. Further, inclusion in sport can be leveraged to support relationships between communities, especially where there may be a language barrier, and can be used as a means to include integration in the curriculum. The GAA likewise emphasises the role of its clubs in welcoming refugees from Ukraine and living in direct provision into the local community, and the potential for sport in general, and the GAA in particular, can be a catalyst and an entry point for inclusion in broader Irish life. As put by SARI representative Ms Amina Moustafa:"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The topic of today’s hearing is \"inclusion in sport\" but what SARI focuses on is inclusion through sport. We use sport to address racism and discrimination and to educate through the medium of sport. Sport is a powerful learning tool. We can utilise sport to educate people on the values that are so important to Irish society."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Among SARI’s recommendations is the creation of opportunities for members of marginalised communities to feed into the design and implementation of sports projects and programmes that are designed for them. SARI cites its Hijabs and Hat tricks programme as an example of how this approach can ensure issues such as kit design and training schedule takes accounts of the distinct needs of particular groups, and can influence the development of young leaders."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland states that the following issues were raised in terms of inclusion of ethnic minority communities in sport:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Racism, including overtly racist language in sporting settings, and denial of access to use facilities or attend matches;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Stereotyping, whereby only certain sports were offered to members of ethnic minority communities based on preconceptions of members of these communities;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Living conditions, such as those of direct provision and halting sites; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Lack of understanding from coaches and sport programmers of the impact of living conditions on punctual and consistent participation in sport."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland calls for education to cover anti-racism concepts, non-discriminatory languages, and the reality of living conditions to be delivered to those working and participating at all levels in the sporting sector. TRUST suggests that NGBs should all, in their constitutions, commit to equity, equality, diversity, cultural integration, social inclusion, and non-discrimination, using a rights-based framework."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The GAA highlights its collaboration with Sport Against Racism Ireland on diversity and inclusion training workshops, as well as to support members when an issue of racism, discrimination, or other forms of hostility, arises. The GAA notes that it encourages and creates awareness that cultural competence at club level is the embedding into everyday practice cultural awareness, knowledge, and sensitivity."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The FAI notes that, as part of FAI Club Licensing, all clubs are required to develop a Football and Social Responsibility Strategy, and the FAI has employed eight full-time Football and Social Responsibility Managers working with League of Ireland clubs. The FAI also states its responsibility to support all clubs in delivering anti-racism and anti-discrimination education."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "An important issue for sport and ethnic minority is how the relevant governing bodies deal with allegations of racist incidents. The Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media noted the importance of the new national code of conduct template as a tool for reviewing existing policies and procedures in response to such incidents. Sport Ireland outlined that it has a role in developing the capacity of governing bodies to deal with such incidents, although it does not have a regulatory function. The IRFU offered an example of such a policy through its Charter for Irish Rugby and the work ongoing to embed the principles of the charter into the everyday behaviours of its clubs."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Grassroots sport and socioeconomic diversity"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland states that a persistent social gradient in the proportion of people active in sport exists in terms of socioeconomic status, with those from lower socioeconomic groups being both less likely to be active and more likely to be sedentary; Sport Ireland notes that sedentary rates amongst the lowest socioeconomic cohort (20%) are far higher than observed among the most affluent cohort (7%). Sport Ireland outlines that, during 2022, Sport Ireland distributed over €11 million in dormant accounts funding, which provides NGBs and LSPs with supports to develop innovative sport and physical activity initiatives that aim to engage with the personal and social development of persons who are economically or socially disadvantaged."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Furthermore, Sport Ireland notes its role in funding the Urban Outdoor Adventure Initiative in support of the actions from the National Sports Policy and the National Physical Activity Plan to implement and support participation programmes with a focus on disadvantaged communities, so as to create greater opportunities for people living in urban areas to participate in physical activity through outdoor adventure sports. Sports Against Racism Ireland outlines how sports participation can tackle socio-economic inequalities, citing the football for unity programme as one that ties in with the social and economic regeneration of the north east inner city of Dublin. The Federation of Irish Sport cites community sports hubs as a means to provide information, support, and advice on a wide range of sports and physical activities to make it easier for people in disadvantaged areas to engage in a more active lifestyle."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "There is clear potential for inclusion in sport to be utilised as a means to support the social exclusion of those experiencing issues such as homeless, addiction, and a history of criminal offending. The GAA and the FAI are among the sporting bodies that run programmes targeted at such issues."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Sport and older people"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Age and Opportunity highlights that older persons should have access to healthcare to help maintain or regain the optimum level of physical, mental, and emotional wellbeing and to prevent or delay the onset of illness. Age and Opportunity states that residents of care settings and visitors to day care settings should therefore be enabled to be as physically active as possible, and that associated meaningful activities should take account of individual interests and be integrated into everyday life. Age and Opportunity also recommends, in this regard, that a network-based organisation for relevant activity providers be established and resourced in Ireland."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In relation to sport and physical activity in the community, as interfaced with the interests of older persons, Age and Opportunity recommends that local authorities place additional focus on and investment in infrastructure to reduce the barriers preventing access to and use of open space, and that policies and practices designed to increase participation of older persons in sport and physical activity should be a consideration for any public funding for venues and events. In addition, Age and Opportunity calls for the consideration of those most reliant on free-to-air television in decision-making processes surrounding designated free-to-air sporting and cultural events."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In terms of sport and physical activity for older people receiving home support services, Age and Opportunity recommends that the entitlement to personal assistance services be extended to those aged 65 and over who have aged with, or into, disability, and that a social, rather than medical, model of home support is nurtured by policy and practice in order to allow all older persons to access and enjoy some level of physical activity and reap the attendant health benefits."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Age Action states that the research and narrative surrounding older people’s participation in sport is dominated by “biomedically informed policies, emphasising the prescription of exercise as medicine and a universal approach to the promotion of active aging in later life”. Age Action calls for more research to determine the rationale for withdrawal from sport and physical activity in older age, including understanding cumulative disadvantage as a barrier to participation, as well as research to understand the psychological and social benefits in order to design strategies to promote the participation of older people in sport."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Age Action recommends that sporting activities be presented to older people as opportunities for enjoyment and socialisation as opposed to emphasising healthy ageing, that older people be involved in the design and implementation of programmes to ensure that their needs are met, that practical barriers be addressed, such as pension rates, cost of engaging with and accessing sport, accessibility of venues, and digital exclusion, and that ageist stereotypes are challenged in designing sporting interventions for older people."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland states that, as the number of older people is set to increase significantly over the years, it aims to actively implement the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/publication/737780-national-positive-ageing-strategy/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "National Positive Ageing Strategy"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", so as to halt or slow the decline in social and active participation among older people. Sport Ireland observes that the utilisation of expertise of older and experienced individuals in coaching, working, and mentorship is important, as is recognition of the role of physical activity in the promotion of positive mental health, active citizenship, and community activities."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland and the Federation of Irish Sport note that LSPs aim to encourage participation in sport and physical activity across the lifespan, and support the rollout of the Age and Opportunity Active programme for sport and physical activity for older people; Sport Ireland points to LSP initiatives such as active age line-dancing, pickleball, chair-based aerobics, activator pole walking class, and dance programmes. Other examples of initiatives encouraging physical activity for older people include exercise classes and Walking Football provided by the GAA in association with ALONE."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A number of sports organisations run programmes that demonstrate the potential for sports to facilitate social inclusion and to combat isolation among older people. The GAA has roled out initiatives such as its GAA generations programme that links transition year students with older people, a social initiative which puts on social events for older adults, and the work of GAA volunteers in delivering essential goods and services to older people cocooning during the pandemic. The IRFU points to its Walking Rugby programme as a means to encourage physical activity, re-engagement with local clubs and preventing social isolation among older people. The FAI operates a Football Memories programme that encourages older people including people with dementia to engage with materials and conversation of their memories of football."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland identifies recreational walking as an activity where, in contrast to most sports, participation levels increase with age upto the age of 65. The IRFU also points to recreational walking as a means to encourage physical activity and social participation among older people, noting that many rugby clubs have opened their grounds to walkers under the Get Ireland Walking Initiative. The GAA also points to recreational walking as a means to encourage physical activity and social inclusion, citing its Ireland Lights Up initiative which opens up lighted GAA facilties to social walkers on dark winter evenings. The DPO Network, while welcoming such initiatives, stresses that a more systematic approach is needed."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee received evidence on the impacts of changing broadcast and ticketing models, such as streaming services and cashless ticketing for live sports events, on the inclusion of older people as spectators and consumers of sport. Age Action notes its concern that digital-first approaches to the provision of services, including access to sport, might exclude some older persons. Age Action specifically notes concerns with cashless ticketing at Gaelic Games grounds and online streaming of Gaelic Games on the GAAGo platform. Age Action states that many older persons are not comfortable or secure in making financial transactions online, or managing their banking online, and that many older people are not in a position to use streaming services to access sporting events. Age Action outlines that there are 628,000 people aged 60 or older that either do not use the internet or have below basic digital skills. The GAA on its part noted that while cash ticketing at match venues places a burden and security risk for volunteers, that the GAA makes efforts to accommodate all match goers: it maintains cash ticket sales at other venues and access assistance measures at the ground for those that need it, and Croke Park has recognition as an Age Friendly stadium. It also outlines that GAAGo is not broadcasting matches that would otherwise be free to air, and that the number of free to air matches broadcast in 2023 has increased significantly."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Intersectionality in sport"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Federation of Irish Sport states that, when considering sport and development initiatives, it is important to apply an intersectional lens; the Federation of Irish Sport notes that, for instance, gender differences in participation are exacerbated when other factors are considered, such as ethnicity, disability, or socioeconomic status. Sport Ireland iterates its recognition of the wider societal, structural, and systemic challenges faced by marginalised groups in modern-day Ireland, and its recognition of the intersectionality of people’s identities and the compounding impact of same on the marginalisation that people experience."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A number of sporting organisations outline examples of programmes that support the inclusion in sport of people who experience multiple factors of marginalisation leading to distinct barriers to inclusion: SARI for instance outlines the Hijabs and Hattricks programme that supports the inclusion of Muslim women in soccer, while Sport Ireland cites its My Time campaign aimed at older women."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sport Ireland states its commitment to a two-fold approach to intersectionality through targeted interventions that are co-designed with communities with specific needs and requirements, and through a broader approach to the promotion of equality, diversity, and inclusion in and through sport and physical activity."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Furthermore, as part of the "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/policy-information/43eee-embracing-irelands-outdoors-national-outdoor-recreation-strategy-2023-2027/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "National Outdoor Recreation Strategy 2023-2027"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", Sport Ireland notes its co-leadership role in the implementation of the actions contained therein, including “to increase the number of programmes and participants engaged in outdoor recreation for all, including ethnic minorities, people with disabilities, older adults, unemployed [people], disadvantaged areas, Travellers, women and girls, and young people”, as well as “to develop stakeholder guidance and deliver training on key inclusivity themes, including the development of accessible infrastructure and encouraging people of all abilities into the outdoors”."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TRUST Ireland recommends the following:"
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The alignment of the definition of sport in the National Sport Strategy and the Irish Sports Council Act with governance, structures and funding, and the expressed need of the entire population;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The expansion of the understanding of what inclusion in sport appears as and requires, to comprise participation at all levels, including leadership structures;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The prioritisation of those who are “furthest behind” in sports-related planning, and ensuring that rights-based and outcomes-driven approaches to sport provision at all levels in line with public sector duty and equality legislation;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The prioritisation of retrofitting existing structures to establish participatory approaches to cross-sector sports policy and planning at all levels and functions of sport;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The prioritisation of capacity-building and workforce development for the delivery of a skilled workforce for equality- and outcomes-based approaches to sport provision;"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "An increase in engagement with volunteers on the understanding of the priorities of inclusion and participation in sport in Ireland, in recognition of the significance of the contribution of volunteers to sport in Ireland; and"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The expansion of cross-sectoral funding access and allocations to support the elimination of barriers to participation for marginalised and underserved groups."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Appendix 1"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "List of public oral hearings"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p>Date</p></th><th scope=\"col\"><p>Transcript</p></th></tr></thead><tbody><tr><td><p>21 June 2023</p></td><td><p><a href=\"https://www.oireachtas.ie/en/debates/debate/joint_committee_on_tourism_culture_arts_sport_and_media/2023-06-21/2/\">Meeting transcript</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p><a href=\"https://www.oireachtas.ie/en/debates/debate/joint_committee_on_tourism_culture_arts_sport_and_media/2023-10-11/3/\">Meeting transcript</a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "List of witnesses"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p>Date</p></th><th scope=\"col\"><p>Witness</p></th><th scope=\"col\"><p>Opening statements</p></th></tr></thead><tbody><tr><td><p>21 June 2023 </p></td><td><p>St Joseph’s Mercy Secondary School Navan. Co. Meath</p><ul><li>Ms Mya Doocey</li><li>Ms Mia Gilligan</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-06-21_opening-statement-mya-doocey-student-st-joseph-s-mercy-secondary-school-navan-co-meath_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>21 June 2023 </p></td><td><p>Disabled Persons Organisation Network</p><ul><li>Mr Derek Maguire, President of Deaf Sports Ireland</li><li>Dr John Bosco Conama, Irish Deaf Society</li><li>Ms Jacqui Browne, Chairperson</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-06-21_opening-statement-jacqui-browne-chairperson-disabled-person-s-organisation-network_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>21 June 2023 </p></td><td><p>Sport Against Racism</p><ul><li>Amina Moustafa, Board member</li><li>Fintan Drury, Acting chair</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-06-21_opening-statement-amina-moustafa-general-manager-sport-against-racism_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>21 June 2023 </p></td><td><p>Sporting Pride Ireland</p><ul><li>Mr Aidan Walsh, Chair and national governing body liaison</li><li>Ms Karina Murray, Events coordinator</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-06-21_opeining-statement-aidan-walsh-chairperson-sporting-pride-ireland_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>21 June 2023</p></td><td><p>TRUST Ireland</p><ul><li>Ms Sarah Carney, UNESCO Chair at Munster Technological University and lead Trust Ireland Partner</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-06-21_opening-statement-sarah-carney-unesco-chair-at-munster-technological-university-and-lead-trust-ireland-partner-trust-ireland_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Federation of Irish Sport</p><ul><li>Ms Mary O’Connor, CEO</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-mary-o-connor-ceo-federation-of-irish-sport_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Football Association of Ireland</p><ul><li>Ms Aoife Rafferty, People and culture director</li><li>Mr Ger McDermott, Grassroots director</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-aoife-rafferty-people-and-culture-director-football-association-of-ireland_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Gaelic Athletic Association</p><ul><li>Mr Tom Ryan, Director General</li><li>Mr Ger McTavish, National diversity and inclusion manager</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-tom-ryan-director-general-gaelic-athletic-association_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Irish Rugby Football Union</p><ul><li>Ms Anne Marie Hughes, Head of equity, diversity and inclusivity</li><li>Mr Ultan O’Callaghan, Head of rugby development</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-anne-marie-hughes-head-of-equity-diversity-and-inclusivity-irish-rugby-football-union_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Sport Ireland</p><ul><li>Dr Una May, CEO</li><li>Ms Helen McHugh, Diversity and inclusion manager</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-dr-una-may-ceo-sport-ireland_en.pdf\">Opening statement</a></p></td></tr><tr><td><p>11 October 2023</p></td><td><p>Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media</p><ul><li>Mr Micheál Ó Conaire, Principal officer with responsibility for sports policy, </li><li>Mr James Lavelle, Assistant principal officer with responsibility for sports policy</li></ul></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_tourism_culture_arts_sport_and_media/submissions/2023/2023-10-11_opening-statement-miche-l-conaire-principal-officer-sports-policy-unit-department-of-tourism-culture-arts-gaeltacht-sport-and-media_en.pdf\">Opening statement</a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Appendix 2"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "List of written submissions"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\"><p>Stakeholder</p></th><th scope=\"col\"><p>Stakeholder</p></th></tr></thead><tbody><tr><td><p>Age Action</p></td><td><p>Her Sport</p></td></tr><tr><td><p>Age and Opportunity</p></td><td><p>Irish Rugby Football Union</p></td></tr><tr><td><p>Camogie Association</p></td><td><p>Irish Wheelchair Association</p></td></tr><tr><td><p>Cara</p></td><td><p>Olympic Federation of Ireland</p></td></tr><tr><td><p>City and County Management Association</p></td><td><p>Paralympics Ireland</p></td></tr><tr><td><p>Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media</p></td><td><p>Sport Against Racism Ireland</p></td></tr><tr><td><p>Disabled Persons Organisation Network</p></td><td><p>Sport Ireland</p></td></tr><tr><td><p>Federation of Irish Sport</p></td><td><p>Sporting Pride Ireland</p></td></tr><tr><td><p>Football Association of Ireland</p></td><td><p>Trust Ireland</p></td></tr><tr><td><p>Gaelic Athletic Association</p></td><td><p>Women in Sport</p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

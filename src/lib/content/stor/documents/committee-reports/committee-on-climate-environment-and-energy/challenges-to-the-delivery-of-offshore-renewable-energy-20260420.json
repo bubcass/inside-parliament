@@ -1,0 +1,3686 @@
+{
+  "id": "challenges-to-the-delivery-of-offshore-renewable-energy-20260420",
+  "slug": "challenges-to-the-delivery-of-offshore-renewable-energy-20260420",
+  "type": "committee-report",
+  "destination": "committee-reports",
+  "featured": false,
+  "heroLayout": "contained",
+  "showContents": true,
+  "flourishWidth": "prose",
+  "title": "Challenges to the delivery of Offshore Renewable Energy",
+  "dek": "Offshore wind is an essential part of meeting Ireland's energy independence. Although Ireland has doubled its wind energy capacity by building offshore wind infrastructure, the progress has been slow.",
+  "eyebrow": "Committee on Climate, Environment and Energy",
+  "committeeName": "Committee on Climate, Environment and Energy",
+  "topics": ["wind", "energy", "policy"],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "version": "1.0",
+  "keywords": ["wind", "energy", "policy"],
+  "license": "Oireachtas PSI Licence",
+  "publisher": "Houses of the Oireachtas",
+  "publishedDate": "2026-04-20",
+  "contributors": [
+    {
+      "name": "Barry Kavanagh",
+      "role": "author",
+      "affiliation": "Committee secretariat",
+      "showAsAuthor": false,
+      "profileRole": "Clerk to the committee"
+    },
+    {
+      "name": "David Cass",
+      "role": "reviewer",
+      "affiliation": "Communications",
+      "showAsAuthor": false,
+      "profileRole": "Web content editor"
+    }
+  ],
+  "researcher": {
+    "name": "Barry Kavanagh",
+    "role": "Clerk to the committee",
+    "organisation": "Committee secretariat"
+  },
+  "hero": {
+    "src": "/media/renewable-report-2026-05-20.jpg",
+    "alt": "Challenges to the delivery of Offshore Renewable Energy report launch cover",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "An Comhchoiste um"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Aeráid"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": ", Comh"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "shaol agus"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Fuinneamh"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Dúshláin maidir le Fuinneamh In"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "-"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "athnuaite Amach ón gCósta a"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "sholáthar"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "2026"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Joint Committee on"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Climate, Environment and Energy"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Challenges to the delivery of Offshore"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Renewable"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Energy"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "202"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "6"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "3"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "/C"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "EE"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "/"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "11"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Contents"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Related information ................................................................................................. 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Publications ............................................................................................................................ 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee videos ................................................................................................................... 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee debates ................................................................................................................ 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Contact details ........................................................................................................................ 4"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Terms of reference ................................................................................................................. 4 "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Cathaoirleach’s Foreword ......................................................................................... 6"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Joint Committee Consideration ....................................................................... 9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Recommendations ........................................................................................ 17"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Related information"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Publications"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "All publications for this committee are available on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/publications/?q=&date=&term=%2Fie%2Foireachtas%2Fhouse%2Fdail%2F33&fromDate=07%2F10%2F2024&toDate=07%2F10%2F2024&committee%5B%5D=%2Fen%2Fcommittees%2F33%2Fenvironment-and-climate-action%2F",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Oireachtas website."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee videos"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Footage of Committee proceedings can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/33/environment-and-climate-action/videos/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee videos page."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee debates"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Transcripts of Committee debates can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/33/environment-and-climate-action/debates/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee debates page."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Contact details"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The contact details for the Committee can be found on the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/33/environment-and-climate-action/#contact",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Committee page."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Terms of reference"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Read the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/committees/about-committees/functions-powers-and-remit-of-departmental-joint-committees/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "terms of reference "
+          },
+          {
+            "type": "text",
+            "text": "for the Committee."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Committee Membership"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Naoise-%C3%93-Muir%C3%AD.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Naoise Ó Múirí,"
+          },
+          {
+            "type": "text",
+            "text": " Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Lorraine-Clifford-Lee.S.2016-04-25/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Lorraine Clifford- Lee,"
+          },
+          {
+            "type": "text",
+            "text": " Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Members"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Ciar%C3%A1n-Ahern.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Ciarán Ahern,"
+          },
+          {
+            "type": "text",
+            "text": " Labour Party"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Malcolm-Byrne.D.2019-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Malcolm Byrne,"
+          },
+          {
+            "type": "text",
+            "text": " Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/John-Clendennen.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "John Clendennen,"
+          },
+          {
+            "type": "text",
+            "text": " Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/R%C3%A9ada-Cronin.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Réada Cronin,"
+          },
+          {
+            "type": "text",
+            "text": " Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Pa-Daly.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Pa Daly,"
+          },
+          {
+            "type": "text",
+            "text": " Sinn Féin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Barry-Heneghan.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Barry Heneghan,"
+          },
+          {
+            "type": "text",
+            "text": " Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Jennifer-Whitmore.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Jennifer Whitmore,"
+          },
+          {
+            "type": "text",
+            "text": " Social Democrats"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Naoise-%C3%93-Cear%C3%BAil.D.2024-11-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Naoise Ó Cearúil,"
+          },
+          {
+            "type": "text",
+            "text": " Fianna Fáil"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Mark-Duffy.S.2025-01-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Mark Duffy,"
+          },
+          {
+            "type": "text",
+            "text": " Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Alice-Mary-Higgins.S.2016-04-25/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Alice- Mary Higgins,"
+          },
+          {
+            "type": "text",
+            "text": " Independent"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Malcolm-Noonan.D.2020-02-08/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Malcolm Noonan,"
+          },
+          {
+            "type": "text",
+            "text": " Green Party"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/members/member/Noel-O'Donovan.S.2025-01-29/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Noel O’Donovan,"
+          },
+          {
+            "type": "text",
+            "text": " Fine Gael"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Cathaoirleach’s Foreword"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The ongoing conflict in the Gulf has once again laid bare Ireland’s unsustainable dependency on imported fossil fuels; our supply lines are at ongoing risk of serious disruption and our communities are vulnerable to external price shocks. The volatility of recent years, soaring prices, supply disruptions and the consequences of geopolitical instability have made it clear that our dependence on fossil fuels is not sustainable."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Over the past decade, Ireland has doubled its wind energy capacity by building onshore wind infrastructure. However, progress on offshore wind (ORE) has been very slow. It is vital that the barriers that continue to stand in the way of achieving sovereign control over our energy security and resilience are broken down. With some of Europe’s strongest offshore wind resources, Ireland has the potential to meet up to 80% of electricity demand from renewables in the near term. At a time of growing global volatility, we must be prepared to adapt."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "It was against this backdrop that this Committee decided to carry out a comprehensive examination of the challenges facing the offshore wind sector. Offshore wind is an essential component of meeting our energy independence objectives. Members have agreed on 18 different actions to accelerate ORE progress. I wish to sincerely thank all stakeholders that engaged in this process."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Naoise Ó Muirí TD, Cathaoirleach"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "May 2026"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "1. Introduction"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "As part of the National Climate Objective, Ireland is committed to developing at least 37 gigawatts (GW) of offshore renewable energy (ORE) by 2050, with interim targets of 5GW by 2030 and 20GW by 2040."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Government has aimed to meet the 5GW target through a series of offshore projects related to “Phase One” and the South Coast Designated Maritime Area Plan (DMAP). "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-1",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[1]"
+          },
+          {
+            "type": "text",
+            "text": " Phase One projects include the second iteration of the Arklow Bank Wind Park, the predecessor of which is the only example of Irish ORE since it was commissioned in 2004."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "As part of the second phase of projects and the South Coast DMAP, the Government has recently announced the results of an auction to lead the Tonn Nua project off Co. Waterford."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A National DMAP for ORE is scheduled to be completed by 2027. It is hoped that by moving away from selecting sites on an individual basis, a national framework will shorten the planning process and accelerate the delivery of ORE."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Government has also set up the Offshore Wind Delivery Taskforce and Offshore Wind Energy Clearing House to generate further momentum. However, despite significant progress, the actual construction of new offshore wind farms remains elusive. As a result, it is now generally accepted that Ireland will not meet the 2030 target."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The reason for the slow pace of development is attributable to a myriad of overlapping organisational, legal and technical complexities. The Joint Committee agreed to engage with stakeholders in the sector to examine these issues more closely and make recommendations on how they can be resolved."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2. Joint Committee Consideration"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "General"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted that despite substantial progress, including the designation of the South Coast DMAP and the setting up of the Maritime Area Regulatory Authority (MARA), the prospect of Ireland meeting the 2030 ORE target is extremely unlikely. Members noted that missing this target will puts ongoing and future ORE investment at risk."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "In relation to the target of 5GW ORE by 2030, officials from the Department of Climate, Energy and the Environment (DCEE) said that there has been a change in what is considered achievable, adding that it is now hoped that projects will be in construction by 2030. The Final Determination of Price Review 6"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[2]"
+                  },
+                  {
+                    "type": "text",
+                    "text": " by the"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Commission of the Regulation of Utilities, which sets potential investment of up to €13-14 billion into the national grid over the coming years has also engendered confidence that power from ORE will also be receivable onshore."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses identified several issues inhibiting the development of Ireland’s ORE. These include the resourcing of planning and consenting authorities, the development of supporting infrastructure such as the electricity grid and ports, supply chain confidence and a range of other factors."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Resourcing, Planning & Consent"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted the occurrence of substantial delays to ORE projects in the planning and consenting system. In the first instance, all parties agreed that the resourcing of agencies such as An Coimisiún Pleanála (ACP), MARA, the CRU and the National Parks and Wildlife Service (NPWS) was critical to the delivery of planning and consenting decisions that do not drastically prolong, and thereby undermine, ORE projects."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Tina Raleigh, Head of Offshore Wind at Statkraft Ireland, raised the example of North Irish Sea Array (NISA), a Phase 1 project off the coast of Dublin, Meath and Louth. Having been awarded an Offshore Renewable Electricity Support Scheme (ORESS 1) contract in 2023, it was envisioned that the project would pass through the planning system in approximately 12 months. Following the submission of a 10,000 page application to An Coimisiún Pleanála (ACP) in June 2024, a request for further information (RFI) was not received until April 2025. Ms Raleigh described the extent of the RFI as “unprecedented”. The prospect of a second RFI and potential Court challenges means that the project has no realistic chance of being built until 2030. The Committee agreed that such pace was extremely frustrating and was reducing the attractiveness of investment in the ORE sector."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Officials from ACP elaborated on the RFI process associated with applications currently being considered. They explained that RFIs have been prepared following detailed reviews by ACP inspectors and external consultants of the large volume of information supplied. In one case, ACP received 82 submissions from prescribed bodies, which ACP recognise as experts in their field and to which they are statutorily obliged to consider. There were also 291 third party submissions. Members were further advised that ACP is dealing with Phase 1 project applications without a DMAP or other location specific plan. Peter Mullan, CEO, ACP added that under the Renewable Energy Directive III"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-3",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[3]"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", permitting requirements for renewable energy projects will be streamlined and determinations made with a maximum period of 65 weeks."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Officials from ACP advised that since 2022, an extra 117 staff have been recruited into the organisation. ACP is now running at a 92% staff complement and believes it has sufficient resources to handle ORE planning applications in the system. As well as an internal staff with significant experience in the sector, ACP officials also"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "pointed to the Marine Framework Panel, which is made up of 43 individuals and companies with specialist expertise."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Officials from the NPWS outlined that the unit working on ORE has approval for 17 staff, but that only five are currently in place. Competition from the private sector makes it difficult to recruit staff with the level of expertise required to handle complex ORE applications. The NPWS engages thoroughly with applicants but stressed that, at present, a small amount of people are being asked to do a lot of work. Members expressed hope that further NPWS recruitment would reduce the significant timeframe for pre-application engagement."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted the prevalence of Judicial Reviews related to planning and consent in the ORE sector to the extent that many developers build them into project timelines. Members further noted that the setting up of the Planning & Environment Court in 2023 has reduced the typical timeline of the Judicial Reviews in the sector from 2-3 years to 9-12 months. It was highlighted that there are only three judges sitting on the Court and that an increase of resources would result in further reduction of timelines."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Members and witnesses from the ORE sector agreed that judicial reviews of the primary consenting application will be biggest challenge over the coming years. Mr Peter Lefroy, Offshore Development Head at RWE Renewables Ireland, said that a cycle has emerged whereby arguments over small technicalities are preventing the overarching need to deliver projects for the benefit of the State from being met."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Members raised concern about the decision-making record of the planning authority under its previous iteration and enquired as to whether lessons had been learned. Mr Peter Mullan, CEO of ACP, acknowledged that there had been questions about decision-making. He highlighted the appointment of a director of legal affairs and supporting staff as a significant factor in ACP winning legal cases at a ratio of 2 to 1 in 2025."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Members raised the possibility of front-loading public engagement at the outset of projects in order to address public concerns at an early stage. Witnesses from the ORE sector agreed that timely and participative public engagement is hugely valuable and also highlighted the current absence of clear policy on how to facilitate interaction between the State, the ORE sector and other marine users."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses contended that engagement from the public with ORE developers has not been matched by state bodies like the NPWS, the Marine Institute, MARA and the CRU. Meaningful engagement, they claimed, does not usually occur until an application has been submitted, which affords no opportunity for developers to identify and mitigate potential obstacles and delays. It has become abundantly clear that state bodies are not resourced adequately to deal with the scale of what ORE project applications entail."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses and members agreed the designation of Marine Protected Areas (MPAs) based on robust of scientific evidence is critically important for the conservation of marine biodiversity. Concern was expressed that a recent Government decision not to introduce stand-alone legislation might delay the process further. Officials from"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "DCEE confirmed that legislation will take the form of an amendment to the Maritime Area Planning Act which will allow the development of marine protected areas through the DMAP process. This is part of a process whereby marine planning and marine protection become fully aligned - this will be particularly effective when the National DMAP is drawn."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses and members agreed on the importance of sharing all data gathered by different agencies from Ireland’s vast marine area through the ObSERVE programme"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-4",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[4]"
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Such an initiative could serve to assist the ORE sector in the development of planning applications."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Infrastructure"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses welcomed the €3.5 billion investment in the electricity grid announced by the Government in 2025"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-5",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[5]"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", which is wholly necessary for Ireland to realise its ORE potential. The Committee noted calls for the upgrade and reinforcement of the grid, which is vital to economic growth, decarbonisation and more affordable energy bills, to be a priority for Government. At present, between 10-15% of all renewable power generated on the island of Ireland is lost to Dispatch Down, which occurs when the transmission system operator (TSO) instructs a renewable generator to produce less electricity."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted that only one of the four sites on the south-coast DMAP is being progressed to auction."
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "6"
+                  },
+                  {
+                    "type": "text",
+                    "text": " For the other three sites, there is no clarity on how and when they will be progressed as it is not known if there is grid capacity in the region. Without certainty on when Ireland’s grid will have the capacity to incorporate the level of renewable energy projected with ORE, developers and financiers cannot have confidence in delivery timelines."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses also highlighted the problem of overspecification on the part of Eirgrid for Phase One ORE infrastructure that it will eventually take ownership of."
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-6",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[6]"
+                  },
+                  {
+                    "type": "text",
+                    "text": " Members were advised that developers are being required to go above and beyond industry standards at great cost. Peter Lefoy, Offshore Development Head, RWE stated that: “All of the risk has been weighted on us as developers. It is putting what we see as massively unfair obligations on us. It is putting obligations on us to deliver warranties that we cannot procure from the supply chain.”"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted the anticipation of developers in the ORE sector of the ongoing review of the National Ports Policy, a draft of which will go to public"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "consultation in the first half of 2026."
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-7",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[7]"
+          },
+          {
+            "type": "text",
+            "text": " At present, only one port on the island of Ireland (Belfast) has the capacity to service offshore wind construction. In a briefing to the Committee, Wind Energy Ireland stated that it is “imperative that the expansion of at least two Irish ports is prioritised, with consideration for both fixed and floating wind.” The Committee was advised that without sufficient expansion of Irish ports, developers will be forced to build from ports in foreign jurisdictions, with Ireland forgoing economic growth, employment opportunities and innovation."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses expressed concern that the review of National Ports Policy will not yield change to the currently held policy whereby commercial ports do not receive exchequer funding. In order to further derisk the ORE sector and generate momentum toward construction, witnesses suggested that the Ports Policy be revised to allow a mixture of state, EU and private investment."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Witnesses advised that, given the scale of opportunity in the development of ORE, Ireland needs to consider the long-term demand that can be met and examine where that demand can come from, and what infrastructure will be needed to deliver it. This will not prevent the realisation of decarbonising Ireland’s existing demand."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Supply Chain & Coastal Communities"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted that continued ambiguity surrounding planning and future infrastructure is also have a negative effect on supply chain confidence. On a domestic and global level, suppliers do not have the confidence to fully engage with developers in the ORE sector. This is further complicated by the fact that global supply chains continue to experience strain in an era of geopolitical instability. Members noted that offshore substations and export cables now have a lead time of four years from order placement to delivery."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted concern that no effective progress has been made by the National Seafood Offshore Renewable Energy Working Group in delivering an agreement between seafood and ORE sectors. This may jeopardise health and safety in an already harsh working environment."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Members noted the opportunity that ORE offers for indigenous resilient economic and employment growth. Demand for clean reliable energy can be tapped into by exploring the co-location of ORE with the next generation of superconductors and pharma. Witnesses further highlighted the need to align education, training and supply chain development and to continue investment in initiatives such as the Skillnet Offshore Wind Academy"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-8",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "[8]"
+                  },
+                  {
+                    "type": "text",
+                    "text": ". If the right policy is adopted, coastal communities can be revitalised through the provision of long-term, sustainable and well-paid work."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Prices, Storage & Private Wires"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Members commented that at a time of international volatility and decreasing commitment to renewable energy, as well as the record number of people in arrears on energy bills, it is imperative that the development of Ireland’s ORE leads ultimately to the delivery of lower energy prices for households."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted the importance of developing Long Duration Energy Storage (LDES) in order to deliver low-cost energy from Offshore Renewables. The development of LDES will allow for emergence of multiday storage, whereby the reserving of wind energy at times when it exceeds demand will lead to greater efficiency. Witnesses commented that areas particularly prone to dispatch down, such as the west and north-west, will benefit hugely from LDES."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee noted support for Private Wires Legislation in order to augment the development of ORE. Witnesses highlighted the envisaged benefits of the legislation to ORE, including relieving pressure on the national grid and providing solutions to"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "potential problems connecting new sites. Officials from DCEE confirmed that they are currently developing proposals for the use of private wires."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Some Members noted that the accelerated development of private wires, longduration energy storage, battery storage, hydrogen production and demand-side flexibility will be critical to reducing renewable energy curtailment, alleviating pressure on the national grid and ensuring that Offshore Renewable Energy can be stored, transported or directly supplied to productive local demand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 4
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "3. Recommendations"
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that the resourcing of planning and consenting authorities, as well as bodies supporting the decision-making process, is prioritised. Measures supporting the filling of positions, in particular the National Parks and Wildlife Service, critical to the processing of ORE applications should be considered and implemented as a matter of urgency, including a gap analysis on all bodies and agencies involved in the ORE planning process to ensure that areas not already identified are adequately resourced."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that statutory decision timelines be implemented for planning and consenting authorities to increase planning certainty. The Committee recommends annual public reporting requirements for all agencies involved in Offshore Renewable Energy consenting and planning processes to improve transparency accountability and delivery certainty."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the forming of a comprehensive policy and framework to facilitate deep, ongoing engagement on the development of ORE between the State, the sector and the public. The Committee recommends that bodies supporting the decision-making process for ORE consider measures to increase and deepen pre-application engagement with applicants, particularly the publication of clear advice on how this kind of engagement can take place and what would be expected from applicants."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that the number of Judges ruling on cases in the Planning & Environment Court is increased in order to mitigate delays and uncertainty in relation to planning decisions."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the full publication and sharing of data gathered through the ObSERVE Programme in order to assist ORE applicants to increase knowledge of marine scientific and biological factors."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that the specification of ORE assets that will be transferred to the State, such as substation platforms, is set at a realistic level that complies with international standards, thereby preventing cumbersome and expensive overspecification that further inhibits ORE development."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that the updating of the National Ports Policy allows for the funding of port development from State, EU and private investment in order to provide for the necessary expansion of Irish ports to facilitate ORE development."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends prioritising the designation and expansion of two Irish ports which can facilitate ORE."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends an analysis and formulation of strategy to identify and locate future electricity demand beyond the decarbonisation of Ireland’s existing demand, recognising that Ireland’s current demand will be met relatively quicky by ORE."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the rapid progression of legislation and policy relating to long-duration energy storage, battery storage and demand-side flexibility to reduce renewable energy curtailment and maximise the efficient use of Offshore Renewable Energy."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the early engagement of coastal communities in the significant economic opportunities associated with ORE for individuals and communities. Initiatives and measures to align education and training initiatives with skills complementary to employment in the ORE sector should be enhanced and increased."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends increased investment and support for education and training initiatives to help develop the supply-chain and skills base for offshore wind energy, such as the Skillnet Offshore Wind Academy, and particularly aimed at supporting people in coastal communities."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that tangible community benefit mechanisms associated with Offshore Renewable Energy projects include long-term local investment funds, training pathways and supports for coastal enterprise development in areas directly impacted by Offshore Renewable Energy infrastructure."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the prioritisation of a National Framework Agreement between the ORE and seafood sectors so that best practice, co-operation and safety can complement the future development of both sectors."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the publication and enactment of Marine Protected Areas (MPA) legislation as a matter of urgency in order to give certainty to the ORE sector regarding sites that need to be protected for marine biodiversity or features that protect or have the potential to restore marine biodiversity."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that potential sites for new Special Protection Areas (SPAs) for sea birds and Special Areas of Conservation (SACs) yet to be designated be layered into maps from the sea sensitivity analysis and afforded consideration in all assessment of potential concession sites for ORE. Marine biodiversity must be afforded equal priority with climate objectives."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends that coastal community forums be established to participate in processes around ORE and designation of MPAs and to improve information flow between state bodies, the relevant departments and the proposers of projects."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends the establishment of a new taskforce to determine ways to increase state ownership of and investment in offshore wind."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "The Committee recommends better coordinated consideration of maritime planning, consenting, grid delivery, port infrastructure, supply chain development and community benefit measures, alongside the publication of regular progress reports against national ORE targets."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "4. Bibliography"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/major-milestones-reached-as-state-continues-to-plan-for-its-long-term-offshore-renewable-energy-future/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Major milestones reached as State continues to plan for its long-term offshore renewable energy future,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Climate, Energy and the Environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.cru.ie/publications/28912/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Price Review 6 | CRU.ie,"
+          },
+          {
+            "type": "text",
+            "text": " Commission for the Regulation of Utilities"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/renewable-energy-directive-red-iii-further-information/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Renewable Energy Directive (RED III) - Further Information,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Housing,"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Local Government and Heritage"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/publications/observe-programme/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "ObSERVE Programme,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Climate, Energy and the Environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/minister-obrien-announces-publication-of-departments-ndp-sectoral-capital-plan-for-2026-2030/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Minister O'Brien announces publication of department's NDP Sectoral Capital Plan for"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/minister-obrien-announces-publication-of-departments-ndp-sectoral-capital-plan-for-2026-2030/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "2026-2030,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Climate, Energy and the Environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/publications/oress-tonn-nua-offshore-wind-auction/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "ORESS Tonn Nua Offshore Wind Auction,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Climate, Energy and the Environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/government-publishes-framework-for-irelands-offshore-electricity-transmission-system-to-facilitate-huge-growth-in-renewable-energy/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Government publishes framework for Ireland’s Offshore Electricity Transmission System to facilitate huge growth in renewable energy,"
+          },
+          {
+            "type": "text",
+            "text": " Department of Climate, Energy and the Environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/debates/question/2026-03-04/62/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Ports Policy – Wednesday, 4 Mar 2026 – Parliamentary Questions (34th Dáil) – Houses of the Oireachtas"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://skillnetoffshorewindacademy.ie/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Home - Skillnet Offshore Wind Academy"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Appendix 1 – Meeting Transcript and Opening Statements"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Meeting Transcript"
+          }
+        ]
+      },
+      {
+        "type": "tableBlock",
+        "attrs": {
+          "html": "<table><thead><tr><th scope=\"col\" colspan=\"2\"><p><strong>Date \tLink to Transcript </strong></p></th><th scope=\"col\"></th></tr></thead><tbody><tr><td colspan=\"2\"><p>19 November 2025 \t<a href=\"https://data.oireachtas.ie/ie/oireachtas/debateRecord/joint_committee_on_climate_environment_and_energy/2025-11-19/debate/mul@/main.pdf\">main.pdf </a></p></td><td></td></tr><tr><td colspan=\"2\"><p>26 November 2025 \t<a href=\"https://data.oireachtas.ie/ie/oireachtas/debateRecord/joint_committee_on_climate_environment_and_energy/2025-11-26/debate/mul@/main.pdf\">main.pdf </a></p></td><td></td></tr><tr><td colspan=\"2\"><p> </p><p>Opening Statements </p></td><td></td></tr><tr><td><p><strong>Date </strong></p></td><td><p><strong>Witnesses </strong></p></td><td><p><strong>Link to Submission </strong></p></td></tr><tr><td><p>19 November 2025 </p></td><td><p>Wind Energy Ireland </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-noel-cunniffe-ceo-wind-energy-ireland_en.pdf\">2025-11-19_openingstatement-noel-cunniffeceo-wind-energyireland_en.pdf </a></p></td></tr><tr><td><p>19 November 2025 </p></td><td><p>Skatkraft  </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-tina-raleigh-head-of-offshore-wind-statkraft_en.pdf\">2025-11-19_openingstatement-tina-raleighhead-of-offshore-windstatkraft_en.pdf </a></p></td></tr><tr><td><p>19 November 2025  </p></td><td><p>DP Energy  </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-adam-cronin-chief-operating-officer-dp-energy_en.pdf\">2025-11-19_openingstatement-adamcronin-chief-operatingofficer-dpenergy_en.pdf </a></p></td></tr><tr><td><p>19 November 2025  </p></td><td><p>RWE Energy  </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-peter-lefroy-offshore-development-head-rwe-renewables-ireland_en.pdf\">Microsoft Word - Opening Statement for </a></p><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-peter-lefroy-offshore-development-head-rwe-renewables-ireland_en.pdf\">Committee dcee Peter </a></p><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-19_opening-statement-peter-lefroy-offshore-development-head-rwe-renewables-ireland_en.pdf\">Lefroy </a></p></td></tr><tr><td><p>26 November 2025 </p></td><td><p>An Coimisiún Pleanála  </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-26_opening-statement-peter-mullan-chief-executive-officer-an-coimisiun-pleanala_en.pdf\">2025-11-26_openingstatement-petermullan-chief-executiveofficer-an-coimisiunpleanala_en.pdf </a></p></td></tr><tr><td><p>26 November 2025 </p></td><td><p>Department of Climate, Energy &amp; the </p><p>Environment  </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-26_opening-statement-matt-collins-assistant-secretary-general-department-of-climate-energy-and-the-environment_en.pdf\">2025-11-26_openingstatement-matt-collinsassistant-secretarygeneral-department-ofclimate-energy-andthe-</a></p><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-26_opening-statement-matt-collins-assistant-secretary-general-department-of-climate-energy-and-the-environment_en.pdf\">environment_en.pdf </a></p></td></tr><tr><td><p>26 November 2025 </p></td><td><p>National Parks and Wildlife Service </p></td><td><p><a href=\"https://data.oireachtas.ie/ie/oireachtas/committee/dail/34/joint_committee_on_climate_environment_and_energy/submissions/2025/2025-11-26_opening-statement-malachy-corcoran-director-legislation-and-licensing-directorate-the-national-parks-and-wildlife-service_en.pdf\">2025-11-26_openingstatement-malachycorcoran-directorlegislation-andlicensing-directoratethe-national-parks-andwildlife-service_en.pdf </a></p></td></tr></tbody></table>"
+        }
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/major-milestones-reached-as-state-continues-to-plan-for-its-long-term-offshore-renewable-energy-future/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Major milestones reached as State continues to plan for its long-term offshore renewable energy future "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-1",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.cru.ie/publications/28912/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Price Review 6 | CRU.ie "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/renewable-energy-directive-red-iii-further-information/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Renewable Energy Directive (RED III) - Further Information "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-3",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/publications/observe-programme/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "ObSERVE Programme "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-4",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/minister-obrien-announces-publication-of-departments-ndp-sectoral-capital-plan-for-2026-2030/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Minister O'Brien announces publication of department's NDP Sectoral Capital Plan for 2026-2030 "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/publications/oress-tonn-nua-offshore-wind-auction/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      },
+                      {
+                        "type": "superscript"
+                      }
+                    ],
+                    "text": "6"
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/publications/oress-tonn-nua-offshore-wind-auction/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": " ORESS Tonn Nua Offshore Wind Auction "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-5",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.gov.ie/en/department-of-climate-energy-and-the-environment/press-releases/government-publishes-framework-for-irelands-offshore-electricity-transmission-system-to-facilitate-huge-growth-in-renewable-energy/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Government publishes framework for Ireland’s Offshore Electricity Transmission System to facilitate huge growth in renewable energy "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-6",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://www.oireachtas.ie/en/debates/question/2026-03-04/62/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Ports Policy – Wednesday, 4 Mar 2026 – Parliamentary Questions (34th Dáil) – Houses of the Oireachtas "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-7",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://skillnetoffshorewindacademy.ie/",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "Home - Skillnet Offshore Wind Academy "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-8",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

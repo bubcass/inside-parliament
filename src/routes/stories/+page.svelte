@@ -5,6 +5,8 @@
     import { stories } from "$lib/content/stories";
     import { plainTextFromHtml } from "$lib/content/text";
     const isVideoHero = (src: string) => src.toLowerCase().endsWith(".mp4");
+    const hasHeroMedia = (story: (typeof stories)[number]) =>
+        Boolean(story.hero?.src?.trim());
     let bookmarked = $state<Set<string>>(new Set());
 
     onMount(() => {
@@ -34,25 +36,27 @@
         {#each stories as story}
             <article>
                 <a href="{base}/stories/{story.slug}/">
-                    {#if isVideoHero(story.hero.src)}
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            aria-hidden="true"
-                        >
-                            <source
+                    {#if hasHeroMedia(story)}
+                        {#if isVideoHero(story.hero.src)}
+                            <video
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                aria-hidden="true"
+                            >
+                                <source
+                                    src="{base}{story.hero.src}"
+                                    type="video/mp4"
+                                />
+                            </video>
+                        {:else}
+                            <img
                                 src="{base}{story.hero.src}"
-                                type="video/mp4"
+                                alt=""
+                                loading="lazy"
                             />
-                        </video>
-                    {:else}
-                        <img
-                            src="{base}{story.hero.src}"
-                            alt=""
-                            loading="lazy"
-                        />
+                        {/if}
                     {/if}
                     <div>
                         <div class="story-context">

@@ -1,0 +1,839 @@
+{
+  "id": "an-analysis-of-deis-schools-20260509",
+  "slug": "an-analysis-of-deis-schools-20260509",
+  "type": "article",
+  "destination": "parliamentary-budget-office",
+  "featured": true,
+  "heroLayout": "split",
+  "showContents": false,
+  "flourishWidth": "wide",
+  "title": "An analysis of DEIS schools",
+  "dek": "DEIS schools look to address educational disadvantage by providing additional supports to schools serving communities identified as experiencing the highest levels of socio-economic need. Is the policy effective in closing the disparity in education outcomes?",
+  "eyebrow": "Visual data analysis",
+  "topics": ["deis", "schools", "education", "disadvantage"],
+  "layout": "standard",
+  "status": "published",
+  "publishedDate": "2026-05-09",
+  "contributors": [
+    {
+      "name": "Angelika Glapska",
+      "role": "author",
+      "showAsAuthor": true
+    }
+  ],
+  "researcher": {
+    "name": "Angelika Glapska",
+    "role": "Data rock star",
+    "organisation": "Parliamentary Budget Office"
+  },
+  "hero": {
+    "src": "/media/schoolwork.jpg",
+    "alt": "A pencil being held by a child",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Introduction"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Delivering Equality of Opportunity in Schools (DEIS) is a programme targeting schools serving communities with the highest levels of need."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS schools are identified by the Department of Education and Youth using enrolment data and wider indicators of disadvantage. The programme was introduced in 2006 and consolidated a range of earlier initiatives that had addressed specific dimensions of educational disadvantage."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS addresses educational disadvantage by providing additional supports to schools serving communities identified as experiencing the highest levels of socio-economic need. These supports include increased teaching resources and access to specific educational programmes."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Within the DEIS programme, primary schools are categorised based on location and level of identified need. Urban schools are divided into three bands: DEIS Plus, Urban Band 1 and Urban Band 2, with DEIS Plus representing schools serving communities with the highest levels of disadvantage. Primary rural schools are classified separately as DEIS Rural."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The big picture "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS schools make up a sizeable share of Ireland’s mainstream school system, but they are not the majority. In 2025/26, there are 1,186 DEIS schools, representing 31.3% of mainstream schools. Non-DEIS schools account for the remaining 2,602 schools, or 68.7%."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "This means that almost one in three mainstream schools is included in the DEIS programme. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The overall pattern is similar when mainstream schools are split between primary and post-primary level. Primary schools account for the larger number of schools overall, but the DEIS share is close to one-third at both levels."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "In 2025/26, there are 954 DEIS primary schools, representing 31.1% of mainstream primary schools. At post-primary level, there are 232 DEIS schools, representing 32.2% of mainstream post-primary schools."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680305?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "This shows that the scale differs between primary and post-primary schools, but the broad pattern, or share of DEIS to Non-DEIS is similar across both. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Looking at school type gives a more detailed picture of composition of DEIS and non-DEIS schools. The largest single group is non-DEIS primary schools, with 2,113 schools. This is more than all other school types combined, underlining the scale of the non-DEIS primary within the mainstream school system."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Within DEIS primary schools, rural schools are the largest group, with 502 schools. Urban Band 1 accounts for 305 schools, while Urban Band 2 accounts for 147 schools. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "At post-primary level, vocational schools make up the largest DEIS group, with 129 schools."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Where are the DEIS schools?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "County-level figures underline an important distinction between scale and concentration. Larger counties tend to have more schools, and therefore more DEIS schools in absolute terms. But a high count does not necessarily mean that DEIS schools account for a high share of schools in that county. County Dublin, for example, has the largest number of DEIS schools, with 241. County Donegal, by contrast, has the highest DEIS share, at around 74%."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680309?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Does the DEIS share look different at Constituency level?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "At constituency level, the DEIS share looks quite different from the national picture. Nationally, around one-third of mainstream schools are DEIS schools. However, this share varies substantially across constituencies."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680312?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "In most constituencies, non-DEIS schools remain the majority. The DEIS share exceeds 50% in only five constituencies. Dublin South-Central has highest DEIS share, at 84.4%, followed by Dublin North-West at 79.1%. At the other end of the range, some constituencies have a much smaller DEIS share, with Kildare North having the lowest share, at 3.0%."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The variation between constituencies is wide. Across all constituencies, the DEIS share ranges from around 3% to 84%, with a median of around 26%."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680315?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "This means that the typical constituency has a lower DEIS share than the national figure of around one-third. The national figure is pulled upwards by a smaller number of constituencies with particularly high concentrations of DEIS schools."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS Plus"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS Plus was published in March 2026 as part of the DEIS Strategy to 2035, and provides additional supports to 121 existing DEIS schools and around 30,898 students."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680318?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Of the 121 schools included, 96 are primary schools and 25 are post-primary. This means almost 8 in 10 DEIS Plus schools are at primary level. By enrolment, around 65% of students in DEIS Plus schools are in primary schools and around 35% are in post-primary schools."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS Plus schools are also concentrated geographically, with County Dublin accounting for 80 of the 121 schools, or around two-thirds of the total. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Vocational schools account for just over half of the DEIS Plus post-primary schools, with the remainder made up of secondary, community and comprehensive schools. By constituency, DEIS Plus schools are concentrated in a relatively small number of areas, with Dublin North-West accounting for 22 schools, or over 18%. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680330?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Schools Enrolments 2014-2023"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "At primary level, total enrolment peaked in 2018, at 567,772 pupils, before falling back slightly in later years. Within that wider trend, the DEIS share of enrolment was broadly stable between 2014 and 2021. In 2021, 19.3% of primary pupils were enrolled in DEIS schools. In 2022, this increased to 27.5%, following the addition of 284 primary schools to the programme."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680337?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "At post-primary level, total enrolment continued to rise across the period, reaching 416,575 students in 2023. In 2021, 20.7% of post-primary students were enrolled in DEIS schools, increasing to 25.5% in 2022, following the addition of 38 post-primary schools to the programme."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Share of DEIS schools. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "County-level data shows a broad link between deprivation and the share of DEIS schools, but not a straight line. Counties with lower Pobal HP scores tend to have higher DEIS shares. Donegal is the clearest example: it has the highest DEIS share, at 74.24%, and the lowest HP score in the dataset."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680341?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The pattern is less clear in other counties. Dublin has a relatively high DEIS share despite a positive county-level HP score, while some counties with negative HP scores have more modest DEIS shares. It is important to note that while the county view points to a broad pattern, it may mask variation within the counties."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Are DEIS schools found in areas classified as affluent?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Breaking the figures down by deprivation classification, rather than by county, gives a clearer view of where DEIS schools are located. In very disadvantaged areas, 27 of 28 schools are DEIS. Similarly, DEIS schools make up the majority in disadvantaged areas, with 275 DEIS schools compared with 74 non-DEIS schools."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680346?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Affluent areas sit at the other end of the scale, with the majority of schools in these areas classified as non-DEIS. Out of 17 DEIS schools in areas classified as affluent in the Pobal HP deprivation index, 12 of them are in county Dublin. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "As previously noted, DEIS status is based on school enrolment, not on the Pobal HP score of the area in which the school is located. These figures therefore show where DEIS schools are located, rather than how DEIS status is determined."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Education Indicators"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The geography of DEIS schools is only one lens. Outcomes are another. This section looks at two indicators that sit near the end of the school pathway: retention to Leaving Cert and progression to higher education. The first shows how many students remain in school to complete senior cycle, the second shows how many move on to third-level education."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Retention"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "At county level, Leaving Cert retention shows modest movement, with most counties sitting within a narrow range across the three cohorts. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680351?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Some counties remain consistently towards the upper end of the distribution, while others are more often found near the lower end. County retention combines both DEIS and Non-DEIS schools, offering a broad geographic view. The more revealing gaps appear when retention is examined by deprivation and DEIS status."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Leaving Cert retention remains high across the more advantaged area classifications, before falling more sharply further down the scale. In affluent areas, 94% of the 2017 cohort completed the Leaving Cert in 2022/23, while above-average areas recorded a similar rate of 92.5%. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The gap between groups is substantial. Affluent areas were 11.9 percentage points ahead of disadvantaged areas, and 18.5 percentage points ahead of very disadvantaged areas. At the far end of the scale, retention in extremely disadvantaged areas was 55.8%, leaving a 38.2 percentage point gap across the full range."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The retention gap between DEIS and non-DEIS students has narrowed since the early 2000s. Among the 2001 first-year cohort, 68.2% of DEIS students went on to sit the Leaving Cert, compared with 85% non-DEIS students. By the 2017 cohort, the figures had risen to 83.4% and 92.1% respectively, reducing the gap from 16.8 percentage points to 8.7 points."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680355?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The retention gap reached its narrowest point for the 2015 cohort, before widening slightly in the two most recent cohorts. Even so, the 2017 retention rate for DEIS students was 15.2 points higher than the 2001 cohort."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Progression"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The higher education transition gap has narrowed, but only modestly. In 2023, DEIS post-primary schools had a higher transition rate than in 2015, while non-DEIS schools remained broadly stable at around seven in ten students. The gap narrowed from 27.8 percentage points in 2015 to 24.9 points in 2023."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680368?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Within DEIS schools, the increase was driven mainly by female students. The female transition rate rose from 19.4% in 2015 to 24.7% in 2023, while the male rate was slightly lower in 2023 than in 2015. In non-DEIS schools, female transition rates were also higher than male rates throughout the period, ending at 37.7% in 2023."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "textAlign": null,
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Prolonged Absence"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Prolonged absence is concentrated heavily in urban DEIS primary schools. Urban Band 1 schools sit well above every other group, followed by Urban Band 2 schools. Rural DEIS schools sit closer to rural non-DEIS schools than to the urban DEIS bands. The highest absence rates are found where DEIS status overlaps with urban concentration."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "[[flourish:story/3680372?657582]]"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "DEIS post-primary schools record higher prolonged absence in every year shown. The gap has narrowed from its peak, but remains substantial: in 2023/24, prolonged absence was 28.3% in DEIS post-primary schools, compared with 18.6% in non-DEIS post-primary schools."
+          }
+        ]
+      }
+    ]
+  },
+  "enhancements": [
+    {
+      "block": {
+        "type": "link-list",
+        "eyebrow": "Explore further",
+        "links": [
+          {
+            "label": "The Parliamentary Budget Office",
+            "href": "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/parliamentary-budget-office/",
+            "description": "Explore the Parliamentary Budget Office and its recent publications, analysis and services."
+          },
+          {
+            "label": "PBO | Explorer",
+            "href": "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/parliamentary-budget-office/explorer/",
+            "description": "Browse the Parliamentary Budget Office’s interactive tools, calculators and data visualisation resources."
+          }
+        ]
+      }
+    }
+  ]
+}

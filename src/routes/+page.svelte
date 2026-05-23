@@ -64,6 +64,7 @@
         },
     ];
     const isVideoHero = (src: string) => src.toLowerCase().endsWith(".mp4");
+    const hasHeroMedia = (story: Story) => Boolean(story.hero?.src?.trim());
     let bookmarked = $state<Set<string>>(new Set());
 
     onMount(() => {
@@ -98,19 +99,21 @@
                         >{featuredStory.date} · {featuredStory.readingTime}</small
                     >
                 </div>
-                {#if isVideoHero(featuredStory.hero.src)}
-                    <video autoplay muted loop playsinline aria-hidden="true">
-                        <source
+                {#if hasHeroMedia(featuredStory)}
+                    {#if isVideoHero(featuredStory.hero.src)}
+                        <video autoplay muted loop playsinline aria-hidden="true">
+                            <source
+                                src="{base}{featuredStory.hero.src}"
+                                type="video/mp4"
+                            />
+                        </video>
+                    {:else}
+                        <img
                             src="{base}{featuredStory.hero.src}"
-                            type="video/mp4"
+                            alt=""
+                            loading="eager"
                         />
-                    </video>
-                {:else}
-                    <img
-                        src="{base}{featuredStory.hero.src}"
-                        alt=""
-                        loading="eager"
-                    />
+                    {/if}
                 {/if}
             </a>
         </article>
@@ -120,25 +123,27 @@
         {#each leadingStories as story}
             <article class="secondary-story">
                 <a href="{base}/stories/{story.slug}/">
-                    {#if isVideoHero(story.hero.src)}
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            aria-hidden="true"
-                        >
-                            <source
+                    {#if hasHeroMedia(story)}
+                        {#if isVideoHero(story.hero.src)}
+                            <video
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                aria-hidden="true"
+                            >
+                                <source
+                                    src="{base}{story.hero.src}"
+                                    type="video/mp4"
+                                />
+                            </video>
+                        {:else}
+                            <img
                                 src="{base}{story.hero.src}"
-                                type="video/mp4"
+                                alt=""
+                                loading="lazy"
                             />
-                        </video>
-                    {:else}
-                        <img
-                            src="{base}{story.hero.src}"
-                            alt=""
-                            loading="lazy"
-                        />
+                        {/if}
                     {/if}
                     <div class="secondary-copy">
                         <div class="story-context">
@@ -164,25 +169,27 @@
         {#each trailingStories as story}
             <article class="secondary-story">
                 <a href="{base}/stories/{story.slug}/">
-                    {#if isVideoHero(story.hero.src)}
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            aria-hidden="true"
-                        >
-                            <source
+                    {#if hasHeroMedia(story)}
+                        {#if isVideoHero(story.hero.src)}
+                            <video
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                aria-hidden="true"
+                            >
+                                <source
+                                    src="{base}{story.hero.src}"
+                                    type="video/mp4"
+                                />
+                            </video>
+                        {:else}
+                            <img
                                 src="{base}{story.hero.src}"
-                                type="video/mp4"
+                                alt=""
+                                loading="lazy"
                             />
-                        </video>
-                    {:else}
-                        <img
-                            src="{base}{story.hero.src}"
-                            alt=""
-                            loading="lazy"
-                        />
+                        {/if}
                     {/if}
                     <div class="secondary-copy">
                         <div class="story-context">
