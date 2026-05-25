@@ -29,6 +29,17 @@ export function validateStorDocument(value: StorDocument) {
     );
   }
 
+  if (value.shortVideos && !Array.isArray(value.shortVideos)) {
+    throw new Error(
+      'Invalid Stór document: "shortVideos" must be an array when provided.',
+    );
+  }
+
+  for (const [index, item] of (value.shortVideos ?? []).entries()) {
+    requiredString(item.src, `shortVideos[${index}].src`);
+    requiredString(item.poster, `shortVideos[${index}].poster`);
+  }
+
   if (
     value.destination === 'committee-reports' &&
     (!value.committeeName || !value.committeeName.trim())

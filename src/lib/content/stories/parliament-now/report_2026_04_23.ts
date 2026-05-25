@@ -11,6 +11,14 @@ export const thePublicRecord: Story = {
   byline: "Robert Kennedy-Cochrane",
   date: "April 23, 2026",
   readingTime: "4 min read",
+  shortVideos: [
+    {
+      title: "Oversight of children in care",
+      eyebrow: "Committee report",
+      poster: "/media/shorts/posters/oversight-of-children-in-care.jpg",
+      src: "/media/shorts/videos/oversight-of-children-in-care.mp4",
+    },
+  ],
   hero: {
     src: "/media/report-launch-alan-kelly.jpg",
     alt: "Members of the Joint Committee on Health launching a report on the Plinth at Leinster House in April 2026",
@@ -36,7 +44,7 @@ export const thePublicRecord: Story = {
       media: {
         type: "video",
         asset: {
-          src: "/media/Committee_launch.mp4",
+          src: "/media/shorts/videos/oversight-of-children-in-care.mp4",
           caption: "The Cathaoirleach introduces the report",
         },
       },

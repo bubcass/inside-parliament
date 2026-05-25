@@ -9,8 +9,22 @@ export const parliamentNowStoryScaffold: Story = {
   title: "Turning history's wounds into shared strengths",
   dek: "The European project grew from the kernel of the Schuman Declaration in 1950, a rejection of conflict and the impetus for a better future built on the fundamental principle of co-operation.",
   byline: "Angharad Williams",
-  date: "May 11, 2026",
+  date: "May 9, 2026",
   readingTime: "6 min read",
+  shortVideos: [
+    {
+      title: "Turning history's wounds into shared strengths",
+      eyebrow: "Europe Day 2026",
+      poster: "/media/shorts/posters/europe-day-cathaoirleach.png",
+      src: "/media/shorts/videos/europe-day-cathaoirleach.mp4",
+    },
+    {
+      title: "European unity in a time of uncertainty",
+      eyebrow: "Europe Day",
+      poster: "/media/shorts/posters/europe-day-ceann-comhairle.png",
+      src: "/media/shorts/videos/europe-day-ceann-comhairle.mp4",
+    },
+  ],
   hero: {
     src: "/media/european-flag.mp4",
     alt: "The European flag flying in the sunshine",
@@ -36,7 +50,7 @@ export const parliamentNowStoryScaffold: Story = {
       media: {
         type: "video",
         asset: {
-          src: "/media/ceann-comhairle-europe-day.mp4",
+          src: "/media/shorts/videos/europe-day-ceann-comhairle.mp4",
           poster: "/media/ceann_comhairle_chair.jpg",
           caption:
             "The Ceann Comhairle speaks about the importance of the European project in a time of uncertainty.",
@@ -61,7 +75,7 @@ export const parliamentNowStoryScaffold: Story = {
       media: {
         type: "video",
         asset: {
-          src: "/media/Cathaoirleach_Europe_Day.mp4",
+          src: "/media/shorts/videos/europe-day-cathaoirleach.mp4",
           poster: "/media/cathaoirleach-europe-day.jpg",
           autoplay: true,
           caption:

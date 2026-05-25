@@ -1,15 +1,7 @@
 <script lang="ts">
     import { base } from "$app/paths";
     import { onDestroy, onMount } from "svelte";
-
-    export interface ShortVideoItem {
-        slug: string;
-        title: string;
-        eyebrow: string;
-        date: string;
-        poster: string;
-        src: string;
-    }
+    import type { ShortVideoItem } from "$lib/content/shorts";
 
     interface Props {
         items: ShortVideoItem[];

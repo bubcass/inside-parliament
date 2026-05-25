@@ -11,6 +11,14 @@ export const howDoTDsVoteInTheDail: Story = {
   byline: "David Cass",
   date: "April 23, 2026",
   readingTime: "5 min read",
+  shortVideos: [
+    {
+      title: "How do TDs vote in the Dáil?",
+      eyebrow: "Parliament Essentials",
+      poster: "/media/shorts/posters/how-tds-vote-in-the-dail.jpg",
+      src: "/media/shorts/videos/how-tds-vote-in-the-dail.mp4",
+    },
+  ],
   hero: {
     src: "/media/full_chamber.png",
     alt: "A wide view of the Seanad chamber prepared for parliamentary business.",
@@ -104,7 +112,7 @@ export const howDoTDsVoteInTheDail: Story = {
             alt: "The Ceann Comhairle puts a question formally to the Dáil",
           },
           video: {
-            src: "/media/division-in-dail.mp4",
+            src: "/media/shorts/videos/how-tds-vote-in-the-dail.mp4",
             poster: "/media/ceann_comhairle_in_the_chair.jpg",
           },
         },

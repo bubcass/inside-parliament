@@ -23,6 +23,6 @@ export function suggestedStorDocumentPath(options: {
   destination: StorDestination;
   slug: string;
 }) {
-  const base = `src/lib/content/stor/documents/${destinationFolder(options.destination)}`;
+  const base = `src/lib/content/inside-parliament/documents/${destinationFolder(options.destination)}`;
   return `${base}/${options.slug}.json`;
 }

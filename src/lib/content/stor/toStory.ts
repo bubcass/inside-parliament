@@ -145,6 +145,7 @@ export function storDocumentToStory(document: StorDocument): StorRenderResult {
         credit: document.hero?.credit ?? null,
       },
       blocks,
+      shortVideos: document.shortVideos,
     },
   };
 }

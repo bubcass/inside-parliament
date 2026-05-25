@@ -11,6 +11,14 @@ export const theSeanadAtWork: Story = {
   byline: "Angharad Williams",
   date: "April 22, 2026",
   readingTime: "8 min read",
+  shortVideos: [
+    {
+      title: "European scrutiny in the Seanad",
+      eyebrow: "Parliament at Work",
+      poster: "/media/shorts/posters/european-scrutiny-seanad.png",
+      src: "/media/shorts/videos/european-scrutiny-seanad.mp4",
+    },
+  ],
   hero: {
     src: "/media/cathaoirleach.png",
     alt: "The Cathaoirleach, Mark Daly, in the chair at the Seanad",
@@ -30,7 +38,7 @@ export const theSeanadAtWork: Story = {
     {
       type: "video",
       video: {
-        src: "/media/transparency_seanad.mp4",
+        src: "/media/shorts/videos/european-scrutiny-seanad.mp4",
         poster: "/media/SSC-on-EU-Scrutiny.jpg",
         caption:
           "The committee meets in the Seanad chamber and is distinctive in being made up entirely of Senators.",

@@ -36,7 +36,7 @@ export const report20260416: Story = {
       media: {
         type: "video",
         asset: {
-          src: "/media/Committee_launch.mp4",
+          src: "/media/shorts/videos/oversight-of-children-in-care.mp4",
           caption: "The Cathaoirleach introduces the report",
         },
       },

@@ -10,6 +10,14 @@ export const thisWeekInTheChamber: Story = {
   byline: "David Cass",
   date: "April 22, 2026",
   readingTime: "2 min read",
+  shortVideos: [
+    {
+      title: "This week in Dáil Éireann",
+      eyebrow: "The week ahead",
+      poster: "/media/shorts/posters/this-week-dail-eireann.png",
+      src: "/media/shorts/videos/this-week-dail-eireann.mp4",
+    },
+  ],
   hero: {
     src: "/media/deputy_bacik.jpg",
     alt: "Deputy Ivana Bacik speaks in the Dáil Chamber",
@@ -37,7 +45,7 @@ export const thisWeekInTheChamber: Story = {
       media: {
         type: "video",
         asset: {
-          src: "/media/Socials_tease-2.mp4",
+          src: "/media/shorts/videos/this-week-dail-eireann.mp4",
           poster: "/media/full_chamber.jpg",
           caption:
             "A round-up of what's expected to be discussed this week in Dáil Éireann",

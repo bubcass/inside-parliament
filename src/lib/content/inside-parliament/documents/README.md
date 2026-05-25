@@ -1,4 +1,4 @@
-Canonical Stór documents should be saved here as metadata-wrapped JSON files.
+Canonical Inside Parliament documents should be saved here as metadata-wrapped JSON files.
 
 Recommended layout:
 

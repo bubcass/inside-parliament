@@ -45,7 +45,10 @@ async function materializeImageAssets(options: {
   relativePath: string;
   document: StorDocument;
 }) {
-  const relativeJsonPath = options.relativePath.replace(/^src\/lib\/content\/stor\/documents\//, '');
+  const relativeJsonPath = options.relativePath.replace(
+    /^src\/lib\/content\/inside-parliament\/documents\//,
+    '',
+  );
   const jsonExtension = extname(relativeJsonPath);
   const assetBase = relativeJsonPath.slice(0, relativeJsonPath.length - jsonExtension.length);
   const assetRootRelative = `media/imported/${assetBase}`;
@@ -117,7 +120,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const targetPath = resolve(process.cwd(), relativePath);
-    const contentRoot = resolve(process.cwd(), 'src/lib/content/stor/documents');
+    const contentRoot = resolve(process.cwd(), 'src/lib/content/inside-parliament/documents');
 
     if (!targetPath.startsWith(contentRoot)) {
       return json({ ok: false }, { status: 400 });

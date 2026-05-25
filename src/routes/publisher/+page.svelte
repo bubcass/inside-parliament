@@ -1019,7 +1019,7 @@
             .insertContent({
                 type: "videoBlock",
                 attrs: {
-                    src: "/media/Committee_launch.mp4",
+                    src: "/media/shorts/videos/oversight-of-children-in-care.mp4",
                     poster: "",
                     captions: "",
                     caption: "",

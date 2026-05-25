@@ -3,25 +3,25 @@
   "slug": "biodiversity-around-leinster-house-20260524",
   "type": "article",
   "destination": "parliament-now",
-  "featured": false,
+  "featured": true,
   "heroLayout": "split",
   "title": "Biodiversity around Leinster House",
   "dek": "The seat of the Houses of the Oireachtas is in the heart of Dublin's city centre. It still teems with birds, insects and plants.",
   "eyebrow": "Parliament and its people",
-  "topics": [
-    "biodiversity",
-    "staff",
-    "Leinster House"
-  ],
+  "topics": ["biodiversity", "staff", "Leinster House"],
   "layout": "standard",
   "status": "published",
   "language": "en",
-  "keywords": [
-    "biodiversity",
-    "staff",
-    "Leinster House"
+  "keywords": ["biodiversity", "staff", "Leinster House"],
+  "publishedDate": "2026-04-22",
+  "shortVideos": [
+    {
+      "title": "Biodiversity around Leinster House",
+      "eyebrow": "Parliament and its people",
+      "poster": "/media/shorts/posters/biodiversity-around-leinster-house.jpg",
+      "src": "/media/shorts/videos/biodiversity-around-leinster-house.mp4"
+    }
   ],
-  "publishedDate": "2026-05-24",
   "contributors": [
     {
       "name": "Angharad Williams",
@@ -75,7 +75,7 @@
       {
         "type": "imageBlock",
         "attrs": {
-          "src": "/media/biodiversity-video.mp4",
+          "src": "/media/shorts/videos/biodiversity-around-leinster-house.mp4",
           "alt": "Leinster House campus in spring, some insights from Paul Smith, Parliamentary Usher",
           "caption": "Paul Smith is a Parliamentary Usher with a deep knowledge of the plants, insets and birds around Parliament.",
           "credit": "",

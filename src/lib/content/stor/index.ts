@@ -13,12 +13,12 @@ export interface StorListItem {
 
 const documentModules = import.meta.glob(
   [
-    './documents/parliament-now/**/*.json',
-    './documents/parliament-explained/**/*.json',
-    './documents/parliament-at-work/**/*.json',
-    './documents/parliament-now/**/*.ts',
-    './documents/parliament-explained/**/*.ts',
-    './documents/parliament-at-work/**/*.ts',
+    '../inside-parliament/documents/parliament-now/**/*.json',
+    '../inside-parliament/documents/parliament-explained/**/*.json',
+    '../inside-parliament/documents/parliament-at-work/**/*.json',
+    '../inside-parliament/documents/parliament-now/**/*.ts',
+    '../inside-parliament/documents/parliament-explained/**/*.ts',
+    '../inside-parliament/documents/parliament-at-work/**/*.ts',
   ],
   {
     eager: true,

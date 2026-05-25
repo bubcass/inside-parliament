@@ -15,6 +15,13 @@ export type StoryBlock =
 export type StorySection = 'parliament-now' | 'parliament-explained' | 'parliament-at-work';
 export type StoryHeroLayout = 'contained' | 'split' | 'immersive';
 
+export interface StoryShortVideo {
+  src: string;
+  poster: string;
+  title?: string;
+  eyebrow?: string;
+}
+
 export interface Story {
   slug: string;
   section: StorySection;
@@ -49,6 +56,7 @@ export interface Story {
   readingTime: string;
   hero: ImageAsset;
   blocks: StoryBlock[];
+  shortVideos?: StoryShortVideo[];
 }
 
 export interface ImageAsset {

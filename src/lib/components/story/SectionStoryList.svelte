@@ -12,6 +12,8 @@
   let secondaryStories = $derived(
     featuredStory ? stories.filter((story) => story.slug !== featuredStory.slug) : []
   );
+  let visualStories = $derived(secondaryStories.slice(0, 4));
+  let compactStories = $derived(secondaryStories.slice(4));
   const isVideoHero = (src: string) => src.toLowerCase().endsWith('.mp4');
   const hasHeroMedia = (story: Story) => Boolean(story.hero?.src?.trim());
   let bookmarked = $state<Set<string>>(new Set());
@@ -57,9 +59,9 @@
     </article>
   {/if}
 
-  {#if secondaryStories.length}
+  {#if visualStories.length}
     <div class="secondary-grid">
-      {#each secondaryStories as story}
+      {#each visualStories as story}
         <article class="secondary-story">
           <a href="{base}/stories/{story.slug}/">
             {#if hasHeroMedia(story)}
@@ -82,6 +84,28 @@
               <span class="secondary-summary">{plainTextFromHtml(story.dek)}</span>
               <small>{story.date} · {story.readingTime}</small>
             </div>
+          </a>
+        </article>
+      {/each}
+    </div>
+  {/if}
+
+  {#if compactStories.length}
+    <div class="tertiary-grid" aria-label={`${section.title} more stories`}>
+      {#each compactStories as story}
+        <article class="tertiary-story">
+          <a href="{base}/stories/{story.slug}/">
+            {#if hasHeroMedia(story)}
+              {#if isVideoHero(story.hero.src)}
+                <video autoplay muted loop playsinline aria-hidden="true">
+                  <source src="{base}{story.hero.src}" type="video/mp4" />
+                </video>
+              {:else}
+                <img src="{base}{story.hero.src}" alt="" loading="lazy" />
+              {/if}
+            {/if}
+            <p class="tertiary-eyebrow">{story.eyebrow}</p>
+            <h3>{story.title}</h3>
           </a>
         </article>
       {/each}
@@ -206,6 +230,37 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tertiary-grid {
+    margin-top: clamp(var(--space-7), 5vw, 3.5rem);
+    display: grid;
+    gap: clamp(var(--space-5), 2.5vw, var(--space-6));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tertiary-story a {
+    display: grid;
+    gap: var(--space-3);
+    text-decoration: none;
+  }
+
+  .tertiary-story img,
+  .tertiary-story video {
+    aspect-ratio: 4 / 3;
+    background: var(--color-soft);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .tertiary-eyebrow {
+    color: var(--color-accent);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-meta);
+    letter-spacing: 0.11em;
+    line-height: var(--line-height-small);
+    margin: 0;
+    text-transform: uppercase;
+  }
+
   .secondary-story a {
     display: grid;
     gap: var(--space-4);
@@ -232,6 +287,17 @@
     line-height: 1.18;
     margin: 0 0 var(--space-3);
     max-width: 18ch;
+    text-wrap: balance;
+  }
+
+  .tertiary-story h3 {
+    color: var(--color-accent-2);
+    font-family: var(--font-sans);
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+    font-weight: var(--font-weight-heading);
+    line-height: 1.16;
+    margin: 0;
+    max-width: 16ch;
     text-wrap: balance;
   }
 
@@ -291,6 +357,10 @@
     }
 
     .secondary-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tertiary-grid {
       grid-template-columns: minmax(0, 1fr);
     }
   }

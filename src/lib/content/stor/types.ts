@@ -1,4 +1,4 @@
-import type { Story, StoryBlock, StorySection, VideoAsset } from '../types';
+import type { Story, StoryBlock, StorySection, StoryShortVideo, VideoAsset } from '../types';
 
 export type StorDestination =
   | 'parliament-now'
@@ -122,6 +122,7 @@ export interface StorDocument {
   publishedDate?: string | null;
   hero?: StorHero;
   launchVideo?: VideoAsset;
+  shortVideos?: StoryShortVideo[];
   content: ProseMirrorDocument;
   enhancements?: StorEnhancement[];
 }
