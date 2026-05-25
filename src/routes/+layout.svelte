@@ -6,7 +6,8 @@
     let { children } = $props();
     const isPublisherRoute = $derived(
         page.url.pathname === `${base}/publisher` ||
-            page.url.pathname === `${base}/publisher/`,
+            page.url.pathname === `${base}/publisher/` ||
+            page.url.pathname.startsWith(`${base}/publisher/`),
     );
 </script>
 
@@ -20,7 +21,11 @@
 
 <a class="skip-link" href="#content">Skip to content</a>
 
-<header class="site-header" aria-label="Site header">
+<header
+    class:site-header--studio={isPublisherRoute}
+    class="site-header"
+    aria-label="Site header"
+>
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
             <span class="brand-mark" aria-hidden="true">

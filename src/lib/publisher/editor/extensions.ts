@@ -108,6 +108,82 @@ export const ImageBlock = Node.create({
   },
 });
 
+export const VideoBlock = Node.create({
+  name: 'videoBlock',
+  group: 'block',
+  atom: true,
+  selectable: true,
+  draggable: true,
+
+  addAttributes() {
+    return {
+      src: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-src') || '',
+        renderHTML: (attributes) => ({ 'data-src': attributes.src || '' }),
+      },
+      poster: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-poster') || '',
+        renderHTML: (attributes) => ({ 'data-poster': attributes.poster || '' }),
+      },
+      captions: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-captions') || '',
+        renderHTML: (attributes) => ({
+          'data-captions': attributes.captions || '',
+        }),
+      },
+      caption: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-caption') || '',
+        renderHTML: (attributes) => ({
+          'data-caption': attributes.caption || '',
+        }),
+      },
+      credit: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-credit') || '',
+        renderHTML: (attributes) => ({ 'data-credit': attributes.credit || '' }),
+      },
+      autoplay: {
+        default: true,
+        parseHTML: (element) => element.getAttribute('data-autoplay') !== 'false',
+        renderHTML: (attributes) => ({
+          'data-autoplay': attributes.autoplay === false ? 'false' : 'true',
+        }),
+      },
+    };
+  },
+
+  parseHTML() {
+    return [{ tag: 'stor-video' }];
+  },
+
+  renderHTML({ HTMLAttributes, node }) {
+    return [
+      'stor-video',
+      mergeAttributes(HTMLAttributes, {
+        class: 'stor-embedded-block stor-embedded-block--video',
+      }),
+      ['div', { class: 'stor-embedded-block__eyebrow' }, 'Video'],
+      [
+        'p',
+        { class: 'stor-embedded-block__text' },
+        node.attrs.caption || 'Video block',
+      ],
+      [
+        'p',
+        { class: 'stor-embedded-block__meta' },
+        node.attrs.src || 'No video path selected',
+      ],
+      ...(node.attrs.poster
+        ? [['p', { class: 'stor-embedded-block__meta' }, `Poster: ${node.attrs.poster}`]]
+        : []),
+    ];
+  },
+});
+
 export const FlourishBlock = Node.create({
   name: 'flourishBlock',
   group: 'block',
@@ -365,6 +441,78 @@ export const SceneScrollyBlock = Node.create({
   },
 });
 
+export const LinkListBlock = Node.create({
+  name: 'linkListBlock',
+  group: 'block',
+  atom: true,
+  selectable: true,
+  draggable: true,
+
+  addAttributes() {
+    return {
+      eyebrow: {
+        default: 'Explore further',
+        parseHTML: (element) => element.getAttribute('data-eyebrow') || 'Explore further',
+        renderHTML: (attributes) => ({
+          'data-eyebrow': attributes.eyebrow || 'Explore further',
+        }),
+      },
+      heading: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-heading') || '',
+        renderHTML: (attributes) => ({ 'data-heading': attributes.heading || '' }),
+      },
+      links: {
+        default: [],
+        parseHTML: (element) =>
+          parseJsonAttribute(element.getAttribute('data-links') || '', []),
+        renderHTML: (attributes) => ({
+          'data-links': encodeJsonAttribute(attributes.links),
+        }),
+      },
+    };
+  },
+
+  parseHTML() {
+    return [{ tag: 'stor-link-list' }];
+  },
+
+  renderHTML({ HTMLAttributes, node }) {
+    const links = Array.isArray(node.attrs.links) ? node.attrs.links : [];
+    const visibleLinks = links.slice(0, 3).map((item) => {
+      const link = (item ?? {}) as Record<string, unknown>;
+      const label = String(link.label ?? '').trim() || 'Untitled link';
+      const href = String(link.href ?? '').trim() || 'No URL set';
+      return ['li', { class: 'stor-embedded-block__step' }, `${label} · ${href}`];
+    });
+    const remainingCount = links.length > 3 ? links.length - 3 : 0;
+
+    return [
+      'stor-link-list',
+      mergeAttributes(HTMLAttributes, {
+        class: 'stor-embedded-block stor-embedded-block--link-list',
+      }),
+      ['div', { class: 'stor-embedded-block__eyebrow' }, 'Explore further'],
+      [
+        'p',
+        { class: 'stor-embedded-block__text' },
+        node.attrs.heading || node.attrs.eyebrow || 'Explore further',
+      ],
+      [
+        'p',
+        { class: 'stor-embedded-block__meta' },
+        `${links.length} link${links.length === 1 ? '' : 's'}`,
+      ],
+      ...(visibleLinks.length
+        ? [['ol', { class: 'stor-embedded-block__steps' }, ...visibleLinks]]
+        : []),
+      ...(remainingCount > 0
+        ? [['p', { class: 'stor-embedded-block__meta' }, `+ ${remainingCount} more link${remainingCount === 1 ? '' : 's'}`]]
+        : []),
+    ];
+  },
+});
+
 function summarizeTable(html: string) {
   const rowCount = (html.match(/<tr\b/gi) || []).length;
   const headerCount = (html.match(/<th\b/gi) || []).length;
@@ -418,10 +566,12 @@ export const TableBlock = Node.create({
 export interface StructuredBlockSelection {
   type:
     | 'imageBlock'
+    | 'videoBlock'
     | 'flourishBlock'
     | 'tableBlock'
     | 'mediaTextBlock'
-    | 'sceneScrollyBlock';
+    | 'sceneScrollyBlock'
+    | 'linkListBlock';
   attrs: Record<string, unknown>;
   from: number;
   to: number;
@@ -449,10 +599,12 @@ export function getSelectedStructuredBlock(editor: {
   if (
     selectedNode &&
     (selectedNode.type.name === 'imageBlock' ||
+      selectedNode.type.name === 'videoBlock' ||
       selectedNode.type.name === 'flourishBlock' ||
       selectedNode.type.name === 'tableBlock' ||
       selectedNode.type.name === 'mediaTextBlock' ||
-      selectedNode.type.name === 'sceneScrollyBlock')
+      selectedNode.type.name === 'sceneScrollyBlock' ||
+      selectedNode.type.name === 'linkListBlock')
   ) {
     return {
       type: selectedNode.type.name,
@@ -466,10 +618,12 @@ export function getSelectedStructuredBlock(editor: {
   if (
     nodeAfter &&
     (nodeAfter.type.name === 'imageBlock' ||
+      nodeAfter.type.name === 'videoBlock' ||
       nodeAfter.type.name === 'flourishBlock' ||
       nodeAfter.type.name === 'tableBlock' ||
       nodeAfter.type.name === 'mediaTextBlock' ||
-      nodeAfter.type.name === 'sceneScrollyBlock')
+      nodeAfter.type.name === 'sceneScrollyBlock' ||
+      nodeAfter.type.name === 'linkListBlock')
   ) {
     return {
       type: nodeAfter.type.name,

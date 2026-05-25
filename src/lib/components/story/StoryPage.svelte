@@ -172,6 +172,15 @@
     text-underline-offset: 0.16em;
   }
 
+  .lede :global(a)::after {
+    content: "↗";
+    display: inline-block;
+    font-size: 0.8em;
+    margin-left: 0.14em;
+    text-decoration: none;
+    transform: translateY(-0.08em);
+  }
+
   .lede :global(em) {
     font-style: italic;
   }

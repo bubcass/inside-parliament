@@ -8,29 +8,42 @@
     import Link from "@tiptap/extension-link";
     import Superscript from "@tiptap/extension-superscript";
     import Subscript from "@tiptap/extension-subscript";
-    import StoryPage from "$lib/components/story/StoryPage.svelte";
+    import StoryPreviewPane from "$lib/publisher/StoryPreviewPane.svelte";
     import { extractDocxMetadata } from "$lib/publisher/extractDocxMetadata";
     import {
         FlourishBlock,
         getSelectedStructuredBlock,
         ImageBlock,
+        LinkListBlock,
         MediaTextBlock,
         SceneScrollyBlock,
         TableBlock,
+        VideoBlock,
         type StructuredBlockSelection,
     } from "$lib/publisher/editor/extensions";
     import { transformImportedHtml } from "$lib/publisher/editor/importHtml";
-    import { storDocumentToStory } from "$lib/content/stor/toStory";
-    import { storDocumentToXml } from "$lib/content/stor/toXml";
     import {
         DESTINATION_OPTIONS,
         STATUS_OPTIONS,
         TYPE_OPTIONS,
     } from "$lib/publisher/metadata";
-    import { suggestedStorDocumentPath } from "$lib/publisher/paths";
+    import {
+        buildCanonicalPublisherDocument,
+        buildPublisherXmlPreview,
+        buildRenderedPublisherPreview,
+        buildSuggestedPublisherPath,
+        embeddedImageStats,
+        slugifyPublisherValue,
+    } from "$lib/publisher/preview";
+    import {
+        createPublisherPreviewChannel,
+        publishPublisherPreviewSnapshot,
+        publisherPreviewUrl,
+        writePublisherPreviewSnapshot,
+        type PublisherPreviewSnapshot,
+    } from "$lib/publisher/previewSession";
     import type {
         ProseMirrorDocument,
-        ProseMirrorNode,
         StorContributor,
         StorDestination,
         StorDocument,
@@ -126,14 +139,17 @@
     let editorDocument = $state<ProseMirrorDocument | null>(null);
     let selectedStructuredBlock = $state<StructuredBlockSelection | null>(null);
     let openStage = $state<"start" | "details" | "edit" | "preview">("start");
+    let livePreviewMode = $state<"split" | "off">("split");
     let importedFilename = $state("");
     let importMessage = $state<string | null>(null);
     let importError = $state<string | null>(null);
     let editorMounted = $state(false);
     let hasLocalDraft = $state(false);
     let draftStatus = $state<string | null>(null);
+    let detachedPreviewAvailable = $state(false);
     let draftPersistenceReady = false;
     let editorDraftSaveTimeout: number | null = null;
+    let previewChannel: BroadcastChannel | null = null;
     const DOCX_IMPORT_RELOAD_KEY =
         "inside-parliament-docx-import-reload-attempted";
 
@@ -174,19 +190,6 @@
             { type: "paragraph", attrs: { textAlign: null }, content: [] },
         ],
     };
-
-    function slugify(input: string) {
-        const base = input.trim() || "untitled-story";
-        return (
-            base
-                .normalize("NFKD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .replace(/[^a-zA-Z0-9-]+/g, "-")
-                .replace(/-+/g, "-")
-                .replace(/^[-]+|[-]+$/g, "")
-                .toLowerCase() || "untitled-story"
-        );
-    }
 
     function normalizeFlourishDataSrc(value: string) {
         const trimmed = value.trim();
@@ -546,35 +549,6 @@
         return `${base}${src}`;
     }
 
-    function embeddedImageStats(document: ProseMirrorDocument | null) {
-        if (!document) {
-            return { count: 0, totalChars: 0 };
-        }
-
-        let count = 0;
-        let totalChars = 0;
-
-        const visit = (node: ProseMirrorNode) => {
-            if (node.type === "imageBlock") {
-                const src = String(node.attrs?.src ?? "").trim();
-                if (src.startsWith("data:image/")) {
-                    count += 1;
-                    totalChars += src.length;
-                }
-            }
-
-            for (const child of node.content ?? []) {
-                visit(child);
-            }
-        };
-
-        for (const node of document.content ?? []) {
-            visit(node);
-        }
-
-        return { count, totalChars };
-    }
-
     function readPublisherDraft() {
         if (typeof window === "undefined") return null;
 
@@ -697,136 +671,38 @@
     let canonicalDocument = $derived.by<StorDocument | null>(() => {
         if (!editorDocument) return null;
 
-        const title = metadata.title.trim();
-        const publishedDate = metadata.publishedDate.trim() || null;
-        const generatedSlug = slugify(
-            `${title || importedFilename || "untitled"}${publishedDate ? `-${publishedDate.slice(0, 10).replace(/-/g, "")}` : ""}`,
-        );
-        const slug = metadata.slug.trim() || generatedSlug;
-        const keywordList = splitKeywords(metadata.keywords);
-        const derivedEyebrow = metadata.eyebrow.trim();
-        const authorContributor =
-            contributors.find(
-                (contributor) =>
-                    contributor.role.trim().toLowerCase() === "author",
-            ) ??
-            contributors[0] ??
-            null;
-        const authorName = authorContributor?.name?.trim() ?? "";
-        const authorOrganisation = authorContributor?.affiliation?.trim() ?? "";
-        const authorProfileRole = authorContributor?.profileRole?.trim() ?? "";
-        const authorProfileImage =
-            authorContributor?.profileImage?.trim() ?? "";
-        const authorBio = authorContributor?.bio?.trim() ?? "";
-
-        return {
-            id: slug,
-            slug,
-            type: metadata.type,
-            destination: metadata.destination,
-            featured: metadata.featured,
-            ...(metadata.heroLayout !== "none"
-                ? { heroLayout: metadata.heroLayout }
-                : {}),
-            title: title || "Untitled document",
-            dek: metadata.dek,
-            ...(derivedEyebrow ? { eyebrow: derivedEyebrow } : {}),
-            ...(metadata.abstract.trim()
-                ? { abstract: metadata.abstract.trim() }
-                : {}),
-            ...(keywordList.length ? { topics: keywordList } : {}),
-            layout: "standard",
-            status: metadata.status,
-            language: metadata.language.trim() || "en",
-            keywords: keywordList,
-            publishedDate,
-            contributors: contributors
-                .map((contributor) => ({
-                    name: contributor.name.trim(),
-                    role: contributor.role.trim(),
-                    affiliation: contributor.affiliation?.trim() || undefined,
-                    showAsAuthor: contributor.showAsAuthor ?? false,
-                    profileRole: contributor.profileRole?.trim() || undefined,
-                    profileImage: contributor.profileImage?.trim() || undefined,
-                    bio: contributor.bio?.trim() || undefined,
-                }))
-                .filter((contributor) => contributor.name && contributor.role),
-            ...(authorName ||
-            authorProfileRole ||
-            authorOrganisation ||
-            authorBio ||
-            authorProfileImage
-                ? {
-                      researcher: {
-                          ...(authorName ? { name: authorName } : {}),
-                          ...(authorProfileRole
-                              ? { role: authorProfileRole }
-                              : {}),
-                          ...(authorOrganisation
-                              ? { organisation: authorOrganisation }
-                              : {}),
-                          ...(authorBio ? { bio: authorBio } : {}),
-                          ...(authorProfileImage
-                              ? { image: authorProfileImage }
-                              : {}),
-                      },
-                  }
-                : {}),
-            hero:
-                metadata.heroLayout !== "none" && metadata.heroSrc.trim()
-                    ? {
-                          src: metadata.heroSrc.trim(),
-                          alt:
-                              metadata.heroAlt.trim() ||
-                              title ||
-                              "Story hero image",
-                          position:
-                              metadata.heroPosition.trim() || "center center",
-                      }
-                    : undefined,
-            content: editorDocument,
-        };
-    });
-
-    let renderedPreview = $derived.by(() => {
-        if (!canonicalDocument) return null;
-        if (embeddedImageStats(canonicalDocument.content).count > 0) {
-            return null;
-        }
-
-        try {
-            return storDocumentToStory(canonicalDocument);
-        } catch {
-            return null;
-        }
-    });
-
-    let suggestedPath = $derived.by(() => {
-        if (!canonicalDocument) return null;
-
-        return suggestedStorDocumentPath({
-            destination: canonicalDocument.destination,
-            slug: canonicalDocument.slug,
+        return buildCanonicalPublisherDocument({
+            metadata,
+            contributors,
+            importedFilename,
+            editorDocument,
         });
     });
 
-    let canonicalXml = $derived.by(() => {
-        if (!canonicalDocument) return null;
-        if (embeddedImageStats(canonicalDocument.content).count > 0) {
-            return null;
-        }
+    let renderedPreview = $derived.by(() => {
+        return buildRenderedPublisherPreview(canonicalDocument);
+    });
 
-        try {
-            return storDocumentToXml(canonicalDocument);
-        } catch {
-            return null;
-        }
+    let suggestedPath = $derived.by(() => {
+        return buildSuggestedPublisherPath(canonicalDocument);
+    });
+
+    let canonicalXml = $derived.by(() => {
+        return buildPublisherXmlPreview(canonicalDocument);
     });
 
     let embeddedImportImages = $derived.by(() =>
         embeddedImageStats(editorDocument),
     );
     let hasEmbeddedImportImages = $derived(embeddedImportImages.count > 0);
+    let showEditPreview = $derived(livePreviewMode === "split");
+    let livePreviewSnapshot = $derived.by<PublisherPreviewSnapshot>(() => ({
+        story: renderedPreview?.story ?? null,
+        isPaused: hasEmbeddedImportImages,
+        embeddedImageCount: embeddedImportImages.count,
+        suggestedPath,
+        updatedAt: new Date().toISOString(),
+    }));
 
     let activeStage = $derived(
         stageItems.find((stage) => stage.id === openStage) ?? stageItems[0],
@@ -995,7 +871,7 @@
             }
             metadata.heroAlt = metadata.heroAlt || metadata.title;
             if (!metadata.slug.trim()) {
-                metadata.slug = slugify(
+                metadata.slug = slugifyPublisherValue(
                     `${metadata.title || importedFilename}-${metadata.publishedDate.replace(/-/g, "")}`,
                 );
             }
@@ -1134,6 +1010,26 @@
             .run();
     }
 
+    function insertVideoBlock() {
+        if (!editor) return;
+
+        editor
+            .chain()
+            .focus()
+            .insertContent({
+                type: "videoBlock",
+                attrs: {
+                    src: "/media/Committee_launch.mp4",
+                    poster: "",
+                    captions: "",
+                    caption: "",
+                    credit: "",
+                    autoplay: true,
+                },
+            })
+            .run();
+    }
+
     function insertFlourishBlock() {
         if (!editor) return;
 
@@ -1250,6 +1146,12 @@
         focusScale: string;
     };
 
+    type PublisherExploreLink = {
+        label: string;
+        href: string;
+        description: string;
+    };
+
     function emptySceneStep(): PublisherSceneStep {
         return {
             eyebrow: "",
@@ -1268,6 +1170,14 @@
             focusX: "50",
             focusY: "50",
             focusScale: "1",
+        };
+    }
+
+    function emptyExploreLink(): PublisherExploreLink {
+        return {
+            label: "",
+            href: "",
+            description: "",
         };
     }
 
@@ -1302,8 +1212,27 @@
         });
     }
 
+    function normalizeExploreLinks(value: unknown): PublisherExploreLink[] {
+        if (!Array.isArray(value) || !value.length) {
+            return [emptyExploreLink(), emptyExploreLink()];
+        }
+
+        return value.map((item) => {
+            const link = (item ?? {}) as Record<string, unknown>;
+            return {
+                label: String(link.label ?? ""),
+                href: String(link.href ?? ""),
+                description: String(link.description ?? ""),
+            };
+        });
+    }
+
     function updateSelectedSceneSteps(nextSteps: PublisherSceneStep[]) {
         updateSelectedStructuredBlock({ steps: nextSteps });
+    }
+
+    function updateSelectedExploreLinks(nextLinks: PublisherExploreLink[]) {
+        updateSelectedStructuredBlock({ links: nextLinks });
     }
 
     function updateSelectedSceneStep(
@@ -1340,6 +1269,49 @@
 
         updateSelectedSceneSteps(
             steps.filter((_, stepIndex) => stepIndex !== index),
+        );
+    }
+
+    function insertExploreFurtherBlock() {
+        if (!editor) return;
+
+        editor
+            .chain()
+            .focus()
+            .insertContent({
+                type: "linkListBlock",
+                attrs: {
+                    eyebrow: "Explore further",
+                    heading: "",
+                    links: [emptyExploreLink(), emptyExploreLink()],
+                },
+            })
+            .run();
+    }
+
+    function updateSelectedExploreLink(
+        index: number,
+        patch: Partial<PublisherExploreLink>,
+    ) {
+        const links = normalizeExploreLinks(selectedStructuredBlock?.attrs.links);
+        links[index] = { ...links[index], ...patch };
+        updateSelectedExploreLinks(links);
+    }
+
+    function addExploreLink() {
+        const links = normalizeExploreLinks(selectedStructuredBlock?.attrs.links);
+        updateSelectedExploreLinks([...links, emptyExploreLink()]);
+    }
+
+    function removeExploreLink(index: number) {
+        const links = normalizeExploreLinks(selectedStructuredBlock?.attrs.links);
+        if (links.length <= 1) {
+            updateSelectedExploreLinks([emptyExploreLink()]);
+            return;
+        }
+
+        updateSelectedExploreLinks(
+            links.filter((_, linkIndex) => linkIndex !== index),
         );
     }
 
@@ -1458,8 +1430,10 @@
                 Superscript,
                 Subscript,
                 ImageBlock,
+                VideoBlock,
                 MediaTextBlock,
                 SceneScrollyBlock,
+                LinkListBlock,
                 FlourishBlock,
                 TableBlock,
             ],
@@ -1475,6 +1449,7 @@
             },
             onUpdate: ({ editor }) => {
                 editorDocument = editor.getJSON() as ProseMirrorDocument;
+                selectedStructuredBlock = getSelectedStructuredBlock(editor);
             },
             onSelectionUpdate: ({ editor }) => {
                 selectedStructuredBlock = getSelectedStructuredBlock(editor);
@@ -1552,6 +1527,16 @@
         };
     });
 
+    onMount(() => {
+        detachedPreviewAvailable = typeof window.open === "function";
+        previewChannel = createPublisherPreviewChannel();
+
+        return () => {
+            previewChannel?.close();
+            previewChannel = null;
+        };
+    });
+
     $effect(() => {
         if (!draftPersistenceReady) return;
 
@@ -1563,8 +1548,16 @@
         persistPublisherDraft();
     });
 
+    $effect(() => {
+        if (typeof window === "undefined") return;
+
+        livePreviewSnapshot;
+        writePublisherPreviewSnapshot(livePreviewSnapshot);
+        publishPublisherPreviewSnapshot(previewChannel, livePreviewSnapshot);
+    });
+
     function syncGeneratedSlug() {
-        metadata.slug = slugify(
+        metadata.slug = slugifyPublisherValue(
             `${metadata.title || importedFilename || "untitled"}${metadata.publishedDate ? `-${metadata.publishedDate.replace(/-/g, "")}` : ""}`,
         );
     }
@@ -1645,13 +1638,26 @@
             showAsAuthor: checked ? contributorIndex === index : false,
         }));
     }
+
+    function openDetachedPreview() {
+        if (typeof window === "undefined") return;
+
+        writePublisherPreviewSnapshot(livePreviewSnapshot);
+        const popup = window.open(
+            publisherPreviewUrl(base),
+            "inside-parliament-publisher-preview",
+            "popup=yes,width=1440,height=960,left=80,top=80,resizable=yes,scrollbars=yes",
+        );
+
+        popup?.focus();
+    }
 </script>
 
 <svelte:head>
-    <title>Inside Parliament Publisher</title>
+    <title>Oireachtas Digital Publishing Studio</title>
     <meta
         name="description"
-        content="Import Word documents, enrich them with story metadata, and publish ProseMirror JSON stories into Inside Parliament."
+        content="Create, edit, preview, and publish digital stories in the Oireachtas Digital Publishing Studio."
     />
 </svelte:head>
 
@@ -1770,6 +1776,14 @@
                         >Back</button
                     >
                     <div class="publish-panel__actions-right">
+                        {#if detachedPreviewAvailable}
+                            <button
+                                type="button"
+                                onclick={openDetachedPreview}
+                            >
+                                Pop out preview
+                            </button>
+                        {/if}
                         <button
                             type="button"
                             onclick={copyProseMirrorJson}
@@ -2367,11 +2381,49 @@
                         </div>
                     </details>
 
+                    <div class="editor-stage-toolbar">
+                        <div class="editor-stage-toolbar__copy">
+                            <strong>Live web preview</strong>
+                            <span>
+                                Keep the production story rendering beside the
+                                editor while you shape the article.
+                            </span>
+                        </div>
+                        <div class="editor-stage-toolbar__actions">
+                            <button
+                                type="button"
+                                class:editor-stage-toolbar__button--active={!showEditPreview}
+                                class="editor-stage-toolbar__button"
+                                onclick={() => (livePreviewMode = "off")}
+                            >
+                                Preview off
+                            </button>
+                            <button
+                                type="button"
+                                class:editor-stage-toolbar__button--active={showEditPreview}
+                                class="editor-stage-toolbar__button"
+                                onclick={() => (livePreviewMode = "split")}
+                            >
+                                Split preview
+                            </button>
+                            {#if detachedPreviewAvailable}
+                                <button
+                                    type="button"
+                                    class="editor-stage-toolbar__button"
+                                    onclick={openDetachedPreview}
+                                >
+                                    Open on second screen
+                                </button>
+                            {/if}
+                        </div>
+                    </div>
+
                     <div
                         class="editor-layout"
                         class:editor-layout--inspecting={Boolean(
                             selectedStructuredBlock,
                         )}
+                        class:editor-layout--previewing={showEditPreview}
                     >
                         <div class="editor-shell">
                             <div class="editor-menu">
@@ -2733,9 +2785,23 @@
                                         <button
                                             type="button"
                                             class="editor-menu__dropdown-action"
+                                            onclick={insertVideoBlock}
+                                        >
+                                            Add video
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="editor-menu__dropdown-action"
                                             onclick={insertFlourishBlock}
                                         >
                                             Add Flourish
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="editor-menu__dropdown-action"
+                                            onclick={insertExploreFurtherBlock}
+                                        >
+                                            Add explore further
                                         </button>
                                         <button
                                             type="button"
@@ -2761,7 +2827,27 @@
                             </div>
                         </div>
 
-                        {#if selectedStructuredBlock}
+                        {#if selectedStructuredBlock || showEditPreview}
+                            <div class="editor-side-column">
+                            {#if showEditPreview}
+                                <section class="editor-preview-panel">
+                                    <div class="editor-preview-panel__header">
+                                        <strong>Live story preview</strong>
+                                        <span>
+                                            This uses the same story renderer as
+                                            the published article route.
+                                        </span>
+                                    </div>
+                                    <StoryPreviewPane
+                                        story={renderedPreview?.story ?? null}
+                                        isPaused={hasEmbeddedImportImages}
+                                        embeddedImageCount={embeddedImportImages.count}
+                                        pausedCopy="Convert the imported images into local media files in the preview step to unlock the web rendering here."
+                                        emptyCopy="Add content and metadata in the editor to see the article layout update here."
+                                    />
+                                </section>
+                            {/if}
+                            {#if selectedStructuredBlock}
                             <div class="editor-sidebars">
                             <aside class="inspector-panel">
                                 {#if selectedStructuredBlock?.type === "sceneScrollyBlock"}
@@ -3380,6 +3466,104 @@
                                                 })}
                                         />
                                     </label>
+                                {:else if selectedStructuredBlock?.type === "videoBlock"}
+                                    <h3>Video block</h3>
+                                    <p class="inspector-hint">
+                                        Use this for standalone MP4s so the
+                                        published page gets the proper video
+                                        player, captions, and share controls.
+                                    </p>
+                                    <label>
+                                        <span>Video path</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .src ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    src: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label>
+                                        <span>Poster image</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .poster ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    poster: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label>
+                                        <span>Captions file</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .captions ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    captions: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label>
+                                        <span>Caption</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .caption ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    caption: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label>
+                                        <span>Credit</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .credit ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    credit: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label class="checkbox">
+                                        <input
+                                            type="checkbox"
+                                            checked={Boolean(
+                                                selectedStructuredBlock.attrs
+                                                    .autoplay ?? true,
+                                            )}
+                                            onchange={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    autoplay: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).checked,
+                                                })}
+                                        />
+                                        <span>Autoplay while visible</span>
+                                    </label>
                                 {:else if selectedStructuredBlock?.type === "imageBlock"}
                                     <h3>Image block</h3>
                                     <div class="inspector-preview inspector-preview--image">
@@ -3595,6 +3779,133 @@
                                             <option value="prose">Prose</option>
                                         </select>
                                     </label>
+                                {:else if selectedStructuredBlock?.type === "linkListBlock"}
+                                    {@const exploreLinks = normalizeExploreLinks(
+                                        selectedStructuredBlock.attrs.links,
+                                    )}
+                                    <h3>Explore further</h3>
+                                    <p class="inspector-hint">
+                                        Add related reading or external links to
+                                        close out the article. Each item needs a
+                                        label and URL to publish.
+                                    </p>
+                                    <p class="inspector-meta">
+                                        Only links with both a label and a URL
+                                        will appear in the preview and
+                                        published story.
+                                    </p>
+                                    <label>
+                                        <span>Eyebrow</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .eyebrow ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    eyebrow: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <label>
+                                        <span>Heading (optional)</span>
+                                        <input
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .heading ?? "",
+                                            )}
+                                            oninput={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    heading: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).value,
+                                                })}
+                                        />
+                                    </label>
+                                    <div class="scene-step-stack">
+                                        {#each exploreLinks as link, index}
+                                            <div class="scene-step-card">
+                                                <div class="scene-step-card__header">
+                                                    <div>
+                                                        <strong
+                                                            >Link {index + 1}</strong
+                                                        >
+                                                        <p class="scene-step-card__meta">
+                                                            {link.label ||
+                                                                "Untitled link"}
+                                                        </p>
+                                                    </div>
+                                                    <div class="scene-step-card__actions">
+                                                        <button
+                                                            type="button"
+                                                            class="editor-menu__dropdown-action"
+                                                            onclick={() =>
+                                                                removeExploreLink(
+                                                                    index,
+                                                                )}
+                                                        >
+                                                            Remove
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <label>
+                                                    <span>Label</span>
+                                                    <input
+                                                        value={link.label}
+                                                        oninput={(event) =>
+                                                            updateSelectedExploreLink(
+                                                                index,
+                                                                {
+                                                                    label: (
+                                                                        event.currentTarget as HTMLInputElement
+                                                                    ).value,
+                                                                },
+                                                            )}
+                                                    />
+                                                </label>
+                                                <label>
+                                                    <span>URL</span>
+                                                    <input
+                                                        value={link.href}
+                                                        oninput={(event) =>
+                                                            updateSelectedExploreLink(
+                                                                index,
+                                                                {
+                                                                    href: (
+                                                                        event.currentTarget as HTMLInputElement
+                                                                    ).value,
+                                                                },
+                                                            )}
+                                                    />
+                                                </label>
+                                                <label>
+                                                    <span>Description</span>
+                                                    <textarea
+                                                        rows="3"
+                                                        oninput={(event) =>
+                                                            updateSelectedExploreLink(
+                                                                index,
+                                                                {
+                                                                    description:
+                                                                        (
+                                                                            event.currentTarget as HTMLTextAreaElement
+                                                                        ).value,
+                                                                },
+                                                            )}
+                                                    >{link.description}</textarea>
+                                                </label>
+                                            </div>
+                                        {/each}
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="editor-menu__dropdown-action"
+                                        onclick={addExploreLink}
+                                    >
+                                        Add link
+                                    </button>
                                 {:else if selectedStructuredBlock?.type === "tableBlock"}
                                     {@const tableSummary = summarizeTableHtml(
                                         selectedStructuredBlock.attrs.html,
@@ -3611,6 +3922,8 @@
                                     </p>
                                 {/if}
                             </aside>
+                            </div>
+                            {/if}
                             </div>
                         {/if}
                     </div>
@@ -3635,55 +3948,18 @@
                 <div class="stage-body">
                     <details class="export-preview" open>
                         <summary>Live preview</summary>
-                        <div class="preview-frame">
-                            {#if hasEmbeddedImportImages}
-                                <div class="preview-placeholder">
-                                    <h2>Preview paused</h2>
-                                    <p>
-                                        This document contains
-                                        {embeddedImportImages.count} imported
-                                        DOCX image{embeddedImportImages.count ===
-                                        1
-                                            ? ""
-                                            : "s"} still embedded for editing.
-                                    </p>
-                                    <p>
-                                        Convert those imported images into local
-                                        media files first, then this preview and
-                                        the JSON/XML exports will unlock
-                                        automatically.
-                                    </p>
-                                    <div class="preview-placeholder__actions">
-                                        <button
-                                            type="button"
-                                            class="publish-button"
-                                            onclick={publishCanonicalJson}
-                                            disabled={!canonicalDocument ||
-                                                !suggestedPath ||
-                                                !validation.ok}
-                                        >
-                                            Convert images and continue
-                                        </button>
-                                        {#if suggestedPath}
-                                            <span>
-                                                Output:
-                                                <code>{suggestedPath}</code>
-                                            </span>
-                                        {/if}
-                                    </div>
-                                </div>
-                            {:else if renderedPreview}
-                                <StoryPage story={renderedPreview.story} />
-                            {:else}
-                                <div class="preview-placeholder">
-                                    <h2>Preview</h2>
-                                    <p>
-                                        Start a draft or import a document to
-                                        generate a live preview.
-                                    </p>
-                                </div>
-                            {/if}
-                        </div>
+                        <StoryPreviewPane
+                            story={renderedPreview?.story ?? null}
+                            isPaused={hasEmbeddedImportImages}
+                            embeddedImageCount={embeddedImportImages.count}
+                            suggestedPath={suggestedPath}
+                            pausedCopy="Convert those imported images into local media files first, then this preview and the JSON/XML exports will unlock automatically."
+                            pausedActionLabel="Convert images and continue"
+                            pausedAction={publishCanonicalJson}
+                            pausedActionDisabled={!canonicalDocument ||
+                                !suggestedPath ||
+                                !validation.ok}
+                        />
                     </details>
 
                     {#if suggestedPath}
@@ -3747,8 +4023,19 @@
 
 <style>
     .publisher-scope {
+        --studio-ink: #2f3134;
+        --studio-text: #4f5358;
+        --studio-muted: #70757c;
+        --studio-faint: #90959c;
+        --studio-line: #d4d7dc;
+        --studio-line-strong: #b9bec6;
+        --studio-paper: #f4f5f6;
+        --studio-panel: #ffffff;
+        --studio-panel-soft: #f8f9fa;
+        --studio-panel-strong: #eef1f4;
+        --studio-focus: #202225;
         color: #262626;
-        background: #f4f4f2;
+        background: var(--studio-paper);
         font-family:
             "IBM Plex Sans",
             system-ui,
@@ -3775,10 +4062,10 @@
     }
 
     .publisher-scope button {
-        background: #fafaf8;
-        border: 1px solid #d7d7d2;
+        background: var(--studio-panel);
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        color: #262626;
+        color: var(--studio-ink);
         cursor: pointer;
         padding: 0.58rem 0.82rem;
         transition:
@@ -3789,8 +4076,8 @@
     }
 
     .publisher-scope button:hover {
-        background: #f0f0ed;
-        border-color: #b8b8b2;
+        background: var(--studio-panel-soft);
+        border-color: var(--studio-line-strong);
     }
 
     .publisher-scope button:disabled {
@@ -3802,15 +4089,20 @@
     .publisher-scope select,
     .publisher-scope textarea {
         width: 100%;
-        background: #fafaf8;
-        border: 1px solid #d7d7d2;
+        background: var(--studio-panel);
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        color: #262626;
+        color: var(--studio-ink);
         padding: 0.65rem 0.8rem;
     }
 
     .publisher-scope textarea {
         resize: vertical;
+    }
+
+    .publisher-scope input::placeholder,
+    .publisher-scope textarea::placeholder {
+        color: var(--studio-faint);
     }
 
     .publisher-scope input[type="checkbox"] {
@@ -3822,7 +4114,7 @@
     .publisher-scope select:focus-visible,
     .publisher-scope textarea:focus-visible,
     .publisher-scope summary:focus-visible {
-        outline: 2px solid #111111;
+        outline: 2px solid var(--studio-focus);
         outline-offset: 2px;
     }
 
@@ -3846,16 +4138,16 @@
         padding: 0.75rem 0.9rem;
         text-align: left;
         white-space: normal;
-        color: #4f4f4f;
+        color: var(--studio-text);
         font-size: 0.95rem;
         font-weight: 550;
     }
 
     .stage-pill.active {
-        background: #efefec;
-        border-color: #b8b8b2;
-        color: #262626;
-        box-shadow: inset 0 3px 0 #262626;
+        background: var(--studio-panel-strong);
+        border-color: var(--studio-line-strong);
+        color: var(--studio-ink);
+        box-shadow: inset 0 3px 0 var(--studio-ink);
         font-weight: 600;
     }
 
@@ -3871,64 +4163,64 @@
         padding: 0.5rem 0.1rem 0.55rem;
         background: transparent;
         border: 0;
-        border-bottom: 2px solid #dddcd5;
+        border-bottom: 2px solid var(--studio-line);
         border-radius: 0;
         box-shadow: none;
     }
 
     .status-card--warning {
-        border-bottom-color: #c28a2f;
+        border-bottom-color: #c88a2b;
     }
 
     .status-card--ready {
-        border-bottom-color: #2f7a45;
+        border-bottom-color: #2f8a57;
     }
 
     .status-card strong {
         font-size: 0.74rem;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: #555550;
+        color: var(--studio-text);
     }
 
     .status-card--warning strong {
-        color: #7d5b1e;
+        color: #9a6b22;
     }
 
     .status-card--ready strong {
-        color: #245c34;
+        color: #2d754d;
     }
 
     .status-card span {
-        color: #72726c;
+        color: var(--studio-muted);
         font-size: 0.86rem;
     }
 
     .status-card--warning span {
-        color: #8a6a32;
+        color: #9a6b22;
     }
 
     .status-card--ready span {
-        color: #3f6c4e;
+        color: #4d7f63;
     }
 
     .publish-message,
     .status-panel {
-        background: #fafaf8;
-        border: 1px solid #d7d7d2;
+        background: var(--studio-panel);
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
         padding: 0.8rem 0.95rem;
     }
 
     .publish-message.error,
     .status-panel.error {
-        border-color: #b9a8a8;
-        background: #f6f2f1;
+        border-color: #c8ccd2;
+        background: #f4f5f6;
     }
 
     .publish-message.success {
-        border-color: #c6ccc1;
-        background: #f1f3ef;
+        border-color: #c8ccd2;
+        background: #f4f5f6;
     }
 
     .publish-message {
@@ -3951,10 +4243,10 @@
         justify-content: space-between;
         gap: 0.75rem;
         padding: 0.7rem 0.95rem;
-        background: #f1f3ef;
-        border: 1px solid #c6ccc1;
+        background: var(--studio-panel-strong);
+        border: 1px solid #c8ccd2;
         border-radius: 4px;
-        color: #394239;
+        color: var(--studio-ink);
         flex-wrap: nowrap;
         min-height: 2.85rem;
     }
@@ -3981,10 +4273,10 @@
         flex-shrink: 0;
         min-height: 1.85rem;
         padding: 0.16rem 0.55rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 999px;
-        background: #fafaf8;
-        color: #394239;
+        background: var(--studio-panel);
+        color: var(--studio-ink);
         font-size: 0.82rem;
         font-weight: 600;
         white-space: nowrap;
@@ -3999,8 +4291,8 @@
     }
 
     .status-panel.warning {
-        border-color: #cfc8b3;
-        background: #f6f4ec;
+        border-color: #c8ccd2;
+        background: #f4f5f6;
     }
 
     .status-panel ul {
@@ -4009,8 +4301,8 @@
     }
 
     .stage-section {
-        background: #fafaf8;
-        border: 1px solid #d7d7d2;
+        background: var(--studio-panel);
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
         overflow: hidden;
         box-shadow: 0 8px 20px rgba(38, 38, 38, 0.03);
@@ -4022,11 +4314,11 @@
         gap: 1rem;
         align-items: center;
         padding: 0.8rem 0.95rem;
-        background: #efefec;
+        background: var(--studio-panel-strong);
     }
 
     .stage-heading span {
-        color: #262626;
+        color: var(--studio-ink);
         font-size: 0.82rem;
         font-weight: 700;
         letter-spacing: 0.05em;
@@ -4034,7 +4326,7 @@
     }
 
     .stage-heading strong {
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.92rem;
         font-weight: 600;
     }
@@ -4047,7 +4339,7 @@
 
     .stage-copy {
         margin: 0;
-        color: #555555;
+        color: var(--studio-text);
         line-height: 1.45;
         max-width: 42rem;
         font-size: 0.95rem;
@@ -4069,9 +4361,9 @@
         align-content: start;
         min-height: 12rem;
         padding: 0.9rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #f7f7f4;
+        background: var(--studio-panel-soft);
     }
 
     .workflow-card strong {
@@ -4079,13 +4371,13 @@
     }
 
     .workflow-card span {
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.92rem;
     }
 
     .workflow-note {
         margin: 0;
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.88rem;
     }
 
@@ -4095,9 +4387,9 @@
         justify-content: center;
         width: fit-content;
         padding: 0.58rem 0.82rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #fafaf8;
+        background: var(--studio-panel);
         cursor: pointer;
     }
 
@@ -4115,26 +4407,33 @@
     }
 
     .primary-button {
-        background: #262626 !important;
-        border-color: #262626 !important;
-        color: #fafaf8 !important;
+        background: var(--studio-ink) !important;
+        border-color: var(--studio-ink) !important;
+        color: #ffffff !important;
     }
 
     .publish-button {
-        background: #e6f1e8 !important;
-        border-color: #7fa086 !important;
-        color: #24462b !important;
+        background: #edf5ef !important;
+        border-color: #8eb59b !important;
+        border-radius: 6px !important;
+        color: #2f5b3f !important;
+        font-weight: 500;
     }
 
     .publish-button:hover {
-        background: #d7e8da !important;
-        border-color: #5f8267 !important;
+        background: #e3f0e7 !important;
+        border-color: #6f9f80 !important;
+        color: #244a32 !important;
+    }
+
+    .publish-button:focus-visible {
+        outline-color: #2f5b3f;
     }
 
     .destructive-button {
-        background: #f7ecea !important;
-        border-color: #c78f87 !important;
-        color: #7e2f24 !important;
+        background: #eceef1 !important;
+        border-color: #b7bcc3 !important;
+        color: #4b4f55 !important;
     }
 
     .destructive-button:hover {
@@ -4338,6 +4637,47 @@
         font-weight: 600;
     }
 
+    .editor-stage-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.85rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid var(--studio-line);
+        border-radius: 8px;
+        background: var(--studio-panel);
+    }
+
+    .editor-stage-toolbar__copy {
+        display: grid;
+        gap: 0.2rem;
+    }
+
+    .editor-stage-toolbar__copy span {
+        color: var(--studio-text);
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+
+    .editor-stage-toolbar__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+    }
+
+    .editor-stage-toolbar__button {
+        min-width: 8.5rem;
+        background: var(--studio-panel-soft);
+    }
+
+    .editor-stage-toolbar__button--active {
+        border-color: var(--studio-ink);
+        background: var(--studio-panel-strong);
+        color: var(--studio-ink);
+    }
+
     .editor-layout {
         display: grid;
         gap: 1rem;
@@ -4345,16 +4685,17 @@
         align-items: start;
     }
 
-    .editor-layout--inspecting {
-        grid-template-columns: minmax(0, 1fr) 21rem;
+    .editor-layout--inspecting,
+    .editor-layout--previewing {
+        grid-template-columns: minmax(0, 1fr) minmax(24rem, 36rem);
     }
 
     .editor-shell {
         display: grid;
         min-height: 0;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 8px;
-        background: #fffdfa;
+        background: var(--studio-panel);
         overflow: hidden;
         box-shadow: 0 10px 24px rgba(33, 33, 30, 0.05);
     }
@@ -4365,11 +4706,11 @@
         gap: 0.4rem;
         align-items: center;
         padding: 0.72rem 0.95rem;
-        background: #fbfbf8;
+        background: var(--studio-panel-soft);
         position: sticky;
         top: 0;
         z-index: 3;
-        border-bottom: 1px solid #e3e1db;
+        border-bottom: 1px solid var(--studio-line);
         min-height: 3.5rem;
     }
 
@@ -4387,7 +4728,7 @@
     .editor-menu__divider {
         width: 1px;
         align-self: stretch;
-        background: #dfddd6;
+        background: var(--studio-line);
         margin: 0 0.2rem;
     }
 
@@ -4408,7 +4749,7 @@
         border: 1px solid transparent;
         border-radius: 6px;
         background: transparent;
-        color: #8d8a82;
+        color: var(--studio-muted);
         cursor: pointer;
         transition:
             background 140ms ease,
@@ -4417,9 +4758,9 @@
     }
 
     .editor-menu__heading-control:hover {
-        border-color: #ddd9d0;
-        background: #f6f4ee;
-        color: #4e4a42;
+        border-color: var(--studio-line-strong);
+        background: var(--studio-panel);
+        color: var(--studio-ink);
     }
 
     .editor-menu__heading-glyph {
@@ -4454,7 +4795,7 @@
         border: 1px solid transparent;
         border-radius: 6px;
         background: transparent;
-        color: #8d8a82;
+        color: var(--studio-muted);
         transition:
             background 140ms ease,
             border-color 140ms ease,
@@ -4463,9 +4804,9 @@
 
     .editor-menu__button:hover,
     .editor-menu__dropdown-toggle:hover {
-        border-color: #ddd9d0;
-        background: #f6f4ee;
-        color: #4e4a42;
+        border-color: var(--studio-line-strong);
+        background: var(--studio-panel);
+        color: var(--studio-ink);
     }
 
     .editor-menu__button--icon {
@@ -4473,9 +4814,9 @@
     }
 
     .editor-menu__button--active {
-        border-color: #d4c8aa;
-        background: #f6f0e3;
-        color: #6c5213;
+        border-color: var(--studio-ink);
+        background: var(--studio-panel-strong);
+        color: var(--studio-ink);
     }
 
     .editor-menu__button svg {
@@ -4532,9 +4873,9 @@
     }
 
     .editor-menu__dropdown[open] .editor-menu__dropdown-toggle {
-        border-color: #d4c8aa;
-        background: #f3ecdd;
-        color: #6c5213;
+        border-color: var(--studio-ink);
+        background: var(--studio-panel-strong);
+        color: var(--studio-ink);
     }
 
     .editor-menu__dropdown-toggle {
@@ -4543,10 +4884,10 @@
         gap: 0.55rem;
         min-height: 2.35rem;
         padding: 0.45rem 0.8rem;
-        border: 1px solid #ddd9d0;
+        border: 1px solid var(--studio-line);
         border-radius: 6px;
-        background: #fffdfa;
-        color: #7a766c;
+        background: var(--studio-panel);
+        color: var(--studio-text);
         cursor: pointer;
         list-style: none;
         font-size: 0.92rem;
@@ -4571,9 +4912,9 @@
         display: grid;
         gap: 0.4rem;
         padding: 0.65rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 8px;
-        background: #fffdfa;
+        background: var(--studio-panel);
         box-shadow: 0 12px 28px rgba(28, 28, 26, 0.12);
     }
 
@@ -4582,27 +4923,27 @@
         width: 100%;
         min-height: 2.5rem;
         padding: 0.6rem 0.75rem;
-        border: 1px solid #e1ddd3;
+        border: 1px solid var(--studio-line);
         border-radius: 6px;
-        background: #faf9f5;
+        background: var(--studio-panel-soft);
         text-align: left;
         font-weight: 600;
-        color: #232320;
+        color: var(--studio-ink);
     }
 
     .editor-menu__dropdown-action:hover {
-        background: #f3f1ea;
+        background: var(--studio-panel);
     }
 
     .editor-menu__dropdown-action:disabled {
-        color: #8a867c;
-        background: #f6f4ee;
+        color: var(--studio-faint);
+        background: var(--studio-panel-soft);
         cursor: not-allowed;
     }
 
     .editor-menu__dropdown-note {
         margin: 0.2rem 0 0;
-        color: #5e5a50;
+        color: var(--studio-text);
         font-size: 0.84rem;
         line-height: 1.45;
     }
@@ -4611,41 +4952,74 @@
         min-height: 0;
         height: calc(100vh - 15rem);
         overflow: auto;
-        background: linear-gradient(180deg, #fffdf9 0%, #ffffff 100%);
+        background: linear-gradient(180deg, #fbfcfd 0%, #ffffff 100%);
     }
 
     .editor-host {
         min-height: 100%;
     }
 
+    .editor-side-column {
+        display: grid;
+        gap: 0.85rem;
+        align-content: start;
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow: auto;
+    }
+
+    .editor-preview-panel,
     .inspector-panel {
         display: grid;
         align-content: start;
         gap: 0.65rem;
         padding: 0.85rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #f7f7f4;
-        max-height: calc(100vh - 2rem);
+        overflow: hidden;
+    }
+
+    .editor-preview-panel {
+        background: var(--studio-panel-soft);
+    }
+
+    .editor-preview-panel__header {
+        display: grid;
+        gap: 0.2rem;
+    }
+
+    .editor-preview-panel__header span {
+        color: var(--studio-text);
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    .editor-preview-panel :global(.preview-frame) {
+        max-height: calc(100vh - 13rem);
         overflow: auto;
+        border: 1px solid var(--studio-line);
+        border-radius: 4px;
+        background: #ffffff;
+    }
+
+    .inspector-panel {
+        background: var(--studio-panel-soft);
     }
 
     .editor-sidebars {
         display: grid;
         gap: 0.85rem;
         align-content: start;
-        position: sticky;
-        top: 1rem;
     }
 
-    .inspector-panel h3,
-    .preview-placeholder h2 {
+    .inspector-panel h3 {
         margin: 0;
     }
 
     .inspector-panel p {
         margin: 0;
-        color: #555555;
+        color: var(--studio-text);
         line-height: 1.45;
     }
 
@@ -4653,13 +5027,13 @@
         display: grid;
         gap: 0.7rem;
         padding: 0.75rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #fcfcfa;
+        background: var(--studio-panel);
     }
 
     .inspector-preview__media {
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
         overflow: hidden;
         background: #ffffff;
@@ -4679,7 +5053,7 @@
         justify-content: center;
         min-height: 10rem;
         padding: 1rem;
-        color: #66635c;
+        color: var(--studio-text);
         font-size: 0.92rem;
         font-weight: 600;
     }
@@ -4694,7 +5068,7 @@
     }
 
     .inspector-preview__copy span {
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.88rem;
         font-weight: 400;
         line-height: 1.45;
@@ -4709,9 +5083,9 @@
         display: grid;
         gap: 0.6rem;
         padding: 0.75rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #fcfcfa;
+        background: var(--studio-panel);
     }
 
     .scene-step-card__header {
@@ -4727,7 +5101,7 @@
 
     .scene-step-card__meta {
         margin: 0.25rem 0 0;
-        color: #66635c;
+        color: var(--studio-text);
         font-size: 0.9rem;
         line-height: 1.35;
     }
@@ -4752,9 +5126,9 @@
         display: grid;
         gap: 0.65rem;
         padding: 0.9rem;
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #f7f7f4;
+        background: var(--studio-panel-soft);
     }
 
     .publish-panel--top {
@@ -4767,7 +5141,7 @@
     }
 
     .publish-panel__copy span {
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.92rem;
     }
 
@@ -4780,7 +5154,7 @@
 
     .path-hint {
         margin: 0;
-        color: #555555;
+        color: var(--studio-text);
         font-size: 0.92rem;
         line-height: 1.45;
     }
@@ -4789,24 +5163,24 @@
         display: inline-block;
         margin-top: 0.18rem;
         padding: 0.1rem 0.3rem;
-        background: #efefec;
-        border: 1px solid #d7d7d2;
+        background: var(--studio-panel-strong);
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
         font-size: 0.85rem;
     }
 
     .export-preview {
-        border: 1px solid #d7d7d2;
+        border: 1px solid var(--studio-line);
         border-radius: 4px;
-        background: #fafaf8;
+        background: var(--studio-panel);
         overflow: hidden;
     }
 
     .export-preview summary {
         align-items: center;
-        background: #f5f5f2;
-        border-left: 4px solid #d0d0ca;
-        color: #303030;
+        background: var(--studio-panel-strong);
+        border-left: 4px solid var(--studio-line-strong);
+        color: var(--studio-ink);
         padding: 0.8rem 0.95rem;
         cursor: pointer;
         display: flex;
@@ -4844,42 +5218,6 @@
         color: #555555;
         line-height: 1.5;
         background: #fafaf8;
-    }
-
-    .preview-frame {
-        background: #ffffff;
-    }
-
-    .preview-placeholder {
-        max-width: 36rem;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-        color: #4c5967;
-    }
-
-    .preview-placeholder__actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.85rem;
-        margin-top: 1.4rem;
-    }
-
-    .preview-placeholder__actions span {
-        color: #57534e;
-        font-size: 0.92rem;
-        line-height: 1.45;
-    }
-
-    .preview-placeholder__actions code {
-        display: inline-block;
-        margin-left: 0.35rem;
-        padding: 0.1rem 0.3rem;
-        background: #efefec;
-        border: 1px solid #d7d7d2;
-        border-radius: 4px;
-        font-size: 0.85rem;
     }
 
     :global(.publisher-editor__content) {
@@ -4948,6 +5286,15 @@
         text-decoration-thickness: 1px;
     }
 
+    :global(.publisher-editor__content a)::after {
+        content: "↗";
+        display: inline-block;
+        font-size: 0.8em;
+        margin-left: 0.14em;
+        text-decoration: none;
+        transform: translateY(-0.08em);
+    }
+
     :global(.publisher-editor__content .is-editor-empty:first-child::before) {
         color: #8a8a84;
         font-style: normal;
@@ -4994,6 +5341,18 @@
             grid-template-columns: 1fr;
         }
 
+        .editor-stage-toolbar {
+            align-items: stretch;
+        }
+
+        .editor-stage-toolbar__actions {
+            width: 100%;
+        }
+
+        .editor-stage-toolbar__button {
+            flex: 1 1 10rem;
+        }
+
         .editor-menu {
             position: static;
         }
@@ -5002,12 +5361,16 @@
             margin-left: 0;
         }
 
+        .editor-side-column,
         .editor-sidebars {
             position: static;
             top: auto;
+            max-height: none;
+            overflow: visible;
         }
 
         .editor-stage,
+        .editor-preview-panel :global(.preview-frame),
         .inspector-panel {
             height: auto;
             max-height: none;

@@ -146,6 +146,15 @@
     text-underline-offset: 0.18em;
   }
 
+  .copy > p:not(.eyebrow) :global(a)::after {
+    content: "↗";
+    display: inline-block;
+    font-size: 0.8em;
+    margin-left: 0.14em;
+    text-decoration: none;
+    transform: translateY(-0.08em);
+  }
+
   .copy > p:not(.eyebrow) :global(a:hover),
   .copy > p:not(.eyebrow) :global(a:focus-visible) {
     color: var(--link-hover);

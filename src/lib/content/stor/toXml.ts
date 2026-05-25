@@ -239,6 +239,18 @@ function serializeTableHtml(html: string) {
 
 function serializeImageBlock(node: ProseMirrorNode) {
   const src = esc(String(node.attrs?.src ?? ''));
+  if (/\.mp4($|\?)/i.test(String(node.attrs?.src ?? ''))) {
+    const poster = esc(String(node.attrs?.poster ?? ''));
+    const captions = esc(String(node.attrs?.captions ?? ''));
+    const caption = node.attrs?.caption ? `<title>${esc(String(node.attrs.caption))}</title>` : '';
+    const credit = node.attrs?.credit
+      ? `<caption><para>Credit: ${esc(String(node.attrs.credit))}</para></caption>`
+      : '';
+
+    return `<figure role="video">${caption}<mediaobject><videoobject><videodata fileref="${src}"${
+      poster ? ` poster="${poster}"` : ''
+    }/></videoobject>${captions ? `<textobject><phrase>Captions: ${captions}</phrase></textobject>` : ''}</mediaobject>${credit}</figure>`;
+  }
   const alt = esc(String(node.attrs?.alt ?? ''));
   const layout = esc(String(node.attrs?.layout ?? 'inline'));
   const caption = node.attrs?.caption ? `<title>${esc(String(node.attrs.caption))}</title>` : '';
@@ -249,6 +261,20 @@ function serializeImageBlock(node: ProseMirrorNode) {
   return `<figure role="image" condition="${layout}">${caption}<mediaobject><imageobject><imagedata fileref="${src}"/></imageobject>${
     alt ? `<textobject><phrase>${alt}</phrase></textobject>` : ''
   }</mediaobject>${credit}</figure>`;
+}
+
+function serializeVideoBlock(node: ProseMirrorNode) {
+  const src = esc(String(node.attrs?.src ?? ''));
+  const poster = esc(String(node.attrs?.poster ?? ''));
+  const captions = esc(String(node.attrs?.captions ?? ''));
+  const caption = node.attrs?.caption ? `<title>${esc(String(node.attrs.caption))}</title>` : '';
+  const credit = node.attrs?.credit
+    ? `<caption><para>Credit: ${esc(String(node.attrs.credit))}</para></caption>`
+    : '';
+
+  return `<figure role="video">${caption}<mediaobject><videoobject><videodata fileref="${src}"${
+    poster ? ` poster="${poster}"` : ''
+  }/></videoobject>${captions ? `<textobject><phrase>Captions: ${captions}</phrase></textobject>` : ''}</mediaobject>${credit}</figure>`;
 }
 
 function serializeFlourishBlock(node: ProseMirrorNode) {
@@ -381,6 +407,8 @@ function serializeStandaloneNode(node: ProseMirrorNode): string {
       return `<programlisting>${esc(node.text ?? '')}</programlisting>`;
     case 'imageBlock':
       return serializeImageBlock(node);
+    case 'videoBlock':
+      return serializeVideoBlock(node);
     case 'mediaTextBlock':
       return serializeMediaTextBlock(node);
     case 'sceneScrollyBlock':

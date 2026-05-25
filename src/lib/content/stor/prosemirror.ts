@@ -121,14 +121,25 @@ export interface CommitteeReportNode {
     | 'paragraph'
     | 'flourish'
     | 'image'
+    | 'video'
     | 'table'
     | 'media-text'
-    | 'scene-scrolly';
+    | 'scene-scrolly'
+    | 'link-list';
   level?: number;
   text: string;
   block?: Extract<
     StoryBlock,
-    { type: 'flourish' | 'image' | 'table' | 'media-text' | 'scene-scrolly' }
+    {
+      type:
+        | 'flourish'
+        | 'image'
+        | 'video'
+        | 'table'
+        | 'media-text'
+        | 'scene-scrolly'
+        | 'link-list';
+    }
   >;
 }
 
@@ -150,6 +161,22 @@ function parseFlourishMarker(text: string) {
 function imageBlockFromNode(node: ProseMirrorNode) {
   const src = String(node.attrs?.src ?? '').trim();
   if (!src) return null;
+  if (/\.mp4($|\?)/i.test(src)) {
+    return {
+      type: 'video' as const,
+      video: {
+        src,
+        ...(String(node.attrs?.poster ?? '').trim()
+          ? { poster: String(node.attrs?.poster ?? '').trim() }
+          : {}),
+        ...(String(node.attrs?.captions ?? '').trim()
+          ? { captions: String(node.attrs?.captions ?? '').trim() }
+          : {}),
+        caption: String(node.attrs?.caption ?? '').trim() || null,
+        credit: String(node.attrs?.credit ?? '').trim() || null,
+      },
+    };
+  }
 
   return {
     type: 'image' as const,
@@ -165,6 +192,31 @@ function imageBlockFromNode(node: ProseMirrorNode) {
         | 'wide'
         | 'full'
         | 'portrait') || 'inline',
+  };
+}
+
+function videoBlockFromNode(
+  node: ProseMirrorNode,
+): Extract<StoryBlock, { type: 'video' }> | null {
+  const src = String(node.attrs?.src ?? '').trim();
+  if (!src) return null;
+
+  return {
+    type: 'video',
+    video: {
+      src,
+      ...(String(node.attrs?.poster ?? '').trim()
+        ? { poster: String(node.attrs?.poster ?? '').trim() }
+        : {}),
+      ...(String(node.attrs?.captions ?? '').trim()
+        ? { captions: String(node.attrs?.captions ?? '').trim() }
+        : {}),
+      ...(typeof node.attrs?.autoplay === 'boolean'
+        ? { autoplay: Boolean(node.attrs.autoplay) }
+        : {}),
+      caption: String(node.attrs?.caption ?? '').trim() || null,
+      credit: String(node.attrs?.credit ?? '').trim() || null,
+    },
   };
 }
 
@@ -347,6 +399,44 @@ function tableBlockFromNode(node: ProseMirrorNode) {
   };
 }
 
+function linkListBlockFromNode(
+  node: ProseMirrorNode,
+): Extract<StoryBlock, { type: 'link-list' }> | null {
+  const linksSource = Array.isArray(node.attrs?.links)
+    ? (node.attrs?.links as unknown[])
+    : [];
+
+  const links = linksSource
+    .map((item) => {
+      const link = (item ?? {}) as Record<string, unknown>;
+      const label = String(link.label ?? '').trim();
+      const href = String(link.href ?? '').trim();
+      const description = String(link.description ?? '').trim();
+
+      if (!label || !href) return null;
+
+      return {
+        label,
+        href,
+        ...(description ? { description } : {}),
+      };
+    })
+    .filter(Boolean) as Extract<StoryBlock, { type: 'link-list' }>['links'];
+
+  if (!links.length) return null;
+
+  return {
+    type: 'link-list',
+    ...(String(node.attrs?.eyebrow ?? '').trim()
+      ? { eyebrow: String(node.attrs?.eyebrow ?? '').trim() }
+      : {}),
+    ...(String(node.attrs?.heading ?? '').trim()
+      ? { heading: String(node.attrs?.heading ?? '').trim() }
+      : {}),
+    links,
+  };
+}
+
 export function proseMirrorToCommitteeNodes(
   document: ProseMirrorDocument,
 ): CommitteeReportNode[] {
@@ -463,8 +553,23 @@ export function proseMirrorToCommitteeNodes(
       if (!block) continue;
 
       nodes.push({
-        type: 'image',
-        text: block.image.alt,
+        type: block.type === 'video' ? 'video' : 'image',
+        text:
+          block.type === 'video'
+            ? block.video.caption ?? block.video.src
+            : block.image.alt,
+        block,
+      });
+      continue;
+    }
+
+    if (node.type === 'videoBlock') {
+      const block = videoBlockFromNode(node);
+      if (!block) continue;
+
+      nodes.push({
+        type: 'video',
+        text: block.video.caption ?? block.video.src,
         block,
       });
       continue;
@@ -477,6 +582,18 @@ export function proseMirrorToCommitteeNodes(
       nodes.push({
         type: 'table',
         text: 'Table',
+        block,
+      });
+      continue;
+    }
+
+    if (node.type === 'linkListBlock') {
+      const block = linkListBlockFromNode(node);
+      if (!block) continue;
+
+      nodes.push({
+        type: 'link-list',
+        text: block.eyebrow ?? block.heading ?? 'Explore further',
         block,
       });
     }
@@ -598,12 +715,32 @@ export function proseMirrorToNarrativeBlocks(
       continue;
     }
 
+    if (node.type === 'videoBlock') {
+      const video = videoBlockFromNode(node);
+      if (!video) continue;
+
+      flush();
+      blocks.push(video);
+      encounteredBodyContent = true;
+      continue;
+    }
+
     if (node.type === 'tableBlock') {
       const table = tableBlockFromNode(node);
       if (!table) continue;
 
       flush();
       blocks.push(table);
+      encounteredBodyContent = true;
+      continue;
+    }
+
+    if (node.type === 'linkListBlock') {
+      const linkList = linkListBlockFromNode(node);
+      if (!linkList) continue;
+
+      flush();
+      blocks.push(linkList);
       encounteredBodyContent = true;
     }
   }

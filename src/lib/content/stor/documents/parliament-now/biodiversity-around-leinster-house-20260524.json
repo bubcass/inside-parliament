@@ -1,0 +1,335 @@
+{
+  "id": "biodiversity-around-leinster-house-20260524",
+  "slug": "biodiversity-around-leinster-house-20260524",
+  "type": "article",
+  "destination": "parliament-now",
+  "featured": false,
+  "heroLayout": "split",
+  "title": "Biodiversity around Leinster House",
+  "dek": "The seat of the Houses of the Oireachtas is in the heart of Dublin's city centre. It still teems with birds, insects and plants.",
+  "eyebrow": "Parliament and its people",
+  "topics": [
+    "biodiversity",
+    "staff",
+    "Leinster House"
+  ],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "keywords": [
+    "biodiversity",
+    "staff",
+    "Leinster House"
+  ],
+  "publishedDate": "2026-05-24",
+  "contributors": [
+    {
+      "name": "Angharad Williams",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true
+    }
+  ],
+  "researcher": {
+    "name": "Angharad Williams",
+    "organisation": "Communications"
+  },
+  "hero": {
+    "src": "/media/biodiversity.mp4",
+    "alt": "Daffodils on Leinster Lawn in front of Leinster House",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Leinster house is a bustling parliamentary campus hosting hundreds of public representatives and staff supporting the work of the Houses of the Oireachtas. Looking a little harder, it becomes obvious that despite its city centre location, the campus just off Merrion Square is full of colourful flora and fauna."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Earth Day and National Biodiversity Week"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "April 22 is Earth Day and it's followed in May by National Biodiversity Week. The springtime is an apt opportunity to look at how choices and practices on our parliamentary campus can help climate action in line with Ireland’s Climate Action Plan. "
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/biodiversity-video.mp4",
+          "alt": "Leinster House campus in spring, some insights from Paul Smith, Parliamentary Usher",
+          "caption": "Paul Smith is a Parliamentary Usher with a deep knowledge of the plants, insets and birds around Parliament.",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The rich biodiversity of Leinster House"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Biodiversity is a topic that is often mentioned in the Houses of the Oireachtas in the context of debates, committees and action plans focused on reversing biodiversity loss and strengthening Ireland’s environmental governance."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In Dáil Éireann, the 56th Earth Day was recognised through a "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/debates/debate/dail/2026-04-22/9/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer",
+                  "class": null,
+                  "title": "Dáil Éireann debate - Wednesday, 22 Apr 2026"
+                }
+              }
+            ],
+            "text": "Motion on Earth Day (Private Members’ Business)"
+          },
+          {
+            "type": "text",
+            "text": ", highlighting the importance of environmental action at national and global levels. Earth Day began as a grassroots movement and has grown into a global initiative involving more than 1 billion people across 193 countries. While the overarching theme for "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.earthday.org/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer",
+                  "class": null,
+                  "title": "Earth Day"
+                }
+              }
+            ],
+            "text": "Earth Day 2026"
+          },
+          {
+            "type": "text",
+            "text": " remains \"Our Power, Our Planet\" this year’s emphasis is on collective action, including the role of individuals, communities and institutions in protecting the environment amid evolving global, economic, and civic challenges. "
+          }
+        ]
+      },
+      {
+        "type": "mediaTextBlock",
+        "attrs": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Despite being an urban campus, Leinster House contains several pockets of biodiversity. Mature trees, pollinator friendly plants, and small habitat features support a surprising variety of wildlife. Recently, Paul Smith from the Superintendent’s Section, who is also a wildlife photographer, gave an engaging talk on the wildlife found around the parliamentary grounds that was organised by the Green Team."
+          ],
+          "mediaType": "image",
+          "poster": "",
+          "captions": "",
+          "mediaSide": "right",
+          "src": "/media/Paul-Smith-gives-wildlife-talk-at-LH.png",
+          "alt": "An usher in the Houses of the Oireachtas gives a biodiversity talk",
+          "caption": "Paul Smith is part of the security staff on the campus. He's also a custodian of much biodiversity knowledge.",
+          "credit": ""
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The Green Team in Leinster House"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Biodiversity is not just an issue for our TDs and Senators. Across the Leinster House campus and within the administrative areas of the Houses of the Oireachtas Service, a range of initiatives are under way to the reduce the impact we have on the environment.  These includes the introduction of reusable cups, energy and water saving initiatives and measures. The staff in Ireland's Parliament have all made changes to how we work to help reduce the impact we have on the environment. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Oireachtas Service Green Team was launched in July 2024 to integrate sustainability into the way the organisation works.  It brings together people from the stainability, procurement, HR, catering facilities management units who have specific roles in reducing our impact on the environment and promoting sustainable approaches to services we deliver. "
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The team’s work is structured around five key pillars: "
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Energy and emissions "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Waste management "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Water conservation "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Biodiversity "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sustainable travel "
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "They have coordinated internal activities including the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/climate-action-hub/_modules/sustainability-in-the-houses-of-the-oireachtas/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer",
+                  "class": null,
+                  "title": "Climate Action "
+                }
+              }
+            ],
+            "text": "National Transport’s smarter travel programme"
+          },
+          {
+            "type": "text",
+            "text": "step challenges Walktober and most recently Marchathon, with the aim for Staff to be more active and to commute more sustainably. This March, 20 teams from across the Service took part, with 97 staff members participating to promote active, low carbon commuting."
+          }
+        ]
+      },
+      {
+        "type": "linkListBlock",
+        "attrs": {
+          "eyebrow": "Explore further",
+          "heading": "",
+          "links": [
+            {
+              "label": "Climate Action Hub",
+              "href": "https://www.oireachtas.ie/en/how-parliament-is-run/houses-of-the-oireachtas-service/climate-action-hub/",
+              "description": "Find out how the Houses of the Oireachtas is playing its part with climate action"
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

@@ -67,10 +67,12 @@ export interface ProseMirrorNode {
     | 'blockquote'
     | 'codeBlock'
     | 'imageBlock'
+    | 'videoBlock'
     | 'mediaTextBlock'
     | 'sceneScrollyBlock'
     | 'flourishBlock'
-    | 'tableBlock';
+    | 'tableBlock'
+    | 'linkListBlock';
   attrs?: Record<string, unknown> & {
     level?: number;
     start?: number;
