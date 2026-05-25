@@ -78,7 +78,7 @@
     {/if}
 
     <div class="secondary-grid">
-        {#each leadingStories as story}
+        {#each leadingStories as story (story.slug)}
             <article class="secondary-story">
                 <a href="{base}/stories/{story.slug}/">
                     {#if hasHeroMedia(story)}
@@ -124,7 +124,7 @@
     <ShortsCarousel items={shortVideos} />
 
     <div class="tertiary-grid">
-        {#each trailingStories as story}
+        {#each trailingStories as story (story.slug)}
             <article class="tertiary-story">
                 <a href="{base}/stories/{story.slug}/">
                     {#if hasHeroMedia(story)}

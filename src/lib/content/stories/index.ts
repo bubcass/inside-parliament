@@ -57,7 +57,12 @@ for (const story of storStories) {
 }
 
 export const stories: Story[] = [...mergedStories.values()].sort(
-  (a, b) => storyDateValue(b) - storyDateValue(a),
+  (a, b) => {
+    const dateDelta = storyDateValue(b) - storyDateValue(a);
+    if (dateDelta !== 0) return dateDelta;
+
+    return a.slug.localeCompare(b.slug);
+  },
 );
 
 export function getStory(slug: string) {

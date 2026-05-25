@@ -61,7 +61,7 @@
 
   {#if visualStories.length}
     <div class="secondary-grid">
-      {#each visualStories as story}
+      {#each visualStories as story (story.slug)}
         <article class="secondary-story">
           <a href="{base}/stories/{story.slug}/">
             {#if hasHeroMedia(story)}
@@ -92,7 +92,7 @@
 
   {#if compactStories.length}
     <div class="tertiary-grid" aria-label={`${section.title} more stories`}>
-      {#each compactStories as story}
+      {#each compactStories as story (story.slug)}
         <article class="tertiary-story">
           <a href="{base}/stories/{story.slug}/">
             {#if hasHeroMedia(story)}

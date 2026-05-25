@@ -30,7 +30,9 @@ export const storDocuments: StorDocument[] = Object.values(documentModules).sort
   (a, b) => {
     const aTime = Date.parse(a.publishedDate ?? '') || 0;
     const bTime = Date.parse(b.publishedDate ?? '') || 0;
-    return bTime - aTime;
+    if (bTime !== aTime) return bTime - aTime;
+
+    return a.slug.localeCompare(b.slug);
   },
 );
 
