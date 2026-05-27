@@ -1,0 +1,454 @@
+{
+  "id": "ireland-s-meps-in-the-seanad-20260526",
+  "slug": "ireland-s-meps-in-the-seanad-20260526",
+  "type": "article",
+  "destination": "parliament-at-work",
+  "featured": true,
+  "heroLayout": "split",
+  "title": "Ireland's MEPs in the Seanad",
+  "dek": "The heart of the European project can sometimes feel far removed from Irish citizens. With its ongoing conversation with MEPs, the Seanad is looking to bridge that gap.",
+  "eyebrow": "The Seanad at Work",
+  "topics": ["Seanad", "MEPs", "Europe"],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "keywords": ["Seanad", "MEPs", "Europe"],
+  "publishedDate": "2026-05-26",
+  "contributors": [
+    {
+      "name": "David Cass",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true
+    }
+  ],
+  "researcher": {
+    "name": "David Cass",
+    "organisation": "Communications"
+  },
+  "hero": {
+    "src": "/media/shared/european-parliament.jpg",
+    "alt": "A wide view of the European Parliament in a plenary meeting",
+    "position": "left center"
+  },
+  "shortVideos": [
+    {
+      "title": "Ireland's MEPs in the Seanad",
+      "eyebrow": "The Seanad at Work",
+      "poster": "/media/shared/european-parliament.jpg",
+      "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4"
+    }
+  ],
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "On a regular basis Seanad Éireann welcomes some of Ireland's Members of the European Parliament, MEPs, to speak in the Chamber. Standing Order 63(1) of Seanad Éireann allows for this type of engagement and the Cathaoirleach, Senator Mark Daly, believes it this discussion with Ireland's elected representatives in Europe is a crucial and potentially overlooked aspect of the work of Senators."
+          }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Engagement with the European Union is an important role of Seanad Éireann. The annual attendance of our MEPs, especially with our upcoming Presidency of the EU, is more important than ever in showcasing the work of our MEPs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Ireland South"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In February 2026 the Seanad heard from MEPs representating Ireland's "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/search/advanced?name=&euPoliticalGroupBodyRefNum=&countryCode=IE&constituency=South&bodyType=ALL",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "South constituency"
+          },
+          {
+            "type": "text",
+            "text": " , speaking to matters such as artificial intelligency, social media and immigration. The MEPs attending were Ms Kathleen Funchion, MEP; Mr. Billy Kelleher, MEP; Mr. Seán Kelly, MEP; Mr. Michael McNamara, MEP and Ms Cynthia Ní Mhurchú, MEP."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/ireland-south-meps.jpg",
+          "alt": "Ireland South MEPs and the Cathaoirleach and Leas-Chathaoirleach of the Seanad in the Seanad ante-chamber",
+          "caption": "Ireland South MEPs and the Cathaoirleach and Leas-Chathaoirleach in February 2026",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257299/KATHLEEN_FUNCHION/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Kathleen Funchion"
+          },
+          {
+            "type": "text",
+            "text": " is a Sinn Féin/Left group in the European Parliament - GUE/NGL MEP and a member of the European Parliament’s Committee on Regional Development and the Delegation to the EU-UK Parliamentary Partnership Assembly."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/197818/BILLY_KELLEHER/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Billy Kelleher"
+          },
+          {
+            "type": "text",
+            "text": " is a Fianna Fáil/Renew Europe Group MEP. He is a member of the Committee on Economic and Monetary Affairs, the Subcommittee on Tax Matters and the Delegation for Relations with the United States."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/96668/SEAN_KELLY/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Séan Kelly"
+          },
+          {
+            "type": "text",
+            "text": " is a Fine Gael/European Peoples Party MEP. He is Chair of the Delegation for Relations with Australia and New Zealand and a member of the Conference of Delegation Chairs and the Committee on Industry, Research and Energy."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257300/MICHAEL_MCNAMARA/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Michael McNamara"
+          },
+          {
+            "type": "text",
+            "text": " is an Independent/Renew Europe Group MEP and a member of the Delegation for Relations with the countries of South Asia and the Committee on Civil Liberties, Justice and Home Affairs."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257301/CYNTHIA_NI+MHURCHU/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Cynthia Ní Mhurchú"
+          },
+          {
+            "type": "text",
+            "text": " is a Fianna Fáil/Renew Europe Group MEP and a member of the Committee on the Internal Market and Consumer Protection and the Delegation for Relations with Canada."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Midlands-North-West"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The five MEPs representing the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/search/advanced?name=&euPoliticalGroupBodyRefNum=&countryCode=IE&constituency=Midlands-North-West&bodyType=ALL",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Midlands-North-West constituency"
+          },
+          {
+            "type": "text",
+            "text": " addressed the Seanad in May 2026, participating in a discussion on the general theme of Ireland’s Presidency of the  Council of the European Union. The MEPs attending were Nina Carberry MEP, Barry Cowen MEP, Luke ‘Ming’ Flanagan MEP, Ciaran Mullooly MEP and Maria Walsh MEP."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257296/NINA_CARBERRY/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Nina Carberry"
+          },
+          {
+            "type": "text",
+            "text": " is a Fine Gael/European Peoples Party MEP and a member of the European Parliament’s Committee on Transport and Tourism and the Delegation to the EU-UK Parliamentary Partnership Assembly."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257297/BARRY_COWEN/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Barry Cowen"
+          },
+          {
+            "type": "text",
+            "text": " is a Fianna Fáil/Renew Europe Group MEP. He is a member of the Committee on Agriculture and Rural Development and the Delegation for Relations with Australia and New Zealand."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/124985/LUKE+MING_FLANAGAN/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Luke 'Ming' Flanagan"
+          },
+          {
+            "type": "text",
+            "text": " is an Independent/ Left group in the European Parliament - GUE/NGL MEP. He is Vice-Chair of the Delegation for Relations with Mercosur and a member of the Committee on Agriculture and Rural Development and the Delegation to the EU-UK Parliamentary Partnership Assembly."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/257298/CIARAN_MULLOOLY/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Ciaran Mullolly"
+          },
+          {
+            "type": "text",
+            "text": " is an Independent Ireland/Renew Europe Group MEP and Vice-Chair of the Special Committee on the Housing Crisis in the European Union, and a member of the Committee on Regional Development and the Committee on Agriculture and Rural Development."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.europarl.europa.eu/meps/en/197863/MARIA_WALSH/home",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Maria Walsh"
+          },
+          {
+            "type": "text",
+            "text": " is a Fine Gael/European Peoples Party MEP and a member of the Committee on on Agriculture and Rural Development, the Committee on Women’s Rights and Gender Equality and the Delegation for Relations with the United States."
+          }
+        ]
+      },
+      {
+        "type": "mediaTextBlock",
+        "attrs": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "The Cathaoirleach notes that decisions made in Brussels and Strasbourg shape everyday life in Ireland, from workers' rights and climate action to digital rules and much more.",
+            "Our MEPs are responsible for shaping those decisions on behalf of all of the Irish people, so this process brings Senators and MEPs together to discuss the matters that affect both Ireland as a nation and those relevant to people right across Europe.",
+            "The Seanad's ongoing discussion with MEPs is particularly important in light of the upcoming Irish Presidency of the Council of the European Union, which it will hold for the first time since 2013."
+          ],
+          "mediaType": "video",
+          "poster": "",
+          "captions": "",
+          "mediaSide": "right",
+          "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4",
+          "alt": "Describe the image",
+          "caption": "",
+          "credit": ""
+        }
+      },
+      {
+        "type": "linkListBlock",
+        "attrs": {
+          "eyebrow": "Explore further",
+          "heading": "",
+          "links": [
+            {
+              "label": "The EU and the Oireachtas",
+              "href": "https://www.oireachtas.ie/en/inter-parliamentary-work/european-union/",
+              "description": "Find out more about the European Union"
+            },
+            {
+              "label": "Special addresses",
+              "href": "https://www.oireachtas.ie/en/oireachtas-tv/video-on-demand/?house=seanad&seanadCategories%5BSpecial+Address%5D=Special+Address",
+              "description": "Watch the addresses by MEPs on demand"
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}

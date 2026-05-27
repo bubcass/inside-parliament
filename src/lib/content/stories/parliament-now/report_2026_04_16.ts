@@ -8,7 +8,7 @@ export const report20260416: Story = {
   title: "National Cyber Security Bill 2026",
   dek: "Pre-legislative scrutiny highlights the a need for a grace period following the implementation of the proposed legislation and increasing the guidance available to affected stakeholders.",
   byline: "Angharad Williams",
-  date: "May 9, 2026",
+  date: "April 9, 2026",
   readingTime: "5 min read",
   hero: {
     src: "/media/report_launch.jpg",

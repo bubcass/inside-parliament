@@ -9,6 +9,11 @@
     import Superscript from "@tiptap/extension-superscript";
     import Subscript from "@tiptap/extension-subscript";
     import StoryPreviewPane from "$lib/publisher/StoryPreviewPane.svelte";
+    import type {
+        PublisherAssetEntry,
+        PublisherAssetKind,
+        PublisherAssetScope,
+    } from "$lib/publisher/assets";
     import { extractDocxMetadata } from "$lib/publisher/extractDocxMetadata";
     import {
         FlourishBlock,
@@ -77,6 +82,14 @@
         savedAt: string;
     };
 
+    type PublisherAssetTarget = {
+        key: string;
+        label: string;
+        accept: PublisherAssetKind[];
+        value: string;
+        apply: (path: string) => void;
+    };
+
     const PUBLISHER_DRAFT_KEY = "inside-parliament/publisher-draft";
 
     function todayLocalIsoDate() {
@@ -139,10 +152,19 @@
     let editorDocument = $state<ProseMirrorDocument | null>(null);
     let selectedStructuredBlock = $state<StructuredBlockSelection | null>(null);
     let openStage = $state<"start" | "details" | "edit" | "preview">("start");
-    let livePreviewMode = $state<"split" | "off">("split");
+    let livePreviewMode = $state<"split" | "off">("off");
     let importedFilename = $state("");
     let importMessage = $state<string | null>(null);
     let importError = $state<string | null>(null);
+    let assetUploadMessage = $state<string | null>(null);
+    let assetUploadError = $state<string | null>(null);
+    let assetUploadPending = $state(false);
+    let assetLibraryLoading = $state(false);
+    let assetLibrary = $state<PublisherAssetEntry[]>([]);
+    let assetUploadScope = $state<PublisherAssetScope>("story");
+    let heroAssetTargetKey = $state("hero-src");
+    let selectedBlockAssetTargetKey = $state("");
+    let sceneStepAssetTargetKeys = $state<Record<number, string>>({});
     let editorMounted = $state(false);
     let hasLocalDraft = $state(false);
     let draftStatus = $state<string | null>(null);
@@ -549,6 +571,339 @@
         return `${base}${src}`;
     }
 
+    function derivedStorySlug() {
+        const explicitSlug = metadata.slug.trim();
+        if (explicitSlug) return explicitSlug;
+
+        const slugSource = metadata.title.trim() || importedFilename.trim();
+        if (!slugSource) return "";
+
+        const dateSuffix = metadata.publishedDate.trim()
+            ? `-${metadata.publishedDate.trim().replace(/-/g, "")}`
+            : "";
+        return slugifyPublisherValue(`${slugSource}${dateSuffix}`);
+    }
+
+    function assetKindAcceptValue(kinds: PublisherAssetKind[]) {
+        const tokens = new Set<string>();
+
+        for (const kind of kinds) {
+            if (kind === "image") {
+                tokens.add("image/*");
+                continue;
+            }
+            if (kind === "video") {
+                tokens.add("video/*");
+                tokens.add(".mp4");
+                tokens.add(".webm");
+                tokens.add(".mov");
+                tokens.add(".m4v");
+                continue;
+            }
+            if (kind === "audio") {
+                tokens.add("audio/*");
+                continue;
+            }
+            if (kind === "captions") {
+                tokens.add(".vtt");
+                tokens.add(".srt");
+            }
+        }
+
+        return [...tokens].join(",");
+    }
+
+    async function refreshAssetLibrary() {
+        const slug = derivedStorySlug();
+        const destination = metadata.destination;
+
+        if (!slug) {
+            assetLibrary = [];
+            assetLibraryLoading = false;
+            return;
+        }
+
+        assetLibraryLoading = true;
+
+        try {
+            const params = new URLSearchParams({ destination, slug });
+            const response = await fetch(
+                `${base}/api/publisher-assets?${params.toString()}`,
+            );
+            const payload = (await response.json()) as {
+                ok?: boolean;
+                assets?: PublisherAssetEntry[];
+                message?: string;
+            };
+
+            if (!response.ok || !payload.ok) {
+                throw new Error(
+                    payload.message ||
+                        "Could not load the story asset library right now.",
+                );
+            }
+
+            assetLibrary = Array.isArray(payload.assets) ? payload.assets : [];
+        } catch (error) {
+            assetLibrary = [];
+            assetUploadError =
+                error instanceof Error
+                    ? error.message
+                    : "Could not load the story asset library right now.";
+        } finally {
+            assetLibraryLoading = false;
+        }
+    }
+
+    function heroAssetTargets(): PublisherAssetTarget[] {
+        if (metadata.heroLayout === "none") return [];
+
+        return [
+            {
+                key: "hero-src",
+                label: "Hero image",
+                accept: ["image"],
+                value: metadata.heroSrc,
+                apply: (path: string) => {
+                    metadata.heroSrc = path;
+                },
+            },
+        ];
+    }
+
+    function selectedBlockAssetTargets(): PublisherAssetTarget[] {
+        if (!selectedStructuredBlock) return [];
+
+        if (selectedStructuredBlock.type === "imageBlock") {
+            return [
+                {
+                    key: "image-src",
+                    label: "Image",
+                    accept: ["image"],
+                    value: String(selectedStructuredBlock.attrs.src ?? ""),
+                    apply: (path: string) =>
+                        updateSelectedStructuredBlock({ src: path }),
+                },
+            ];
+        }
+
+        if (selectedStructuredBlock.type === "videoBlock") {
+            return [
+                {
+                    key: "video-src",
+                    label: "Video",
+                    accept: ["video"],
+                    value: String(selectedStructuredBlock.attrs.src ?? ""),
+                    apply: (path: string) =>
+                        updateSelectedStructuredBlock({ src: path }),
+                },
+                {
+                    key: "video-poster",
+                    label: "Poster",
+                    accept: ["image"],
+                    value: String(selectedStructuredBlock.attrs.poster ?? ""),
+                    apply: (path: string) =>
+                        updateSelectedStructuredBlock({ poster: path }),
+                },
+                {
+                    key: "video-captions",
+                    label: "Captions",
+                    accept: ["captions"],
+                    value: String(selectedStructuredBlock.attrs.captions ?? ""),
+                    apply: (path: string) =>
+                        updateSelectedStructuredBlock({ captions: path }),
+                },
+            ];
+        }
+
+        if (selectedStructuredBlock.type === "mediaTextBlock") {
+            const mediaType =
+                String(selectedStructuredBlock.attrs.mediaType ?? "image") ===
+                "video"
+                    ? "video"
+                    : "image";
+
+            const targets: PublisherAssetTarget[] = [
+                {
+                    key: "media-text-src",
+                    label: mediaType === "video" ? "Video" : "Image",
+                    accept: [mediaType],
+                    value: String(selectedStructuredBlock.attrs.src ?? ""),
+                    apply: (path: string) =>
+                        updateSelectedStructuredBlock({ src: path }),
+                },
+            ];
+
+            if (mediaType === "video") {
+                targets.push(
+                    {
+                        key: "media-text-poster",
+                        label: "Poster",
+                        accept: ["image"],
+                        value: String(selectedStructuredBlock.attrs.poster ?? ""),
+                        apply: (path: string) =>
+                            updateSelectedStructuredBlock({ poster: path }),
+                    },
+                    {
+                        key: "media-text-captions",
+                        label: "Captions",
+                        accept: ["captions"],
+                        value: String(
+                            selectedStructuredBlock.attrs.captions ?? "",
+                        ),
+                        apply: (path: string) =>
+                            updateSelectedStructuredBlock({ captions: path }),
+                    },
+                );
+            }
+
+            return targets;
+        }
+
+        return [];
+    }
+
+    function sceneStepAssetTargets(
+        step: PublisherSceneStep,
+        index: number,
+    ): PublisherAssetTarget[] {
+        const targets: PublisherAssetTarget[] = [
+            {
+                key: `scene-step-${index}-src`,
+                label: step.mediaType === "video" ? "Video" : "Image",
+                accept: [step.mediaType],
+                value:
+                    step.mediaType === "video" ? step.videoSrc : step.imageSrc,
+                apply: (path: string) =>
+                    updateSelectedSceneStep(
+                        index,
+                        step.mediaType === "video"
+                            ? { videoSrc: path }
+                            : { imageSrc: path },
+                    ),
+            },
+        ];
+
+        if (step.mediaType === "video") {
+            targets.push(
+                {
+                    key: `scene-step-${index}-poster`,
+                    label: "Poster",
+                    accept: ["image"],
+                    value: step.poster,
+                    apply: (path: string) =>
+                        updateSelectedSceneStep(index, { poster: path }),
+                },
+                {
+                    key: `scene-step-${index}-captions`,
+                    label: "Captions",
+                    accept: ["captions"],
+                    value: step.captions,
+                    apply: (path: string) =>
+                        updateSelectedSceneStep(index, { captions: path }),
+                },
+            );
+        }
+
+        return targets;
+    }
+
+    function ensureActiveAssetTarget(
+        currentKey: string,
+        targets: PublisherAssetTarget[],
+    ) {
+        if (!targets.length) return "";
+        if (targets.some((target) => target.key === currentKey)) {
+            return currentKey;
+        }
+        return targets[0].key;
+    }
+
+    function activeAssetTarget(
+        currentKey: string,
+        targets: PublisherAssetTarget[],
+    ) {
+        return (
+            targets.find((target) => target.key === currentKey) ?? targets[0] ?? null
+        );
+    }
+
+    function assetsForTarget(
+        target: PublisherAssetTarget | null,
+    ): PublisherAssetEntry[] {
+        if (!target) return assetLibrary;
+        return assetLibrary.filter((asset) => target.accept.includes(asset.kind));
+    }
+
+    function activeSceneStepTarget(
+        index: number,
+        step: PublisherSceneStep,
+    ): PublisherAssetTarget | null {
+        const targets = sceneStepAssetTargets(step, index);
+        return activeAssetTarget(sceneStepAssetTargetKeys[index] ?? "", targets);
+    }
+
+    function setSceneStepAssetTarget(index: number, key: string) {
+        sceneStepAssetTargetKeys = {
+            ...sceneStepAssetTargetKeys,
+            [index]: key,
+        };
+    }
+
+    async function handleAssetUpload(
+        event: Event,
+        target: PublisherAssetTarget | null,
+    ) {
+        const input = event.currentTarget as HTMLInputElement;
+        const file = input.files?.[0];
+        const slug = derivedStorySlug();
+
+        if (!file || !target || !slug) {
+            input.value = "";
+            return;
+        }
+
+        assetUploadPending = true;
+        assetUploadError = null;
+        assetUploadMessage = null;
+
+        try {
+            const form = new FormData();
+            form.set("destination", metadata.destination);
+            form.set("slug", slug);
+            form.set("scope", assetUploadScope);
+            form.set("file", file);
+
+            const response = await fetch(`${base}/api/publisher-assets`, {
+                method: "POST",
+                body: form,
+            });
+            const payload = (await response.json()) as {
+                ok?: boolean;
+                asset?: PublisherAssetEntry;
+                message?: string;
+            };
+
+            if (!response.ok || !payload.ok || !payload.asset) {
+                throw new Error(
+                    payload.message || "Could not upload that asset right now.",
+                );
+            }
+
+            target.apply(payload.asset.path);
+            assetUploadMessage = `Saved ${payload.asset.name} to ${assetUploadScope === "shared" ? "the shared media library" : "this story's media folder"}.`;
+            await refreshAssetLibrary();
+        } catch (error) {
+            assetUploadError =
+                error instanceof Error
+                    ? error.message
+                    : "Could not upload that asset right now.";
+        } finally {
+            assetUploadPending = false;
+            input.value = "";
+        }
+    }
+
     function readPublisherDraft() {
         if (typeof window === "undefined") return null;
 
@@ -703,6 +1058,20 @@
         suggestedPath,
         updatedAt: new Date().toISOString(),
     }));
+    let currentStoryAssetSlug = $derived.by(() => derivedStorySlug());
+    let currentStoryAssetFolder = $derived.by(() =>
+        currentStoryAssetSlug
+            ? `/media/${metadata.destination}/${currentStoryAssetSlug}/`
+            : "",
+    );
+    let heroTargets = $derived.by(() => heroAssetTargets());
+    let blockTargets = $derived.by(() => selectedBlockAssetTargets());
+    let activeHeroTarget = $derived.by(() =>
+        activeAssetTarget(heroAssetTargetKey, heroTargets),
+    );
+    let activeBlockTarget = $derived.by(() =>
+        activeAssetTarget(selectedBlockAssetTargetKey, blockTargets),
+    );
 
     let activeStage = $derived(
         stageItems.find((stage) => stage.id === openStage) ?? stageItems[0],
@@ -1556,6 +1925,30 @@
         publishPublisherPreviewSnapshot(previewChannel, livePreviewSnapshot);
     });
 
+    $effect(() => {
+        heroTargets;
+        blockTargets;
+
+        heroAssetTargetKey = ensureActiveAssetTarget(
+            heroAssetTargetKey,
+            heroTargets,
+        );
+        selectedBlockAssetTargetKey = ensureActiveAssetTarget(
+            selectedBlockAssetTargetKey,
+            blockTargets,
+        );
+    });
+
+    $effect(() => {
+        if (typeof window === "undefined") return;
+
+        currentStoryAssetSlug;
+        metadata.destination;
+
+        assetUploadError = null;
+        void refreshAssetLibrary();
+    });
+
     function syncGeneratedSlug() {
         metadata.slug = slugifyPublisherValue(
             `${metadata.title || importedFilename || "untitled"}${metadata.publishedDate ? `-${metadata.publishedDate.replace(/-/g, "")}` : ""}`,
@@ -1740,6 +2133,18 @@
         {#if importError}
             <div class="publish-message error">
                 <strong>{importError}</strong>
+            </div>
+        {/if}
+
+        {#if assetUploadMessage}
+            <div class="publish-message success">
+                <strong>{assetUploadMessage}</strong>
+            </div>
+        {/if}
+
+        {#if assetUploadError}
+            <div class="publish-message error">
+                <strong>{assetUploadError}</strong>
             </div>
         {/if}
 
@@ -2377,6 +2782,112 @@
                                         </label>
                                     {/if}
                                 </div>
+                                {#if metadata.heroLayout !== "none"}
+                                    <div class="asset-manager">
+                                        <div class="asset-manager__header">
+                                            <div>
+                                                <strong>Hero asset library</strong>
+                                                <p>
+                                                    Upload the hero image into
+                                                    the story folder and apply it
+                                                    directly.
+                                                </p>
+                                            </div>
+                                            {#if currentStoryAssetSlug}
+                                                <code
+                                                    >{currentStoryAssetFolder}</code
+                                                >
+                                            {:else}
+                                                <p class="asset-manager__hint">
+                                                    Add a title or slug first to
+                                                    unlock story-scoped uploads.
+                                                </p>
+                                            {/if}
+                                        </div>
+
+                                        <div class="asset-manager__controls">
+                                            <label>
+                                                <span>Upload destination</span>
+                                                <select
+                                                    bind:value={assetUploadScope}
+                                                >
+                                                    <option value="story">
+                                                        This story
+                                                    </option>
+                                                    <option value="shared">
+                                                        Shared media
+                                                    </option>
+                                                </select>
+                                            </label>
+                                            <label class="file-label">
+                                                <input
+                                                    type="file"
+                                                    accept={assetKindAcceptValue(
+                                                        activeHeroTarget?.accept ??
+                                                            ["image"],
+                                                    )}
+                                                    onchange={(event) =>
+                                                        handleAssetUpload(
+                                                            event,
+                                                            activeHeroTarget,
+                                                        )}
+                                                    disabled={!currentStoryAssetSlug ||
+                                                        assetUploadPending}
+                                                />
+                                                {assetUploadPending
+                                                    ? "Uploading…"
+                                                    : "Upload hero asset"}
+                                            </label>
+                                        </div>
+
+                                        {#if activeHeroTarget}
+                                            <div class="asset-manager__library">
+                                                {#if assetLibraryLoading}
+                                                    <p
+                                                        class="asset-manager__hint"
+                                                    >
+                                                        Loading story and shared
+                                                        assets…
+                                                    </p>
+                                                {:else if !assetsForTarget(
+                                                    activeHeroTarget,
+                                                ).length}
+                                                    <p
+                                                        class="asset-manager__hint"
+                                                    >
+                                                        No matching image assets
+                                                        yet for this story.
+                                                    </p>
+                                                {:else}
+                                                    <div class="asset-list">
+                                                        {#each assetsForTarget(
+                                                            activeHeroTarget,
+                                                        ) as asset}
+                                                            <button
+                                                                type="button"
+                                                                class="asset-chip"
+                                                                onclick={() =>
+                                                                    activeHeroTarget.apply(
+                                                                        asset.path,
+                                                                    )}
+                                                            >
+                                                                <strong
+                                                                    >{asset.name}</strong
+                                                                >
+                                                                <span
+                                                                    >{asset.scope ===
+                                                                    "shared"
+                                                                        ? "Shared"
+                                                                        : "Story"}</span
+                                                                >
+                                                            </button>
+                                                        {/each}
+                                                    </div>
+                                                {/if}
+                                            </div>
+                                        {/if}
+                                    </div>
+                                {/if}
                             </div>
                         </div>
                     </details>
@@ -2891,6 +3402,14 @@
                                     </label>
                                     <div class="scene-step-stack">
                                         {#each sceneSteps as step, index}
+                                            {@const stepTargets = sceneStepAssetTargets(
+                                                step,
+                                                index,
+                                            )}
+                                            {@const stepAssetTarget = activeSceneStepTarget(
+                                                index,
+                                                step,
+                                            )}
                                             <div class="scene-step-card">
                                                 <div class="scene-step-card__header">
                                                     <div>
@@ -3094,6 +3613,128 @@
                                                                 )}
                                                         />
                                                     </label>
+                                                {/if}
+                                                {#if stepAssetTarget}
+                                                    <div class="asset-manager">
+                                                        <div class="asset-manager__header">
+                                                            <div>
+                                                                <strong
+                                                                    >Step asset
+                                                                    library</strong
+                                                                >
+                                                                <p>
+                                                                    Choose the
+                                                                    media for
+                                                                    this story
+                                                                    step without
+                                                                    typing paths
+                                                                    by hand.
+                                                                </p>
+                                                            </div>
+                                                            <code
+                                                                >{currentStoryAssetFolder}</code
+                                                            >
+                                                        </div>
+                                                        <div class="asset-manager__targets">
+                                                            {#each stepTargets as target}
+                                                                <button
+                                                                    type="button"
+                                                                    class:asset-target-button--active={stepAssetTarget.key ===
+                                                                        target.key}
+                                                                    class="asset-target-button"
+                                                                    onclick={() =>
+                                                                        setSceneStepAssetTarget(
+                                                                            index,
+                                                                            target.key,
+                                                                        )}
+                                                                >
+                                                                    {target.label}
+                                                                </button>
+                                                            {/each}
+                                                        </div>
+                                                        <div class="asset-manager__controls">
+                                                            <label>
+                                                                <span
+                                                                    >Upload
+                                                                    destination</span
+                                                                >
+                                                                <select
+                                                                    bind:value={assetUploadScope}
+                                                                >
+                                                                    <option value="story">
+                                                                        This
+                                                                        story
+                                                                    </option>
+                                                                    <option value="shared">
+                                                                        Shared
+                                                                        media
+                                                                    </option>
+                                                                </select>
+                                                            </label>
+                                                            <label class="file-label">
+                                                                <input
+                                                                    type="file"
+                                                                    accept={assetKindAcceptValue(
+                                                                        stepAssetTarget.accept,
+                                                                    )}
+                                                                    onchange={(event) =>
+                                                                        handleAssetUpload(
+                                                                            event,
+                                                                            stepAssetTarget,
+                                                                        )}
+                                                                    disabled={!currentStoryAssetSlug ||
+                                                                        assetUploadPending}
+                                                                />
+                                                                {assetUploadPending
+                                                                    ? "Uploading…"
+                                                                    : `Upload ${stepAssetTarget.label.toLowerCase()}`}
+                                                            </label>
+                                                        </div>
+                                                        <div class="asset-manager__library">
+                                                            {#if assetLibraryLoading}
+                                                                <p class="asset-manager__hint">
+                                                                    Loading
+                                                                    story and
+                                                                    shared
+                                                                    assets…
+                                                                </p>
+                                                            {:else if !assetsForTarget(
+                                                                stepAssetTarget,
+                                                            ).length}
+                                                                <p class="asset-manager__hint">
+                                                                    No matching
+                                                                    assets yet
+                                                                    for this
+                                                                    target.
+                                                                </p>
+                                                            {:else}
+                                                                <div class="asset-list">
+                                                                    {#each assetsForTarget(
+                                                                        stepAssetTarget,
+                                                                    ) as asset}
+                                                                        <button
+                                                                            type="button"
+                                                                            class="asset-chip"
+                                                                            onclick={() =>
+                                                                                stepAssetTarget.apply(
+                                                                                    asset.path,
+                                                                                )}
+                                                                        >
+                                                                            <strong
+                                                                                >{asset.name}</strong
+                                                                            >
+                                                                            <span
+                                                                                >{asset.scope ===
+                                                                                "shared"
+                                                                                    ? "Shared"
+                                                                                    : "Story"}</span
+                                                                            >
+                                                                        </button>
+                                                                    {/each}
+                                                                </div>
+                                                            {/if}
+                                                        </div>
+                                                    </div>
                                                 {/if}
                                                 <label>
                                                     <span>Place label</span>
@@ -3466,6 +4107,113 @@
                                                 })}
                                         />
                                     </label>
+                                    {#if activeBlockTarget}
+                                        <div class="asset-manager">
+                                            <div class="asset-manager__header">
+                                                <div>
+                                                    <strong>Block asset library</strong>
+                                                    <p>
+                                                        Upload or reuse assets
+                                                        for this media/text
+                                                        block.
+                                                    </p>
+                                                </div>
+                                                <code
+                                                    >{currentStoryAssetFolder}</code
+                                                >
+                                            </div>
+                                            <div class="asset-manager__targets">
+                                                {#each blockTargets as target}
+                                                    <button
+                                                        type="button"
+                                                        class:asset-target-button--active={selectedBlockAssetTargetKey ===
+                                                            target.key}
+                                                        class="asset-target-button"
+                                                        onclick={() =>
+                                                            (selectedBlockAssetTargetKey =
+                                                                target.key)}
+                                                    >
+                                                        {target.label}
+                                                    </button>
+                                                {/each}
+                                            </div>
+                                            <div class="asset-manager__controls">
+                                                <label>
+                                                    <span
+                                                        >Upload destination</span
+                                                    >
+                                                    <select
+                                                        bind:value={assetUploadScope}
+                                                    >
+                                                        <option value="story">
+                                                            This story
+                                                        </option>
+                                                        <option value="shared">
+                                                            Shared media
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                                <label class="file-label">
+                                                    <input
+                                                        type="file"
+                                                        accept={assetKindAcceptValue(
+                                                            activeBlockTarget.accept,
+                                                        )}
+                                                        onchange={(event) =>
+                                                            handleAssetUpload(
+                                                                event,
+                                                                activeBlockTarget,
+                                                            )}
+                                                        disabled={!currentStoryAssetSlug ||
+                                                            assetUploadPending}
+                                                    />
+                                                    {assetUploadPending
+                                                        ? "Uploading…"
+                                                        : `Upload ${activeBlockTarget.label.toLowerCase()}`}
+                                                </label>
+                                            </div>
+                                            <div class="asset-manager__library">
+                                                {#if assetLibraryLoading}
+                                                    <p class="asset-manager__hint">
+                                                        Loading story and shared
+                                                        assets…
+                                                    </p>
+                                                {:else if !assetsForTarget(
+                                                    activeBlockTarget,
+                                                ).length}
+                                                    <p class="asset-manager__hint">
+                                                        No matching assets yet
+                                                        for this target.
+                                                    </p>
+                                                {:else}
+                                                    <div class="asset-list">
+                                                        {#each assetsForTarget(
+                                                            activeBlockTarget,
+                                                        ) as asset}
+                                                            <button
+                                                                type="button"
+                                                                class="asset-chip"
+                                                                onclick={() =>
+                                                                    activeBlockTarget.apply(
+                                                                        asset.path,
+                                                                    )}
+                                                            >
+                                                                <strong
+                                                                    >{asset.name}</strong
+                                                                >
+                                                                <span
+                                                                    >{asset.scope ===
+                                                                    "shared"
+                                                                        ? "Shared"
+                                                                        : "Story"}</span
+                                                                >
+                                                            </button>
+                                                        {/each}
+                                                    </div>
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/if}
                                 {:else if selectedStructuredBlock?.type === "videoBlock"}
                                     <h3>Video block</h3>
                                     <p class="inspector-hint">
@@ -3564,6 +4312,113 @@
                                         />
                                         <span>Autoplay while visible</span>
                                     </label>
+                                    {#if activeBlockTarget}
+                                        <div class="asset-manager">
+                                            <div class="asset-manager__header">
+                                                <div>
+                                                    <strong>Block asset library</strong>
+                                                    <p>
+                                                        Choose the video,
+                                                        poster, or captions file
+                                                        for this block.
+                                                    </p>
+                                                </div>
+                                                <code
+                                                    >{currentStoryAssetFolder}</code
+                                                >
+                                            </div>
+                                            <div class="asset-manager__targets">
+                                                {#each blockTargets as target}
+                                                    <button
+                                                        type="button"
+                                                        class:asset-target-button--active={selectedBlockAssetTargetKey ===
+                                                            target.key}
+                                                        class="asset-target-button"
+                                                        onclick={() =>
+                                                            (selectedBlockAssetTargetKey =
+                                                                target.key)}
+                                                    >
+                                                        {target.label}
+                                                    </button>
+                                                {/each}
+                                            </div>
+                                            <div class="asset-manager__controls">
+                                                <label>
+                                                    <span
+                                                        >Upload destination</span
+                                                    >
+                                                    <select
+                                                        bind:value={assetUploadScope}
+                                                    >
+                                                        <option value="story">
+                                                            This story
+                                                        </option>
+                                                        <option value="shared">
+                                                            Shared media
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                                <label class="file-label">
+                                                    <input
+                                                        type="file"
+                                                        accept={assetKindAcceptValue(
+                                                            activeBlockTarget.accept,
+                                                        )}
+                                                        onchange={(event) =>
+                                                            handleAssetUpload(
+                                                                event,
+                                                                activeBlockTarget,
+                                                            )}
+                                                        disabled={!currentStoryAssetSlug ||
+                                                            assetUploadPending}
+                                                    />
+                                                    {assetUploadPending
+                                                        ? "Uploading…"
+                                                        : `Upload ${activeBlockTarget.label.toLowerCase()}`}
+                                                </label>
+                                            </div>
+                                            <div class="asset-manager__library">
+                                                {#if assetLibraryLoading}
+                                                    <p class="asset-manager__hint">
+                                                        Loading story and shared
+                                                        assets…
+                                                    </p>
+                                                {:else if !assetsForTarget(
+                                                    activeBlockTarget,
+                                                ).length}
+                                                    <p class="asset-manager__hint">
+                                                        No matching assets yet
+                                                        for this target.
+                                                    </p>
+                                                {:else}
+                                                    <div class="asset-list">
+                                                        {#each assetsForTarget(
+                                                            activeBlockTarget,
+                                                        ) as asset}
+                                                            <button
+                                                                type="button"
+                                                                class="asset-chip"
+                                                                onclick={() =>
+                                                                    activeBlockTarget.apply(
+                                                                        asset.path,
+                                                                    )}
+                                                            >
+                                                                <strong
+                                                                    >{asset.name}</strong
+                                                                >
+                                                                <span
+                                                                    >{asset.scope ===
+                                                                    "shared"
+                                                                        ? "Shared"
+                                                                        : "Story"}</span
+                                                                >
+                                                            </button>
+                                                        {/each}
+                                                    </div>
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/if}
                                 {:else if selectedStructuredBlock?.type === "imageBlock"}
                                     <h3>Image block</h3>
                                     <div class="inspector-preview inspector-preview--image">
@@ -3672,6 +4527,98 @@
                                             >
                                         </select>
                                     </label>
+                                    {#if activeBlockTarget}
+                                        <div class="asset-manager">
+                                            <div class="asset-manager__header">
+                                                <div>
+                                                    <strong>Block asset library</strong>
+                                                    <p>
+                                                        Pick an image for this
+                                                        block from the story or
+                                                        shared library.
+                                                    </p>
+                                                </div>
+                                                <code
+                                                    >{currentStoryAssetFolder}</code
+                                                >
+                                            </div>
+                                            <div class="asset-manager__controls">
+                                                <label>
+                                                    <span
+                                                        >Upload destination</span
+                                                    >
+                                                    <select
+                                                        bind:value={assetUploadScope}
+                                                    >
+                                                        <option value="story">
+                                                            This story
+                                                        </option>
+                                                        <option value="shared">
+                                                            Shared media
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                                <label class="file-label">
+                                                    <input
+                                                        type="file"
+                                                        accept={assetKindAcceptValue(
+                                                            activeBlockTarget.accept,
+                                                        )}
+                                                        onchange={(event) =>
+                                                            handleAssetUpload(
+                                                                event,
+                                                                activeBlockTarget,
+                                                            )}
+                                                        disabled={!currentStoryAssetSlug ||
+                                                            assetUploadPending}
+                                                    />
+                                                    {assetUploadPending
+                                                        ? "Uploading…"
+                                                        : "Upload image"}
+                                                </label>
+                                            </div>
+                                            <div class="asset-manager__library">
+                                                {#if assetLibraryLoading}
+                                                    <p class="asset-manager__hint">
+                                                        Loading story and shared
+                                                        assets…
+                                                    </p>
+                                                {:else if !assetsForTarget(
+                                                    activeBlockTarget,
+                                                ).length}
+                                                    <p class="asset-manager__hint">
+                                                        No matching image assets
+                                                        yet for this story.
+                                                    </p>
+                                                {:else}
+                                                    <div class="asset-list">
+                                                        {#each assetsForTarget(
+                                                            activeBlockTarget,
+                                                        ) as asset}
+                                                            <button
+                                                                type="button"
+                                                                class="asset-chip"
+                                                                onclick={() =>
+                                                                    activeBlockTarget.apply(
+                                                                        asset.path,
+                                                                    )}
+                                                            >
+                                                                <strong
+                                                                    >{asset.name}</strong
+                                                                >
+                                                                <span
+                                                                    >{asset.scope ===
+                                                                    "shared"
+                                                                        ? "Shared"
+                                                                        : "Story"}</span
+                                                                >
+                                                            </button>
+                                                        {/each}
+                                                    </div>
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/if}
                                 {:else if selectedStructuredBlock?.type === "flourishBlock"}
                                     <h3>Flourish block</h3>
                                     <label>
@@ -4635,6 +5582,98 @@
         color: #303030;
         font-size: 0.84rem;
         font-weight: 600;
+    }
+
+    .asset-manager {
+        display: grid;
+        gap: 0.7rem;
+        padding: 0.8rem;
+        border: 1px solid var(--studio-line);
+        border-radius: 6px;
+        background: var(--studio-panel);
+    }
+
+    .asset-manager__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .asset-manager__header > div {
+        display: grid;
+        gap: 0.2rem;
+    }
+
+    .asset-manager__header p,
+    .asset-manager__hint {
+        margin: 0;
+        color: var(--studio-text);
+        font-size: 0.88rem;
+        line-height: 1.45;
+    }
+
+    .asset-manager__header code {
+        display: inline-block;
+        padding: 0.2rem 0.45rem;
+        border: 1px solid var(--studio-line);
+        border-radius: 4px;
+        background: var(--studio-panel-soft);
+        font-size: 0.8rem;
+    }
+
+    .asset-manager__controls {
+        display: flex;
+        gap: 0.7rem;
+        align-items: end;
+        flex-wrap: wrap;
+    }
+
+    .asset-manager__targets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+    }
+
+    .asset-target-button {
+        min-height: 2.2rem;
+        background: var(--studio-panel-soft);
+    }
+
+    .asset-target-button--active {
+        border-color: var(--studio-ink);
+        background: var(--studio-panel-strong);
+        color: var(--studio-ink);
+    }
+
+    .asset-manager__library {
+        display: grid;
+        gap: 0.55rem;
+    }
+
+    .asset-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+    }
+
+    .asset-chip {
+        display: grid;
+        gap: 0.1rem;
+        min-width: 12rem;
+        justify-items: start;
+        text-align: left;
+        background: var(--studio-panel-soft);
+    }
+
+    .asset-chip strong {
+        font-size: 0.88rem;
+    }
+
+    .asset-chip span {
+        color: var(--studio-text);
+        font-size: 0.8rem;
     }
 
     .editor-stage-toolbar {

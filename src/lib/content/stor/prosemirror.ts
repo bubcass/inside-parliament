@@ -399,6 +399,21 @@ function tableBlockFromNode(node: ProseMirrorNode) {
   };
 }
 
+function quoteBlockFromNode(
+  node: ProseMirrorNode,
+): Extract<StoryBlock, { type: 'quote' }> | null {
+  const fragments = (node.content ?? [])
+    .map((child) => renderInline(child).trim())
+    .filter(Boolean);
+
+  if (!fragments.length) return null;
+
+  return {
+    type: 'quote',
+    text: fragments.join('<br><br>'),
+  };
+}
+
 function linkListBlockFromNode(
   node: ProseMirrorNode,
 ): Extract<StoryBlock, { type: 'link-list' }> | null {
@@ -485,6 +500,17 @@ export function proseMirrorToCommitteeNodes(
       nodes.push({
         type: 'paragraph',
         text,
+      });
+      continue;
+    }
+
+    if (node.type === 'blockquote') {
+      const quote = quoteBlockFromNode(node);
+      if (!quote) continue;
+
+      nodes.push({
+        type: 'paragraph',
+        text: quote.text,
       });
       continue;
     }
@@ -666,6 +692,16 @@ export function proseMirrorToNarrativeBlocks(
 
       encounteredBodyContent = true;
       currentParagraphs.push(html);
+      continue;
+    }
+
+    if (node.type === 'blockquote') {
+      const quote = quoteBlockFromNode(node);
+      if (!quote) continue;
+
+      flush();
+      blocks.push(quote);
+      encounteredBodyContent = true;
       continue;
     }
 

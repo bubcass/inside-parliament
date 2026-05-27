@@ -6,7 +6,9 @@
 
 <figure class="quote-block">
   <blockquote>
-    <p>{block.text}</p>
+    <div class="quote-copy">
+      {@html block.text}
+    </div>
   </blockquote>
   {#if block.attribution}
     <figcaption>{block.attribution}</figcaption>
@@ -15,23 +17,32 @@
 
 <style>
   .quote-block {
-    border-left: 1px solid var(--color-line-strong);
+    border-left: 8px solid var(--color-line);
     margin: var(--block-space) auto;
     max-width: var(--measure-prose);
-    padding: var(--space-2) 0 var(--space-2) var(--space-5);
+    padding: 0 0 0 var(--space-5);
   }
 
   blockquote {
     margin: 0;
   }
 
-  p {
-    font-family: var(--font-serif);
-    font-size: clamp(1.2rem, 1.9vw, 1.65rem);
-    font-weight: 500;
-    line-height: 1.3;
+  .quote-copy {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    line-height: 1.55;
     margin: 0;
-    text-wrap: balance;
+  }
+
+  .quote-copy :global(p) {
+    margin: 0;
+  }
+
+  .quote-copy :global(br + br) {
+    display: block;
+    content: "";
+    margin-top: var(--space-3);
   }
 
   figcaption {
@@ -46,7 +57,8 @@
 
   @media (max-width: 620px) {
     .quote-block {
-      margin: 3.5rem auto;
+      margin: 3rem auto;
+      padding-left: var(--space-4);
     }
   }
 </style>
