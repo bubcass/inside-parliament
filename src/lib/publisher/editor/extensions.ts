@@ -146,6 +146,27 @@ export const VideoBlock = Node.create({
         parseHTML: (element) => element.getAttribute('data-credit') || '',
         renderHTML: (attributes) => ({ 'data-credit': attributes.credit || '' }),
       },
+      featureLatestVideo: {
+        default: false,
+        parseHTML: (element) => element.getAttribute('data-feature-latest-video') === 'true',
+        renderHTML: (attributes) => ({
+          'data-feature-latest-video': attributes.featureLatestVideo ? 'true' : 'false',
+        }),
+      },
+      carouselTitle: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-carousel-title') || '',
+        renderHTML: (attributes) => ({
+          'data-carousel-title': attributes.carouselTitle || '',
+        }),
+      },
+      carouselEyebrow: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-carousel-eyebrow') || '',
+        renderHTML: (attributes) => ({
+          'data-carousel-eyebrow': attributes.carouselEyebrow || '',
+        }),
+      },
       autoplay: {
         default: true,
         parseHTML: (element) => element.getAttribute('data-autoplay') !== 'false',
@@ -332,6 +353,27 @@ export const MediaTextBlock = Node.create({
         default: '',
         parseHTML: (element) => element.getAttribute('data-credit') || '',
         renderHTML: (attributes) => ({ 'data-credit': attributes.credit || '' }),
+      },
+      featureLatestVideo: {
+        default: false,
+        parseHTML: (element) => element.getAttribute('data-feature-latest-video') === 'true',
+        renderHTML: (attributes) => ({
+          'data-feature-latest-video': attributes.featureLatestVideo ? 'true' : 'false',
+        }),
+      },
+      carouselTitle: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-carousel-title') || '',
+        renderHTML: (attributes) => ({
+          'data-carousel-title': attributes.carouselTitle || '',
+        }),
+      },
+      carouselEyebrow: {
+        default: '',
+        parseHTML: (element) => element.getAttribute('data-carousel-eyebrow') || '',
+        renderHTML: (attributes) => ({
+          'data-carousel-eyebrow': attributes.carouselEyebrow || '',
+        }),
       },
     };
   },

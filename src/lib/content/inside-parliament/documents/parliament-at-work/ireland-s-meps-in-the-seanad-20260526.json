@@ -8,19 +8,11 @@
   "title": "Ireland's MEPs in the Seanad",
   "dek": "The heart of the European project can sometimes feel far removed from Irish citizens. With its ongoing conversation with MEPs, the Seanad is looking to bridge that gap.",
   "eyebrow": "The Seanad at Work",
-  "topics": [
-    "Seanad",
-    "MEPs",
-    "Europe"
-  ],
+  "topics": ["Seanad", "MEPs", "Europe"],
   "layout": "standard",
   "status": "published",
   "language": "en",
-  "keywords": [
-    "Seanad",
-    "MEPs",
-    "Europe"
-  ],
+  "keywords": ["Seanad", "MEPs", "Europe"],
   "publishedDate": "2026-05-26",
   "contributors": [
     {
@@ -39,6 +31,14 @@
     "alt": "A wide view of the European Parliament in a plenary meeting",
     "position": "left center"
   },
+  "shortVideos": [
+    {
+      "title": "Ireland's MEPs in the Seanad",
+      "eyebrow": "The Seanad at Work",
+      "poster": "/media/shared/european-parliament.jpg",
+      "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4"
+    }
+  ],
   "content": {
     "type": "doc",
     "content": [

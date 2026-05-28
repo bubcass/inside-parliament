@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, extname, resolve } from 'node:path';
 import type {
   ProseMirrorDocument,
@@ -11,7 +11,19 @@ import type {
 type PublishPayload = {
   path?: string;
   document?: StorDocument;
+  action?: 'publish' | 'unpublish';
 };
+
+function resolveTargetPath(relativePath: string) {
+  const targetPath = resolve(process.cwd(), relativePath);
+  const contentRoot = resolve(process.cwd(), 'src/lib/content/inside-parliament/documents');
+
+  if (!targetPath.startsWith(contentRoot)) {
+    return null;
+  }
+
+  return targetPath;
+}
 
 function extensionForMimeType(mimeType: string) {
   switch (mimeType.toLowerCase()) {
@@ -114,21 +126,37 @@ export const POST: RequestHandler = async ({ request }) => {
     const payload = (await request.json()) as PublishPayload;
     const relativePath = payload.path?.trim();
     const document = payload.document;
+    const action = payload.action ?? 'publish';
 
-    if (!relativePath || !document) {
+    if (!relativePath || (action === 'publish' && !document)) {
       return json({ ok: false }, { status: 400 });
     }
 
-    const targetPath = resolve(process.cwd(), relativePath);
-    const contentRoot = resolve(process.cwd(), 'src/lib/content/inside-parliament/documents');
-
-    if (!targetPath.startsWith(contentRoot)) {
+    const targetPath = resolveTargetPath(relativePath);
+    if (!targetPath) {
       return json({ ok: false }, { status: 400 });
+    }
+
+    const publishDocument = document as StorDocument | undefined;
+
+    if (action === 'unpublish') {
+      const existingRaw = await readFile(targetPath, 'utf8');
+      const existingDocument = JSON.parse(existingRaw) as StorDocument;
+      const unpublishedDocument: StorDocument = {
+        ...existingDocument,
+        status: 'archived',
+      };
+
+      await writeFile(targetPath, `${JSON.stringify(unpublishedDocument, null, 2)}\n`, 'utf8');
+      return json({ ok: true, path: relativePath, document: unpublishedDocument });
     }
 
     const documentWithAssets = await materializeImageAssets({
       relativePath,
-      document,
+      document: {
+        ...publishDocument!,
+        status: 'published',
+      },
     });
 
     await mkdir(dirname(targetPath), { recursive: true });
@@ -141,5 +169,34 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ ok: true, path: relativePath, document: documentWithAssets });
   } catch {
     return json({ ok: false }, { status: 500 });
+  }
+};
+
+export const GET: RequestHandler = async ({ url }) => {
+  const relativePath = url.searchParams.get('path')?.trim();
+  if (!relativePath) {
+    return json({ ok: false }, { status: 400 });
+  }
+
+  const targetPath = resolveTargetPath(relativePath);
+  if (!targetPath) {
+    return json({ ok: false }, { status: 400 });
+  }
+
+  try {
+    const raw = await readFile(targetPath, 'utf8');
+    const document = JSON.parse(raw) as StorDocument;
+
+    return json({
+      ok: true,
+      exists: true,
+      status: document.status ?? 'draft',
+      document,
+    });
+  } catch {
+    return json({
+      ok: true,
+      exists: false,
+    });
   }
 };

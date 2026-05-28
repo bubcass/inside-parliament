@@ -81,6 +81,57 @@ export function embeddedImageStats(document: ProseMirrorDocument | null) {
   return { count, totalChars };
 }
 
+export interface PublisherShortVideoCandidate {
+  src: string;
+  poster: string;
+  title: string;
+  eyebrow: string;
+}
+
+export function extractPublisherShortVideoCandidates(options: {
+  metadata: Pick<PublisherPreviewMetadata, 'title' | 'eyebrow'>;
+  editorDocument: ProseMirrorDocument;
+}) {
+  const candidates: PublisherShortVideoCandidate[] = [];
+
+  for (const node of options.editorDocument.content ?? []) {
+    if (node.type === 'videoBlock' && node.attrs?.featureLatestVideo) {
+      const src = String(node.attrs?.src ?? '').trim();
+      const poster = String(node.attrs?.poster ?? '').trim();
+      if (!src) continue;
+
+      candidates.push({
+        src,
+        poster,
+        title: String(node.attrs?.carouselTitle ?? '').trim() || options.metadata.title.trim(),
+        eyebrow:
+          String(node.attrs?.carouselEyebrow ?? '').trim() || options.metadata.eyebrow.trim(),
+      });
+      continue;
+    }
+
+    if (
+      node.type === 'mediaTextBlock' &&
+      node.attrs?.featureLatestVideo &&
+      String(node.attrs?.mediaType ?? '').trim() === 'video'
+    ) {
+      const src = String(node.attrs?.src ?? '').trim();
+      const poster = String(node.attrs?.poster ?? '').trim();
+      if (!src) continue;
+
+      candidates.push({
+        src,
+        poster,
+        title: String(node.attrs?.carouselTitle ?? '').trim() || options.metadata.title.trim(),
+        eyebrow:
+          String(node.attrs?.carouselEyebrow ?? '').trim() || options.metadata.eyebrow.trim(),
+      });
+    }
+  }
+
+  return candidates;
+}
+
 export function buildCanonicalPublisherDocument({
   metadata,
   contributors,
@@ -109,6 +160,13 @@ export function buildCanonicalPublisherDocument({
   const authorProfileRole = authorContributor?.profileRole?.trim() ?? '';
   const authorProfileImage = authorContributor?.profileImage?.trim() ?? '';
   const authorBio = authorContributor?.bio?.trim() ?? '';
+  const shortVideoCandidates = extractPublisherShortVideoCandidates({
+    metadata: {
+      title: title || 'Untitled document',
+      eyebrow: derivedEyebrow,
+    },
+    editorDocument,
+  });
 
   return {
     id: slug,
@@ -157,6 +215,22 @@ export function buildCanonicalPublisherDocument({
             position: metadata.heroPosition.trim() || 'center center',
           }
         : undefined,
+    ...(shortVideoCandidates[0]?.poster
+      ? {
+          shortVideos: [
+            {
+              src: shortVideoCandidates[0].src,
+              poster: shortVideoCandidates[0].poster,
+              ...(shortVideoCandidates[0].title
+                ? { title: shortVideoCandidates[0].title }
+                : {}),
+              ...(shortVideoCandidates[0].eyebrow
+                ? { eyebrow: shortVideoCandidates[0].eyebrow }
+                : {}),
+            },
+          ],
+        }
+      : {}),
     content: editorDocument,
   };
 }

@@ -9,6 +9,7 @@ export interface StorListItem {
   section: StorySection;
   committeeName?: string;
   publishedDate?: string | null;
+  status?: StorDocument['status'];
 }
 
 const documentModules = import.meta.glob(
@@ -36,7 +37,11 @@ export const storDocuments: StorDocument[] = Object.values(documentModules).sort
   },
 );
 
-export const storRenderedDocuments = storDocuments.map((document) =>
+export const storPublishedDocuments = storDocuments.filter(
+  (document) => (document.status ?? 'draft') === 'published',
+);
+
+export const storRenderedDocuments = storPublishedDocuments.map((document) =>
   storDocumentToStory(document),
 );
 
@@ -50,8 +55,33 @@ export const storDocumentList: StorListItem[] = storRenderedDocuments.map(
     section: story.section,
     committeeName: source.committeeName,
     publishedDate: source.publishedDate ?? null,
+    status: source.status ?? 'draft',
   }),
 );
+
+export const storEditorDocumentList: StorListItem[] = storDocuments.map((document) => ({
+  slug: document.slug,
+  title: document.title,
+  destination: document.destination,
+  section: document.section ??
+    (document.destination === 'parliament-now' ||
+    document.destination === 'houses-of-the-oireachtas' ||
+    document.destination === 'committee-reports'
+      ? 'parliament-now'
+      : document.destination === 'parliament-explained' ||
+          document.destination === 'library-research-service'
+        ? 'parliament-explained'
+        : 'parliament-at-work'),
+  committeeName: document.committeeName,
+  publishedDate: document.publishedDate ?? null,
+  status: document.status ?? 'draft',
+})).sort((a, b) => {
+  const aTime = Date.parse(a.publishedDate ?? '') || 0;
+  const bTime = Date.parse(b.publishedDate ?? '') || 0;
+  if (bTime !== aTime) return bTime - aTime;
+
+  return a.slug.localeCompare(b.slug);
+});
 
 export function getStorDocument(slug: string) {
   return storDocuments.find((document) => document.slug === slug) ?? null;

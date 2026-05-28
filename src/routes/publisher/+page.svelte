@@ -9,6 +9,10 @@
     import Superscript from "@tiptap/extension-superscript";
     import Subscript from "@tiptap/extension-subscript";
     import StoryPreviewPane from "$lib/publisher/StoryPreviewPane.svelte";
+    import {
+        getStorDocument,
+        storEditorDocumentList,
+    } from "$lib/content/stor";
     import type {
         PublisherAssetEntry,
         PublisherAssetKind,
@@ -38,6 +42,7 @@
         buildRenderedPublisherPreview,
         buildSuggestedPublisherPath,
         embeddedImageStats,
+        extractPublisherShortVideoCandidates,
         slugifyPublisherValue,
     } from "$lib/publisher/preview";
     import {
@@ -165,6 +170,11 @@
     let heroAssetTargetKey = $state("hero-src");
     let selectedBlockAssetTargetKey = $state("");
     let sceneStepAssetTargetKeys = $state<Record<number, string>>({});
+    let publicationExists = $state(false);
+    let publicationStatus = $state<StorDocument["status"] | null>(null);
+    let publicationStateLoading = $state(false);
+    let existingStorySlug = $state("");
+    let existingStoryQuery = $state("");
     let editorMounted = $state(false);
     let hasLocalDraft = $state(false);
     let draftStatus = $state<string | null>(null);
@@ -655,6 +665,43 @@
         }
     }
 
+    async function refreshPublicationState() {
+        if (!suggestedPath) {
+            publicationExists = false;
+            publicationStatus = null;
+            publicationStateLoading = false;
+            return;
+        }
+
+        publicationStateLoading = true;
+
+        try {
+            const params = new URLSearchParams({ path: suggestedPath });
+            const response = await fetch(
+                `${base}/api/publish-document?${params.toString()}`,
+            );
+            const payload = (await response.json()) as {
+                ok?: boolean;
+                exists?: boolean;
+                status?: StorDocument["status"];
+            };
+
+            if (!response.ok || !payload.ok) {
+                publicationExists = false;
+                publicationStatus = null;
+                return;
+            }
+
+            publicationExists = Boolean(payload.exists);
+            publicationStatus = payload.exists ? payload.status ?? null : null;
+        } catch {
+            publicationExists = false;
+            publicationStatus = null;
+        } finally {
+            publicationStateLoading = false;
+        }
+    }
+
     function heroAssetTargets(): PublisherAssetTarget[] {
         if (metadata.heroLayout === "none") return [];
 
@@ -904,6 +951,131 @@
         }
     }
 
+    function documentKeywordsValue(document: StorDocument) {
+        return (document.keywords ?? []).join(", ");
+    }
+
+    function applyExistingShortVideoSelection(document: StorDocument) {
+        const featuredVideo = document.shortVideos?.[0];
+        if (!featuredVideo) return document.content;
+
+        const nextDocument = JSON.parse(
+            JSON.stringify(document.content),
+        ) as ProseMirrorDocument;
+
+        for (const node of nextDocument.content ?? []) {
+            if (
+                node.type === "videoBlock" &&
+                String(node.attrs?.src ?? "").trim() === featuredVideo.src
+            ) {
+                node.attrs = {
+                    ...(node.attrs ?? {}),
+                    featureLatestVideo: true,
+                    carouselTitle: featuredVideo.title ?? "",
+                    carouselEyebrow: featuredVideo.eyebrow ?? "",
+                    poster:
+                        String(node.attrs?.poster ?? "").trim() ||
+                        featuredVideo.poster,
+                };
+                return nextDocument;
+            }
+
+            if (
+                node.type === "mediaTextBlock" &&
+                String(node.attrs?.mediaType ?? "").trim() === "video" &&
+                String(node.attrs?.src ?? "").trim() === featuredVideo.src
+            ) {
+                node.attrs = {
+                    ...(node.attrs ?? {}),
+                    featureLatestVideo: true,
+                    carouselTitle: featuredVideo.title ?? "",
+                    carouselEyebrow: featuredVideo.eyebrow ?? "",
+                    poster:
+                        String(node.attrs?.poster ?? "").trim() ||
+                        featuredVideo.poster,
+                };
+                return nextDocument;
+            }
+        }
+
+        return nextDocument;
+    }
+
+    function loadStorDocumentIntoPublisher(document: StorDocument) {
+        metadata = {
+            destination: document.destination,
+            type: document.type,
+            featured: document.featured ?? false,
+            heroLayout: document.heroLayout ?? "contained",
+            title: document.title,
+            dek: document.dek,
+            eyebrow: document.eyebrow ?? "",
+            abstract: document.abstract ?? "",
+            publishedDate: document.publishedDate ?? "",
+            status: document.status ?? "draft",
+            language: document.language ?? "en",
+            keywords: documentKeywordsValue(document),
+            heroSrc: document.hero?.src ?? "",
+            heroAlt: document.hero?.alt ?? "",
+            heroPosition: document.hero?.position ?? "left center",
+            slug: document.slug,
+        };
+        contributors = normalizeContributorDisplay(
+            document.contributors?.length
+                ? document.contributors
+                : defaultContributorsForDestination(),
+        );
+        importedFilename = "";
+        importError = null;
+        importMessage = `Loaded ${document.title} into the publisher.`;
+        existingStorySlug = document.slug;
+        openStage = "details";
+
+        const hydratedContent = applyExistingShortVideoSelection(document);
+        if (editor) {
+            editor.commands.setContent(hydratedContent);
+            editorDocument = editor.getJSON() as ProseMirrorDocument;
+        } else {
+            editorDocument = hydratedContent;
+        }
+    }
+
+    function openExistingStory() {
+        if (!existingStorySlug) return;
+        const document = getStorDocument(existingStorySlug);
+        if (!document) {
+            importError =
+                "That story could not be loaded into the publisher.";
+            return;
+        }
+
+        loadStorDocumentIntoPublisher(document);
+    }
+
+    function selectExistingStory(story: (typeof storEditorDocumentList)[number]) {
+        existingStorySlug = story.slug;
+    }
+
+    function existingStorySearchText(story: (typeof storEditorDocumentList)[number]) {
+        return [
+            story.title,
+            story.slug,
+            story.destination,
+            story.status ?? "draft",
+            story.publishedDate ?? "",
+        ]
+            .join(" ")
+            .toLowerCase();
+    }
+
+    function formatExistingStoryLabel(
+        story: (typeof storEditorDocumentList)[number],
+    ) {
+        return `${story.title} · ${story.status ?? "draft"}${
+            story.publishedDate ? ` · ${story.publishedDate}` : ""
+        }`;
+    }
+
     function readPublisherDraft() {
         if (typeof window === "undefined") return null;
 
@@ -1058,6 +1230,17 @@
         suggestedPath,
         updatedAt: new Date().toISOString(),
     }));
+    let featuredShortVideoCandidates = $derived.by(() =>
+        editorDocument
+            ? extractPublisherShortVideoCandidates({
+                  metadata: {
+                      title: metadata.title,
+                      eyebrow: metadata.eyebrow,
+                  },
+                  editorDocument,
+              })
+            : [],
+    );
     let currentStoryAssetSlug = $derived.by(() => derivedStorySlug());
     let currentStoryAssetFolder = $derived.by(() =>
         currentStoryAssetSlug
@@ -1072,6 +1255,53 @@
     let activeBlockTarget = $derived.by(() =>
         activeAssetTarget(selectedBlockAssetTargetKey, blockTargets),
     );
+    let publicationPhase = $derived.by<
+        "new" | "published" | "archived" | "checking"
+    >(() => {
+        if (publicationStateLoading) return "checking";
+        if (!publicationExists) return "new";
+        if (publicationStatus === "archived") return "archived";
+        return "published";
+    });
+    let filteredExistingStories = $derived.by(() => {
+        const query = existingStoryQuery.trim().toLowerCase();
+        const stories = query
+            ? storEditorDocumentList.filter((story) =>
+                  existingStorySearchText(story).includes(query),
+              )
+            : storEditorDocumentList;
+
+        return stories.slice(0, 10);
+    });
+    let selectedExistingStory = $derived.by(
+        () =>
+            storEditorDocumentList.find((story) => story.slug === existingStorySlug) ??
+            null,
+    );
+    let publicationPhaseLabel = $derived.by(() => {
+        switch (publicationPhase) {
+            case "checking":
+                return "Checking publication status…";
+            case "new":
+                return "First publication";
+            case "archived":
+                return "Archived story";
+            case "published":
+                return "Published story";
+        }
+    });
+    let publicationPhaseCopy = $derived.by(() => {
+        switch (publicationPhase) {
+            case "checking":
+                return "Checking whether this path already has a published story.";
+            case "new":
+                return "This draft will be published to Inside Parliament for the first time.";
+            case "archived":
+                return "This story has been unpublished before. Republishing will restore it to public story listings.";
+            case "published":
+                return "This story already exists at the target path. Republishing will update it in place.";
+        }
+    });
 
     let activeStage = $derived(
         stageItems.find((stage) => stage.id === openStage) ?? stageItems[0],
@@ -1126,6 +1356,21 @@
 
         if (!hasBodyContent(editorDocument)) {
             warnings.push("No document content has been added yet.");
+        }
+
+        if (featuredShortVideoCandidates.length > 1) {
+            errors.push(
+                "Only one video can be featured in Latest videos for each story.",
+            );
+        }
+
+        if (
+            featuredShortVideoCandidates.length === 1 &&
+            !featuredShortVideoCandidates[0]?.poster.trim()
+        ) {
+            errors.push(
+                "Featured Latest videos entries need a poster image before publishing.",
+            );
         }
 
         return { errors, warnings, ok: errors.length === 0 };
@@ -1331,10 +1576,56 @@
                 editorDocument = editor.getJSON() as ProseMirrorDocument;
             }
 
+            if (payload.document?.status) {
+                metadata.status = payload.document.status;
+            }
+
             importMessage = hasEmbeddedImportImages
                 ? `Converted imported images into local media files and published the document to ${suggestedPath}.`
                 : `Published locally to ${suggestedPath}.`;
             importError = null;
+            await refreshPublicationState();
+        } catch {
+            // Silent no-op for static/GitHub Pages environments where no server route exists.
+        }
+    }
+
+    async function unpublishCanonicalJson() {
+        if (!suggestedPath || !publicationExists) return;
+        if (
+            !window.confirm(
+                "Unpublish this story? It will be archived and removed from public story listings.",
+            )
+        ) {
+            return;
+        }
+
+        try {
+            const response = await fetch("/api/publish-document", {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    path: suggestedPath,
+                    action: "unpublish",
+                }),
+            });
+
+            if (!response.ok) return;
+
+            const payload = (await response.json()) as {
+                ok?: boolean;
+                document?: StorDocument;
+            };
+
+            if (payload.document?.status) {
+                metadata.status = payload.document.status;
+            }
+
+            importMessage = `Unpublished locally and archived ${suggestedPath}.`;
+            importError = null;
+            await refreshPublicationState();
         } catch {
             // Silent no-op for static/GitHub Pages environments where no server route exists.
         }
@@ -1949,6 +2240,13 @@
         void refreshAssetLibrary();
     });
 
+    $effect(() => {
+        if (typeof window === "undefined") return;
+
+        suggestedPath;
+        void refreshPublicationState();
+    });
+
     function syncGeneratedSlug() {
         metadata.slug = slugifyPublisherValue(
             `${metadata.title || importedFilename || "untitled"}${metadata.publishedDate ? `-${metadata.publishedDate.replace(/-/g, "")}` : ""}`,
@@ -2111,15 +2409,12 @@
                 </div>
                 <div
                     class="status-card"
-                    class:status-card--warning={!canonicalDocument}
-                    class:status-card--ready={Boolean(canonicalDocument)}
+                    class:status-card--warning={publicationPhase === "new" ||
+                        publicationPhase === "archived"}
+                    class:status-card--ready={publicationPhase === "published"}
                 >
-                    <strong>Current story</strong>
-                    <span
-                        >{canonicalDocument
-                            ? canonicalDocument.slug
-                            : "No story output yet"}</span
-                    >
+                    <strong>Publication</strong>
+                    <span>{publicationPhaseLabel}</span>
                 </div>
             </div>
         {/if}
@@ -2171,10 +2466,13 @@
             <div class="publish-panel publish-panel--top">
                 <div class="publish-panel__copy">
                     <strong>Preview and publish</strong>
-                    <span>
-                        Review the rendered output, export assets if needed, or publish directly
-                        to Inside Parliament.
-                    </span>
+                    <span>{publicationPhaseCopy}</span>
+                    {#if suggestedPath}
+                        <p class="publish-panel__meta">
+                            Target file
+                            <code>{suggestedPath}</code>
+                        </p>
+                    {/if}
                 </div>
                 <div class="publish-panel__actions">
                     <button type="button" onclick={() => (openStage = "edit")}
@@ -2220,12 +2518,36 @@
                             onclick={publishCanonicalJson}
                             disabled={!canonicalDocument ||
                                 !suggestedPath ||
-                                !validation.ok}
+                                !validation.ok ||
+                                publicationPhase === "checking"}
                         >
-                            {hasEmbeddedImportImages
-                                ? "Convert images and publish"
-                                : "Publish"}
+                            {#if publicationPhase === "archived"}
+                                {hasEmbeddedImportImages
+                                    ? "Convert images and republish"
+                                    : "Republish and restore"}
+                            {:else if publicationExists}
+                                {hasEmbeddedImportImages
+                                    ? "Convert images and republish"
+                                    : "Republish"}
+                            {:else}
+                                {hasEmbeddedImportImages
+                                    ? "Convert images and publish"
+                                    : "Publish"}
+                            {/if}
                         </button>
+                        {#if publicationExists}
+                            <button
+                                type="button"
+                                class="destructive-button"
+                                onclick={unpublishCanonicalJson}
+                                disabled={publicationStatus === "archived" ||
+                                    publicationStateLoading}
+                            >
+                                {publicationStatus === "archived"
+                                    ? "Already unpublished"
+                                    : "Unpublish"}
+                            </button>
+                        {/if}
                     </div>
                 </div>
             </div>
@@ -2272,6 +2594,63 @@
                             <button type="button" onclick={startNewDraft}
                                 >Start a new draft</button
                             >
+                        </div>
+
+                        <div class="workflow-card">
+                            <strong>Open existing story</strong>
+                            <span
+                                >Load a published or archived story into the
+                                publisher and continue editing it in place.</span
+                            >
+                            <label class="story-search">
+                                <span class="sr-only"
+                                    >Search existing stories</span
+                                >
+                                <input
+                                    bind:value={existingStoryQuery}
+                                    type="search"
+                                    placeholder="Search by title, slug, or date"
+                                />
+                            </label>
+                            <div class="story-search-results">
+                                {#if filteredExistingStories.length}
+                                    {#each filteredExistingStories as story}
+                                        <button
+                                            type="button"
+                                            class="story-search-result"
+                                            class:story-search-result--active={existingStorySlug ===
+                                                story.slug}
+                                            onclick={() =>
+                                                selectExistingStory(story)}
+                                        >
+                                            <strong>{story.title}</strong>
+                                            <span
+                                                >{story.destination} · {story.slug}</span
+                                            >
+                                            <span class="story-search-result__meta"
+                                                >{formatExistingStoryLabel(story)}</span
+                                            >
+                                        </button>
+                                    {/each}
+                                {:else}
+                                    <p class="workflow-note">
+                                        No stories match that search yet.
+                                    </p>
+                                {/if}
+                            </div>
+                            {#if selectedExistingStory}
+                                <p class="workflow-note">
+                                    Selected:
+                                    <code>{selectedExistingStory.slug}</code>
+                                </p>
+                            {/if}
+                            <button
+                                type="button"
+                                onclick={openExistingStory}
+                                disabled={!existingStorySlug}
+                            >
+                                Open selected story
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -4030,6 +4409,26 @@
                                         selectedStructuredBlock.attrs
                                             .mediaType ?? "image",
                                     ) === "video"}
+                                        <label class="checkbox">
+                                            <input
+                                                type="checkbox"
+                                                checked={Boolean(
+                                                    selectedStructuredBlock.attrs
+                                                        .featureLatestVideo ??
+                                                        false,
+                                                )}
+                                                onchange={(event) =>
+                                                    updateSelectedStructuredBlock({
+                                                        featureLatestVideo:
+                                                            (
+                                                                event.currentTarget as HTMLInputElement
+                                                            ).checked,
+                                                    })}
+                                            />
+                                            <span
+                                                >Feature in Latest videos</span
+                                            >
+                                        </label>
                                         <label>
                                             <span>Poster image</span>
                                             <input
@@ -4045,6 +4444,47 @@
                                                     })}
                                             />
                                         </label>
+                                        {#if Boolean(
+                                            selectedStructuredBlock.attrs
+                                                .featureLatestVideo ?? false,
+                                        )}
+                                            <label>
+                                                <span>Carousel title</span>
+                                                <input
+                                                    value={String(
+                                                        selectedStructuredBlock
+                                                            .attrs
+                                                            .carouselTitle ??
+                                                            metadata.title,
+                                                    )}
+                                                    oninput={(event) =>
+                                                        updateSelectedStructuredBlock({
+                                                            carouselTitle:
+                                                                (
+                                                                    event.currentTarget as HTMLInputElement
+                                                                ).value,
+                                                        })}
+                                                />
+                                            </label>
+                                            <label>
+                                                <span>Carousel eyebrow</span>
+                                                <input
+                                                    value={String(
+                                                        selectedStructuredBlock
+                                                            .attrs
+                                                            .carouselEyebrow ??
+                                                            metadata.eyebrow,
+                                                    )}
+                                                    oninput={(event) =>
+                                                        updateSelectedStructuredBlock({
+                                                            carouselEyebrow:
+                                                                (
+                                                                    event.currentTarget as HTMLInputElement
+                                                                ).value,
+                                                        })}
+                                                />
+                                            </label>
+                                        {/if}
                                         <label>
                                             <span>Captions file</span>
                                             <input
@@ -4312,6 +4752,60 @@
                                         />
                                         <span>Autoplay while visible</span>
                                     </label>
+                                    <label class="checkbox">
+                                        <input
+                                            type="checkbox"
+                                            checked={Boolean(
+                                                selectedStructuredBlock.attrs
+                                                    .featureLatestVideo ??
+                                                    false,
+                                            )}
+                                            onchange={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    featureLatestVideo: (
+                                                        event.currentTarget as HTMLInputElement
+                                                    ).checked,
+                                                })}
+                                        />
+                                        <span>Feature in Latest videos</span>
+                                    </label>
+                                    {#if Boolean(
+                                        selectedStructuredBlock.attrs
+                                            .featureLatestVideo ?? false,
+                                    )}
+                                        <label>
+                                            <span>Carousel title</span>
+                                            <input
+                                                value={String(
+                                                    selectedStructuredBlock.attrs
+                                                        .carouselTitle ??
+                                                        metadata.title,
+                                                )}
+                                                oninput={(event) =>
+                                                    updateSelectedStructuredBlock({
+                                                        carouselTitle: (
+                                                            event.currentTarget as HTMLInputElement
+                                                        ).value,
+                                                    })}
+                                            />
+                                        </label>
+                                        <label>
+                                            <span>Carousel eyebrow</span>
+                                            <input
+                                                value={String(
+                                                    selectedStructuredBlock.attrs
+                                                        .carouselEyebrow ??
+                                                        metadata.eyebrow,
+                                                )}
+                                                oninput={(event) =>
+                                                    updateSelectedStructuredBlock({
+                                                        carouselEyebrow: (
+                                                            event.currentTarget as HTMLInputElement
+                                                        ).value,
+                                                    })}
+                                            />
+                                        </label>
+                                    {/if}
                                     {#if activeBlockTarget}
                                         <div class="asset-manager">
                                             <div class="asset-manager__header">
@@ -5322,6 +5816,52 @@
         font-size: 0.92rem;
     }
 
+    .story-search {
+        display: grid;
+    }
+
+    .story-search-results {
+        display: grid;
+        gap: 0.45rem;
+        max-height: 16rem;
+        padding-right: 0.1rem;
+        overflow-y: auto;
+    }
+
+    .story-search-result {
+        display: grid;
+        gap: 0.2rem;
+        align-items: start;
+        padding: 0.72rem 0.78rem;
+        border: 1px solid var(--studio-line);
+        border-radius: 4px;
+        background: var(--studio-panel);
+        text-align: left;
+    }
+
+    .story-search-result strong {
+        font-size: 0.96rem;
+    }
+
+    .story-search-result span {
+        font-size: 0.84rem;
+    }
+
+    .story-search-result__meta {
+        color: var(--studio-text-soft);
+    }
+
+    .story-search-result--active {
+        border-color: var(--studio-accent);
+        background: color-mix(
+            in srgb,
+            var(--studio-accent) 8%,
+            var(--studio-panel) 92%
+        );
+        box-shadow: 0 0 0 1px
+            color-mix(in srgb, var(--studio-accent) 30%, transparent);
+    }
+
     .workflow-note {
         margin: 0;
         color: var(--studio-text);
@@ -6182,6 +6722,23 @@
     .publish-panel__copy span {
         color: var(--studio-text);
         font-size: 0.92rem;
+    }
+
+    .publish-panel__meta {
+        margin: 0.15rem 0 0;
+        color: var(--studio-text);
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+
+    .publish-panel__meta code {
+        display: inline-block;
+        margin-left: 0.35rem;
+        padding: 0.08rem 0.32rem;
+        background: var(--studio-panel);
+        border: 1px solid var(--studio-line);
+        border-radius: 4px;
+        font-size: 0.8rem;
     }
 
     .publish-panel__actions-right {
