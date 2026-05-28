@@ -148,9 +148,18 @@
           },
           {
             "type": "text",
-            "text": " remains \"Our Power, Our Planet\" this year’s emphasis is on collective action, including the role of individuals, communities and institutions in protecting the environment amid evolving global, economic, and civic challenges. "
+            "text": " remains \"Our Power, Our Planet\" this year’s emphasis is on collective action, including the role of individuals, communities and institutions in protecting the environment amid evolving global, economic, and civic challenges."
           }
         ]
+      },
+      {
+        "type": "vote-map",
+        "title": "The Earth Day motion in the Dáil",
+        "intro": "The motion was a piece of Private Members' business brought forward by Deputy Roderic O'Gorman of the Green Party. It was subsequently amended by the Government, leading to a vote on the contents of the motion.",
+        "chamberSvg": "/media/dail-chamber.svg",
+        "voteData": "/data/dail-vote-sample.json",
+        "seatData": "/data/seatAssignmentsHistory.csv",
+        "membersData": "/data/dail-members.json"
       },
       {
         "type": "mediaTextBlock",

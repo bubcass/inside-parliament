@@ -120,6 +120,7 @@ export interface CommitteeReportNode {
     | 'heading'
     | 'paragraph'
     | 'flourish'
+    | 'vote-map'
     | 'image'
     | 'video'
     | 'table'
@@ -133,6 +134,7 @@ export interface CommitteeReportNode {
     {
       type:
         | 'flourish'
+        | 'vote-map'
         | 'image'
         | 'video'
         | 'table'
@@ -268,6 +270,35 @@ function mediaTextBlockFromNode(
             },
     },
     mediaSide,
+  };
+}
+
+function voteMapBlockFromNode(
+  node: ProseMirrorNode,
+): Extract<StoryBlock, { type: 'vote-map' }> | null {
+  const rawNode = node as unknown as Record<string, unknown>;
+  const chamberSvg = String(rawNode.chamberSvg ?? node.attrs?.chamberSvg ?? '').trim();
+  const voteData = String(rawNode.voteData ?? node.attrs?.voteData ?? '').trim();
+  const seatData = String(rawNode.seatData ?? node.attrs?.seatData ?? '').trim();
+  const membersData = String(rawNode.membersData ?? node.attrs?.membersData ?? '').trim();
+
+  if (!chamberSvg || !voteData || !seatData || !membersData) return null;
+
+  return {
+    type: 'vote-map',
+    ...(String(rawNode.title ?? node.attrs?.title ?? '').trim()
+      ? { title: String(rawNode.title ?? node.attrs?.title ?? '').trim() }
+      : {}),
+    ...(String(rawNode.intro ?? node.attrs?.intro ?? '').trim()
+      ? { intro: String(rawNode.intro ?? node.attrs?.intro ?? '').trim() }
+      : {}),
+    ...(String(rawNode.caption ?? node.attrs?.caption ?? '').trim()
+      ? { caption: String(rawNode.caption ?? node.attrs?.caption ?? '').trim() }
+      : {}),
+    chamberSvg,
+    voteData,
+    seatData,
+    membersData,
   };
 }
 
@@ -562,6 +593,18 @@ export function proseMirrorToCommitteeNodes(
       continue;
     }
 
+    if (node.type === 'vote-map') {
+      const block = voteMapBlockFromNode(node);
+      if (!block) continue;
+
+      nodes.push({
+        type: 'vote-map',
+        text: block.title ?? block.intro ?? 'Vote map',
+        block,
+      });
+      continue;
+    }
+
     if (node.type === 'sceneScrollyBlock') {
       const block = sceneScrollyBlockFromNode(node);
       if (!block) continue;
@@ -727,6 +770,16 @@ export function proseMirrorToNarrativeBlocks(
 
       flush();
       blocks.push(mediaText);
+      encounteredBodyContent = true;
+      continue;
+    }
+
+    if (node.type === 'vote-map') {
+      const voteMap = voteMapBlockFromNode(node);
+      if (!voteMap) continue;
+
+      flush();
+      blocks.push(voteMap);
       encounteredBodyContent = true;
       continue;
     }

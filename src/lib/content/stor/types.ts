@@ -69,6 +69,7 @@ export interface ProseMirrorNode {
     | 'imageBlock'
     | 'videoBlock'
     | 'mediaTextBlock'
+    | 'vote-map'
     | 'sceneScrollyBlock'
     | 'flourishBlock'
     | 'tableBlock'
