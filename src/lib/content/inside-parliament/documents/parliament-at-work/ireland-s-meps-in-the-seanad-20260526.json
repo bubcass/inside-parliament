@@ -8,11 +8,19 @@
   "title": "Ireland's MEPs in the Seanad",
   "dek": "The heart of the European project can sometimes feel far removed from Irish citizens. With its ongoing conversation with MEPs, the Seanad is looking to bridge that gap.",
   "eyebrow": "The Seanad at Work",
-  "topics": ["Seanad", "MEPs", "Europe"],
+  "topics": [
+    "Seanad",
+    "MEPs",
+    "Europe"
+  ],
   "layout": "standard",
   "status": "published",
   "language": "en",
-  "keywords": ["Seanad", "MEPs", "Europe"],
+  "keywords": [
+    "Seanad",
+    "MEPs",
+    "Europe"
+  ],
   "publishedDate": "2026-05-26",
   "contributors": [
     {
@@ -31,14 +39,6 @@
     "alt": "A wide view of the European Parliament in a plenary meeting",
     "position": "left center"
   },
-  "shortVideos": [
-    {
-      "title": "Ireland's MEPs in the Seanad",
-      "eyebrow": "The Seanad at Work",
-      "poster": "/media/shared/european-parliament.jpg",
-      "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4"
-    }
-  ],
   "content": {
     "type": "doc",
     "content": [
@@ -48,6 +48,15 @@
           {
             "type": "text",
             "text": "On a regular basis Seanad Éireann welcomes some of Ireland's Members of the European Parliament, MEPs, to speak in the Chamber. Standing Order 63(1) of Seanad Éireann allows for this type of engagement and the Cathaoirleach, Senator Mark Daly, believes it this discussion with Ireland's elected representatives in Europe is a crucial and potentially overlooked aspect of the work of Senators."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Speaking before MEPs addressed the Seanad in May 2026, the Cathaoirleach stated:"
           }
         ]
       },
@@ -64,6 +73,26 @@
             ]
           }
         ]
+      },
+      {
+        "type": "mediaTextBlock",
+        "attrs": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "The Cathaoirleach notes that decisions made in Brussels and Strasbourg shape everyday life in Ireland, from workers' rights and climate action to digital rules and much more.",
+            "Our MEPs are responsible for shaping those decisions on behalf of all of the Irish people, so this process brings Senators and MEPs together to discuss the matters that affect both Ireland as a nation and those relevant to people right across Europe.",
+            "The Seanad's ongoing discussion with MEPs is particularly important in light of the upcoming Irish Presidency of the Council of the European Union, which it will hold for the first time since 2013."
+          ],
+          "mediaType": "video",
+          "poster": "",
+          "captions": "",
+          "mediaSide": "right",
+          "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4",
+          "alt": "Describe the image",
+          "caption": "",
+          "credit": ""
+        }
       },
       {
         "type": "heading",
@@ -283,6 +312,16 @@
         ]
       },
       {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/midlands-north-west-meps-in-the-seanad.jpg",
+          "alt": "Midlands-North-West MEPs came before the Seanad in May 2026",
+          "caption": "Midlands-North-West MEPs came before the Seanad in May 2026",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
         "type": "paragraph",
         "content": [
           {
@@ -406,26 +445,6 @@
             "text": " is a Fine Gael/European Peoples Party MEP and a member of the Committee on on Agriculture and Rural Development, the Committee on Women’s Rights and Gender Equality and the Delegation for Relations with the United States."
           }
         ]
-      },
-      {
-        "type": "mediaTextBlock",
-        "attrs": {
-          "eyebrow": "",
-          "heading": "",
-          "paragraphs": [
-            "The Cathaoirleach notes that decisions made in Brussels and Strasbourg shape everyday life in Ireland, from workers' rights and climate action to digital rules and much more.",
-            "Our MEPs are responsible for shaping those decisions on behalf of all of the Irish people, so this process brings Senators and MEPs together to discuss the matters that affect both Ireland as a nation and those relevant to people right across Europe.",
-            "The Seanad's ongoing discussion with MEPs is particularly important in light of the upcoming Irish Presidency of the Council of the European Union, which it will hold for the first time since 2013."
-          ],
-          "mediaType": "video",
-          "poster": "",
-          "captions": "",
-          "mediaSide": "right",
-          "src": "/media/parliament-at-work/ireland-s-meps-in-the-seanad-20260526/cathaoirleach-meps-mobile-2.mp4",
-          "alt": "Describe the image",
-          "caption": "",
-          "credit": ""
-        }
       },
       {
         "type": "linkListBlock",
