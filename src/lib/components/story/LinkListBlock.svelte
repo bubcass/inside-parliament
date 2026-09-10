@@ -105,4 +105,28 @@
       margin-top: var(--space-2);
     }
   }
+
+  @media print {
+    .link-list {
+      margin: 8mm 0;
+      max-width: none;
+    }
+
+    h2 {
+      break-after: avoid;
+      color: #1f1f1f;
+      font-size: 18pt;
+    }
+
+    .link-card {
+      break-inside: avoid;
+      padding: 3mm 0;
+    }
+
+    .link-label,
+    .link-description {
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+  }
 </style>

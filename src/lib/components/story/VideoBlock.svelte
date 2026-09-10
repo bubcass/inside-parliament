@@ -133,4 +133,25 @@
       margin: 3.5rem auto;
     }
   }
+
+  @media print {
+    .video-block {
+      break-inside: avoid;
+      margin: 7mm 0;
+      max-width: none;
+    }
+
+    video,
+    .video-actions {
+      display: none;
+    }
+
+    figcaption {
+      border-top: 1px solid var(--color-line);
+      font-size: 8pt;
+      margin-top: 2mm;
+      max-width: none;
+      padding-top: 2mm;
+    }
+  }
 </style>

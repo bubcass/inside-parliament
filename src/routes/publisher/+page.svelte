@@ -64,6 +64,7 @@
         type: StorDocument["type"];
         featured: boolean;
         heroLayout: NonNullable<StorDocument["heroLayout"]> | "none";
+        showContents: boolean;
         title: string;
         dek: string;
         eyebrow: string;
@@ -108,6 +109,7 @@
         type: "article",
         featured: false,
         heroLayout: "contained",
+        showContents: false,
         title: "",
         dek: "",
         eyebrow: "",
@@ -134,17 +136,32 @@
     }
 
     function normalizeContributorDisplay(list: StorContributor[]) {
-        let hasVisibleAuthor = false;
+        const hasExplicitDisplayChoice = list.some(
+            (contributor) => typeof contributor.showAsAuthor === "boolean",
+        );
+        const selectedAuthorIndex = list.findIndex(
+            (contributor) =>
+                contributor.showAsAuthor === true &&
+                contributor.role.trim().toLowerCase() === "author",
+        );
+        const legacyAuthorIndex = hasExplicitDisplayChoice
+            ? -1
+            : list.findIndex(
+                  (contributor) =>
+                      contributor.role.trim().toLowerCase() === "author",
+              );
 
-        return list.map((contributor) => {
+        return list.map((contributor, index) => {
             const isEligible =
                 contributor.role.trim().toLowerCase() === "author";
-            if (isEligible && !hasVisibleAuthor) {
-                hasVisibleAuthor = true;
-                return { ...contributor, showAsAuthor: true };
-            }
+            const showAsAuthor =
+                isEligible &&
+                index ===
+                    (selectedAuthorIndex >= 0
+                        ? selectedAuthorIndex
+                        : legacyAuthorIndex);
 
-            return { ...contributor, showAsAuthor: false };
+            return { ...contributor, showAsAuthor };
         });
     }
 
@@ -1007,6 +1024,7 @@
             type: document.type,
             featured: document.featured ?? false,
             heroLayout: document.heroLayout ?? "contained",
+            showContents: document.showContents ?? false,
             title: document.title,
             dek: document.dek,
             eyebrow: document.eyebrow ?? "",
@@ -3109,6 +3127,13 @@
                             </div>
 
                             <div class="presentation-flags">
+                                <label class="checkbox">
+                                    <input
+                                        type="checkbox"
+                                        bind:checked={metadata.showContents}
+                                    />
+                                    <span>Show contents</span>
+                                </label>
                                 <label class="checkbox">
                                     <input
                                         type="checkbox"

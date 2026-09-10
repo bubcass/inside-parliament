@@ -78,4 +78,34 @@
       aspect-ratio: 4 / 3;
     }
   }
+
+  @media print {
+    .image-block,
+    .inline,
+    .wide,
+    .full {
+      break-inside: avoid;
+      margin: 7mm auto;
+      max-width: 155mm;
+      width: 100%;
+    }
+
+    img,
+    .inline img,
+    .wide img,
+    .full img {
+      aspect-ratio: auto;
+      border: 0;
+      height: auto;
+      max-height: 155mm;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    figcaption {
+      font-size: 8pt;
+      line-height: 1.35;
+      margin-top: 2mm;
+    }
+  }
 </style>

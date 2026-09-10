@@ -21,8 +21,35 @@ export function stripHtml(value: string) {
     .trim();
 }
 
-function renderMarkedText(text: string, marks: ProseMirrorMark[] = []) {
-  let output = escapeHtml(text);
+function renderBareUrls(text: string) {
+  const urlPattern = /\b(?:(?:https?:\/\/|www\.)[^\s<]+|(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^\s<]*)?)/gi;
+  let output = '';
+  let cursor = 0;
+
+  for (const match of text.matchAll(urlPattern)) {
+    const start = match.index ?? 0;
+    const candidate = match[0];
+    const trailingPunctuation = candidate.match(/[.,;:!?]+$/)?.[0] ?? '';
+    const visibleUrl = candidate.slice(0, candidate.length - trailingPunctuation.length);
+    if (!visibleUrl) continue;
+
+    const href = /^https?:\/\//i.test(visibleUrl) ? visibleUrl : `https://${visibleUrl}`;
+    output += escapeHtml(text.slice(cursor, start));
+    output += `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleUrl)}</a>`;
+    output += escapeHtml(trailingPunctuation);
+    cursor = start + candidate.length;
+  }
+
+  return output + escapeHtml(text.slice(cursor));
+}
+
+function renderMarkedText(
+  text: string,
+  marks: ProseMirrorMark[] = [],
+  options: { linkifyBareUrls?: boolean } = {},
+) {
+  const hasLinkMark = marks.some((mark) => mark.type === 'link');
+  let output = options.linkifyBareUrls && !hasLinkMark ? renderBareUrls(text) : escapeHtml(text);
 
   for (const mark of marks) {
     switch (mark.type) {
@@ -48,11 +75,23 @@ function renderMarkedText(text: string, marks: ProseMirrorMark[] = []) {
         output = `<sub>${output}</sub>`;
         break;
       case 'link':
-        if (mark.attrs?.href?.startsWith('#')) {
+        if (!mark.attrs?.href) {
           break;
         }
 
-        output = `<a href="${escapeHtml(mark.attrs?.href ?? '#')}">${output}</a>`;
+        if (mark.attrs.href.startsWith('#')) {
+          const footnoteReference = mark.attrs.href.match(
+            /^#footnote-(?!ref-)([a-z0-9_-]+)$/i,
+          );
+          const id = footnoteReference ? ` id="footnote-ref-${escapeHtml(footnoteReference[1])}"` : '';
+          const backReference = mark.attrs.href.match(/^#footnote-ref-([a-z0-9_-]+)$/i);
+          const ariaLabel = backReference
+            ? ` aria-label="Back to footnote reference ${escapeHtml(backReference[1])}"`
+            : '';
+          output = `<a${id} href="${escapeHtml(mark.attrs.href)}"${ariaLabel}>${output}</a>`;
+        } else {
+          output = `<a href="${escapeHtml(mark.attrs.href)}" target="_blank" rel="noopener noreferrer">${output}</a>`;
+        }
         break;
     }
   }
@@ -60,34 +99,66 @@ function renderMarkedText(text: string, marks: ProseMirrorMark[] = []) {
   return output;
 }
 
-export function renderInline(node: ProseMirrorNode): string {
+export function renderInline(
+  node: ProseMirrorNode,
+  options: { linkifyBareUrls?: boolean } = {},
+): string {
   switch (node.type) {
     case 'text':
-      return renderMarkedText(node.text ?? '', node.marks);
+      return renderMarkedText(node.text ?? '', node.marks, options);
     case 'hardBreak':
       return '<br>';
     default:
-      return (node.content ?? []).map(renderInline).join('');
+      return (node.content ?? []).map((child) => renderInline(child, options)).join('');
+  }
+}
+
+function renderPlainText(node: ProseMirrorNode): string {
+  switch (node.type) {
+    case 'text':
+      return node.text ?? '';
+    case 'hardBreak':
+      return ' ';
+    default:
+      return (node.content ?? []).map(renderPlainText).join('');
   }
 }
 
 export function renderList(node: ProseMirrorNode): string {
   const tag = node.type === 'orderedList' ? 'ol' : 'ul';
   const items = (node.content ?? []).map((item) => {
+    const footnoteBackReference = findLinkHref(item, /^#footnote-ref-([a-z0-9_-]+)$/i);
+    const id = footnoteBackReference
+      ? ` id="footnote-${escapeHtml(footnoteBackReference.slice('#footnote-ref-'.length))}"`
+      : '';
     const body = (item.content ?? [])
       .map((child) => {
         if (child.type === 'orderedList' || child.type === 'bulletList') {
           return renderList(child);
         }
 
-        return renderInline(child);
+        return renderInline(child, { linkifyBareUrls: Boolean(footnoteBackReference) });
       })
       .join('');
 
-    return `<li>${body}</li>`;
+    return `<li${id}>${body}</li>`;
   });
 
   return `<${tag}>${items.join('')}</${tag}>`;
+}
+
+function findLinkHref(node: ProseMirrorNode, pattern: RegExp): string | null {
+  const href = node.marks
+    ?.find((mark) => mark.type === 'link' && pattern.test(String(mark.attrs?.href ?? '')))
+    ?.attrs?.href;
+  if (href) return href;
+
+  for (const child of node.content ?? []) {
+    const nestedHref = findLinkHref(child, pattern);
+    if (nestedHref) return nestedHref;
+  }
+
+  return null;
 }
 
 function isOrderedListHtml(value: string) {
@@ -703,9 +774,13 @@ export function proseMirrorToNarrativeBlocks(
 
   for (const node of document.content ?? []) {
     if (node.type === 'heading') {
-      const heading = stripHtml(renderInline(node));
+      // Story headings are rendered by Svelte as text, not HTML. Keep them as
+      // plain text here so characters such as apostrophes and ampersands are
+      // not HTML-escaped once during conversion and then escaped a second time
+      // by the component.
+      const heading = renderPlainText(node).replace(/\s+/g, ' ').trim();
       const level = Number(node.attrs?.level ?? 1);
-      const normalizedHeading = heading.replace(/\s+/g, ' ').trim().toLowerCase();
+      const normalizedHeading = heading.toLowerCase();
 
       if (
         !encounteredBodyContent &&

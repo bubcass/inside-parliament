@@ -104,4 +104,42 @@
       min-width: 30rem;
     }
   }
+
+  @media print {
+    .table-block {
+      margin: 8mm 0;
+      max-width: none;
+    }
+
+    .table-shell {
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .table-shell :global(table) {
+      min-width: 0;
+      table-layout: auto;
+    }
+
+    .table-shell :global(thead) {
+      display: table-header-group;
+    }
+
+    .table-shell :global(tr) {
+      break-inside: avoid;
+    }
+
+    .table-shell :global(th),
+    .table-shell :global(td) {
+      font-size: 7.5pt;
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+      padding: 2mm;
+    }
+
+    .table-shell :global(a)::after {
+      content: none;
+    }
+  }
 </style>

@@ -14,6 +14,7 @@ export interface PublisherPreviewMetadata {
   type: StorDocument['type'];
   featured: boolean;
   heroLayout: NonNullable<StorDocument['heroLayout']> | 'none';
+  showContents: boolean;
   title: string;
   dek: string;
   eyebrow: string;
@@ -151,10 +152,18 @@ export function buildCanonicalPublisherDocument({
   const slug = metadata.slug.trim() || generatedSlug;
   const keywordList = splitKeywords(metadata.keywords);
   const derivedEyebrow = metadata.eyebrow.trim();
-  const authorContributor =
-    contributors.find((contributor) => contributor.role.trim().toLowerCase() === 'author') ??
-    contributors[0] ??
-    null;
+  const hasExplicitDisplayChoice = contributors.some(
+    (contributor) => typeof contributor.showAsAuthor === 'boolean',
+  );
+  const authorContributor = hasExplicitDisplayChoice
+    ? contributors.find(
+        (contributor) =>
+          contributor.showAsAuthor === true &&
+          contributor.role.trim().toLowerCase() === 'author',
+      ) ?? null
+    : contributors.find(
+        (contributor) => contributor.role.trim().toLowerCase() === 'author',
+      ) ?? contributors[0] ?? null;
   const authorName = authorContributor?.name?.trim() ?? '';
   const authorOrganisation = authorContributor?.affiliation?.trim() ?? '';
   const authorProfileRole = authorContributor?.profileRole?.trim() ?? '';
@@ -175,6 +184,7 @@ export function buildCanonicalPublisherDocument({
     destination: metadata.destination,
     featured: metadata.featured,
     ...(metadata.heroLayout !== 'none' ? { heroLayout: metadata.heroLayout } : {}),
+    showContents: metadata.showContents,
     title: title || 'Untitled document',
     dek: metadata.dek,
     ...(derivedEyebrow ? { eyebrow: derivedEyebrow } : {}),

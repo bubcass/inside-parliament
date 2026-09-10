@@ -252,4 +252,47 @@
       padding-left: var(--space-4);
     }
   }
+
+  @media print {
+    .scrolly {
+      margin: 9mm 0;
+      padding: 0;
+    }
+
+    .scrolly-intro,
+    .scrolly-grid {
+      max-width: none;
+    }
+
+    .scrolly-grid {
+      display: block;
+      margin-top: 5mm;
+    }
+
+    .media-sticky {
+      display: none;
+    }
+
+    .steps {
+      display: block;
+      padding: 0;
+    }
+
+    article {
+      break-inside: avoid;
+      margin: 0 0 7mm;
+      padding-left: 4mm;
+    }
+
+    .step-media {
+      display: block;
+      margin: 0 0 3mm;
+    }
+
+    .step-media img {
+      aspect-ratio: auto;
+      max-height: 125mm;
+      object-fit: contain;
+    }
+  }
 </style>

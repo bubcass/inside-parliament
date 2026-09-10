@@ -1,7 +1,9 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import type { Story } from '$lib/content/types';
+  import { onDestroy, onMount } from 'svelte';
+  import type { Story, StoryBlock } from '$lib/content/types';
   import BlockRenderer from './BlockRenderer.svelte';
+  import StoryAuthor from './StoryAuthor.svelte';
   import StoryToolbar from './StoryToolbar.svelte';
 
   let { story }: { story: Story } = $props();
@@ -9,6 +11,117 @@
   let hasHeroMedia = $derived(Boolean(heroSrc.trim()));
   let heroLayout = $derived(hasHeroMedia ? (story.heroLayout ?? 'contained') : 'contained');
   let heroIsVideo = $derived(heroSrc.toLowerCase().endsWith('.mp4'));
+
+  type ContentsEntry = {
+    id: string;
+    label: string;
+    blockIndex: number;
+  };
+
+  function headingForBlock(block: StoryBlock) {
+    if (block.type === 'text') {
+      return (block.headingLevel ?? 2) === 2 ? block.heading : undefined;
+    }
+
+    if (block.type === 'media-text') return block.heading;
+    return undefined;
+  }
+
+  function slugifyHeading(value: string) {
+    return value
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/&/g, ' and ')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '') || 'section';
+  }
+
+  let contentsEntries = $derived.by<ContentsEntry[]>(() => {
+    if (!story.showContents) return [];
+
+    const counts = new Map<string, number>();
+    return story.blocks.flatMap((block, blockIndex) => {
+      const heading = headingForBlock(block);
+      if (!heading) return [];
+
+      const baseId = slugifyHeading(heading);
+      const count = counts.get(baseId) ?? 0;
+      counts.set(baseId, count + 1);
+
+      return [{
+        id: count === 0 ? baseId : `${baseId}-${count + 1}`,
+        label: heading,
+        blockIndex
+      }];
+    });
+  });
+
+  let contentsIdMap = $derived.by(() =>
+    new Map(contentsEntries.map((entry) => [entry.blockIndex, entry.id]))
+  );
+  let showContentsRail = $derived(story.showContents && contentsEntries.length > 1);
+  let activeContentsId = $state<string | null>(null);
+  let teardownContentsObserver: (() => void) | null = null;
+
+  function setupContentsObserver() {
+    teardownContentsObserver?.();
+    teardownContentsObserver = null;
+
+    if (!showContentsRail || typeof window === 'undefined') {
+      activeContentsId = null;
+      return;
+    }
+
+    const headings = contentsEntries
+      .map((entry) => ({ id: entry.id, element: document.getElementById(entry.id) }))
+      .filter((entry): entry is { id: string; element: HTMLElement } => Boolean(entry.element));
+    if (!headings.length) return;
+
+    activeContentsId = headings[0].id;
+    const visible = new Map<string, number>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const id = (entry.target as HTMLElement).id;
+          if (entry.isIntersecting) visible.set(id, entry.boundingClientRect.top);
+          else visible.delete(id);
+        }
+
+        if (visible.size) {
+          activeContentsId = [...visible.entries()].sort((a, b) => a[1] - b[1])[0]?.[0]
+            ?? activeContentsId;
+          return;
+        }
+
+        const threshold = window.innerHeight * 0.3;
+        let fallbackId = headings[0].id;
+        for (const heading of headings) {
+          if (heading.element.getBoundingClientRect().top <= threshold) fallbackId = heading.id;
+          else break;
+        }
+        activeContentsId = fallbackId;
+      },
+      { rootMargin: '-20% 0px -55% 0px', threshold: [0, 0.1, 0.25, 0.5, 1] }
+    );
+
+    for (const heading of headings) observer.observe(heading.element);
+    teardownContentsObserver = () => {
+      observer.disconnect();
+      visible.clear();
+    };
+  }
+
+  onMount(setupContentsObserver);
+
+  $effect(() => {
+    showContentsRail;
+    contentsEntries;
+    if (typeof window === 'undefined') return;
+    queueMicrotask(setupContentsObserver);
+  });
+
+  onDestroy(() => teardownContentsObserver?.());
 </script>
 
 <article class="story">
@@ -29,7 +142,14 @@
           <h1>{story.title}</h1>
           <p class="lede overlay-dek">{@html story.dek}</p>
           <div class="meta overlay-meta" aria-label="Story details">
-            <span>By {story.byline}</span>
+            {#if story.byline}
+              <span class="author-meta">
+                By {story.byline}
+                {#if story.researcher?.role}
+                  <span class="author-role"> · {story.researcher.role}</span>
+                {/if}
+              </span>
+            {/if}
             <span>{story.date}</span>
             <span>{story.readingTime}</span>
           </div>
@@ -39,7 +159,14 @@
       <div class="mobile-immersive-copy">
         <p class="lede">{@html story.dek}</p>
         <div class="meta" aria-label="Story details">
-          <span>By {story.byline}</span>
+          {#if story.byline}
+            <span class="author-meta">
+              By {story.byline}
+              {#if story.researcher?.role}
+                <span class="author-role"> · {story.researcher.role}</span>
+              {/if}
+            </span>
+          {/if}
           <span>{story.date}</span>
           <span>{story.readingTime}</span>
         </div>
@@ -61,7 +188,14 @@
         <h1>{story.title}</h1>
         <p class="lede">{@html story.dek}</p>
         <div class="meta" aria-label="Story details">
-          <span>By {story.byline}</span>
+          {#if story.byline}
+            <span class="author-meta">
+              By {story.byline}
+              {#if story.researcher?.role}
+                <span class="author-role"> · {story.researcher.role}</span>
+              {/if}
+            </span>
+          {/if}
           <span>{story.date}</span>
           <span>{story.readingTime}</span>
         </div>
@@ -89,12 +223,35 @@
     {/if}
   </header>
 
-  <StoryToolbar {story} />
+  <StoryToolbar
+    {story}
+    hasContents={showContentsRail}
+    immersive={heroLayout === 'immersive'}
+  />
+  <StoryAuthor {story} hasContents={showContentsRail} />
 
-  <div class="story-body">
-    {#each story.blocks as block}
-      <BlockRenderer {block} />
-    {/each}
+  <div class="story-content" class:with-contents={showContentsRail}>
+    {#if showContentsRail}
+      <aside class="story-contents" aria-label="Table of contents">
+        <p class="story-contents-label">Contents</p>
+        <nav class="story-contents-nav">
+          {#each contentsEntries as entry}
+            <a
+              class="story-contents-link"
+              class:is-active={activeContentsId === entry.id}
+              href={`#${entry.id}`}
+              aria-current={activeContentsId === entry.id ? 'location' : undefined}
+            >{entry.label}</a>
+          {/each}
+        </nav>
+      </aside>
+    {/if}
+
+    <div class="story-body">
+      {#each story.blocks as block, index}
+        <BlockRenderer {block} headingId={contentsIdMap.get(index)} />
+      {/each}
+    </div>
   </div>
 </article>
 
@@ -207,6 +364,17 @@
     color: var(--color-faint);
     content: "/";
     margin-left: 0.65rem;
+  }
+
+  .author-role {
+    color: inherit;
+    font-weight: 400;
+  }
+
+  @media screen {
+    .author-meta {
+      display: none;
+    }
   }
 
   .hero-media {
@@ -345,19 +513,96 @@
   }
 
   .story-body {
-    padding: 0 var(--gutter) 0;
+    min-width: 0;
+    width: 100%;
   }
 
-  .story-hero.split + .story-body,
-  .story-hero.immersive + .story-body {
-    padding-top: 0;
+  .story-content {
+    margin: 0 auto;
+    max-width: calc(var(--wide) + (var(--gutter) * 2));
+    padding: 0 var(--gutter);
   }
 
   .story-body > :global(:first-child) {
     margin-top: 0;
   }
 
+  .story-content.with-contents {
+    align-items: start;
+    display: grid;
+    gap: clamp(var(--space-6), 5vw, var(--space-8));
+    grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr);
+  }
+
+  .story-contents {
+    max-height: calc(100svh - var(--site-header-height) - (var(--space-5) * 2));
+    overflow-y: auto;
+    position: sticky;
+    scrollbar-gutter: stable;
+    top: calc(var(--site-header-height) + var(--space-5));
+  }
+
+  .story-contents-label {
+    color: var(--color-accent-2);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: var(--line-height-small);
+    margin: 0 0 var(--space-3);
+    text-transform: uppercase;
+  }
+
+  .story-contents-nav {
+    border-top: 1px solid color-mix(in srgb, var(--color-line) 76%, transparent);
+    display: grid;
+  }
+
+  .story-contents-link {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-line) 68%, transparent);
+    color: var(--color-accent-2);
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
+    font-weight: 600;
+    line-height: 1.35;
+    padding: 0.85rem 0;
+    text-decoration: none;
+  }
+
+  .story-contents-link:hover,
+  .story-contents-link:focus-visible {
+    color: var(--link-hover);
+    text-decoration: none;
+  }
+
+  .story-contents-link.is-active {
+    color: var(--link-hover);
+    padding-left: 0.7rem;
+    position: relative;
+  }
+
+  .story-contents-link.is-active::before {
+    background: var(--color-accent);
+    border-radius: 999px;
+    content: '';
+    height: 1.05rem;
+    left: 0;
+    position: absolute;
+    top: 0.9rem;
+    width: 0.18rem;
+  }
+
   @media (max-width: 860px) {
+    .story-content.with-contents {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .story-contents {
+      max-height: none;
+      overflow: visible;
+      position: static;
+    }
+
     .story-hero.split,
     .story-hero.contained {
       display: block;
@@ -449,6 +694,148 @@
 
     .story-hero.immersive .mobile-immersive-copy .meta span:not(:last-child)::after {
       color: var(--color-faint);
+    }
+  }
+
+  @media print {
+    .story {
+      background: white;
+      overflow: visible;
+    }
+
+    .story-hero.split,
+    .story-hero.contained,
+    .story-hero.immersive {
+      display: block;
+      margin: 0;
+      max-width: none;
+      min-height: 0;
+      padding: 0;
+    }
+
+    .story-hero.split,
+    .story-hero.contained,
+    .story-hero.immersive .hero-media {
+      break-inside: avoid;
+    }
+
+    .story-hero.split .hero-copy,
+    .story-hero.contained .hero-copy,
+    .story-hero.immersive .hero-overlay {
+      background: #fff !important;
+      color: #1f1f1f;
+      margin: 0 0 7mm;
+      max-width: none;
+      padding: 0;
+      position: static;
+    }
+
+    .story-hero.immersive .hero-media {
+      background: #fff !important;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .story-hero.immersive .hero-overlay {
+      order: -1;
+    }
+
+    .story-hero.immersive .overlay-dek,
+    .story-hero.immersive .overlay-meta {
+      backdrop-filter: none;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      display: block;
+      padding: 0;
+    }
+
+    .story-hero.immersive h1,
+    .story-hero.immersive .lede,
+    .story-hero.immersive .meta,
+    .story-hero.immersive .eyebrow {
+      color: #1f1f1f;
+    }
+
+    .story-hero h1,
+    .story-hero.immersive h1 {
+      font-size: 28pt;
+      line-height: 1.08;
+      margin: 0 0 4mm;
+      max-width: 18ch;
+    }
+
+    .story-hero .lede,
+    .story-hero.immersive .lede {
+      color: #444;
+      font-size: 12pt;
+      line-height: 1.45;
+      margin: 0 0 4mm;
+      max-width: 42em;
+    }
+
+    .story-hero .meta,
+    .story-hero.immersive .overlay-meta {
+      color: #555;
+      font-size: 8.5pt;
+      margin: 0;
+    }
+
+    .story-hero .hero-media {
+      margin: 0;
+      max-width: none;
+      min-height: 0;
+    }
+
+    .story-hero .hero-media::after {
+      content: none;
+    }
+
+    .story-hero img,
+    .story-hero video,
+    .story-hero.immersive img,
+    .story-hero.immersive video {
+      aspect-ratio: auto !important;
+      border: 0;
+      display: block;
+      height: 88mm !important;
+      max-height: 88mm;
+      min-height: 0 !important;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+
+    .story-hero figcaption,
+    .story-hero .immersive-caption {
+      font-size: 8pt;
+      margin: 2mm 0 0;
+      max-width: none;
+      padding: 0;
+    }
+
+    .mobile-immersive-copy {
+      display: none;
+    }
+
+    .story-content,
+    .story-content.with-contents {
+      background: white;
+      display: block;
+      margin: 0;
+      max-width: none;
+      padding: 0;
+    }
+
+    .story-contents {
+      display: none;
+    }
+
+    .story-body {
+      background: white;
+      width: 100%;
     }
   }
 </style>

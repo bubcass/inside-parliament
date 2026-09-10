@@ -2,13 +2,62 @@
     import "../styles.css";
     import { base } from "$app/paths";
     import { page } from "$app/state";
+    import { onMount } from "svelte";
 
     let { children } = $props();
+    let isHeaderCompact = $state(false);
+    let isMobileViewport = $state(false);
+    let mobileSectionMenuOpen = $state(false);
+    let mobileSectionMenu: HTMLDivElement | undefined = $state();
     const isPublisherRoute = $derived(
         page.url.pathname === `${base}/publisher` ||
             page.url.pathname === `${base}/publisher/` ||
             page.url.pathname.startsWith(`${base}/publisher/`),
     );
+    const isResourceRoute = $derived(
+        page.url.pathname.startsWith(`${base}/stories/`) &&
+            page.url.pathname !== `${base}/stories/`,
+    );
+
+    function closeMobileSectionMenu() {
+        mobileSectionMenuOpen = false;
+    }
+
+    onMount(() => {
+        const syncHeader = () => {
+            const mobileMastheadHeight =
+                document.querySelector<HTMLElement>(".site-header")?.offsetHeight ?? 72;
+            isMobileViewport = window.matchMedia("(max-width: 860px)").matches;
+            const threshold = isMobileViewport ? mobileMastheadHeight : 72;
+            isHeaderCompact =
+                isResourceRoute &&
+                (isMobileViewport || window.scrollY > threshold);
+            if (!isHeaderCompact) closeMobileSectionMenu();
+        };
+        const closeOnOutsideClick = (event: PointerEvent) => {
+            if (
+                mobileSectionMenuOpen &&
+                mobileSectionMenu &&
+                !mobileSectionMenu.contains(event.target as Node)
+            ) {
+                closeMobileSectionMenu();
+            }
+        };
+        const closeOnEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") closeMobileSectionMenu();
+        };
+
+        syncHeader();
+        window.addEventListener("scroll", syncHeader, { passive: true });
+        window.addEventListener("pointerdown", closeOnOutsideClick);
+        window.addEventListener("keydown", closeOnEscape);
+
+        return () => {
+            window.removeEventListener("scroll", syncHeader);
+            window.removeEventListener("pointerdown", closeOnOutsideClick);
+            window.removeEventListener("keydown", closeOnEscape);
+        };
+    });
 </script>
 
 <svelte:head>
@@ -23,8 +72,12 @@
 
 <header
     class:site-header--studio={isPublisherRoute}
+    class:site-header--resource={isResourceRoute}
+    class:site-header--compact={isHeaderCompact}
     class="site-header"
     aria-label="Site header"
+    aria-hidden={isResourceRoute && isHeaderCompact && isMobileViewport ? "true" : undefined}
+    inert={isResourceRoute && isHeaderCompact && isMobileViewport ? true : undefined}
 >
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
@@ -105,7 +158,32 @@
     {/if}
 </header>
 
-<main id="content">
+{#if isResourceRoute}
+    <div class="resource-mobile-tools" aria-label="Inside Parliament navigation">
+        <div class="resource-mobile-nav" bind:this={mobileSectionMenu}>
+            <button
+                class="resource-mobile-nav__toggle"
+                type="button"
+                aria-expanded={mobileSectionMenuOpen}
+                aria-controls="resource-mobile-section-menu"
+                onclick={() => (mobileSectionMenuOpen = !mobileSectionMenuOpen)}
+            >
+                <span>Inside Parliament</span>
+                <i aria-hidden="true"></i>
+            </button>
+            {#if mobileSectionMenuOpen}
+                <nav id="resource-mobile-section-menu" class="resource-mobile-nav__menu" aria-label="Sections">
+                    <a href="{base}/parliament-now/" onclick={closeMobileSectionMenu}>Parliament Now</a>
+                    <a href="{base}/parliament-explained/" onclick={closeMobileSectionMenu}>Parliament Explained</a>
+                    <a href="{base}/parliament-at-work/" onclick={closeMobileSectionMenu}>Parliament at Work</a>
+                    <a href="{base}/my-parliament/" onclick={closeMobileSectionMenu}>My Parliament</a>
+                </nav>
+            {/if}
+        </div>
+    </div>
+{/if}
+
+<main id="content" class:resource-main={isResourceRoute}>
     {@render children()}
 </main>
 

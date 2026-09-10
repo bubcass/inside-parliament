@@ -1,6 +1,6 @@
 import type { Story, StoryBlock, StorySection } from '../types';
 import { proseMirrorToNarrativeBlocks } from './prosemirror';
-import type { StorDocument, StorEnhancement, StorRenderResult } from './types';
+import type { StorContributor, StorDocument, StorEnhancement, StorRenderResult } from './types';
 import { validateStorDocument } from './validate';
 
 function destinationToSection(document: StorDocument): StorySection {
@@ -59,14 +59,46 @@ function estimateReadingTime(document: StorDocument) {
 }
 
 function firstVisibleContributor(document: StorDocument) {
+  const contributors = document.contributors ?? [];
+  const hasExplicitDisplayChoice = contributors.some(
+    (contributor) => typeof contributor.showAsAuthor === 'boolean',
+  );
+
+  if (hasExplicitDisplayChoice) {
+    return (
+      contributors.find(
+        (contributor) =>
+          contributor.showAsAuthor === true &&
+          contributor.role.trim().toLowerCase() === 'author',
+      ) ?? null
+    );
+  }
+
   return (
-    document.contributors?.find((contributor) => contributor.showAsAuthor) ??
-    document.contributors?.find(
+    contributors.find(
       (contributor) => contributor.role.trim().toLowerCase() === 'author',
     ) ??
-    document.contributors?.[0] ??
+    contributors[0] ??
     null
   );
+}
+
+function visibleResearcher(document: StorDocument, contributor: StorContributor | null) {
+  const hasExplicitDisplayChoice = document.contributors?.some(
+    (entry) => typeof entry.showAsAuthor === 'boolean',
+  ) ?? false;
+
+  if (hasExplicitDisplayChoice && !contributor) return undefined;
+  if (!contributor) return document.researcher;
+
+  return {
+    ...document.researcher,
+    name: contributor.name,
+    role: contributor.profileRole ?? document.researcher?.role,
+    organisation: contributor.affiliation ?? document.researcher?.organisation,
+    bio: contributor.bio ?? document.researcher?.bio,
+    image: contributor.profileImage ?? document.researcher?.image,
+  };
 }
 
 function headingForBlock(block: StoryBlock) {
@@ -131,9 +163,9 @@ export function storDocumentToStory(document: StorDocument): StorRenderResult {
       byline:
         document.byline ??
         contributor?.name ??
-        'Houses of the Oireachtas',
+        '',
       abstract: document.abstract,
-      researcher: document.researcher,
+      researcher: visibleResearcher(document, contributor),
       date: formatDate(document.publishedDate),
       publishedDate: document.publishedDate,
       readingTime: estimateReadingTime(document),

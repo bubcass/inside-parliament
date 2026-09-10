@@ -4,7 +4,7 @@
   import { autoplayWhileVisible } from './videoAutoplayViewport';
   import { shareVideoAsset } from './videoShare';
 
-  let { block }: { block: MediaTextBlock } = $props();
+  let { block, headingId }: { block: MediaTextBlock; headingId?: string } = $props();
   let mediaSide = $derived(block.mediaSide ?? 'right');
   let image = $derived(block.media.type === 'image' ? (block.media.asset as ImageAsset) : undefined);
   let video = $derived(block.media.type === 'video' ? (block.media.asset as VideoAsset) : undefined);
@@ -38,7 +38,7 @@
       <p class="eyebrow">{block.eyebrow}</p>
     {/if}
     {#if block.heading}
-      <h2>{block.heading}</h2>
+      <h2 id={headingId}>{block.heading}</h2>
     {/if}
     {#each block.paragraphs as paragraph}
       <p>{@html paragraph}</p>
@@ -126,6 +126,7 @@
     font-weight: var(--font-weight-heading);
     line-height: var(--line-height-heading);
     margin: 0 0 var(--space-stack);
+    scroll-margin-top: calc(var(--site-header-height, 3.25rem) + var(--space-5));
     text-wrap: balance;
   }
 
@@ -267,6 +268,69 @@
       aspect-ratio: auto;
       max-height: none;
       width: 100%;
+    }
+  }
+
+  @media print {
+    .media-text,
+    .media-text.left,
+    .media-text.right {
+      display: block;
+      margin: 8mm 0;
+      max-width: none;
+    }
+
+    .copy {
+      max-width: none;
+    }
+
+    h2 {
+      break-after: avoid;
+      color: #1f1f1f;
+      font-size: 18pt;
+      margin-bottom: 3mm;
+    }
+
+    .copy > p:not(.eyebrow) {
+      font-size: 10.5pt;
+      line-height: 1.55;
+      margin-bottom: 3.5mm;
+      orphans: 3;
+      widows: 3;
+    }
+
+    figure,
+    .media-text.left figure {
+      break-inside: avoid;
+      margin: 5mm auto 0;
+      max-width: 110mm;
+      order: 0;
+    }
+
+    .image-figure img {
+      aspect-ratio: auto;
+      display: block;
+      height: auto;
+      margin-inline: auto;
+      max-height: 110mm;
+      max-width: 100%;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .video-figure video,
+    .video-actions {
+      display: none;
+    }
+
+    .caption {
+      font-size: 8pt;
+      line-height: 1.35;
+      margin-top: 2mm;
+    }
+
+    .copy > p:not(.eyebrow) :global(a)::after {
+      content: none;
     }
   }
 </style>

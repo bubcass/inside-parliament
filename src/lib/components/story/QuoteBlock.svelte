@@ -61,4 +61,24 @@
       padding-left: var(--space-4);
     }
   }
+
+  @media print {
+    .quote-block {
+      break-inside: avoid;
+      border-left-width: 2mm;
+      margin: 8mm 0;
+      max-width: none;
+      padding-left: 5mm;
+    }
+
+    .quote-copy {
+      font-size: 11pt;
+      line-height: 1.45;
+    }
+
+    figcaption {
+      font-size: 8pt;
+      margin-top: 3mm;
+    }
+  }
 </style>

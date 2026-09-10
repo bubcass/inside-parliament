@@ -1,0 +1,1366 @@
+{
+  "id": "the-cosmic-ballet-20260910",
+  "slug": "the-cosmic-ballet-20260910",
+  "type": "article",
+  "destination": "parliament-at-work",
+  "featured": true,
+  "heroLayout": "split",
+  "showContents": true,
+  "title": "The cosmic ballet",
+  "dek": "Communicating the work of Parliament requires balancing our democratic obligations with the constantly shifting ways in which people read the world around them.",
+  "eyebrow": "Parliamentary communications",
+  "topics": [
+    "communications",
+    "digital communications",
+    "news",
+    "media"
+  ],
+  "layout": "standard",
+  "status": "published",
+  "language": "en",
+  "keywords": [
+    "communications",
+    "digital communications",
+    "news",
+    "media"
+  ],
+  "publishedDate": "2026-09-10",
+  "contributors": [
+    {
+      "name": "David Cass",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": false,
+      "profileRole": "Web content editor"
+    },
+    {
+      "name": "Karin Whooley",
+      "role": "author",
+      "affiliation": "Communications",
+      "showAsAuthor": true,
+      "profileRole": "Principal Officer"
+    }
+  ],
+  "researcher": {
+    "name": "Karin Whooley",
+    "role": "Principal Officer",
+    "organisation": "Communications"
+  },
+  "hero": {
+    "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/leinster_house.mp4",
+    "alt": "The solar eclipse",
+    "position": "left center"
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The cosmic ballet"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In the warm late summer of 2026, thousands of people in Ireland cast their eyes upwards one evening to a darkening sky as the moon’s silhouette cast a shadow over the sun. A partial solar eclipse."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In the days and hours preceding this cosmic event, we saw people queuing on South Great George's Street for eclipse glasses despite the sticky weather. We saw children and adults alike following the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "Bosco"
+          },
+          {
+            "type": "text",
+            "text": "-inspired instructions for a pinhole camera from the RTÉ website. People waved colanders in the air without fear of ridicule."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The media coverage of the partial eclipse reached saturation point for a couple of days on the TV, radio and the web. It was all over social media and remarkably free of negativity."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "There is no public relations firm for the sun and moon. There was no media training for the upcoming eclipse. The sun and moon have managed perfectly well for a billion years without a communications strategy."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "We pay no heed to the sun and moon most of the time but when their paths cross in a particular way - a cosmic ballet - there are live blogs, explainers, breathless weather forecasts, safety messages and a national shortage of eclipse glasses."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The message"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Media theorist Marshall McLuhan famously declared \"The medium is the message\". He wrote this in the 1960s in arguing that what is said in a newspaper or on television cannot easily be separated from "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "how"
+          },
+          {
+            "type": "text",
+            "text": " that message is delivered and received."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "So in thinking about our parliamentary communications we need to keep in mind "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "what our message is"
+          },
+          {
+            "type": "text",
+            "text": " for the people we want to receive it."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Unlike the 1960s, today’s media landscape is not just about television and newspapers; we have myriad ways of finding out what happens in Leinster House, including podcasts, blogs, the many social media platforms, messaging apps such as WhatsApp, radio and even AI summaries."
+          }
+        ]
+      },
+      {
+        "type": "mediaTextBlock",
+        "attrs": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "Our message, our information about what happens here in the Oireachtas, is not merely that something happened in the Chamber or on the Plinth. It is not just a debate on data centres, the launch of a committee report or a vote on carbon taxation.",
+            "Our message is an event selected, shaped into a form, carried through a channel - the website, a short video, a press release, a public engagement event - and it is then received by an audience.",
+            "Change any one of those constituent parts and the message changes too. All this happens before we get to the end user, who will take that message and start the process all over again."
+          ],
+          "mediaType": "image",
+          "poster": "",
+          "captions": "",
+          "mediaSide": "right",
+          "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/marshall-mcluhan.jpg",
+          "alt": "Marshall McLuhan",
+          "caption": "Marshall McLuhan's \"The medium is the message\" remains true even as the media landscape fragments.",
+          "credit": "",
+          "featureLatestVideo": false,
+          "carouselTitle": "",
+          "carouselEyebrow": ""
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "If I can't show it, you can't see me"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In the Oireachtas the raw material is abundant. Members make speeches, hundreds of parliamentary questions are asked each sitting day and Bills are put forward with amendments. Motions and votes punctuate the business. A hundred hours of live proceedings may be streamed each week and hundreds of thousands of words are published in the Official Report."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This abundance creates its own problem. Nobody experiences all of Parliament directly. Everyone receives a selection."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "For much of the 20th century, that selection was made mainly by newspaper editors and broadcasters. An Official Report has been published since 1919 but when it was physically published either as a bound volume or as a daily book, its audience could only have reached into the hundreds on a regular basis."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "It was mainly the news editors in RTÉ or the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "Irish Press"
+          },
+          {
+            "type": "text",
+            "text": " or the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "Irish Times"
+          },
+          {
+            "type": "text",
+            "text": " who selected the messaging for what happened in Parliament. These were the gatekeepers."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Video records of proceedings only really became a formal asset from the 1990s and it was only much more recent streaming and Oireachtas TV broadcasting that brought it to the mainstream."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Our parliamentary democracy kept on going, like the moon orbiting the Earth orbiting the sun, but by the dawn of the new century, it was still only the budgets, elections, political resignations or heaves - the major cosmic events - that got people to look up "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "en masse"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Digital witnesses"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "With the nascent Internet we saw the emergence of a new type of democracy. Information itself had been democratised."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tim Berners-Lee is one of the founders of the modern web and that was his aspiration; a web of collaboration, of interconnected data that could be shared by anybody with a phone line."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Newspaper editors were no longer the sole gatekeepers of information, deciding what was good or bad, worthy or unworthy. People could make that choice for themselves."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "By the middle of the 1990s the Official Report had been digitised and for the first time the definitive record of everything that happened in Leinster House was at the end of a mouse click."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Of course, that cosmic ballet keeps going. From the web's idealistic beginnings, new gatekeepers ascended in Facebook, X and Tik-Tok. Unlike the newspaper and TV editors, the new gatekeepers were not people. Now algorithms decided the media feed and the messages that people received."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The behemoth social platforms have reduced the distance between what happens in Leinster House and the messages emanating from Parliament; there are comments, posts, videos and podcasts within seconds and minutes of parliamentary events. There has been an explosion in the number of people selecting, clipping, captioning and commenting on the work that happens in the Oireachtas."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The net result is that the same parliamentary moment can be a line in the Official Report, a television package, a short vertical video on Snapchat, a screenshot, a reaction clip, a meme, a search result and an answer generated by an AI assistant."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The event may be the same. The message is not."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The medium and our message"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Have we ever been in control of Parliament’s messaging? When the newspapers and TV and radio held the ascendancy, it was the editors or newspaper owners who had an outsize role in deciding the message."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Today we have commentators across every media avenue. The rise of the citizen journalist. It is really hard to argue that we have control of our message."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Another complication is that history is not a clean sequence in which each new medium ousts the incumbent. Print did not vanish when radio arrived. Television did not abolish newspapers. The web did not fully displace television. We have kept nearly everything and added more."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "What changed was the way people encountered parliamentary information and, in particular, the speed of the information cycle"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-1",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[1]"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "A bound volume required deliberate access with a trip to the library or a person being inside the Leinster House bubble. A newspaper offered a mediated summary. Radio and television added voice and visual immediacy. The web made the source searchable and available at any hour. Social media placed fragments of our messaging inside personalised feeds."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/reuters-research.png",
+          "alt": "Describe the image",
+          "caption": "A growing risk is that diffuse channels for messages will splinter understanding.",
+          "credit": "Reuters Digital News Report",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Fragmentation"
+          },
+          {
+            "type": "text",
+            "text": " is a real problem. The old mass market - our audience - has splintered across channels, formats, creators and communities. Two people can follow events from the same political day and receive almost no overlap in what they see. They are literally seeing, hearing and reading different messages."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The cosmic ballet goes on and more people are looking up in different ways."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "The economies, stupid"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In 1992, Arkansas Governor Bill Clinton's campaign team won the US presidential election, surprisingly beating the sitting President H.W. Bush. The mantra “The economy, stupid” was credited with playing a major part in driving the Clinton team’s success."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "But today any message we put together in parliamentary communications is not concerned with GDP or inflation but by other economies."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The first is the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "attention economy"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-2",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[2]"
+          },
+          {
+            "type": "text",
+            "text": ". People’s attention is finite, so every notification, publisher, platform and public body is competing for a share of it. Worse still, that attention has been monetised, and more clicks, staying longer on a platform and flurries of retweets and likes translate into advertising revenue."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Related to this is what William Davies calls the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "reaction economy"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-3",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "bold"
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[3]"
+          },
+          {
+            "type": "text",
+            "text": ". Information is no longer valued only for what it tells us. It is also valued for the response it provokes. The commodities are now the like, the quote-post, the angry reply, the counter-reaction to the reaction."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The attention and reaction economies might bring a temptation to become louder, faster and more reactive. But a truly democratic institution does not have the luxury of judging success by noise alone. We cannot engagement-farm. Engagement is useful but accuracy, context and "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "trust"
+          },
+          {
+            "type": "text",
+            "text": " are indispensable. If we lose those, we may lose the only reason people have to engage with the Houses of the Oireachtas."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This all has practical consequences too. We cannot assume that publishing something on our own website means the public will find it."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "We have a dedicated team of press officers on our parliamentary communications team but we cannot assume a press release reaches someone, even indirectly, when that person gets news through a creator's short video on YouTube or Tik-Tok. We cannot assume that one social platform reaches the audience that another platform reached two years ago."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Reuters Institute research from 2025 indicates that across the markets it studied, social and video networks were the main source of news for 44% of 18-to-24-year-olds"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-4",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[4]"
+          },
+          {
+            "type": "text",
+            "text": ". Its 2026 report groups social media, video networks and AI chatbots together and puts the figure for that age group above 50%"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "#footnote-5",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              },
+              {
+                "type": "superscript"
+              }
+            ],
+            "text": "[5]"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "According to the research, it is possible that half of the cohort of young people who should be ripe for political engagement may never visit our website to read the Official Report, read our press releases or see our very fine streaming of proceedings."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Connecting with Parliament"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "In putting together our communications strategy, one finding derived from the more than 500 responses is especially interesting."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Most people learn about what happens in the Oireachtas through national and local media, radio, television, social media and other websites. "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "When people want to hear the messaging about what happens here in Leinster House, there's a good chance we're not first, second or even third on the list"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is not an argument against these other sources. It is very easily argued that a healthy parliamentary democracy needs journalists, commentators, civil society and, yes, the people themselves, to interpret Parliament."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "But it is an argument for a stronger and more proactive primary source"
+          },
+          {
+            "type": "text",
+            "text": ". If people meet us elsewhere first, our information must travel well. It must speak everyone's language. And when people do arrive to us, that primary source must be easy to find, clear enough to understand and solid enough to trust."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Our strategies"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Our communications strategy is in train and it is the basis by which we can remodel how we think about our messaging."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "We aim to provide trusted, accessible communications. We want to serve Members in their parliamentary work while engaging citizens with democracy. We want to connect staff and support an informed public understanding of Parliament."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The strategy goals include maintaining broadcasting excellence; deepening public engagement and trust; improving reach by making parliamentary information easier to find and understand; strengthening media relations and enquiry services; improving internal connection; and supporting national and international parliamentary initiatives."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "That matters because institutional communications can easily be mistaken for institutional promotion."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "But our work is not about telling people that Parliament is wonderful. It is about allowing and perhaps even inviting people to see what Parliament is, what it does, how it works and how they can take part in our democratic process. Sometimes the result will be admiration. A lot of the time it will be criticism. The communications job is not to choose between those reactions. It is to make that informed reaction possible."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Flowing from our overall communications strategy is a digital communications strategy that proposes a unified digital service with a single editorial direction."
+          }
+        ]
+      },
+      {
+        "type": "mediaTextBlock",
+        "attrs": {
+          "eyebrow": "",
+          "heading": "",
+          "paragraphs": [
+            "We want to move from reactive and fragmented updates towards proactive, message-led storytelling.",
+            "Essentially, we are looking to join up all the work that goes on in Leinster House to create an accurate, nimble and usefully versatile message.",
+            "In doing this we must consider not just our message but our formats, workflows, standards and technology together. These cannot be separate projects. They are parts of the same public service. They combine to form the message that we bring from this Parliament."
+          ],
+          "mediaType": "image",
+          "poster": "",
+          "captions": "",
+          "mediaSide": "left",
+          "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/full-chamber.png",
+          "alt": "Visualisation of a vote in the Dáil Chamber",
+          "caption": "The language of Parliament can make it difficult to speak the language of our audience.",
+          "credit": "",
+          "featureLatestVideo": false,
+          "carouselTitle": "",
+          "carouselEyebrow": ""
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Wayfinding"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The work that we do in Leinster House is not always the brightest thing in the feed. It does not need to be. It is the fixed point by which other accounts of what happens in Parliament can be or indeed must be checked."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Like the sun and moon, the work of Parliament does not need publicity. Sittings take place. Bills are passed. Votes take place and motions are passed or defeated. Outside the walls of Leinster House, a minority of people pause to think about the machinery that makes it happen."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "But then maybe something unusual happens - a consequential debate, an extraordinary exchange, a disputed quotation or a close vote - and suddenly everyone needs the record. The constant becomes visible. There's a queue of people looking for eclipse glasses."
+          }
+        ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/vote-explorer-2.png",
+          "alt": "Visual of a vote in the Chamber",
+          "caption": "Voting visualised and looking to pique a curiosity in our potential audience.",
+          "credit": "",
+          "layout": "wide"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "We adapt; our democratic obligation does not"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "No matter our message, we need to rigorously interrogate how we build it."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "What is the message? Who needs it? Which form serves them? What context must travel with it? Where is the source and why should people trust it?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Is it accurate? Is it impartial? Is it accessible? Can the audience see where our information came from? Does it preserve context? Does it help somebody understand Parliament rather than merely produce plausible words about it?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The rise of AI - whether in the form of a Google search powered by Gemini, a ChatGPT conversation on a phone or the AI summary you may be using right now - does not reduce the importance of good parliamentary communications directly from the Houses of the Oireachtas Service; in fact, it has the opposite effect. It absolutely increases the value of a source that is authoritative, transparent and available for verification."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Is the role of parliamentary communications becoming less relevant because potentially fewer people want to sit down to read complicated parliamentary debates from beginning to end, or want to read press releases, or watch broadcasts of long days of proceedings?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Or is that role becoming more relevant because a fragmented, synthetic and highly reactive information environment needs an authoritative source more than ever?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Is the work we do in Parliament becoming less visible because the work of politics - of the elected Members we serve - is increasingly happening on platforms and spaces outside the Leinster House campus?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Or is the work becoming more visible because what happens in Parliament now appears in search results, video clips, datasets, and visual tools far beyond the newspaper and television spaces it inhabited in the last century?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The way people communicate with each other is constantly shifting, changing and morphing into something new. There will always be newer platforms, new formats and new arguments about how we can get our message across."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "But our mission should be a simple one: "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Make Parliament easier to find, see and explore"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Give messages with enough clarity and context to remain truthful while remaining nimble to people's tastes and behaviours. People are the "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "italic"
+              }
+            ],
+            "text": "demos"
+          },
+          {
+            "type": "text",
+            "text": " in democracy after all. Keep the clear route back to the source and keep producing the source with the care and authority that gives everything else its value."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Democracy depends on people being able to see it, understand it, question it and return to the record. As with justice, people do not just seek democracy, "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "they need to see democracy being done"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Good communications help people notice the Houses of the Oireachtas. The work we do in Leinster House gives them something trustworthy to find."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "The channels may change but the cosmic ballet goes on."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Look up."
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1,
+          "type": null
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "John Burn-Murdoch, \"The Misinformation Discourse Is a Distraction,\" "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Financial Times"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", 21 Mar. 2025, ft.com "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-1",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "See Curt Steinhorst, \"Lost in the Scroll: The Hidden Impact of the Attention Economy,\" "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Forbes"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", 6 Feb. 2024, www.forbes.com/sites/curtsteinhorst/2024/02/06/lost-in-the-scroll-the-hidden-impact-of-the-attention-economy/ "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-2",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "William Davies, \"The Reaction Economy,\" "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "London Review of Books"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", vol. 45, no. 5, 2 Mar. 2023, www.lrb.co.uk/the-paper/v45/n05/william-davies/the-reaction-economy. "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-3",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Nic Newman et al., "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Digital News Report 2025"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", Reuters Institute for the Study of Journalism, 17 June 2025, reutersinstitute.politics.ox.ac.uk/digital-news-report/2025 "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-4",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Jim Egan et al., "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "text": "Digital News Report 2026"
+                  },
+                  {
+                    "type": "text",
+                    "text": ", Reuters Institute for the Study of Journalism, 2026, reutersinstitute.politics.ox.ac.uk/digital-news-report/2026 "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#footnote-ref-5",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": null,
+                          "title": null
+                        }
+                      }
+                    ],
+                    "text": "↑"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  }
+}
