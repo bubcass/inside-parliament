@@ -258,7 +258,8 @@
 <style>
   .story {
     overflow: clip;
-    --site-header-height: 3.25rem;
+    /* Article pages begin with the compact secondary rail only. */
+    --site-header-height: 2.75rem;
   }
 
   .story-hero.split {
@@ -457,7 +458,7 @@
 
   .hero-overlay {
     bottom: clamp(var(--space-7), 8vh, 5rem);
-    color: var(--color-paper);
+    color: var(--interactive-overlay-text);
     left: max(var(--gutter), calc((100vw - var(--wide)) / 2 + var(--gutter)));
     max-width: min(34rem, calc(100vw - (var(--gutter) * 2)));
     position: absolute;
@@ -469,20 +470,23 @@
     backdrop-filter: blur(10px);
     background: linear-gradient(
       180deg,
-      rgba(24, 21, 18, 0.62),
-      rgba(24, 21, 18, 0.46)
+      var(--interactive-overlay-start),
+      var(--interactive-overlay-end)
     );
-    border: 1px solid rgba(255, 253, 248, 0.14);
+    border: 1px solid var(--interactive-overlay-border);
     border-radius: 0.5rem;
-    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0.75rem 2rem var(--interactive-shadow);
     padding: var(--space-3) var(--space-4);
   }
 
   .story-hero.immersive h1,
-  .story-hero.immersive .lede,
-  .story-hero.immersive .meta,
   .story-hero.immersive .eyebrow {
-    color: var(--color-paper);
+    color: var(--interactive-overlay-heading);
+  }
+
+  .story-hero.immersive .lede,
+  .story-hero.immersive .meta {
+    color: var(--interactive-overlay-text);
   }
 
   .story-hero.immersive h1 {
@@ -530,7 +534,6 @@
 
   .story-body > :global(*) {
     margin-block: 0 !important;
-    max-width: 100%;
     min-width: 0;
   }
 
@@ -600,8 +603,22 @@
   }
 
   @media (max-width: 860px) {
+    .story-content,
+    .story-body {
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .story-body > :global(*) {
+      max-width: 100%;
+    }
+
     .story-body {
       --story-block-gap: clamp(2.75rem, 10vw, 3.5rem);
+    }
+
+    .story {
+      --site-header-height: 3.625rem;
     }
 
     .story-content.with-contents {

@@ -30,9 +30,7 @@
 
 <section class="page-shell my-parliament-page">
     <header>
-        <p class="eyebrow">Saved stories</p>
-        <h1>My Parliament</h1>
-        <p class="lede">
+        <p class="section-intro">
             Save the stories important to you and keep in the loop with what
             happens in the Oireachtas.
         </p>
@@ -48,7 +46,7 @@
                 later.
             </p>
             <p>
-                Saved stories are storied in your browser and won't appear on
+                Saved stories are stored in your browser and won't appear on
                 other devices. They do not require a sign-on but may be cleared
                 if your browser data is removed.
             </p>
@@ -107,23 +105,23 @@
 
 <style>
     .my-parliament-page {
-        padding-top: clamp(var(--space-7), 7vw, 4.75rem);
+        padding-top: clamp(var(--space-6), 4vw, 3rem);
     }
 
     header {
         border-bottom: 1px solid
             color-mix(in srgb, var(--color-line) 55%, transparent);
-        margin-bottom: var(--space-section);
-        padding-bottom: var(--space-6);
+        margin-bottom: clamp(var(--space-6), 4vw, 3rem);
+        padding-bottom: var(--space-5);
     }
 
-    h1 {
+    .section-intro {
         color: var(--color-accent-2);
         font-family: var(--font-sans);
-        font-size: var(--font-size-h1);
-        font-weight: var(--font-weight-heading);
-        line-height: var(--line-height-heading);
-        margin: 0 0 var(--space-stack-tight);
+        font-size: clamp(1.16rem, 1.35vw, 1.32rem);
+        font-weight: 400;
+        line-height: 1.55;
+        margin: 0;
     }
 
     .archive-list {
@@ -219,7 +217,7 @@
 
     .empty-state {
         border: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent);
-        background: color-mix(in srgb, var(--color-soft) 45%, white);
+        background: color-mix(in srgb, var(--color-soft) 62%, var(--color-panel));
         padding: clamp(var(--space-5), 4vw, var(--space-7));
         max-width: var(--measure-prose);
     }

@@ -372,6 +372,9 @@ function voteMapBlockFromNode(
     ...(String(rawNode.caption ?? node.attrs?.caption ?? '').trim()
       ? { caption: String(rawNode.caption ?? node.attrs?.caption ?? '').trim() }
       : {}),
+    ...(String(rawNode.surface ?? node.attrs?.surface ?? '').trim() === 'light'
+      ? { surface: 'light' as const }
+      : {}),
     chamberSvg,
     voteData,
     seatData,

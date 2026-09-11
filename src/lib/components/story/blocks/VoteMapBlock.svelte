@@ -93,7 +93,7 @@
     Tá: '#2e8b57',
     Níl: '#c0392b',
     Staon: '#84a1c4',
-    Absent: '#d6d3d1'
+    Absent: 'var(--interactive-absent-seat)'
   };
 
   const clean = (value: unknown) => (value == null ? '' : String(value).trim());
@@ -276,7 +276,7 @@
     const paintSeat = (el: SVGElement) => {
       const seatLabel = el.getAttribute('data-seat') ?? '';
       const seat = seatIndex.get(seatLabel) ?? null;
-      const fill = seat?.member ? voteColorMap[seat.vote?.vote || 'Absent'] : '#ffffff';
+      const fill = seat?.member ? voteColorMap[seat.vote?.vote || 'Absent'] : 'var(--interactive-empty-seat)';
       const isSelected = seatLabel === selectedSeat;
 
       const applyStateToShape = (shape: Element) => {
@@ -285,7 +285,7 @@
         svgShape.style.transition = 'fill 0.25s ease, opacity 0.2s ease, stroke 0.2s ease';
 
         if (isSelected) {
-          svgShape.style.stroke = '#111827';
+          svgShape.style.stroke = 'var(--interactive-seat-outline)';
           svgShape.style.strokeWidth = '1.4';
           svgShape.style.opacity = '1';
         } else {
@@ -372,7 +372,7 @@
   });
 </script>
 
-<section class="vote-map-block">
+<section class="vote-map-block" class:light-surface={block.surface === 'light'}>
   {#if block.title || block.intro}
     <div class="vote-map-block__intro">
       {#if block.title}
@@ -452,7 +452,7 @@
         <div class="vote-map-card__head">
           <div
             class="vote-map-card__ring"
-            style:border-color={partyColorMap[selectedSeatRecord.member.Party] || '#d6d3d1'}
+            style:border-color={partyColorMap[selectedSeatRecord.member.Party] || 'var(--interactive-seat-outline)'}
           >
             <img src={selectedSeatRecord.member.imageUrl} alt={selectedSeatRecord.member.Deputy} />
           </div>
@@ -490,6 +490,14 @@
   .vote-map-block {
     margin: var(--block-space) auto;
     max-width: min(var(--wide), calc(100vw - (var(--gutter) * 2)));
+  }
+
+  .vote-map-block.light-surface {
+    --interactive-empty-seat: #fffdf8;
+    --interactive-absent-seat: #d6d3d1;
+    --interactive-seat-outline: #252621;
+    --interactive-tooltip: rgba(255, 253, 248, 0.96);
+    --interactive-shadow: rgba(47, 47, 47, 0.12);
   }
 
   .vote-map-block__intro,
@@ -566,10 +574,14 @@
   }
 
   .vote-map-frame {
-    background: color-mix(in srgb, var(--color-soft) 76%, white);
+    background: var(--interactive-surface);
     border: 1px solid var(--color-line);
     overflow-x: auto;
     padding: var(--space-4);
+  }
+
+  .vote-map-block.light-surface .vote-map-frame {
+    background: #fffdf8;
   }
 
   .vote-map-frame:focus-visible {
@@ -590,10 +602,10 @@
   }
 
   .vote-map-tooltip {
-    background: rgba(255, 253, 248, 0.96);
+    background: var(--interactive-tooltip);
     border: 1px solid var(--color-line);
     border-radius: 0.5rem;
-    box-shadow: 0 0.75rem 2rem rgba(47, 47, 47, 0.12);
+    box-shadow: 0 0.75rem 2rem var(--interactive-shadow);
     color: var(--color-ink);
     max-width: 15rem;
     padding: 0.6rem 0.75rem;

@@ -29,6 +29,7 @@
   let shareFeedback = $state('');
   let generatedAudioSrc = $state<string | null>(null);
   let mobileActionsOpen = $state(false);
+  let isDarkTheme = $state(false);
   let mobileActionsMenu: HTMLDivElement | undefined = $state();
   let utterance: SpeechSynthesisUtterance | null = null;
   let audio: HTMLAudioElement | null = null;
@@ -77,6 +78,10 @@
     window.setTimeout(() => {
       citationCopied = false;
     }, 1800);
+  }
+
+  function toggleTheme() {
+    window.dispatchEvent(new Event('inside-parliament:toggle-theme'));
   }
 
   function citationUrl() {
@@ -355,9 +360,18 @@
   onMount(() => {
     isClient = true;
     isBookmarked = readBookmarks().includes(story.slug);
+    isDarkTheme = document.documentElement.dataset.theme === 'dark';
+    const syncTheme = (event: Event) => {
+      isDarkTheme = (event as CustomEvent<'light' | 'dark'>).detail === 'dark';
+    };
     window.addEventListener('pointerdown', closeMobileActionsOnOutsideClick);
     window.addEventListener('keydown', closeMobileActionsOnEscape);
+    window.addEventListener('inside-parliament:theme-changed', syncTheme);
     void loadGeneratedAudio();
+
+    return () => {
+      window.removeEventListener('inside-parliament:theme-changed', syncTheme);
+    };
   });
 
   onDestroy(() => {
@@ -501,6 +515,27 @@
         </span>
         <span>Print</span>
       </button>
+
+      <button
+        type="button"
+        class="icon-button icon-button--utility"
+        onclick={toggleTheme}
+        aria-label={`Use ${isDarkTheme ? 'light' : 'dark'} mode`}
+        title={isDarkTheme ? 'Light mode' : 'Dark mode'}
+      >
+        <span aria-hidden="true">
+          {#if isDarkTheme}
+            <svg viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="3.1" stroke="currentColor" stroke-width="1.5"></circle>
+              <path d="M10 2.5V4M10 16V17.5M17.5 10H16M4 10H2.5M15.3 4.7L14.25 5.75M5.75 14.25L4.7 15.3M15.3 15.3L14.25 14.25M5.75 5.75L4.7 4.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+          {:else}
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M16.6 12.75A7.1 7.1 0 0 1 7.25 3.4a7.1 7.1 0 1 0 9.35 9.35Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          {/if}
+        </span>
+      </button>
     </div>
   </div>
 
@@ -607,6 +642,20 @@
             </svg>
           </span>
           <span>Print article</span>
+        </button>
+        <button
+          type="button"
+          onclick={() => {
+            toggleTheme();
+            mobileActionsOpen = false;
+          }}
+        >
+          <span aria-hidden="true" class="mobile-action-icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M16.6 12.75A7.1 7.1 0 0 1 7.25 3.4a7.1 7.1 0 1 0 9.35 9.35Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <span>{isDarkTheme ? 'Light mode' : 'Dark mode'}</span>
         </button>
         {#if shareFeedback}
           <p aria-live="polite">{shareFeedback}</p>

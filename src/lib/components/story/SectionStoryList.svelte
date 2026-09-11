@@ -25,11 +25,7 @@
 
 <section class="page-shell section-page">
   <header>
-    {#if section.eyebrow}
-      <p class="eyebrow">{section.eyebrow}</p>
-    {/if}
-    <h1>{section.title}</h1>
-    <p class="lede">{section.intro}</p>
+    <p class="section-intro">{section.intro}</p>
   </header>
 
   {#if featuredStory}
@@ -115,31 +111,23 @@
 
 <style>
   .section-page {
-    padding-top: clamp(var(--space-7), 7vw, 4.5rem);
+    padding-top: clamp(var(--space-6), 4vw, 3rem);
   }
 
   header {
     border-bottom: 1px solid color-mix(in srgb, var(--color-line) 55%, transparent);
-    margin-bottom: var(--space-section);
-    padding-bottom: var(--space-6);
+    margin-bottom: clamp(var(--space-6), 4vw, 3rem);
+    padding-bottom: var(--space-5);
   }
 
-  h1 {
+  .section-intro {
     color: var(--color-accent-2);
     font-family: var(--font-sans);
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-heading);
-    line-height: var(--line-height-heading);
-    margin: 0 0 var(--space-stack-tight);
-    text-wrap: balance;
-  }
-
-  .lede {
-    color: var(--color-muted);
-    font-size: var(--font-size-body);
-    line-height: var(--line-height-body);
+    font-size: clamp(1.16rem, 1.35vw, 1.32rem);
+    font-weight: 400;
+    line-height: 1.55;
     margin: 0;
-    max-width: var(--measure-card);
+    max-width: none;
   }
 
   .featured-story {
@@ -338,8 +326,8 @@
       padding-bottom: 1.25rem;
     }
 
-    .lede {
-      max-width: 28rem;
+    .section-intro {
+      font-size: clamp(1.1rem, 4.5vw, 1.22rem);
     }
 
     .featured-story a {

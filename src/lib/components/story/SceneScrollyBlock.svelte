@@ -223,12 +223,12 @@
 
   .scene-canvas::before {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.18), transparent 28%),
-      linear-gradient(to top, rgba(0, 0, 0, 0.48), transparent 54%);
+      linear-gradient(to bottom, var(--interactive-stage-top), transparent 28%),
+      linear-gradient(to top, var(--interactive-stage-bottom), transparent 54%);
   }
 
   .scene-canvas::after {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent 34%, transparent 66%, rgba(0, 0, 0, 0.14));
+    background: linear-gradient(to right, var(--interactive-stage-edge), transparent 34%, transparent 66%, var(--interactive-stage-edge));
   }
 
   .scene-canvas figure {
@@ -256,8 +256,8 @@
   }
 
   .annotation {
-    border-top: 1px solid rgba(255, 253, 248, 0.7);
-    color: rgba(255, 253, 248, 0.82);
+    border-top: 1px solid var(--interactive-annotation-line);
+    color: var(--interactive-annotation);
     font-family: var(--font-sans);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-meta);
@@ -269,7 +269,7 @@
   }
 
   .annotation::before {
-    background: rgba(255, 253, 248, 0.68);
+    background: var(--interactive-annotation-line);
     content: "";
     height: 0.4rem;
     left: 0;
@@ -282,10 +282,10 @@
     backdrop-filter: blur(10px);
     background: linear-gradient(
       180deg,
-      rgba(24, 21, 18, 0.66),
-      rgba(24, 21, 18, 0.5)
+      var(--interactive-overlay-start),
+      var(--interactive-overlay-end)
     );
-    border: 1px solid rgba(255, 253, 248, 0.14);
+    border: 1px solid var(--interactive-overlay-border);
     border-radius: 0.5rem;
     box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.16);
     color: var(--color-panel);
@@ -339,20 +339,20 @@
   }
 
   .place-label {
-    border-top: 1px solid rgba(255, 253, 248, 0.62);
-    color: rgba(255, 253, 248, 0.76);
+    border-top: 1px solid var(--interactive-annotation-line);
+    color: var(--interactive-annotation);
     display: inline-block;
     margin-bottom: var(--space-3);
     padding-top: var(--space-2);
   }
 
   .step-eyebrow {
-    color: rgba(255, 253, 248, 0.82);
+    color: var(--interactive-annotation);
     margin-bottom: var(--space-2);
   }
 
   .overlay-copy h3 {
-    color: var(--color-panel);
+    color: var(--interactive-overlay-heading);
     font-family: var(--font-sans);
     font-size: clamp(1.25rem, 2.2vw, 1.9rem);
     font-weight: var(--font-weight-heading);
@@ -362,7 +362,7 @@
   }
 
   .overlay-copy p:last-child {
-    color: rgba(255, 253, 248, 0.88);
+    color: var(--interactive-overlay-text);
     font-family: var(--font-sans);
     font-size: var(--font-size-body);
     line-height: 1.58;

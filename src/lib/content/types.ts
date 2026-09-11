@@ -144,6 +144,8 @@ export interface VoteMapStoryBlock {
   type: 'vote-map';
   title?: string;
   intro?: string;
+  /** Use when the source SVG depends on a light canvas for legibility. */
+  surface?: 'theme' | 'light';
   chamberSvg: string;
   voteData: string;
   seatData: string;

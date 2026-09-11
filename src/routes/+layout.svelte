@@ -3,12 +3,15 @@
     import { base } from "$app/paths";
     import { page } from "$app/state";
     import { onMount } from "svelte";
+    import type { StorySection } from "$lib/content/types";
 
     let { children } = $props();
-    let isHeaderCompact = $state(false);
     let isMobileViewport = $state(false);
+    let theme = $state<'light' | 'dark'>('light');
     let mobileSectionMenuOpen = $state(false);
+    let mobileSectionActionsOpen = $state(false);
     let mobileSectionMenu: HTMLDivElement | undefined = $state();
+    let mobileSectionActions: HTMLDivElement | undefined = $state();
     const isPublisherRoute = $derived(
         page.url.pathname === `${base}/publisher` ||
             page.url.pathname === `${base}/publisher/` ||
@@ -18,11 +21,24 @@
         page.url.pathname.startsWith(`${base}/stories/`) &&
             page.url.pathname !== `${base}/stories/`,
     );
+    const sectionLabels: Record<StorySection, string> = {
+        "parliament-now": "Parliament Now",
+        "parliament-explained": "Parliament Explained",
+        "parliament-at-work": "Parliament at Work",
+    };
+    const activeSection = $derived.by<StorySection | null>(() => {
+        const pathname = page.url.pathname.replace(/\/+$/, "") || "/";
+        if (isResourceRoute) {
+            return (page.data.story as { section?: StorySection } | undefined)?.section ?? null;
+        }
+        if (pathname === `${base}/parliament-now`) return "parliament-now";
+        if (pathname === `${base}/parliament-explained`) return "parliament-explained";
+        if (pathname === `${base}/parliament-at-work`) return "parliament-at-work";
+        return null;
+    });
     const mobileSectionLabel = $derived.by(() => {
         const pathname = page.url.pathname.replace(/\/+$/, "") || "/";
-        if (pathname === `${base}/parliament-now`) return "Parliament Now";
-        if (pathname === `${base}/parliament-explained`) return "Parliament Explained";
-        if (pathname === `${base}/parliament-at-work`) return "Parliament at Work";
+        if (activeSection) return sectionLabels[activeSection];
         if (pathname === `${base}/my-parliament`) return "My Parliament";
         return "Inside Parliament";
     });
@@ -37,46 +53,64 @@
     function isCurrentMobileSection(href: string) {
         const current = page.url.pathname.replace(/\/+$/, "") || "/";
         const target = href.replace(/\/+$/, "") || "/";
-        return current === target;
+        return current === target || (activeSection !== null && target === `${base}/${activeSection}`);
     }
 
     function closeMobileSectionMenu() {
         mobileSectionMenuOpen = false;
     }
 
+    function closeMobileSectionActions() {
+        mobileSectionActionsOpen = false;
+    }
+
+    function closeMobileTools() {
+        closeMobileSectionMenu();
+        closeMobileSectionActions();
+    }
+
+    function toggleTheme() {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        window.dispatchEvent(new CustomEvent('inside-parliament:theme-changed', { detail: theme }));
+        try {
+            localStorage.setItem('inside-parliament-theme', theme);
+        } catch {
+            // The chosen theme remains active for this visit when storage is unavailable.
+        }
+    }
+
     onMount(() => {
+        const storedTheme = document.documentElement.dataset.theme;
+        theme = storedTheme === 'dark' ? 'dark' : 'light';
         const syncHeader = () => {
-            const mobileMastheadHeight =
-                document.querySelector<HTMLElement>(".site-header")?.offsetHeight ?? 72;
             isMobileViewport = window.matchMedia("(max-width: 860px)").matches;
-            const threshold = isMobileViewport ? mobileMastheadHeight : 72;
-            isHeaderCompact =
-                isResourceRoute &&
-                (isMobileViewport || window.scrollY > threshold);
-            if (!isHeaderCompact) closeMobileSectionMenu();
+            if (!isResourceRoute) closeMobileTools();
         };
         const closeOnOutsideClick = (event: PointerEvent) => {
             if (
-                mobileSectionMenuOpen &&
-                mobileSectionMenu &&
-                !mobileSectionMenu.contains(event.target as Node)
+                (mobileSectionMenuOpen || mobileSectionActionsOpen) &&
+                !mobileSectionMenu?.contains(event.target as Node) &&
+                !mobileSectionActions?.contains(event.target as Node)
             ) {
-                closeMobileSectionMenu();
+                closeMobileTools();
             }
         };
         const closeOnEscape = (event: KeyboardEvent) => {
-            if (event.key === "Escape") closeMobileSectionMenu();
+            if (event.key === "Escape") closeMobileTools();
         };
 
         syncHeader();
         window.addEventListener("scroll", syncHeader, { passive: true });
         window.addEventListener("pointerdown", closeOnOutsideClick);
         window.addEventListener("keydown", closeOnEscape);
+        window.addEventListener("inside-parliament:toggle-theme", toggleTheme);
 
         return () => {
             window.removeEventListener("scroll", syncHeader);
             window.removeEventListener("pointerdown", closeOnOutsideClick);
             window.removeEventListener("keydown", closeOnEscape);
+            window.removeEventListener("inside-parliament:toggle-theme", toggleTheme);
         };
     });
 </script>
@@ -94,11 +128,11 @@
 <header
     class:site-header--studio={isPublisherRoute}
     class:site-header--resource={isResourceRoute}
-    class:site-header--compact={isHeaderCompact}
+    class:site-header--compact={isResourceRoute}
     class="site-header"
     aria-label="Site header"
-    aria-hidden={isResourceRoute && isHeaderCompact && isMobileViewport ? "true" : undefined}
-    inert={isResourceRoute && isHeaderCompact && isMobileViewport ? true : undefined}
+    aria-hidden={isResourceRoute && isMobileViewport ? "true" : undefined}
+    inert={isResourceRoute && isMobileViewport ? true : undefined}
 >
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
@@ -132,6 +166,14 @@
         </div>
     {:else}
         <nav class="site-nav" aria-label="Primary navigation">
+            <a
+                class="oireachtas-home"
+                href="https://www.oireachtas.ie/"
+                aria-label="Return to oireachtas.ie"
+                title="Return to oireachtas.ie"
+            >
+                <img src="{base}/brand/oireachtas-logo.svg" alt="" />
+            </a>
             <a class="brand" href="{base}/" aria-label="Inside Parliament home">
                 <span class="brand-mark" aria-hidden="true">
                     <svg viewBox="0 0 64 28" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
@@ -159,12 +201,37 @@
                         <line x1="12" y1="24" x2="52" y2="24" stroke="currentColor" stroke-width="1.2" />
                     </svg>
                 </span>
-                <span>Inside Parliament</span>
+                <span class="brand-copy">
+                    <span class="brand-title">Inside Parliament</span>
+                </span>
             </a>
+            <div class="site-header-actions">
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    onclick={toggleTheme}
+                    aria-pressed={theme === 'dark'}
+                    aria-label={`Use ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                    title={`Use ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                >
+                    {#if theme === 'dark'}
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                        </svg>
+                    {:else}
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                            <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z" />
+                        </svg>
+                    {/if}
+                </button>
+            </div>
+        </nav>
+        <nav class="section-nav" aria-label="Inside Parliament sections">
             <div class="nav-links">
-                <a href="{base}/parliament-now/">Parliament Now</a>
-                <a href="{base}/parliament-explained/">Parliament Explained</a>
-                <a href="{base}/parliament-at-work/">Parliament at Work</a>
+                <a href="{base}/parliament-now/" aria-current={activeSection === "parliament-now" ? "page" : undefined}>Parliament Now</a>
+                <a href="{base}/parliament-explained/" aria-current={activeSection === "parliament-explained" ? "page" : undefined}>Parliament Explained</a>
+                <a href="{base}/parliament-at-work/" aria-current={activeSection === "parliament-at-work" ? "page" : undefined}>Parliament at Work</a>
                 <a class="my-parliament-link" href="{base}/my-parliament/">
                     <span class="my-parliament-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
@@ -183,6 +250,7 @@
     <div
         class="mobile-section-tools"
         class:resource-mobile-tools={isResourceRoute}
+        class:section-mobile-tools={!isResourceRoute}
         aria-label="Inside Parliament navigation"
     >
         <div class="resource-mobile-nav" bind:this={mobileSectionMenu}>
@@ -208,6 +276,49 @@
                 </nav>
             {/if}
         </div>
+        {#if !isResourceRoute}
+            <div class="mobile-section-actions" bind:this={mobileSectionActions}>
+                <button
+                    class="mobile-section-actions__toggle"
+                    type="button"
+                    aria-label="More page actions"
+                    aria-expanded={mobileSectionActionsOpen}
+                    aria-controls="mobile-section-actions-menu"
+                    onclick={() => (mobileSectionActionsOpen = !mobileSectionActionsOpen)}
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="5" cy="12" r="1.8"></circle>
+                        <circle cx="12" cy="12" r="1.8"></circle>
+                        <circle cx="19" cy="12" r="1.8"></circle>
+                    </svg>
+                </button>
+                {#if mobileSectionActionsOpen}
+                    <div id="mobile-section-actions-menu" class="mobile-section-actions__menu">
+                        <button
+                            type="button"
+                            onclick={() => {
+                                toggleTheme();
+                                closeMobileSectionActions();
+                            }}
+                        >
+                            <span class="mobile-section-action-icon" aria-hidden="true">
+                                {#if theme === 'dark'}
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <circle cx="12" cy="12" r="4" />
+                                        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                                    </svg>
+                                {:else}
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z" />
+                                    </svg>
+                                {/if}
+                            </span>
+                            <span>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
+                        </button>
+                    </div>
+                {/if}
+            </div>
+        {/if}
     </div>
 {/if}
 

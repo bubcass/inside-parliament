@@ -808,7 +808,23 @@
         "content": [
           {
             "type": "text",
-            "text": "Most people learn about what happens in the Oireachtas through national and local media, radio, television, social media and other websites. "
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/connecting-with-parliament/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Most people learn about what happens in the Oireachtas"
+          },
+          {
+            "type": "text",
+            "text": " through national and local media, radio, television, social media and other websites. "
           },
           {
             "type": "text",
@@ -824,6 +840,17 @@
             "text": "."
           }
         ]
+      },
+      {
+        "type": "imageBlock",
+        "attrs": {
+          "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/reported-daily-media-use-of-respondents.png",
+          "alt": "A bar chart of daily users of media",
+          "caption": "Most people find out what happens in Parliament through intermediaries.",
+          "credit": "",
+          "layout": "wide",
+          "fit": "contain"
+        }
       },
       {
         "type": "paragraph",
@@ -1112,7 +1139,7 @@
         "content": [
           {
             "type": "text",
-            "text": "Or is the work becoming more visible because what happens in Parliament now appears in search results, video clips, datasets, and visual tools far beyond the newspaper and television spaces it inhabited in the last century?"
+            "text": "Or is the work becoming more visible because what happens in Parliament now appears in search results, video clips, datasets and visual tools far beyond the newspaper and television spaces it inhabited in the last century?"
           }
         ]
       },
@@ -1205,16 +1232,7 @@
         "content": [
           {
             "type": "text",
-            "text": "The channels may change but the cosmic ballet goes on."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "content": [
-          {
-            "type": "text",
-            "text": "Look up."
+            "text": "The channels may change but the cosmic ballet goes on. Look up."
           }
         ]
       },

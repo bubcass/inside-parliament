@@ -104,12 +104,14 @@
 
 <style>
   .media-text {
-    align-items: center;
+    align-items: start;
     display: grid;
     gap: var(--space-5);
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     margin: var(--block-space) auto;
-    max-width: var(--measure);
+    max-width: var(--measure-prose);
+    min-width: 0;
+    width: min(100%, var(--measure-prose));
   }
 
   .media-text.left figure {
@@ -117,6 +119,7 @@
   }
 
   .copy {
+    min-width: 0;
     max-width: var(--measure-prose);
   }
 
@@ -138,6 +141,7 @@
     font-weight: var(--font-weight-body);
     line-height: var(--line-height-body);
     margin: 0 0 var(--space-stack);
+    overflow-wrap: break-word;
   }
 
   .copy > p:not(.eyebrow) :global(a) {

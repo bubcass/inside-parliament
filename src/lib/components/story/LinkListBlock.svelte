@@ -28,6 +28,8 @@
   .link-list {
     margin: var(--block-space) auto;
     max-width: var(--measure-prose);
+    min-width: 0;
+    width: min(100%, var(--measure-prose));
   }
 
   h2 {

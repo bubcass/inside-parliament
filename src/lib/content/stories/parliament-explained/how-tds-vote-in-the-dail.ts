@@ -86,6 +86,7 @@ export const howDoTDsVoteInTheDail: Story = {
       title: "How a vote looks in the Chamber",
       intro:
         "Explore the example of TDs voting on a motion before the House.  Once a vote begins, only Members of Dáil Éireann, parliamentary ushers and some Oireachtas officials are allowed in the Chamber for the vote.",
+      surface: "light",
       chamberSvg: "/media/dail-chamber.svg",
       voteData: "/data/dail-vote-sample.json",
       seatData: "/data/seatAssignmentsHistory.csv",
