@@ -517,6 +517,7 @@
 
     display: grid;
     gap: var(--story-block-gap);
+    grid-template-columns: minmax(0, 1fr);
     min-width: 0;
     width: 100%;
   }
