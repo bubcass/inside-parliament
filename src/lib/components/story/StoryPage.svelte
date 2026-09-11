@@ -530,6 +530,8 @@
 
   .story-body > :global(*) {
     margin-block: 0 !important;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .story-content.with-contents {
