@@ -18,6 +18,27 @@
         page.url.pathname.startsWith(`${base}/stories/`) &&
             page.url.pathname !== `${base}/stories/`,
     );
+    const mobileSectionLabel = $derived.by(() => {
+        const pathname = page.url.pathname.replace(/\/+$/, "") || "/";
+        if (pathname === `${base}/parliament-now`) return "Parliament Now";
+        if (pathname === `${base}/parliament-explained`) return "Parliament Explained";
+        if (pathname === `${base}/parliament-at-work`) return "Parliament at Work";
+        if (pathname === `${base}/my-parliament`) return "My Parliament";
+        return "Inside Parliament";
+    });
+    const mobileSectionItems = [
+        { href: `${base}/`, label: "Inside Parliament" },
+        { href: `${base}/parliament-now/`, label: "Parliament Now" },
+        { href: `${base}/parliament-explained/`, label: "Parliament Explained" },
+        { href: `${base}/parliament-at-work/`, label: "Parliament at Work" },
+        { href: `${base}/my-parliament/`, label: "My Parliament" },
+    ];
+
+    function isCurrentMobileSection(href: string) {
+        const current = page.url.pathname.replace(/\/+$/, "") || "/";
+        const target = href.replace(/\/+$/, "") || "/";
+        return current === target;
+    }
 
     function closeMobileSectionMenu() {
         mobileSectionMenuOpen = false;
@@ -158,8 +179,12 @@
     {/if}
 </header>
 
-{#if isResourceRoute}
-    <div class="resource-mobile-tools" aria-label="Inside Parliament navigation">
+{#if !isPublisherRoute}
+    <div
+        class="mobile-section-tools"
+        class:resource-mobile-tools={isResourceRoute}
+        aria-label="Inside Parliament navigation"
+    >
         <div class="resource-mobile-nav" bind:this={mobileSectionMenu}>
             <button
                 class="resource-mobile-nav__toggle"
@@ -168,15 +193,18 @@
                 aria-controls="resource-mobile-section-menu"
                 onclick={() => (mobileSectionMenuOpen = !mobileSectionMenuOpen)}
             >
-                <span>Inside Parliament</span>
+                <span>{mobileSectionLabel}</span>
                 <i aria-hidden="true"></i>
             </button>
             {#if mobileSectionMenuOpen}
                 <nav id="resource-mobile-section-menu" class="resource-mobile-nav__menu" aria-label="Sections">
-                    <a href="{base}/parliament-now/" onclick={closeMobileSectionMenu}>Parliament Now</a>
-                    <a href="{base}/parliament-explained/" onclick={closeMobileSectionMenu}>Parliament Explained</a>
-                    <a href="{base}/parliament-at-work/" onclick={closeMobileSectionMenu}>Parliament at Work</a>
-                    <a href="{base}/my-parliament/" onclick={closeMobileSectionMenu}>My Parliament</a>
+                    {#each mobileSectionItems as item}
+                        <a
+                            href={item.href}
+                            aria-current={isCurrentMobileSection(item.href) ? "page" : undefined}
+                            onclick={closeMobileSectionMenu}
+                        >{item.label}</a>
+                    {/each}
                 </nav>
             {/if}
         </div>

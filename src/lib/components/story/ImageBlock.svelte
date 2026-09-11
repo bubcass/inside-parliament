@@ -4,9 +4,10 @@
 
   let { block }: { block: ImageBlock } = $props();
   let layout = $derived(block.layout ?? 'inline');
+  let fit = $derived(block.fit ?? 'cover');
 </script>
 
-<figure class="image-block {layout}">
+<figure class="image-block {layout} {fit}">
   <img src="{base}{block.image.src}" alt={block.image.alt} loading="lazy" />
   {#if block.image.caption || block.image.credit}
     <figcaption class="caption">
@@ -50,6 +51,15 @@
 
   .inline img {
     aspect-ratio: 4 / 3;
+  }
+
+  .contain img,
+  .contain.inline img,
+  .contain.wide img,
+  .contain.full img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
   }
 
   figcaption {

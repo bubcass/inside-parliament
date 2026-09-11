@@ -4,51 +4,69 @@
 
   let { story, hasContents = false }: { story: Story; hasContents?: boolean } = $props();
 
-  let name = $derived(story.researcher?.name?.trim() || story.byline.trim());
-  let role = $derived(story.researcher?.role?.trim() ?? '');
-  let organisation = $derived(story.researcher?.organisation?.trim() ?? '');
-  let image = $derived(story.researcher?.image?.trim() ?? '');
-  let imageSrc = $derived(
-    image && !/^(?:https?:|data:)/i.test(image)
-      ? `${base}${image.startsWith('/') ? image : `/${image}`}`
-      : image
-  );
-  let initials = $derived(
-    name
+  let authors = $derived.by(() => {
+    const selected = story.authors?.filter((author) => author.name?.trim()).slice(0, 3) ?? [];
+    if (selected.length) return selected;
+
+    const legacyName = story.researcher?.name?.trim() || story.byline.trim();
+    return legacyName ? [{ ...story.researcher, name: legacyName }] : [];
+  });
+
+  function authorImageSrc(image = '') {
+    const trimmed = image.trim();
+    return trimmed && !/^(?:https?:|data:)/i.test(trimmed)
+      ? `${base}${trimmed.startsWith('/') ? trimmed : `/${trimmed}`}`
+      : trimmed;
+  }
+
+  function authorInitials(name = '') {
+    return name
       .split(/\s+/)
       .filter(Boolean)
       .slice(0, 2)
       .map((part) => part[0]?.toUpperCase() ?? '')
-      .join('')
-  );
+      .join('');
+  }
 </script>
 
-{#if name}
+{#if authors.length}
   <div class="story-author-shell" class:with-contents={hasContents}>
-    <section id="article-author" class="story-author" aria-label="Article author">
-      <div class="story-author__avatar" aria-hidden={image ? undefined : 'true'}>
-        {#if imageSrc}
-          <img src={imageSrc} alt={story.researcher?.imageAlt ?? `${name}, article author`} />
-        {:else}
-          <span>{initials}</span>
-        {/if}
-      </div>
-
-      <div class="story-author__details">
-        <p class="story-author__name">{name}</p>
-        {#if role || organisation}
-          <p class="story-author__description">
-            {#if role}<span>{role}</span>{/if}
-            {#if role && organisation}
-              <span class="story-author__separator">
-                <span aria-hidden="true">|</span>
-                <span class="visually-hidden">, </span>
-              </span>
+    <section
+      id="article-author"
+      class="story-authors"
+      aria-label={authors.length === 1 ? 'Article author' : 'Article authors'}
+    >
+      {#each authors as author}
+        {@const name = author.name?.trim() ?? ''}
+        {@const role = author.role?.trim() ?? ''}
+        {@const organisation = author.organisation?.trim() ?? ''}
+        {@const imageSrc = authorImageSrc(author.image)}
+        <div class="story-author">
+          <div class="story-author__avatar" aria-hidden={imageSrc ? undefined : 'true'}>
+            {#if imageSrc}
+              <img src={imageSrc} alt={author.imageAlt ?? `${name}, article author`} />
+            {:else}
+              <span>{authorInitials(name)}</span>
             {/if}
-            {#if organisation}<span>{organisation}</span>{/if}
-          </p>
-        {/if}
-      </div>
+          </div>
+
+          <div class="story-author__details">
+            <p class="story-author__name">{name}</p>
+            {#if role || organisation}
+              <p class="story-author__description">
+                {#if role}<span>{role}</span>{/if}
+                {#if role && organisation}
+                  <span class="story-author__separator">
+                    <span aria-hidden="true">|</span>
+                    <span class="visually-hidden">, </span>
+                  </span>
+                {/if}
+                {#if organisation}<span>{organisation}</span>{/if}
+              </p>
+            {/if}
+          </div>
+        </div>
+      {/each}
     </section>
   </div>
 {/if}
@@ -57,7 +75,7 @@
   .story-author-shell {
     margin: 0 auto;
     max-width: calc(var(--measure-prose) + (var(--gutter) * 2));
-    padding: 0 var(--gutter) var(--space-7);
+    padding: 0 var(--gutter) var(--space-6);
   }
 
   .story-author-shell.with-contents {
@@ -67,17 +85,23 @@
     max-width: calc(var(--wide) + (var(--gutter) * 2));
   }
 
-  .story-author-shell.with-contents .story-author {
+  .story-author-shell.with-contents .story-authors {
     grid-column: 2;
+  }
+
+  .story-authors {
+    display: grid;
+    gap: var(--space-4) var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    padding-top: var(--space-2);
+    scroll-margin-top: calc(var(--site-header-height, 3.25rem) + var(--space-4));
   }
 
   .story-author {
     align-items: center;
-    border-top: 1px solid var(--color-line);
     display: flex;
-    gap: var(--space-4);
-    padding-top: var(--space-5);
-    scroll-margin-top: calc(var(--site-header-height, 3.25rem) + var(--space-4));
+    gap: var(--space-3);
+    min-width: 0;
   }
 
   .story-author__avatar {
@@ -87,14 +111,14 @@
     border-radius: 50%;
     color: var(--color-accent-2);
     display: flex;
-    flex: 0 0 4.25rem;
+    flex: 0 0 3rem;
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.78rem;
     font-weight: 700;
-    height: 4.25rem;
+    height: 3rem;
     justify-content: center;
     overflow: hidden;
-    width: 4.25rem;
+    width: 3rem;
   }
 
   .story-author__avatar img {
@@ -115,7 +139,7 @@
 
   .story-author__name {
     color: var(--color-accent-2);
-    font-size: 1.2rem;
+    font-size: 0.98rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -125,10 +149,10 @@
     color: var(--color-muted);
     display: flex;
     flex-wrap: wrap;
-    font-size: 0.96rem;
-    gap: 0.4rem 0.65rem;
-    line-height: 1.45;
-    margin-top: 0.35rem;
+    font-size: 0.82rem;
+    gap: 0.25rem 0.5rem;
+    line-height: 1.35;
+    margin-top: 0.18rem;
   }
 
   .story-author__separator {
@@ -152,23 +176,28 @@
       padding-bottom: var(--space-6);
     }
 
-    .story-author {
+    .story-authors {
       gap: var(--space-3);
-      padding-top: var(--space-4);
+      grid-template-columns: minmax(0, 1fr);
+      padding-top: var(--space-2);
+    }
+
+    .story-author {
+      gap: 0.65rem;
     }
 
     .story-author__avatar {
-      flex-basis: 3.5rem;
-      height: 3.5rem;
-      width: 3.5rem;
+      flex-basis: 2.65rem;
+      height: 2.65rem;
+      width: 2.65rem;
     }
 
     .story-author__name {
-      font-size: 1.05rem;
+      font-size: 0.92rem;
     }
 
     .story-author__description {
-      font-size: 0.88rem;
+      font-size: 0.76rem;
     }
   }
 

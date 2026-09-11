@@ -79,6 +79,11 @@ export const ImageBlock = Node.create({
           'data-layout': attributes.layout || 'inline',
         }),
       },
+      fit: {
+        default: 'cover',
+        parseHTML: (element) => element.getAttribute('data-fit') || 'cover',
+        renderHTML: (attributes) => ({ 'data-fit': attributes.fit || 'cover' }),
+      },
     };
   },
 
@@ -92,7 +97,7 @@ export const ImageBlock = Node.create({
       mergeAttributes(HTMLAttributes, {
         class: `stor-embedded-block stor-embedded-block--image stor-embedded-block--${
           node.attrs.layout || 'inline'
-        }`,
+        } stor-embedded-block--fit-${node.attrs.fit || 'cover'}`,
       }),
       ['div', { class: 'stor-embedded-block__eyebrow' }, 'Image'],
       ['p', { class: 'stor-embedded-block__text' }, node.attrs.alt || 'Image'],
@@ -331,6 +336,11 @@ export const MediaTextBlock = Node.create({
         renderHTML: (attributes) => ({
           'data-media-side': attributes.mediaSide || 'right',
         }),
+      },
+      fit: {
+        default: 'cover',
+        parseHTML: (element) => element.getAttribute('data-fit') || 'cover',
+        renderHTML: (attributes) => ({ 'data-fit': attributes.fit || 'cover' }),
       },
       src: {
         default: '',

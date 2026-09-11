@@ -88,7 +88,13 @@
   }
 
   function articleCitation() {
-    const author = plainText(story.researcher?.name ?? story.byline) || 'Houses of the Oireachtas';
+    const selectedAuthors = story.authors
+      ?.map((author) => plainText(author.name ?? ''))
+      .filter(Boolean)
+      .slice(0, 3) ?? [];
+    const author = selectedAuthors.join(', ')
+      || plainText(story.researcher?.name ?? story.byline)
+      || 'Houses of the Oireachtas';
     const title = plainText(story.title);
     return `${author}. “${title}.” Inside Parliament, Houses of the Oireachtas, ${story.date}, ${citationUrl()}.`;
   }
@@ -611,7 +617,7 @@
 
 <style>
   .story-toolbar {
-    border-top: 1px solid var(--color-line);
+    border-top: 1px solid color-mix(in srgb, var(--color-line) 68%, transparent);
     margin: 0 auto;
     max-width: calc(var(--measure-prose) + (var(--gutter) * 2));
     padding: var(--space-4) var(--gutter) var(--space-6);

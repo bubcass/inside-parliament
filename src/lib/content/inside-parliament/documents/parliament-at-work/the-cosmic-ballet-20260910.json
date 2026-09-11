@@ -30,7 +30,7 @@
       "name": "David Cass",
       "role": "author",
       "affiliation": "Communications",
-      "showAsAuthor": false,
+      "showAsAuthor": true,
       "profileRole": "Web content editor"
     },
     {
@@ -42,8 +42,8 @@
     }
   ],
   "researcher": {
-    "name": "Karin Whooley",
-    "role": "Principal Officer",
+    "name": "David Cass",
+    "role": "Web content editor",
     "organisation": "Communications"
   },
   "hero": {
@@ -93,7 +93,27 @@
           },
           {
             "type": "text",
-            "text": "-inspired instructions for a pinhole camera from the RTÉ website. People waved colanders in the air without fear of ridicule."
+            "text": "-inspired instructions for a "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.rte.ie/news/2026/0811/1587315-solar-eclipse-ireland/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "pinhole camera from the RTÉ website"
+          },
+          {
+            "type": "text",
+            "text": ". People waved colanders in the air without fear of ridicule."
           }
         ]
       },
@@ -203,9 +223,10 @@
           "poster": "",
           "captions": "",
           "mediaSide": "right",
+          "fit": "cover",
           "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/marshall-mcluhan.jpg",
           "alt": "Marshall McLuhan",
-          "caption": "Marshall McLuhan's \"The medium is the message\" remains true even as the media landscape fragments.",
+          "caption": "Marshall McLuhan's \"The medium is the message\" echoes even as the media landscape fragments.",
           "credit": "",
           "featureLatestVideo": false,
           "carouselTitle": "",
@@ -247,7 +268,27 @@
         "content": [
           {
             "type": "text",
-            "text": "For much of the 20th century, that selection was made mainly by newspaper editors and broadcasters. An Official Report has been published since 1919 but when it was physically published either as a bound volume or as a daily book, its audience could only have reached into the hundreds on a regular basis."
+            "text": "For much of the 20th century, that selection was made mainly by newspaper editors and broadcasters. An "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://www.oireachtas.ie/en/debates/find/?debateType=dail",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "Official Report has been published since 1919"
+          },
+          {
+            "type": "text",
+            "text": " but when it was physically published either as a bound volume or as a daily book, its audience could only have reached into the hundreds on a regular basis."
           }
         ]
       },
@@ -486,9 +527,10 @@
         "attrs": {
           "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/reuters-research.png",
           "alt": "Describe the image",
-          "caption": "A growing risk is that diffuse channels for messages will splinter understanding.",
+          "caption": "Diffuse channels for messages may risk the splintering of understanding.",
           "credit": "Reuters Digital News Report",
-          "layout": "wide"
+          "layout": "wide",
+          "fit": "contain"
         }
       },
       {
@@ -535,7 +577,7 @@
         "content": [
           {
             "type": "text",
-            "text": "In 1992, Arkansas Governor Bill Clinton's campaign team won the US presidential election, surprisingly beating the sitting President H.W. Bush. The mantra “The economy, stupid” was credited with playing a major part in driving the Clinton team’s success."
+            "text": "In 1992, Arkansas Governor Bill Clinton's campaign team won the US presidential election, surprisingly beating the sitting President George H.W. Bush. The mantra “The economy, stupid” was credited with playing a major part in driving the Clinton team’s success."
           }
         ]
       },
@@ -872,7 +914,27 @@
         "content": [
           {
             "type": "text",
-            "text": "Flowing from our overall communications strategy is a digital communications strategy that proposes a unified digital service with a single editorial direction."
+            "text": "Flowing from our overall communications strategy is "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://bubcass.github.io/stor-concept/articles/digital-communications-strategy-2026-2028-20260316/",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "a digital communications strategy"
+          },
+          {
+            "type": "text",
+            "text": " that proposes a unified digital service with a single editorial direction."
           }
         ]
       },
@@ -890,9 +952,10 @@
           "poster": "",
           "captions": "",
           "mediaSide": "left",
+          "fit": "cover",
           "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/full-chamber.png",
           "alt": "Visualisation of a vote in the Dáil Chamber",
-          "caption": "The language of Parliament can make it difficult to speak the language of our audience.",
+          "caption": "The language of Parliament can make it difficult for audiences to relate.",
           "credit": "",
           "featureLatestVideo": false,
           "carouselTitle": "",
@@ -925,7 +988,7 @@
         "content": [
           {
             "type": "text",
-            "text": "Like the sun and moon, the work of Parliament does not need publicity. Sittings take place. Bills are passed. Votes take place and motions are passed or defeated. Outside the walls of Leinster House, a minority of people pause to think about the machinery that makes it happen."
+            "text": "Like the sun and moon, the work of Parliament does not need publicity. Sittings are scheduled. Bills are passed. Votes take place and motions are passed or defeated. Outside the walls of Leinster House, a minority of people pause to think about the machinery that makes it happen."
           }
         ]
       },
@@ -934,7 +997,27 @@
         "content": [
           {
             "type": "text",
-            "text": "But then maybe something unusual happens - a consequential debate, an extraordinary exchange, a disputed quotation or a close vote - and suddenly everyone needs the record. The constant becomes visible. There's a queue of people looking for eclipse glasses."
+            "text": "But then maybe something unusual happens - a consequential debate, an extraordinary exchange, a disputed quotation or "
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://bubcass.github.io/chamber-vote-poc/?699=&chamber=dail",
+                  "target": "_blank",
+                  "rel": "noopener noreferrer nofollow",
+                  "class": null,
+                  "title": null
+                }
+              }
+            ],
+            "text": "a close vote"
+          },
+          {
+            "type": "text",
+            "text": " - and suddenly everyone needs the record. The constant becomes visible. There is a queue of people looking for eclipse glasses."
           }
         ]
       },
@@ -943,9 +1026,10 @@
         "attrs": {
           "src": "/media/parliament-at-work/the-cosmic-ballet-20260910/vote-explorer-2.png",
           "alt": "Visual of a vote in the Chamber",
-          "caption": "Voting visualised and looking to pique a curiosity in our potential audience.",
+          "caption": "Voting visualised. We want our audience to be curious about how Parliament works.",
           "credit": "",
-          "layout": "wide"
+          "layout": "wide",
+          "fit": "cover"
         }
       },
       {
@@ -1357,6 +1441,25 @@
             ]
           }
         ]
+      },
+      {
+        "type": "linkListBlock",
+        "attrs": {
+          "eyebrow": "Explore further",
+          "heading": "",
+          "links": [
+            {
+              "label": "Open data insights",
+              "href": "https://bubcass.github.io/stor-concept/articles/open-data-insights-20260121/",
+              "description": "Our position paper on making the work of Parliament open"
+            },
+            {
+              "label": "Insights",
+              "href": "https://bubcass.github.io/open-data-insights/",
+              "description": "Our open data insights portal"
+            }
+          ]
+        }
       },
       {
         "type": "paragraph"

@@ -155,15 +155,20 @@ export function buildCanonicalPublisherDocument({
   const hasExplicitDisplayChoice = contributors.some(
     (contributor) => typeof contributor.showAsAuthor === 'boolean',
   );
-  const authorContributor = hasExplicitDisplayChoice
-    ? contributors.find(
+  const selectedAuthorContributors = (hasExplicitDisplayChoice
+    ? contributors.filter(
         (contributor) =>
           contributor.showAsAuthor === true &&
           contributor.role.trim().toLowerCase() === 'author',
-      ) ?? null
-    : contributors.find(
+      )
+    : contributors.filter(
         (contributor) => contributor.role.trim().toLowerCase() === 'author',
-      ) ?? contributors[0] ?? null;
+      )).slice(0, 3);
+  const authorContributors =
+    selectedAuthorContributors.length || hasExplicitDisplayChoice
+      ? selectedAuthorContributors
+      : contributors.slice(0, 1);
+  const authorContributor = authorContributors[0] ?? null;
   const authorName = authorContributor?.name?.trim() ?? '';
   const authorOrganisation = authorContributor?.affiliation?.trim() ?? '';
   const authorProfileRole = authorContributor?.profileRole?.trim() ?? '';

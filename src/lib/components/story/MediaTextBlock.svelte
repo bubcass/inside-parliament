@@ -6,6 +6,7 @@
 
   let { block, headingId }: { block: MediaTextBlock; headingId?: string } = $props();
   let mediaSide = $derived(block.mediaSide ?? 'right');
+  let fit = $derived(block.fit ?? 'cover');
   let image = $derived(block.media.type === 'image' ? (block.media.asset as ImageAsset) : undefined);
   let video = $derived(block.media.type === 'video' ? (block.media.asset as VideoAsset) : undefined);
   let shareFeedback = $state('');
@@ -45,7 +46,7 @@
     {/each}
   </div>
 
-  <figure class:image-figure={!!image} class:video-figure={!!video}>
+  <figure class:image-figure={!!image} class:video-figure={!!video} class:contain={fit === 'contain'}>
     {#if image}
       <img src="{base}{image.src}" alt={image.alt} loading="lazy" />
       {#if image.caption || image.credit}
@@ -184,6 +185,11 @@
     object-fit: cover;
     object-position: center;
     width: 100%;
+  }
+
+  .image-figure.contain img {
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .video-figure video {

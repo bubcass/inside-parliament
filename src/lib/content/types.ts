@@ -15,6 +15,15 @@ export type StoryBlock =
 export type StorySection = 'parliament-now' | 'parliament-explained' | 'parliament-at-work';
 export type StoryHeroLayout = 'contained' | 'split' | 'immersive';
 
+export interface StoryAuthorProfile {
+  name?: string;
+  role?: string;
+  organisation?: string;
+  bio?: string;
+  image?: string;
+  imageAlt?: string;
+}
+
 export interface StoryShortVideo {
   src: string;
   poster: string;
@@ -43,14 +52,10 @@ export interface Story {
   eyebrow: string;
   byline: string;
   abstract?: string;
-  researcher?: {
-    name?: string;
-    role?: string;
-    organisation?: string;
-    bio?: string;
-    image?: string;
-    imageAlt?: string;
-  };
+  /** Author profiles selected for display, in publisher order. Limited to three. */
+  authors?: StoryAuthorProfile[];
+  /** Legacy primary-author field retained for existing stories and integrations. */
+  researcher?: StoryAuthorProfile;
   date: string;
   publishedDate?: string | null;
   readingTime: string;
@@ -99,6 +104,8 @@ export interface MediaTextBlock {
     asset: ImageAsset | VideoAsset;
   };
   mediaSide?: 'left' | 'right';
+  /** Use contain for charts, diagrams and other images that must not be cropped. */
+  fit?: 'cover' | 'contain';
 }
 
 export interface ImageBlock {
@@ -106,6 +113,8 @@ export interface ImageBlock {
   heading?: string;
   image: ImageAsset;
   layout?: 'inline' | 'wide' | 'full' | 'portrait';
+  /** Use contain for charts, diagrams and other images that must not be cropped. */
+  fit?: 'cover' | 'contain';
 }
 
 export interface VideoBlock {

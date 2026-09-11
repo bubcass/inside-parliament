@@ -265,6 +265,9 @@ function imageBlockFromNode(node: ProseMirrorNode) {
         | 'wide'
         | 'full'
         | 'portrait') || 'inline',
+    fit: (String(node.attrs?.fit ?? '').trim() === 'contain' ? 'contain' : 'cover') as
+      | 'contain'
+      | 'cover',
   };
 }
 
@@ -341,6 +344,9 @@ function mediaTextBlockFromNode(
             },
     },
     mediaSide,
+    fit: (String(node.attrs?.fit ?? '').trim() === 'contain' ? 'contain' : 'cover') as
+      | 'contain'
+      | 'cover',
   };
 }
 

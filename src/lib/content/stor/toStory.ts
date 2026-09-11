@@ -58,47 +58,60 @@ function estimateReadingTime(document: StorDocument) {
   return `${Math.max(1, Math.round(words / 220))} min read`;
 }
 
-function firstVisibleContributor(document: StorDocument) {
+function visibleContributors(document: StorDocument) {
   const contributors = document.contributors ?? [];
   const hasExplicitDisplayChoice = contributors.some(
     (contributor) => typeof contributor.showAsAuthor === 'boolean',
   );
 
   if (hasExplicitDisplayChoice) {
-    return (
-      contributors.find(
+    return contributors
+      .filter(
         (contributor) =>
           contributor.showAsAuthor === true &&
           contributor.role.trim().toLowerCase() === 'author',
-      ) ?? null
-    );
+      )
+      .slice(0, 3);
   }
 
-  return (
+  const legacyContributor =
     contributors.find(
       (contributor) => contributor.role.trim().toLowerCase() === 'author',
-    ) ??
-    contributors[0] ??
-    null
-  );
+    ) ?? contributors[0];
+
+  return legacyContributor ? [legacyContributor] : [];
 }
 
-function visibleResearcher(document: StorDocument, contributor: StorContributor | null) {
+function visibleAuthors(document: StorDocument, contributors: StorContributor[]) {
   const hasExplicitDisplayChoice = document.contributors?.some(
     (entry) => typeof entry.showAsAuthor === 'boolean',
   ) ?? false;
 
-  if (hasExplicitDisplayChoice && !contributor) return undefined;
-  if (!contributor) return document.researcher;
+  if (hasExplicitDisplayChoice && !contributors.length) return [];
+  if (!contributors.length) return document.researcher ? [document.researcher] : [];
 
-  return {
-    ...document.researcher,
-    name: contributor.name,
-    role: contributor.profileRole ?? document.researcher?.role,
-    organisation: contributor.affiliation ?? document.researcher?.organisation,
-    bio: contributor.bio ?? document.researcher?.bio,
-    image: contributor.profileImage ?? document.researcher?.image,
-  };
+  return contributors.map((contributor) => {
+    const legacyProfile =
+      document.researcher?.name?.trim().toLowerCase() === contributor.name.trim().toLowerCase()
+        ? document.researcher
+        : undefined;
+
+    return {
+      ...legacyProfile,
+      name: contributor.name,
+      role: contributor.profileRole ?? legacyProfile?.role,
+      organisation: contributor.affiliation ?? legacyProfile?.organisation,
+      bio: contributor.bio ?? legacyProfile?.bio,
+      image: contributor.profileImage ?? legacyProfile?.image,
+    };
+  });
+}
+
+function formatAuthorNames(contributors: StorContributor[]) {
+  const names = contributors.map((contributor) => contributor.name.trim()).filter(Boolean);
+  if (names.length < 2) return names[0] ?? '';
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  return `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`;
 }
 
 function headingForBlock(block: StoryBlock) {
@@ -138,7 +151,8 @@ function applyEnhancements(blocks: StoryBlock[], enhancements: StorEnhancement[]
 export function storDocumentToStory(document: StorDocument): StorRenderResult {
   validateStorDocument(document);
 
-  const contributor = firstVisibleContributor(document);
+  const contributors = visibleContributors(document);
+  const authors = visibleAuthors(document, contributors);
   const section = destinationToSection(document);
   const blocks = applyEnhancements(
     proseMirrorToNarrativeBlocks(document.content, {
@@ -162,10 +176,11 @@ export function storDocumentToStory(document: StorDocument): StorRenderResult {
       dek: document.dek,
       byline:
         document.byline ??
-        contributor?.name ??
-        '',
+        (formatAuthorNames(contributors) ||
+          authors.map((author) => author.name?.trim()).filter(Boolean).join(', ') ||
+          ''),
       abstract: document.abstract,
-      researcher: visibleResearcher(document, contributor),
+      ...(authors.length ? { authors, researcher: authors[0] } : {}),
       date: formatDate(document.publishedDate),
       publishedDate: document.publishedDate,
       readingTime: estimateReadingTime(document),

@@ -139,10 +139,13 @@
         const hasExplicitDisplayChoice = list.some(
             (contributor) => typeof contributor.showAsAuthor === "boolean",
         );
-        const selectedAuthorIndex = list.findIndex(
-            (contributor) =>
+        const selectedAuthorIndexes = new Set(
+            list.flatMap((contributor, index) =>
                 contributor.showAsAuthor === true &&
-                contributor.role.trim().toLowerCase() === "author",
+                contributor.role.trim().toLowerCase() === "author"
+                    ? [index]
+                    : [],
+            ).slice(0, 3),
         );
         const legacyAuthorIndex = hasExplicitDisplayChoice
             ? -1
@@ -156,10 +159,9 @@
                 contributor.role.trim().toLowerCase() === "author";
             const showAsAuthor =
                 isEligible &&
-                index ===
-                    (selectedAuthorIndex >= 0
-                        ? selectedAuthorIndex
-                        : legacyAuthorIndex);
+                (selectedAuthorIndexes.has(index) ||
+                    (selectedAuthorIndexes.size === 0 &&
+                        index === legacyAuthorIndex));
 
             return { ...contributor, showAsAuthor };
         });
@@ -1683,6 +1685,7 @@
                     caption: "",
                     credit: "",
                     layout: "inline",
+                    fit: "cover",
                 },
             })
             .run();
@@ -1744,6 +1747,7 @@
                     ],
                     mediaType: "image",
                     mediaSide: "right",
+                    fit: "cover",
                     src: "/media/report_launch.jpg",
                     alt: "Describe the image",
                     poster: "",
@@ -2342,10 +2346,28 @@
     }
 
     function setShowAuthorOnPage(index: number, checked: boolean) {
-        contributors = contributors.map((contributor, contributorIndex) => ({
-            ...contributor,
-            showAsAuthor: checked ? contributorIndex === index : false,
-        }));
+        const selectedCount = contributors.filter(
+            (contributor) =>
+                contributor.showAsAuthor === true &&
+                contributor.role.trim().toLowerCase() === "author",
+        ).length;
+        if (checked && selectedCount >= 3) return;
+
+        contributors = normalizeContributorDisplay(
+            contributors.map((contributor, contributorIndex) =>
+                contributorIndex === index
+                    ? { ...contributor, showAsAuthor: checked }
+                    : contributor,
+            ),
+        );
+    }
+
+    function selectedAuthorCount() {
+        return contributors.filter(
+            (contributor) =>
+                contributor.showAsAuthor === true &&
+                contributor.role.trim().toLowerCase() === "author",
+        ).length;
     }
 
     function openDetachedPreview() {
@@ -2825,7 +2847,13 @@
 
                         <div class="full contributor-panel">
                             <div class="contributor-panel__header">
-                                <span>Authors and contributors</span>
+                                <div>
+                                    <span>Authors and contributors</span>
+                                    <p>
+                                        Choose up to three authors to show on the
+                                        article page.
+                                    </p>
+                                </div>
                                 <div class="contributor-panel__actions">
                                     <button
                                         type="button"
@@ -2977,6 +3005,13 @@
                                                     type="checkbox"
                                                     checked={contributor.showAsAuthor ??
                                                         false}
+                                                    disabled={contributor.role
+                                                        .trim()
+                                                        .toLowerCase() !==
+                                                        "author" ||
+                                                        (!contributor.showAsAuthor &&
+                                                            selectedAuthorCount() >=
+                                                                3)}
                                                     onchange={(event) =>
                                                         setShowAuthorOnPage(
                                                             index,
@@ -4538,8 +4573,30 @@
                                                         alt: (
                                                             event.currentTarget as HTMLInputElement
                                                         ).value,
-                                                    })}
+                                                })}
                                             />
+                                        </label>
+                                        <label>
+                                            <span>Image framing</span>
+                                            <select
+                                                value={String(
+                                                    selectedStructuredBlock.attrs
+                                                        .fit ?? "cover",
+                                                )}
+                                                onchange={(event) =>
+                                                    updateSelectedStructuredBlock({
+                                                        fit: (
+                                                            event.currentTarget as HTMLSelectElement
+                                                        ).value,
+                                                    })}
+                                            >
+                                                <option value="cover"
+                                                    >Crop to fill the frame</option
+                                                >
+                                                <option value="contain"
+                                                    >Show the whole image</option
+                                                >
+                                            </select>
                                         </label>
                                     {/if}
                                     <label>
@@ -5043,6 +5100,28 @@
                                             <option value="full">Full</option>
                                             <option value="portrait"
                                                 >Portrait</option
+                                            >
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <span>Image framing</span>
+                                        <select
+                                            value={String(
+                                                selectedStructuredBlock.attrs
+                                                    .fit ?? "cover",
+                                            )}
+                                            onchange={(event) =>
+                                                updateSelectedStructuredBlock({
+                                                    fit: (
+                                                        event.currentTarget as HTMLSelectElement
+                                                    ).value,
+                                                })}
+                                        >
+                                            <option value="cover"
+                                                >Crop to fill the frame</option
+                                            >
+                                            <option value="contain"
+                                                >Show the whole image</option
                                             >
                                         </select>
                                     </label>
@@ -6001,6 +6080,13 @@
         justify-content: space-between;
         gap: 1rem;
         align-items: center;
+    }
+
+    .contributor-panel__header p {
+        color: #666660;
+        font-size: 0.82rem;
+        font-weight: 400;
+        margin: 0.25rem 0 0;
     }
 
     .contributor-panel__actions {
