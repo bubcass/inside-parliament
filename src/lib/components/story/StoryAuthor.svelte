@@ -61,7 +61,7 @@
                     <span class="visually-hidden">, </span>
                   </span>
                 {/if}
-                {#if organisation}<span>{organisation}</span>{/if}
+                {#if organisation}<span class="story-author__organisation">{organisation}</span>{/if}
               </p>
             {/if}
           </div>
@@ -177,8 +177,8 @@
     }
 
     .story-authors {
-      gap: var(--space-3);
-      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-3) 0.75rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       padding-top: var(--space-2);
     }
 
@@ -199,6 +199,11 @@
     .story-author__description {
       font-size: 0.76rem;
     }
+
+    .story-author__organisation,
+    .story-author__separator { display: none; }
+
+    .story-author__description { flex-wrap: nowrap; }
   }
 
   @media print {

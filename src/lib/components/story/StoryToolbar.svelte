@@ -364,13 +364,24 @@
     const syncTheme = (event: Event) => {
       isDarkTheme = (event as CustomEvent<'light' | 'dark'>).detail === 'dark';
     };
+    const handleArticleAction = (event: Event) => {
+      switch ((event as CustomEvent<string>).detail) {
+        case 'listen': togglePlayback(); break;
+        case 'share': void shareStory(); break;
+        case 'save': toggleBookmark(); break;
+        case 'cite': void copyCitation(); break;
+        case 'print': printArticle(); break;
+      }
+    };
     window.addEventListener('pointerdown', closeMobileActionsOnOutsideClick);
     window.addEventListener('keydown', closeMobileActionsOnEscape);
     window.addEventListener('inside-parliament:theme-changed', syncTheme);
+    window.addEventListener('article-action', handleArticleAction);
     void loadGeneratedAudio();
 
     return () => {
       window.removeEventListener('inside-parliament:theme-changed', syncTheme);
+      window.removeEventListener('article-action', handleArticleAction);
     };
   });
 
@@ -830,8 +841,8 @@
       gap: 0.5rem;
     }
 
-    .mobile-story-actions {
-      display: block;
+  .mobile-story-actions {
+      display: none;
       pointer-events: auto;
       position: fixed;
       right: max(12px, env(safe-area-inset-right));

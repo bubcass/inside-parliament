@@ -9,10 +9,13 @@
     let { children } = $props();
     let isMobileViewport = $state(false);
     let theme = $state<'light' | 'dark'>('light');
+    let mobileMastheadHidden = $state(false);
     let mobileSectionMenuOpen = $state(false);
     let mobileSectionActionsOpen = $state(false);
+    let headerActionsOpen = $state(false);
     let mobileSectionMenu: HTMLDivElement | undefined = $state();
     let mobileSectionActions: HTMLDivElement | undefined = $state();
+    let headerActions: HTMLDivElement | undefined = $state();
     const isPublisherRoute = $derived(
         page.url.pathname === `${base}/publisher` ||
             page.url.pathname === `${base}/publisher/` ||
@@ -44,7 +47,6 @@
         return "Inside Parliament";
     });
     const mobileSectionItems = [
-        { href: `${base}/`, label: "Inside Parliament" },
         { href: `${base}/parliament-now/`, label: "Parliament Now" },
         { href: `${base}/parliament-explained/`, label: "Parliament Explained" },
         { href: `${base}/parliament-at-work/`, label: "Parliament at Work" },
@@ -68,6 +70,7 @@
     function closeMobileTools() {
         closeMobileSectionMenu();
         closeMobileSectionActions();
+        headerActionsOpen = false;
     }
 
     function toggleTheme() {
@@ -86,13 +89,15 @@
         theme = storedTheme === 'dark' ? 'dark' : 'light';
         const syncHeader = () => {
             isMobileViewport = window.matchMedia("(max-width: 860px)").matches;
+            mobileMastheadHidden = isMobileViewport && window.scrollY > 16;
             if (!isResourceRoute) closeMobileTools();
         };
         const closeOnOutsideClick = (event: PointerEvent) => {
             if (
-                (mobileSectionMenuOpen || mobileSectionActionsOpen) &&
+                (mobileSectionMenuOpen || mobileSectionActionsOpen || headerActionsOpen) &&
                 !mobileSectionMenu?.contains(event.target as Node) &&
-                !mobileSectionActions?.contains(event.target as Node)
+                !mobileSectionActions?.contains(event.target as Node) &&
+                !headerActions?.contains(event.target as Node)
             ) {
                 closeMobileTools();
             }
@@ -130,10 +135,11 @@
     class:site-header--studio={isPublisherRoute}
     class:site-header--resource={isResourceRoute}
     class:site-header--compact={isResourceRoute}
+    class:site-header--mobile-hidden={mobileMastheadHidden}
     class="site-header"
     aria-label="Site header"
-    aria-hidden={isResourceRoute && isMobileViewport ? "true" : undefined}
-    inert={isResourceRoute && isMobileViewport ? true : undefined}
+    aria-hidden={mobileMastheadHidden ? "true" : undefined}
+    inert={mobileMastheadHidden ? true : undefined}
 >
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
@@ -206,26 +212,24 @@
                     <span class="brand-title">Inside Parliament</span>
                 </span>
             </a>
-            <div class="site-header-actions">
+            <div class="site-header-actions" bind:this={headerActions}>
                 <button
-                    class="theme-toggle"
+                    class="masthead-overflow"
                     type="button"
-                    onclick={toggleTheme}
-                    aria-pressed={theme === 'dark'}
-                    aria-label={`Use ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                    title={`Use ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                    aria-label="More site actions"
+                    aria-expanded={headerActionsOpen}
+                    aria-controls="masthead-actions-menu"
+                    onclick={() => (headerActionsOpen = !headerActionsOpen)}
                 >
-                    {#if theme === 'dark'}
-                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-                            <circle cx="12" cy="12" r="4" />
-                            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-                        </svg>
-                    {:else}
-                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-                            <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z" />
-                        </svg>
-                    {/if}
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="19" cy="12" r="1.8"></circle></svg>
                 </button>
+                {#if headerActionsOpen}
+                    <div id="masthead-actions-menu" class="masthead-actions-menu">
+                        <button type="button" onclick={() => { toggleTheme(); headerActionsOpen = false; }}>
+                            <span>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
+                        </button>
+                    </div>
+                {/if}
             </div>
         </nav>
         <nav class="section-nav" aria-label="Inside Parliament sections">
@@ -250,10 +254,14 @@
 {#if !isPublisherRoute}
     <div
         class="mobile-section-tools"
+        class:mobile-section-tools--visible={mobileMastheadHidden}
         class:resource-mobile-tools={isResourceRoute}
         class:section-mobile-tools={!isResourceRoute}
         aria-label="Inside Parliament navigation"
     >
+        <button class="mobile-back" type="button" aria-label="Go back" onclick={() => history.length > 1 ? history.back() : window.location.assign(`${base}/`)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14.5 5-7 7 7 7" /></svg>
+        </button>
         <div class="resource-mobile-nav" bind:this={mobileSectionMenu}>
             <button
                 class="resource-mobile-nav__toggle"
@@ -277,8 +285,7 @@
                 </nav>
             {/if}
         </div>
-        {#if !isResourceRoute}
-            <div class="mobile-section-actions" bind:this={mobileSectionActions}>
+        <div class="mobile-section-actions" bind:this={mobileSectionActions}>
                 <button
                     class="mobile-section-actions__toggle"
                     type="button"
@@ -295,6 +302,13 @@
                 </button>
                 {#if mobileSectionActionsOpen}
                     <div id="mobile-section-actions-menu" class="mobile-section-actions__menu">
+                        {#if isResourceRoute}
+                            <button type="button" onclick={() => { window.dispatchEvent(new CustomEvent("article-action", { detail: "listen" })); closeMobileSectionActions(); }}><span>Listen</span></button>
+                            <button type="button" onclick={() => { window.dispatchEvent(new CustomEvent("article-action", { detail: "share" })); closeMobileSectionActions(); }}><span>Share article</span></button>
+                            <button type="button" onclick={() => { window.dispatchEvent(new CustomEvent("article-action", { detail: "save" })); closeMobileSectionActions(); }}><span>Save article</span></button>
+                            <button type="button" onclick={() => { window.dispatchEvent(new CustomEvent("article-action", { detail: "cite" })); closeMobileSectionActions(); }}><span>Copy citation</span></button>
+                            <button type="button" onclick={() => { window.dispatchEvent(new CustomEvent("article-action", { detail: "print" })); closeMobileSectionActions(); }}><span>Print article</span></button>
+                        {/if}
                         <button
                             type="button"
                             onclick={() => {
@@ -319,7 +333,6 @@
                     </div>
                 {/if}
             </div>
-        {/if}
     </div>
 {/if}
 
