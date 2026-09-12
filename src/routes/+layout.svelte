@@ -3,6 +3,7 @@
     import { base } from "$app/paths";
     import { page } from "$app/state";
     import { onMount } from "svelte";
+    import BackToTop from "$lib/components/BackToTop.svelte";
     import type { StorySection } from "$lib/content/types";
 
     let { children } = $props();
@@ -325,6 +326,10 @@
 <main id="content" class:resource-main={isResourceRoute}>
     {@render children()}
 </main>
+
+{#if !isPublisherRoute}
+    <BackToTop />
+{/if}
 
 <footer class="site-footer">
     <p>Inside Parliament | Houses of the Oireachtas</p>

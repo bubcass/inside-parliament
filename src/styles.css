@@ -11,7 +11,10 @@
   --link-hover: #7f6c2e;
   --border: #d4ccb8;
   --gold: #6b5922;
+  --gold-hover: #473a16;
   --focus-ring: #3f3414;
+  --surface: #fffdf8;
+  --shadow-soft: 0 6px 20px rgba(47, 47, 47, 0.06);
   --radius: 4px;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -88,7 +91,10 @@
   --link-hover: #f0dea1;
   --border: #4b4a43;
   --gold: #d3bf72;
+  --gold-hover: #ead993;
   --focus-ring: #ead993;
+  --surface: #22231f;
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.24);
   --color-faint: #9b9588;
   --color-soft: #242520;
   --color-panel: #22231f;
