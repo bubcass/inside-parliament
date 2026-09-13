@@ -233,6 +233,38 @@
             </div>
         </nav>
         <nav class="section-nav" aria-label="Inside Parliament sections">
+            {#if isResourceRoute}
+            <a
+                class="resource-home-crumb"
+                href="{base}/"
+                aria-label="Return to Inside Parliament home"
+                title="Return to Inside Parliament home"
+            >
+                <svg viewBox="0 0 64 28" aria-hidden="true" focusable="false">
+                    <path d="M12 9H26L32 5L38 9H52" />
+                    <line x1="12" y1="10.5" x2="52" y2="10.5" />
+                    <rect x="12" y="10.5" width="40" height="13.5" />
+                    <line x1="27.5" y1="10.5" x2="27.5" y2="24" />
+                    <line x1="30" y1="10.5" x2="30" y2="24" />
+                    <line x1="34" y1="10.5" x2="34" y2="24" />
+                    <line x1="36.5" y1="10.5" x2="36.5" y2="24" />
+                    <line x1="26.5" y1="24" x2="37.5" y2="24" />
+                    <rect class="resource-home-crumb__door" x="30.7" y="18.2" width="2.6" height="5.8" />
+                    <rect class="resource-home-crumb__window" x="15" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="19" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="23" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="39.3" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="43.3" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="47.3" y="13" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="15" y="18" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="19" y="18" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="23" y="18" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="39.3" y="18" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="43.3" y="18" width="1.7" height="1.7" />
+                    <rect class="resource-home-crumb__window" x="47.3" y="18" width="1.7" height="1.7" />
+                </svg>
+            </a>
+            {/if}
             <div class="nav-links">
                 <a href="{base}/parliament-now/" aria-current={activeSection === "parliament-now" ? "page" : undefined}>Parliament Now</a>
                 <a href="{base}/parliament-explained/" aria-current={activeSection === "parliament-explained" ? "page" : undefined}>Parliament Explained</a>
