@@ -6,6 +6,8 @@
 
   let { block }: { block: VideoBlock } = $props();
   let shareFeedback = $state('');
+  let player = $state<HTMLVideoElement | null>(null);
+  let isMuted = $state(true);
 
   function clearFeedbackSoon() {
     window.setTimeout(() => {
@@ -25,37 +27,49 @@
       clearFeedbackSoon();
     }
   }
+
+  function toggleSound() {
+    if (!player) return;
+    player.muted = !player.muted;
+    isMuted = player.muted;
+  }
 </script>
 
 <figure class="video-block">
-  <video
-    use:autoplayWhileVisible={{ enabled: block.video.autoplay ?? true }}
-    autoplay={block.video.autoplay ?? true}
-    controls
-    controlslist="nodownload noremoteplayback"
-    disablepictureinpicture
-    disableremoteplayback
-    loop
-    muted
-    playsinline
-    preload="metadata"
-    poster={block.video.poster ? `${base}${block.video.poster}` : undefined}
-  >
-    <source src="{base}{block.video.src}" type="video/mp4" />
-    {#if block.video.captions}
-      <track
-        kind="captions"
-        label="English captions"
-        srclang="en"
-        src="{base}{block.video.captions}"
-        default
-      />
-    {/if}
-  </video>
-  <div class="video-actions">
-    <button type="button" class="video-action" onclick={shareVideo}>
-      Share video
-    </button>
+  <div class="video-player">
+    <video
+      bind:this={player}
+      use:autoplayWhileVisible={{ enabled: block.video.autoplay ?? true }}
+      autoplay={block.video.autoplay ?? true}
+      loop
+      muted={isMuted}
+      playsinline
+      preload="metadata"
+      poster={block.video.poster ? `${base}${block.video.poster}` : undefined}
+    >
+      <source src="{base}{block.video.src}" type="video/mp4" />
+      {#if block.video.captions}
+        <track
+          kind="captions"
+          label="English captions"
+          srclang="en"
+          src="{base}{block.video.captions}"
+          default
+        />
+      {/if}
+    </video>
+    <div class="video-actions" aria-label="Video controls">
+      <button type="button" class="video-action" onclick={toggleSound} aria-label={isMuted ? 'Turn sound on' : 'Mute video'} aria-pressed={!isMuted}>
+        {#if isMuted}
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Zm12.5 2 3 3m0-3-3 3" /></svg>
+        {:else}
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Zm12.5-3.5a5 5 0 0 1 0 7m2-10a9 9 0 0 1 0 13" /></svg>
+        {/if}
+      </button>
+      <button type="button" class="video-action" onclick={shareVideo} aria-label="Share video">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 16V3m0 0-4 4m4-4 4 4M5 10v9h14v-9" /></svg>
+      </button>
+    </div>
     {#if shareFeedback}
       <span class="video-feedback" role="status">{shareFeedback}</span>
     {/if}
@@ -83,24 +97,34 @@
     width: 100%;
   }
 
+  .video-player {
+    position: relative;
+  }
+
   .video-actions {
-    align-items: center;
-    display: flex;
-    gap: 0.75rem;
-    margin-top: var(--space-3);
+    display: grid;
+    gap: 0.7rem;
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .video-action {
-    background: transparent;
-    border: 1px solid color-mix(in srgb, var(--color-line) 82%, transparent);
-    border-radius: var(--radius);
-    color: var(--color-accent-2);
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background: rgba(16, 15, 12, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 999px;
+    color: white;
     cursor: pointer;
-    font: inherit;
-    font-size: var(--font-size-small);
-    font-weight: 600;
+    display: inline-flex;
+    font-size: 1.3rem;
     line-height: 1;
-    padding: 0.55rem 0.8rem;
+    height: 2.8rem;
+    justify-content: center;
+    padding: 0;
+    width: 2.8rem;
   }
 
   .video-action:hover,
@@ -108,12 +132,27 @@
     color: var(--link-hover);
   }
 
+  .video-action svg {
+    fill: none;
+    height: 1.55rem;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    width: 1.55rem;
+  }
+
   .video-feedback {
-    color: var(--color-muted);
+    background: rgba(16, 15, 12, 0.82);
+    border-radius: 999px;
+    bottom: 0.8rem;
+    color: white;
     font-size: var(--font-size-small);
     font-weight: 500;
     line-height: var(--line-height-small);
-    margin-top: 0;
+    padding: 0.35rem 0.6rem;
+    position: absolute;
+    right: 0.75rem;
   }
 
   .caption {
@@ -122,7 +161,7 @@
     max-width: var(--measure);
   }
 
-  span {
+  .caption span {
     color: var(--color-faint);
     display: block;
     margin-top: 0.2rem;

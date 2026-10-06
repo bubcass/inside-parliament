@@ -144,7 +144,8 @@
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
             <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 64 28" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                <svg viewBox="0 0 1092 526" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                    <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" />
                     <path d="M12 9H26L32 5L38 9H52" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
                     <line x1="12" y1="10.5" x2="52" y2="10.5" stroke="currentColor" stroke-width="1.2" />
                     <rect x="12" y="10.5" width="40" height="13.5" stroke="currentColor" stroke-width="1.2" />
@@ -183,7 +184,8 @@
             </a>
             <a class="brand" href="{base}/" aria-label="Inside Parliament home">
                 <span class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 64 28" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                    <svg viewBox="0 0 1092 526" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                        <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" />
                         <path d="M12 9H26L32 5L38 9H52" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
                         <line x1="12" y1="10.5" x2="52" y2="10.5" stroke="currentColor" stroke-width="1.2" />
                         <rect x="12" y="10.5" width="40" height="13.5" stroke="currentColor" stroke-width="1.2" />
@@ -240,7 +242,8 @@
                 aria-label="Return to Inside Parliament home"
                 title="Return to Inside Parliament home"
             >
-                <svg viewBox="0 0 64 28" aria-hidden="true" focusable="false">
+                <svg viewBox="0 0 1092 526" aria-hidden="true" focusable="false">
+                    <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" />
                     <path d="M12 9H26L32 5L38 9H52" />
                     <line x1="12" y1="10.5" x2="52" y2="10.5" />
                     <rect x="12" y="10.5" width="40" height="13.5" />

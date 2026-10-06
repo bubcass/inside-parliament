@@ -2,6 +2,7 @@
     import { base } from "$app/paths";
     import { onDestroy, onMount } from "svelte";
     import type { ShortVideoItem } from "$lib/content/shorts";
+    import { shareVideoAsset } from "$lib/components/story/videoShare";
 
     interface Props {
         items: ShortVideoItem[];
@@ -18,6 +19,8 @@
     let viewerVideo = $state<HTMLVideoElement | null>(null);
     let touchStartY = $state<number | null>(null);
     let showSwipeHint = $state(false);
+    let viewerMuted = $state(true);
+    let shareFeedback = $state("");
     let swipeHintTimer: ReturnType<typeof setTimeout> | null = null;
 
     const cardVideos: Array<HTMLVideoElement | null> = [];
@@ -86,6 +89,7 @@
     function openViewer(index: number) {
         stopTeaser(index);
         viewerIndex = index;
+        viewerMuted = true;
         showSwipeHint = true;
 
         if (swipeHintTimer) {
@@ -100,6 +104,7 @@
     function closeViewer() {
         viewerIndex = null;
         showSwipeHint = false;
+        shareFeedback = "";
         if (viewerVideo) {
             viewerVideo.pause();
             viewerVideo.currentTime = 0;
@@ -109,6 +114,27 @@
     function setViewerIndex(nextIndex: number) {
         if (nextIndex < 0 || nextIndex >= items.length) return;
         viewerIndex = nextIndex;
+        viewerMuted = true;
+    }
+
+    function toggleViewerSound() {
+        if (!viewerVideo) return;
+        viewerVideo.muted = !viewerVideo.muted;
+        viewerMuted = viewerVideo.muted;
+    }
+
+    async function shareViewerVideo() {
+        if (viewerIndex === null) return;
+        const item = items[viewerIndex];
+        const result = await shareVideoAsset({
+            src: item.src,
+            title: item.title,
+        });
+
+        if (result === "copied") {
+            shareFeedback = "Link copied";
+            window.setTimeout(() => (shareFeedback = ""), 1800);
+        }
     }
 
     function handleKeydown(event: KeyboardEvent) {
@@ -310,10 +336,37 @@
                         bind:this={viewerVideo}
                         src={base + item.src}
                         poster={base + item.poster}
-                        controls
+                        muted={viewerMuted}
                         playsinline
                         autoplay
                     ></video>
+
+                    <div class="viewer-video-actions" aria-label="Video controls">
+                        <button
+                            type="button"
+                            class="viewer-video-action"
+                            onclick={toggleViewerSound}
+                            aria-label={viewerMuted ? "Turn sound on" : "Mute video"}
+                            aria-pressed={!viewerMuted}
+                        >
+                            {#if viewerMuted}
+                                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Zm12.5 2 3 3m0-3-3 3" /></svg>
+                            {:else}
+                                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Zm12.5-3.5a5 5 0 0 1 0 7m2-10a9 9 0 0 1 0 13" /></svg>
+                            {/if}
+                        </button>
+                        <button
+                            type="button"
+                            class="viewer-video-action"
+                            onclick={shareViewerVideo}
+                            aria-label="Share video"
+                        >
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 16V3m0 0-4 4m4-4 4 4M5 10v9h14v-9" /></svg>
+                        </button>
+                    </div>
+                    {#if shareFeedback}
+                        <span class="viewer-share-feedback" role="status">{shareFeedback}</span>
+                    {/if}
 
                     <a class="viewer-link" href="{base}/stories/{item.slug}/">
                         Read the full story
@@ -603,6 +656,63 @@
         max-width: 100%;
         object-fit: contain;
         width: min(100%, 24rem);
+    }
+
+    .viewer-video-actions {
+        display: grid;
+        gap: 0.7rem;
+        position: absolute;
+        right: max(0.75rem, calc((100% - min(100%, 24rem)) / 2 + 0.75rem));
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .viewer-video-action {
+        align-items: center;
+        backdrop-filter: blur(8px);
+        background: rgba(16, 15, 12, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.48);
+        border-radius: 999px;
+        color: white;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.3rem;
+        height: 2.8rem;
+        justify-content: center;
+        line-height: 1;
+        padding: 0;
+        width: 2.8rem;
+    }
+
+    .viewer-video-action:hover,
+    .viewer-video-action:focus-visible {
+        background: rgba(16, 15, 12, 0.82);
+        outline: 2px solid white;
+        outline-offset: 2px;
+    }
+
+    .viewer-video-action svg {
+        fill: none;
+        height: 1.55rem;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+        width: 1.55rem;
+    }
+
+    .viewer-share-feedback {
+        background: rgba(16, 15, 12, 0.82);
+        border-radius: 999px;
+        bottom: 0.8rem;
+        color: white;
+        font-size: 0.76rem;
+        font-weight: 600;
+        padding: 0.35rem 0.6rem;
+        position: absolute;
+        right: 0.75rem;
+        z-index: 2;
     }
 
     .viewer-swipe-hint {
