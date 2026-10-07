@@ -486,7 +486,7 @@ a:focus-visible {
 }
 
 .masthead-overflow svg {
-  fill: currentColor;
+  fill: none;
   height: 1.15rem;
   stroke: currentColor;
   stroke-linecap: round;
@@ -754,8 +754,12 @@ a:focus-visible {
   }
 
   .mobile-section-actions__toggle svg {
-    fill: currentColor;
+    fill: none;
     height: 23px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
     width: 23px;
   }
 

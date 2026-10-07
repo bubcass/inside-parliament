@@ -218,12 +218,12 @@
                 <button
                     class="masthead-overflow"
                     type="button"
-                    aria-label="More site actions"
+                    aria-label="Page menu"
                     aria-expanded={headerActionsOpen}
                     aria-controls="masthead-actions-menu"
                     onclick={() => (headerActionsOpen = !headerActionsOpen)}
                 >
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="19" cy="12" r="1.8"></circle></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 7h14M5 12h14M5 17h14"></path></svg>
                 </button>
                 {#if headerActionsOpen}
                     <div id="masthead-actions-menu" class="masthead-actions-menu">
@@ -324,16 +324,12 @@
                 <button
                     class="mobile-section-actions__toggle"
                     type="button"
-                    aria-label="More page actions"
+                    aria-label="Page menu"
                     aria-expanded={mobileSectionActionsOpen}
                     aria-controls="mobile-section-actions-menu"
                     onclick={() => (mobileSectionActionsOpen = !mobileSectionActionsOpen)}
                 >
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <circle cx="5" cy="12" r="1.8"></circle>
-                        <circle cx="12" cy="12" r="1.8"></circle>
-                        <circle cx="19" cy="12" r="1.8"></circle>
-                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 7h14M5 12h14M5 17h14"></path></svg>
                 </button>
                 {#if mobileSectionActionsOpen}
                     <div id="mobile-section-actions-menu" class="mobile-section-actions__menu">
