@@ -302,10 +302,10 @@ a:focus-visible {
   color: color-mix(in srgb, var(--color-accent) 88%, var(--color-faint));
   display: inline-flex;
   flex: 0 0 auto;
-  height: 18px;
+  height: 36px;
   justify-content: center;
   transform: translateY(-0.05em);
-  width: 42px;
+  width: 84px;
 }
 
 .brand-mark svg {
@@ -331,9 +331,9 @@ a:focus-visible {
 
 .publisher-header-lockup .brand-mark {
   color: #505357;
-  height: 1.85rem;
+  height: 2.1rem;
   transform: none;
-  width: auto;
+  width: 4.9rem;
 }
 
 .brand:hover .brand-mark,
@@ -430,8 +430,8 @@ a:focus-visible {
 
 .brand-mark {
   color: currentColor;
-  height: 1.7rem;
-  width: 3.95rem;
+  height: 1.95rem;
+  width: 4.55rem;
 }
 
 .brand-copy {
