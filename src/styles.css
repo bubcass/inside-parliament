@@ -306,10 +306,13 @@ a:focus-visible {
   justify-content: center;
   transform: translateY(-0.05em);
   width: 84px;
+  background-color: currentColor;
+  -webkit-mask: var(--house-mask) center / contain no-repeat;
+  mask: var(--house-mask) center / contain no-repeat;
 }
 
 .brand-mark svg {
-  display: block;
+  display: none;
   height: 100%;
   overflow: visible;
   width: 100%;
@@ -558,13 +561,14 @@ a:focus-visible {
 }
 
 .resource-home-crumb svg {
-  fill: none;
+  display: none;
   height: 1.12rem;
   stroke: currentColor;
   stroke-linejoin: round;
   stroke-width: 1.55;
   width: 2.4rem;
 }
+
 
 .resource-home-crumb__door,
 .resource-home-crumb__window {

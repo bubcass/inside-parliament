@@ -143,31 +143,9 @@
 >
     {#if isPublisherRoute}
         <div class="publisher-header-lockup">
-            <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 1092 526" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
-                    <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" fill="currentColor" />
-                    <path d="M12 9H26L32 5L38 9H52" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
-                    <line x1="12" y1="10.5" x2="52" y2="10.5" stroke="currentColor" stroke-width="1.2" />
-                    <rect x="12" y="10.5" width="40" height="13.5" stroke="currentColor" stroke-width="1.2" />
-                    <line x1="27.5" y1="10.5" x2="27.5" y2="24" stroke="currentColor" stroke-width="1.1" />
-                    <line x1="30" y1="10.5" x2="30" y2="24" stroke="currentColor" stroke-width="1.1" />
-                    <line x1="34" y1="10.5" x2="34" y2="24" stroke="currentColor" stroke-width="1.1" />
-                    <line x1="36.5" y1="10.5" x2="36.5" y2="24" stroke="currentColor" stroke-width="1.1" />
-                    <line x1="26.5" y1="24" x2="37.5" y2="24" stroke="currentColor" stroke-width="1.2" />
-                    <rect x="30.7" y="18.2" width="2.6" height="5.8" fill="currentColor" />
-                    <rect x="15" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="19" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="23" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="39.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="43.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="47.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="15" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="19" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="23" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="39.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="43.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <rect x="47.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                    <line x1="12" y1="24" x2="52" y2="24" stroke="currentColor" stroke-width="1.2" />
+            <span class="brand-mark" aria-hidden="true" style={`--house-mask: url("${base}/brand/insights-house.svg?canonical=2")`}>
+                <svg viewBox="0 0 790 381" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                    <use class="house-lockup" href="{base}/brand/insights-house.svg?canonical=2#house-lockup" fill="currentColor" />
                 </svg>
             </span>
             <strong>Oireachtas Digital Publishing Studio</strong>
@@ -183,31 +161,9 @@
                 <img src="{base}/brand/oireachtas-logo.svg" alt="" />
             </a>
             <a class="brand" href="{base}/" aria-label="Inside Parliament home">
-                <span class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 1092 526" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
-                        <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" fill="currentColor" />
-                        <path d="M12 9H26L32 5L38 9H52" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
-                        <line x1="12" y1="10.5" x2="52" y2="10.5" stroke="currentColor" stroke-width="1.2" />
-                        <rect x="12" y="10.5" width="40" height="13.5" stroke="currentColor" stroke-width="1.2" />
-                        <line x1="27.5" y1="10.5" x2="27.5" y2="24" stroke="currentColor" stroke-width="1.1" />
-                        <line x1="30" y1="10.5" x2="30" y2="24" stroke="currentColor" stroke-width="1.1" />
-                        <line x1="34" y1="10.5" x2="34" y2="24" stroke="currentColor" stroke-width="1.1" />
-                        <line x1="36.5" y1="10.5" x2="36.5" y2="24" stroke="currentColor" stroke-width="1.1" />
-                        <line x1="26.5" y1="24" x2="37.5" y2="24" stroke="currentColor" stroke-width="1.2" />
-                        <rect x="30.7" y="18.2" width="2.6" height="5.8" fill="currentColor" />
-                        <rect x="15" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="19" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="23" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="39.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="43.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="47.3" y="13" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="15" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="19" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="23" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="39.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="43.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <rect x="47.3" y="18" width="1.7" height="1.7" fill="currentColor" />
-                        <line x1="12" y1="24" x2="52" y2="24" stroke="currentColor" stroke-width="1.2" />
+                <span class="brand-mark" aria-hidden="true" style={`--house-mask: url("${base}/brand/insights-house.svg?canonical=2")`}>
+                    <svg viewBox="0 0 790 381" xmlns="http://www.w3.org/2000/svg" fill="none" role="presentation" focusable="false">
+                        <use class="house-lockup" href="{base}/brand/insights-house.svg?canonical=2#house-lockup" fill="currentColor" />
                     </svg>
                 </span>
                 <span class="brand-copy">
@@ -242,29 +198,8 @@
                 aria-label="Return to Inside Parliament home"
                 title="Return to Inside Parliament home"
             >
-                <svg viewBox="0 0 1092 526" aria-hidden="true" focusable="false">
-                    <use class="house-lockup" href="{base}/brand/insights-house.svg#house-lockup" fill="currentColor" />
-                    <path d="M12 9H26L32 5L38 9H52" />
-                    <line x1="12" y1="10.5" x2="52" y2="10.5" />
-                    <rect x="12" y="10.5" width="40" height="13.5" />
-                    <line x1="27.5" y1="10.5" x2="27.5" y2="24" />
-                    <line x1="30" y1="10.5" x2="30" y2="24" />
-                    <line x1="34" y1="10.5" x2="34" y2="24" />
-                    <line x1="36.5" y1="10.5" x2="36.5" y2="24" />
-                    <line x1="26.5" y1="24" x2="37.5" y2="24" />
-                    <rect class="resource-home-crumb__door" x="30.7" y="18.2" width="2.6" height="5.8" />
-                    <rect class="resource-home-crumb__window" x="15" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="19" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="23" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="39.3" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="43.3" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="47.3" y="13" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="15" y="18" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="19" y="18" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="23" y="18" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="39.3" y="18" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="43.3" y="18" width="1.7" height="1.7" />
-                    <rect class="resource-home-crumb__window" x="47.3" y="18" width="1.7" height="1.7" />
+                <svg viewBox="0 0 790 381" aria-hidden="true" focusable="false">
+                    <use class="house-lockup" href="{base}/brand/insights-house.svg?canonical=2#house-lockup" fill="currentColor" />
                 </svg>
             </a>
             {/if}
