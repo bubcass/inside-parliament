@@ -2602,7 +2602,7 @@
             {#if openStage === "start"}
                 <div class="stage-body stage-body--start">
                     <div class="workflow-grid">
-                        <div class="workflow-card">
+                        <div class="workflow-card workflow-card--quick-start">
                             <strong>Upload document</strong>
                             <span
                                 >Import a document and move into metadata
@@ -2625,7 +2625,7 @@
                             {/if}
                         </div>
 
-                        <div class="workflow-card">
+                        <div class="workflow-card workflow-card--quick-start">
                             <strong>Start a blank draft</strong>
                             <span
                                 >Create a new document and continue to
@@ -2636,22 +2636,27 @@
                             >
                         </div>
 
-                        <div class="workflow-card">
-                            <strong>Open existing story</strong>
-                            <span
-                                >Load a published or archived story into the
-                                publisher and continue editing it in place.</span
-                            >
-                            <label class="story-search">
-                                <span class="sr-only"
-                                    >Search existing stories</span
-                                >
-                                <input
-                                    bind:value={existingStoryQuery}
-                                    type="search"
-                                    placeholder="Search by title, slug, or date"
-                                />
-                            </label>
+                        <div class="workflow-card workflow-card--existing-story">
+                            <div class="existing-story-header">
+                                <div>
+                                    <strong>Open existing story</strong>
+                                    <span
+                                        >Load a published or archived story into
+                                        the publisher and continue editing it in
+                                        place.</span
+                                    >
+                                </div>
+                                <label class="story-search">
+                                    <span class="sr-only"
+                                        >Search existing stories</span
+                                    >
+                                    <input
+                                        bind:value={existingStoryQuery}
+                                        type="search"
+                                        placeholder="Search by title, slug, or date"
+                                    />
+                                </label>
+                            </div>
                             <div class="story-search-results">
                                 {#if filteredExistingStories.length}
                                     {#each filteredExistingStories as story}
@@ -2678,19 +2683,25 @@
                                     </p>
                                 {/if}
                             </div>
-                            {#if selectedExistingStory}
-                                <p class="workflow-note">
-                                    Selected:
-                                    <code>{selectedExistingStory.slug}</code>
-                                </p>
-                            {/if}
-                            <button
-                                type="button"
-                                onclick={openExistingStory}
-                                disabled={!existingStorySlug}
-                            >
-                                Open selected story
-                            </button>
+                            <div class="existing-story-footer">
+                                {#if selectedExistingStory}
+                                    <p class="workflow-note">
+                                        Selected:
+                                        <code>{selectedExistingStory.slug}</code>
+                                    </p>
+                                {:else}
+                                    <p class="workflow-note">
+                                        Choose a story to continue editing it.
+                                    </p>
+                                {/if}
+                                <button
+                                    type="button"
+                                    onclick={openExistingStory}
+                                    disabled={!existingStorySlug}
+                                >
+                                    Open selected story
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5911,6 +5922,16 @@
         background: var(--studio-panel-soft);
     }
 
+    .workflow-card--quick-start {
+        min-height: 10.5rem;
+    }
+
+    .workflow-card--existing-story {
+        grid-column: 1 / -1;
+        min-height: 0;
+        gap: 0.8rem;
+    }
+
     .workflow-card strong {
         font-size: 1rem;
     }
@@ -5920,6 +5941,18 @@
         font-size: 0.92rem;
     }
 
+    .existing-story-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.9fr);
+        gap: 1rem;
+        align-items: end;
+    }
+
+    .existing-story-header > div {
+        display: grid;
+        gap: 0.35rem;
+    }
+
     .story-search {
         display: grid;
     }
@@ -5927,7 +5960,8 @@
     .story-search-results {
         display: grid;
         gap: 0.45rem;
-        max-height: 16rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-height: 19rem;
         padding-right: 0.1rem;
         overflow-y: auto;
     }
@@ -5964,6 +5998,17 @@
         );
         box-shadow: 0 0 0 1px
             color-mix(in srgb, var(--studio-accent) 30%, transparent);
+    }
+
+    .existing-story-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .existing-story-footer button {
+        flex: 0 0 auto;
     }
 
     .workflow-note {
@@ -7090,6 +7135,11 @@
             grid-template-columns: 1fr 1fr;
         }
 
+        .existing-story-header,
+        .story-search-results {
+            grid-template-columns: 1fr;
+        }
+
     }
 
     @media (max-width: 640px) {
@@ -7133,6 +7183,15 @@
         .draft-status-actions,
         .publish-panel__actions-right {
             flex-wrap: wrap;
+        }
+
+        .existing-story-footer {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .existing-story-footer button {
+            width: 100%;
         }
     }
 </style>
